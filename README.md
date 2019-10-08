@@ -48,3 +48,9 @@ Generate services : `.\protoc\protoc-3.9.1-win64\bin\protoc --plugin=protoc-gen-
 Generate Proto classes: `.\protoc\protoc-3.9.1-win64\bin\protoc -I=proto\ --cpp_out=cpp\generated integration.proto`
 
 Generate services: `.\protoc\protoc-3.9.1-win64\bin\protoc -I=proto --grpc_out=cpp\generated --plugin=protoc-gen-grpc=protoc\grpc_cpp_plugin.exe integration.proto`
+
+## Building Java library
+
+Prepare Java Jar package: `mvn clean install`
+
+Result Java library is available at: ./java/target/alt-integration-proto-java-?????.jar
