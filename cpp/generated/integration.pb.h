@@ -48,7 +48,7 @@ struct TableStruct_integration_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[40]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[60]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -65,15 +65,33 @@ extern AddTemporaryPayloadsRequestDefaultTypeInternal _AddTemporaryPayloadsReque
 class Address;
 class AddressDefaultTypeInternal;
 extern AddressDefaultTypeInternal _Address_default_instance_;
+class AddressReply;
+class AddressReplyDefaultTypeInternal;
+extern AddressReplyDefaultTypeInternal _AddressReply_default_instance_;
+class AltChainBlock;
+class AltChainBlockDefaultTypeInternal;
+extern AltChainBlockDefaultTypeInternal _AltChainBlock_default_instance_;
+class AltChainConfigRequest;
+class AltChainConfigRequestDefaultTypeInternal;
+extern AltChainConfigRequestDefaultTypeInternal _AltChainConfigRequest_default_instance_;
 class AltPublication;
 class AltPublicationDefaultTypeInternal;
 extern AltPublicationDefaultTypeInternal _AltPublication_default_instance_;
+class AltPublicationReply;
+class AltPublicationReplyDefaultTypeInternal;
+extern AltPublicationReplyDefaultTypeInternal _AltPublicationReply_default_instance_;
 class BitcoinBlock;
 class BitcoinBlockDefaultTypeInternal;
 extern BitcoinBlockDefaultTypeInternal _BitcoinBlock_default_instance_;
+class BitcoinBlockReply;
+class BitcoinBlockReplyDefaultTypeInternal;
+extern BitcoinBlockReplyDefaultTypeInternal _BitcoinBlockReply_default_instance_;
 class BitcoinTransaction;
 class BitcoinTransactionDefaultTypeInternal;
 extern BitcoinTransactionDefaultTypeInternal _BitcoinTransaction_default_instance_;
+class BitcoinTransactionReply;
+class BitcoinTransactionReplyDefaultTypeInternal;
+extern BitcoinTransactionReplyDefaultTypeInternal _BitcoinTransactionReply_default_instance_;
 class BlockIndex;
 class BlockIndexDefaultTypeInternal;
 extern BlockIndexDefaultTypeInternal _BlockIndex_default_instance_;
@@ -89,24 +107,42 @@ extern CalculatorConfigDefaultTypeInternal _CalculatorConfig_default_instance_;
 class Coin;
 class CoinDefaultTypeInternal;
 extern CoinDefaultTypeInternal _Coin_default_instance_;
+class CompareReply;
+class CompareReplyDefaultTypeInternal;
+extern CompareReplyDefaultTypeInternal _CompareReply_default_instance_;
 class EmptyRequest;
 class EmptyRequestDefaultTypeInternal;
 extern EmptyRequestDefaultTypeInternal _EmptyRequest_default_instance_;
 class FlatScoreRoundConfig;
 class FlatScoreRoundConfigDefaultTypeInternal;
 extern FlatScoreRoundConfigDefaultTypeInternal _FlatScoreRoundConfig_default_instance_;
+class ForkresolutionConfigRequest;
+class ForkresolutionConfigRequestDefaultTypeInternal;
+extern ForkresolutionConfigRequestDefaultTypeInternal _ForkresolutionConfigRequest_default_instance_;
 class GeneralReply;
 class GeneralReplyDefaultTypeInternal;
 extern GeneralReplyDefaultTypeInternal _GeneralReply_default_instance_;
 class GetCalculatorReply;
 class GetCalculatorReplyDefaultTypeInternal;
 extern GetCalculatorReplyDefaultTypeInternal _GetCalculatorReply_default_instance_;
+class GetLastKnownBTCBlocksReply;
+class GetLastKnownBTCBlocksReplyDefaultTypeInternal;
+extern GetLastKnownBTCBlocksReplyDefaultTypeInternal _GetLastKnownBTCBlocksReply_default_instance_;
+class GetLastKnownBlocksRequest;
+class GetLastKnownBlocksRequestDefaultTypeInternal;
+extern GetLastKnownBlocksRequestDefaultTypeInternal _GetLastKnownBlocksRequest_default_instance_;
+class GetLastKnownVBKBlocksReply;
+class GetLastKnownVBKBlocksReplyDefaultTypeInternal;
+extern GetLastKnownVBKBlocksReplyDefaultTypeInternal _GetLastKnownVBKBlocksReply_default_instance_;
 class GetMainVBKHeightOfATVReply;
 class GetMainVBKHeightOfATVReplyDefaultTypeInternal;
 extern GetMainVBKHeightOfATVReplyDefaultTypeInternal _GetMainVBKHeightOfATVReply_default_instance_;
 class MerklePath;
 class MerklePathDefaultTypeInternal;
 extern MerklePathDefaultTypeInternal _MerklePath_default_instance_;
+class MerklePathReply;
+class MerklePathReplyDefaultTypeInternal;
+extern MerklePathReplyDefaultTypeInternal _MerklePathReply_default_instance_;
 class MerklePathRequest;
 class MerklePathRequestDefaultTypeInternal;
 extern MerklePathRequestDefaultTypeInternal _MerklePathRequest_default_instance_;
@@ -116,12 +152,18 @@ extern NetworkByteDefaultTypeInternal _NetworkByte_default_instance_;
 class Output;
 class OutputDefaultTypeInternal;
 extern OutputDefaultTypeInternal _Output_default_instance_;
+class OutputReply;
+class OutputReplyDefaultTypeInternal;
+extern OutputReplyDefaultTypeInternal _OutputReply_default_instance_;
 class PopEndorsement;
 class PopEndorsementDefaultTypeInternal;
 extern PopEndorsementDefaultTypeInternal _PopEndorsement_default_instance_;
 class PublicationData;
 class PublicationDataDefaultTypeInternal;
 extern PublicationDataDefaultTypeInternal _PublicationData_default_instance_;
+class PublicationDataReply;
+class PublicationDataReplyDefaultTypeInternal;
+extern PublicationDataReplyDefaultTypeInternal _PublicationDataReply_default_instance_;
 class RelativeScoreConfig;
 class RelativeScoreConfigDefaultTypeInternal;
 extern RelativeScoreConfigDefaultTypeInternal _RelativeScoreConfig_default_instance_;
@@ -161,45 +203,77 @@ extern SimplifyVTBsReplyDefaultTypeInternal _SimplifyVTBsReply_default_instance_
 class SimplifyVTBsRequest;
 class SimplifyVTBsRequestDefaultTypeInternal;
 extern SimplifyVTBsRequestDefaultTypeInternal _SimplifyVTBsRequest_default_instance_;
+class TwoBranchesRequest;
+class TwoBranchesRequestDefaultTypeInternal;
+extern TwoBranchesRequestDefaultTypeInternal _TwoBranchesRequest_default_instance_;
 class VeriBlockBlock;
 class VeriBlockBlockDefaultTypeInternal;
 extern VeriBlockBlockDefaultTypeInternal _VeriBlockBlock_default_instance_;
+class VeriBlockBlockReply;
+class VeriBlockBlockReplyDefaultTypeInternal;
+extern VeriBlockBlockReplyDefaultTypeInternal _VeriBlockBlockReply_default_instance_;
 class VeriBlockMerklePath;
 class VeriBlockMerklePathDefaultTypeInternal;
 extern VeriBlockMerklePathDefaultTypeInternal _VeriBlockMerklePath_default_instance_;
+class VeriBlockMerklePathReply;
+class VeriBlockMerklePathReplyDefaultTypeInternal;
+extern VeriBlockMerklePathReplyDefaultTypeInternal _VeriBlockMerklePathReply_default_instance_;
 class VeriBlockPoPTransaction;
 class VeriBlockPoPTransactionDefaultTypeInternal;
 extern VeriBlockPoPTransactionDefaultTypeInternal _VeriBlockPoPTransaction_default_instance_;
+class VeriBlockPoPTransactionReply;
+class VeriBlockPoPTransactionReplyDefaultTypeInternal;
+extern VeriBlockPoPTransactionReplyDefaultTypeInternal _VeriBlockPoPTransactionReply_default_instance_;
 class VeriBlockPublication;
 class VeriBlockPublicationDefaultTypeInternal;
 extern VeriBlockPublicationDefaultTypeInternal _VeriBlockPublication_default_instance_;
+class VeriBlockPublicationReply;
+class VeriBlockPublicationReplyDefaultTypeInternal;
+extern VeriBlockPublicationReplyDefaultTypeInternal _VeriBlockPublicationReply_default_instance_;
 class VeriBlockTransaction;
 class VeriBlockTransactionDefaultTypeInternal;
 extern VeriBlockTransactionDefaultTypeInternal _VeriBlockTransaction_default_instance_;
+class VeriBlockTransactionReply;
+class VeriBlockTransactionReplyDefaultTypeInternal;
+extern VeriBlockTransactionReplyDefaultTypeInternal _VeriBlockTransactionReply_default_instance_;
 }  // namespace VeriBlock
 PROTOBUF_NAMESPACE_OPEN
 template<> ::VeriBlock::AddPayloadsRequest* Arena::CreateMaybeMessage<::VeriBlock::AddPayloadsRequest>(Arena*);
 template<> ::VeriBlock::AddTemporaryPayloadsRequest* Arena::CreateMaybeMessage<::VeriBlock::AddTemporaryPayloadsRequest>(Arena*);
 template<> ::VeriBlock::Address* Arena::CreateMaybeMessage<::VeriBlock::Address>(Arena*);
+template<> ::VeriBlock::AddressReply* Arena::CreateMaybeMessage<::VeriBlock::AddressReply>(Arena*);
+template<> ::VeriBlock::AltChainBlock* Arena::CreateMaybeMessage<::VeriBlock::AltChainBlock>(Arena*);
+template<> ::VeriBlock::AltChainConfigRequest* Arena::CreateMaybeMessage<::VeriBlock::AltChainConfigRequest>(Arena*);
 template<> ::VeriBlock::AltPublication* Arena::CreateMaybeMessage<::VeriBlock::AltPublication>(Arena*);
+template<> ::VeriBlock::AltPublicationReply* Arena::CreateMaybeMessage<::VeriBlock::AltPublicationReply>(Arena*);
 template<> ::VeriBlock::BitcoinBlock* Arena::CreateMaybeMessage<::VeriBlock::BitcoinBlock>(Arena*);
+template<> ::VeriBlock::BitcoinBlockReply* Arena::CreateMaybeMessage<::VeriBlock::BitcoinBlockReply>(Arena*);
 template<> ::VeriBlock::BitcoinTransaction* Arena::CreateMaybeMessage<::VeriBlock::BitcoinTransaction>(Arena*);
+template<> ::VeriBlock::BitcoinTransactionReply* Arena::CreateMaybeMessage<::VeriBlock::BitcoinTransactionReply>(Arena*);
 template<> ::VeriBlock::BlockIndex* Arena::CreateMaybeMessage<::VeriBlock::BlockIndex>(Arena*);
 template<> ::VeriBlock::BytesArrayReply* Arena::CreateMaybeMessage<::VeriBlock::BytesArrayReply>(Arena*);
 template<> ::VeriBlock::BytesArrayRequest* Arena::CreateMaybeMessage<::VeriBlock::BytesArrayRequest>(Arena*);
 template<> ::VeriBlock::CalculatorConfig* Arena::CreateMaybeMessage<::VeriBlock::CalculatorConfig>(Arena*);
 template<> ::VeriBlock::Coin* Arena::CreateMaybeMessage<::VeriBlock::Coin>(Arena*);
+template<> ::VeriBlock::CompareReply* Arena::CreateMaybeMessage<::VeriBlock::CompareReply>(Arena*);
 template<> ::VeriBlock::EmptyRequest* Arena::CreateMaybeMessage<::VeriBlock::EmptyRequest>(Arena*);
 template<> ::VeriBlock::FlatScoreRoundConfig* Arena::CreateMaybeMessage<::VeriBlock::FlatScoreRoundConfig>(Arena*);
+template<> ::VeriBlock::ForkresolutionConfigRequest* Arena::CreateMaybeMessage<::VeriBlock::ForkresolutionConfigRequest>(Arena*);
 template<> ::VeriBlock::GeneralReply* Arena::CreateMaybeMessage<::VeriBlock::GeneralReply>(Arena*);
 template<> ::VeriBlock::GetCalculatorReply* Arena::CreateMaybeMessage<::VeriBlock::GetCalculatorReply>(Arena*);
+template<> ::VeriBlock::GetLastKnownBTCBlocksReply* Arena::CreateMaybeMessage<::VeriBlock::GetLastKnownBTCBlocksReply>(Arena*);
+template<> ::VeriBlock::GetLastKnownBlocksRequest* Arena::CreateMaybeMessage<::VeriBlock::GetLastKnownBlocksRequest>(Arena*);
+template<> ::VeriBlock::GetLastKnownVBKBlocksReply* Arena::CreateMaybeMessage<::VeriBlock::GetLastKnownVBKBlocksReply>(Arena*);
 template<> ::VeriBlock::GetMainVBKHeightOfATVReply* Arena::CreateMaybeMessage<::VeriBlock::GetMainVBKHeightOfATVReply>(Arena*);
 template<> ::VeriBlock::MerklePath* Arena::CreateMaybeMessage<::VeriBlock::MerklePath>(Arena*);
+template<> ::VeriBlock::MerklePathReply* Arena::CreateMaybeMessage<::VeriBlock::MerklePathReply>(Arena*);
 template<> ::VeriBlock::MerklePathRequest* Arena::CreateMaybeMessage<::VeriBlock::MerklePathRequest>(Arena*);
 template<> ::VeriBlock::NetworkByte* Arena::CreateMaybeMessage<::VeriBlock::NetworkByte>(Arena*);
 template<> ::VeriBlock::Output* Arena::CreateMaybeMessage<::VeriBlock::Output>(Arena*);
+template<> ::VeriBlock::OutputReply* Arena::CreateMaybeMessage<::VeriBlock::OutputReply>(Arena*);
 template<> ::VeriBlock::PopEndorsement* Arena::CreateMaybeMessage<::VeriBlock::PopEndorsement>(Arena*);
 template<> ::VeriBlock::PublicationData* Arena::CreateMaybeMessage<::VeriBlock::PublicationData>(Arena*);
+template<> ::VeriBlock::PublicationDataReply* Arena::CreateMaybeMessage<::VeriBlock::PublicationDataReply>(Arena*);
 template<> ::VeriBlock::RelativeScoreConfig* Arena::CreateMaybeMessage<::VeriBlock::RelativeScoreConfig>(Arena*);
 template<> ::VeriBlock::RemovePayloadsRequest* Arena::CreateMaybeMessage<::VeriBlock::RemovePayloadsRequest>(Arena*);
 template<> ::VeriBlock::RewardCurveConfig* Arena::CreateMaybeMessage<::VeriBlock::RewardCurveConfig>(Arena*);
@@ -213,11 +287,17 @@ template<> ::VeriBlock::RoundRatioConfig* Arena::CreateMaybeMessage<::VeriBlock:
 template<> ::VeriBlock::SetCalculatorRequest* Arena::CreateMaybeMessage<::VeriBlock::SetCalculatorRequest>(Arena*);
 template<> ::VeriBlock::SimplifyVTBsReply* Arena::CreateMaybeMessage<::VeriBlock::SimplifyVTBsReply>(Arena*);
 template<> ::VeriBlock::SimplifyVTBsRequest* Arena::CreateMaybeMessage<::VeriBlock::SimplifyVTBsRequest>(Arena*);
+template<> ::VeriBlock::TwoBranchesRequest* Arena::CreateMaybeMessage<::VeriBlock::TwoBranchesRequest>(Arena*);
 template<> ::VeriBlock::VeriBlockBlock* Arena::CreateMaybeMessage<::VeriBlock::VeriBlockBlock>(Arena*);
+template<> ::VeriBlock::VeriBlockBlockReply* Arena::CreateMaybeMessage<::VeriBlock::VeriBlockBlockReply>(Arena*);
 template<> ::VeriBlock::VeriBlockMerklePath* Arena::CreateMaybeMessage<::VeriBlock::VeriBlockMerklePath>(Arena*);
+template<> ::VeriBlock::VeriBlockMerklePathReply* Arena::CreateMaybeMessage<::VeriBlock::VeriBlockMerklePathReply>(Arena*);
 template<> ::VeriBlock::VeriBlockPoPTransaction* Arena::CreateMaybeMessage<::VeriBlock::VeriBlockPoPTransaction>(Arena*);
+template<> ::VeriBlock::VeriBlockPoPTransactionReply* Arena::CreateMaybeMessage<::VeriBlock::VeriBlockPoPTransactionReply>(Arena*);
 template<> ::VeriBlock::VeriBlockPublication* Arena::CreateMaybeMessage<::VeriBlock::VeriBlockPublication>(Arena*);
+template<> ::VeriBlock::VeriBlockPublicationReply* Arena::CreateMaybeMessage<::VeriBlock::VeriBlockPublicationReply>(Arena*);
 template<> ::VeriBlock::VeriBlockTransaction* Arena::CreateMaybeMessage<::VeriBlock::VeriBlockTransaction>(Arena*);
+template<> ::VeriBlock::VeriBlockTransactionReply* Arena::CreateMaybeMessage<::VeriBlock::VeriBlockTransactionReply>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace VeriBlock {
 
@@ -3570,6 +3650,574 @@ class RemovePayloadsRequest :
 };
 // -------------------------------------------------------------------
 
+class AltChainConfigRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.AltChainConfigRequest) */ {
+ public:
+  AltChainConfigRequest();
+  virtual ~AltChainConfigRequest();
+
+  AltChainConfigRequest(const AltChainConfigRequest& from);
+  AltChainConfigRequest(AltChainConfigRequest&& from) noexcept
+    : AltChainConfigRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline AltChainConfigRequest& operator=(const AltChainConfigRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AltChainConfigRequest& operator=(AltChainConfigRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AltChainConfigRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AltChainConfigRequest* internal_default_instance() {
+    return reinterpret_cast<const AltChainConfigRequest*>(
+               &_AltChainConfigRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    21;
+
+  friend void swap(AltChainConfigRequest& a, AltChainConfigRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AltChainConfigRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AltChainConfigRequest* New() const final {
+    return CreateMaybeMessage<AltChainConfigRequest>(nullptr);
+  }
+
+  AltChainConfigRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AltChainConfigRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AltChainConfigRequest& from);
+  void MergeFrom(const AltChainConfigRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AltChainConfigRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.AltChainConfigRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kKeystoneIntervalFieldNumber = 1,
+  };
+  // int32 keystoneInterval = 1;
+  void clear_keystoneinterval();
+  ::PROTOBUF_NAMESPACE_ID::int32 keystoneinterval() const;
+  void set_keystoneinterval(::PROTOBUF_NAMESPACE_ID::int32 value);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.AltChainConfigRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::int32 keystoneinterval_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetLastKnownBlocksRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.GetLastKnownBlocksRequest) */ {
+ public:
+  GetLastKnownBlocksRequest();
+  virtual ~GetLastKnownBlocksRequest();
+
+  GetLastKnownBlocksRequest(const GetLastKnownBlocksRequest& from);
+  GetLastKnownBlocksRequest(GetLastKnownBlocksRequest&& from) noexcept
+    : GetLastKnownBlocksRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline GetLastKnownBlocksRequest& operator=(const GetLastKnownBlocksRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetLastKnownBlocksRequest& operator=(GetLastKnownBlocksRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const GetLastKnownBlocksRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetLastKnownBlocksRequest* internal_default_instance() {
+    return reinterpret_cast<const GetLastKnownBlocksRequest*>(
+               &_GetLastKnownBlocksRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    22;
+
+  friend void swap(GetLastKnownBlocksRequest& a, GetLastKnownBlocksRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetLastKnownBlocksRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetLastKnownBlocksRequest* New() const final {
+    return CreateMaybeMessage<GetLastKnownBlocksRequest>(nullptr);
+  }
+
+  GetLastKnownBlocksRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<GetLastKnownBlocksRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const GetLastKnownBlocksRequest& from);
+  void MergeFrom(const GetLastKnownBlocksRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetLastKnownBlocksRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.GetLastKnownBlocksRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMaxBlockCountFieldNumber = 1,
+  };
+  // int32 maxBlockCount = 1;
+  void clear_maxblockcount();
+  ::PROTOBUF_NAMESPACE_ID::int32 maxblockcount() const;
+  void set_maxblockcount(::PROTOBUF_NAMESPACE_ID::int32 value);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.GetLastKnownBlocksRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::int32 maxblockcount_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetLastKnownVBKBlocksReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.GetLastKnownVBKBlocksReply) */ {
+ public:
+  GetLastKnownVBKBlocksReply();
+  virtual ~GetLastKnownVBKBlocksReply();
+
+  GetLastKnownVBKBlocksReply(const GetLastKnownVBKBlocksReply& from);
+  GetLastKnownVBKBlocksReply(GetLastKnownVBKBlocksReply&& from) noexcept
+    : GetLastKnownVBKBlocksReply() {
+    *this = ::std::move(from);
+  }
+
+  inline GetLastKnownVBKBlocksReply& operator=(const GetLastKnownVBKBlocksReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetLastKnownVBKBlocksReply& operator=(GetLastKnownVBKBlocksReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const GetLastKnownVBKBlocksReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetLastKnownVBKBlocksReply* internal_default_instance() {
+    return reinterpret_cast<const GetLastKnownVBKBlocksReply*>(
+               &_GetLastKnownVBKBlocksReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    23;
+
+  friend void swap(GetLastKnownVBKBlocksReply& a, GetLastKnownVBKBlocksReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetLastKnownVBKBlocksReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetLastKnownVBKBlocksReply* New() const final {
+    return CreateMaybeMessage<GetLastKnownVBKBlocksReply>(nullptr);
+  }
+
+  GetLastKnownVBKBlocksReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<GetLastKnownVBKBlocksReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const GetLastKnownVBKBlocksReply& from);
+  void MergeFrom(const GetLastKnownVBKBlocksReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetLastKnownVBKBlocksReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.GetLastKnownVBKBlocksReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBlocksFieldNumber = 2,
+    kResultFieldNumber = 1,
+  };
+  // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+  int blocks_size() const;
+  void clear_blocks();
+  const std::string& blocks(int index) const;
+  std::string* mutable_blocks(int index);
+  void set_blocks(int index, const std::string& value);
+  void set_blocks(int index, std::string&& value);
+  void set_blocks(int index, const char* value);
+  void set_blocks(int index, const void* value, size_t size);
+  std::string* add_blocks();
+  void add_blocks(const std::string& value);
+  void add_blocks(std::string&& value);
+  void add_blocks(const char* value);
+  void add_blocks(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& blocks() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_blocks();
+
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.GetLastKnownVBKBlocksReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> blocks_;
+  ::VeriBlock::GeneralReply* result_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetLastKnownBTCBlocksReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.GetLastKnownBTCBlocksReply) */ {
+ public:
+  GetLastKnownBTCBlocksReply();
+  virtual ~GetLastKnownBTCBlocksReply();
+
+  GetLastKnownBTCBlocksReply(const GetLastKnownBTCBlocksReply& from);
+  GetLastKnownBTCBlocksReply(GetLastKnownBTCBlocksReply&& from) noexcept
+    : GetLastKnownBTCBlocksReply() {
+    *this = ::std::move(from);
+  }
+
+  inline GetLastKnownBTCBlocksReply& operator=(const GetLastKnownBTCBlocksReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetLastKnownBTCBlocksReply& operator=(GetLastKnownBTCBlocksReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const GetLastKnownBTCBlocksReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetLastKnownBTCBlocksReply* internal_default_instance() {
+    return reinterpret_cast<const GetLastKnownBTCBlocksReply*>(
+               &_GetLastKnownBTCBlocksReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    24;
+
+  friend void swap(GetLastKnownBTCBlocksReply& a, GetLastKnownBTCBlocksReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetLastKnownBTCBlocksReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetLastKnownBTCBlocksReply* New() const final {
+    return CreateMaybeMessage<GetLastKnownBTCBlocksReply>(nullptr);
+  }
+
+  GetLastKnownBTCBlocksReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<GetLastKnownBTCBlocksReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const GetLastKnownBTCBlocksReply& from);
+  void MergeFrom(const GetLastKnownBTCBlocksReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetLastKnownBTCBlocksReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.GetLastKnownBTCBlocksReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBlocksFieldNumber = 2,
+    kResultFieldNumber = 1,
+  };
+  // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+  int blocks_size() const;
+  void clear_blocks();
+  const std::string& blocks(int index) const;
+  std::string* mutable_blocks(int index);
+  void set_blocks(int index, const std::string& value);
+  void set_blocks(int index, std::string&& value);
+  void set_blocks(int index, const char* value);
+  void set_blocks(int index, const void* value, size_t size);
+  std::string* add_blocks();
+  void add_blocks(const std::string& value);
+  void add_blocks(std::string&& value);
+  void add_blocks(const char* value);
+  void add_blocks(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& blocks() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_blocks();
+
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.GetLastKnownBTCBlocksReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> blocks_;
+  ::VeriBlock::GeneralReply* result_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
 class RoundRatioConfig :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.RoundRatioConfig) */ {
  public:
@@ -3612,7 +4260,7 @@ class RoundRatioConfig :
                &_RoundRatioConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    25;
 
   friend void swap(RoundRatioConfig& a, RoundRatioConfig& b) {
     a.Swap(&b);
@@ -3755,7 +4403,7 @@ class RewardCurveConfig :
                &_RewardCurveConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    26;
 
   friend void swap(RewardCurveConfig& a, RewardCurveConfig& b) {
     a.Swap(&b);
@@ -3944,7 +4592,7 @@ class RelativeScoreConfig :
                &_RelativeScoreConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    27;
 
   friend void swap(RelativeScoreConfig& a, RelativeScoreConfig& b) {
     a.Swap(&b);
@@ -4087,7 +4735,7 @@ class FlatScoreRoundConfig :
                &_FlatScoreRoundConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    28;
 
   friend void swap(FlatScoreRoundConfig& a, FlatScoreRoundConfig& b) {
     a.Swap(&b);
@@ -4225,7 +4873,7 @@ class CalculatorConfig :
                &_CalculatorConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    29;
 
   friend void swap(CalculatorConfig& a, CalculatorConfig& b) {
     a.Swap(&b);
@@ -4305,7 +4953,6 @@ class CalculatorConfig :
     kFlatScoreRoundFieldNumber = 10,
     kPayoutRoundsFieldNumber = 2,
     kKeystoneRoundFieldNumber = 3,
-    kKeystoneIntervalFieldNumber = 4,
   };
   // string basicReward = 1;
   void clear_basicreward();
@@ -4382,11 +5029,6 @@ class CalculatorConfig :
   ::PROTOBUF_NAMESPACE_ID::int32 keystoneround() const;
   void set_keystoneround(::PROTOBUF_NAMESPACE_ID::int32 value);
 
-  // int32 keystoneInterval = 4;
-  void clear_keystoneinterval();
-  ::PROTOBUF_NAMESPACE_ID::int32 keystoneinterval() const;
-  void set_keystoneinterval(::PROTOBUF_NAMESPACE_ID::int32 value);
-
   // @@protoc_insertion_point(class_scope:VeriBlock.CalculatorConfig)
  private:
   class _Internal;
@@ -4401,7 +5043,6 @@ class CalculatorConfig :
   ::VeriBlock::FlatScoreRoundConfig* flatscoreround_;
   ::PROTOBUF_NAMESPACE_ID::int32 payoutrounds_;
   ::PROTOBUF_NAMESPACE_ID::int32 keystoneround_;
-  ::PROTOBUF_NAMESPACE_ID::int32 keystoneinterval_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_integration_2eproto;
 };
@@ -4449,7 +5090,7 @@ class SetCalculatorRequest :
                &_SetCalculatorRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    30;
 
   friend void swap(SetCalculatorRequest& a, SetCalculatorRequest& b) {
     a.Swap(&b);
@@ -4583,7 +5224,7 @@ class GetCalculatorReply :
                &_GetCalculatorReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    31;
 
   friend void swap(GetCalculatorReply& a, GetCalculatorReply& b) {
     a.Swap(&b);
@@ -4727,7 +5368,7 @@ class RewardOutput :
                &_RewardOutput_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    32;
 
   friend void swap(RewardOutput& a, RewardOutput& b) {
     a.Swap(&b);
@@ -4877,7 +5518,7 @@ class PopEndorsement :
                &_PopEndorsement_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    33;
 
   friend void swap(PopEndorsement& a, PopEndorsement& b) {
     a.Swap(&b);
@@ -5027,7 +5668,7 @@ class RewardEndorsement :
                &_RewardEndorsement_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    34;
 
   friend void swap(RewardEndorsement& a, RewardEndorsement& b) {
     a.Swap(&b);
@@ -5171,7 +5812,7 @@ class RewardsCalculateScoreRequest :
                &_RewardsCalculateScoreRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    35;
 
   friend void swap(RewardsCalculateScoreRequest& a, RewardsCalculateScoreRequest& b) {
     a.Swap(&b);
@@ -5308,7 +5949,7 @@ class RewardsCalculateScoreReply :
                &_RewardsCalculateScoreReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    36;
 
   friend void swap(RewardsCalculateScoreReply& a, RewardsCalculateScoreReply& b) {
     a.Swap(&b);
@@ -5455,7 +6096,7 @@ class RewardsCalculateOutputsRequest :
                &_RewardsCalculateOutputsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    33;
+    37;
 
   friend void swap(RewardsCalculateOutputsRequest& a, RewardsCalculateOutputsRequest& b) {
     a.Swap(&b);
@@ -5612,7 +6253,7 @@ class RewardsCalculateOutputsReply :
                &_RewardsCalculateOutputsReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    34;
+    38;
 
   friend void swap(RewardsCalculateOutputsReply& a, RewardsCalculateOutputsReply& b) {
     a.Swap(&b);
@@ -5785,7 +6426,7 @@ class BytesArrayRequest :
                &_BytesArrayRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    39;
 
   friend void swap(BytesArrayRequest& a, BytesArrayRequest& b) {
     a.Swap(&b);
@@ -5922,7 +6563,7 @@ class BytesArrayReply :
                &_BytesArrayReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    36;
+    40;
 
   friend void swap(BytesArrayReply& a, BytesArrayReply& b) {
     a.Swap(&b);
@@ -5993,9 +6634,10 @@ class BytesArrayReply :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kDataFieldNumber = 2,
+    kResultFieldNumber = 1,
   };
-  // bytes data = 1;
+  // bytes data = 2;
   void clear_data();
   const std::string& data() const;
   void set_data(const std::string& value);
@@ -6006,12 +6648,21 @@ class BytesArrayReply :
   std::string* release_data();
   void set_allocated_data(std::string* data);
 
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
   // @@protoc_insertion_point(class_scope:VeriBlock.BytesArrayReply)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+  ::VeriBlock::GeneralReply* result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_integration_2eproto;
 };
@@ -6059,7 +6710,7 @@ class MerklePath :
                &_MerklePath_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    41;
 
   friend void swap(MerklePath& a, MerklePath& b) {
     a.Swap(&b);
@@ -6196,7 +6847,7 @@ class MerklePathRequest :
                &_MerklePathRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    42;
 
   friend void swap(MerklePathRequest& a, MerklePathRequest& b) {
     a.Swap(&b);
@@ -6346,7 +6997,7 @@ class VeriBlockMerklePath :
                &_VeriBlockMerklePath_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    43;
 
   friend void swap(VeriBlockMerklePath& a, VeriBlockMerklePath& b) {
     a.Swap(&b);
@@ -6436,6 +7087,2304 @@ class VeriBlockMerklePath :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr merklepath_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AltPublicationReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.AltPublicationReply) */ {
+ public:
+  AltPublicationReply();
+  virtual ~AltPublicationReply();
+
+  AltPublicationReply(const AltPublicationReply& from);
+  AltPublicationReply(AltPublicationReply&& from) noexcept
+    : AltPublicationReply() {
+    *this = ::std::move(from);
+  }
+
+  inline AltPublicationReply& operator=(const AltPublicationReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AltPublicationReply& operator=(AltPublicationReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AltPublicationReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AltPublicationReply* internal_default_instance() {
+    return reinterpret_cast<const AltPublicationReply*>(
+               &_AltPublicationReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    44;
+
+  friend void swap(AltPublicationReply& a, AltPublicationReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AltPublicationReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AltPublicationReply* New() const final {
+    return CreateMaybeMessage<AltPublicationReply>(nullptr);
+  }
+
+  AltPublicationReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AltPublicationReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AltPublicationReply& from);
+  void MergeFrom(const AltPublicationReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AltPublicationReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.AltPublicationReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kPublicationFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.AltPublication publication = 2;
+  bool has_publication() const;
+  void clear_publication();
+  const ::VeriBlock::AltPublication& publication() const;
+  ::VeriBlock::AltPublication* release_publication();
+  ::VeriBlock::AltPublication* mutable_publication();
+  void set_allocated_publication(::VeriBlock::AltPublication* publication);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.AltPublicationReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::AltPublication* publication_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class PublicationDataReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.PublicationDataReply) */ {
+ public:
+  PublicationDataReply();
+  virtual ~PublicationDataReply();
+
+  PublicationDataReply(const PublicationDataReply& from);
+  PublicationDataReply(PublicationDataReply&& from) noexcept
+    : PublicationDataReply() {
+    *this = ::std::move(from);
+  }
+
+  inline PublicationDataReply& operator=(const PublicationDataReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PublicationDataReply& operator=(PublicationDataReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const PublicationDataReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PublicationDataReply* internal_default_instance() {
+    return reinterpret_cast<const PublicationDataReply*>(
+               &_PublicationDataReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    45;
+
+  friend void swap(PublicationDataReply& a, PublicationDataReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PublicationDataReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline PublicationDataReply* New() const final {
+    return CreateMaybeMessage<PublicationDataReply>(nullptr);
+  }
+
+  PublicationDataReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<PublicationDataReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const PublicationDataReply& from);
+  void MergeFrom(const PublicationDataReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PublicationDataReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.PublicationDataReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kPublicationFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.PublicationData publication = 2;
+  bool has_publication() const;
+  void clear_publication();
+  const ::VeriBlock::PublicationData& publication() const;
+  ::VeriBlock::PublicationData* release_publication();
+  ::VeriBlock::PublicationData* mutable_publication();
+  void set_allocated_publication(::VeriBlock::PublicationData* publication);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.PublicationDataReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::PublicationData* publication_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class BitcoinTransactionReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.BitcoinTransactionReply) */ {
+ public:
+  BitcoinTransactionReply();
+  virtual ~BitcoinTransactionReply();
+
+  BitcoinTransactionReply(const BitcoinTransactionReply& from);
+  BitcoinTransactionReply(BitcoinTransactionReply&& from) noexcept
+    : BitcoinTransactionReply() {
+    *this = ::std::move(from);
+  }
+
+  inline BitcoinTransactionReply& operator=(const BitcoinTransactionReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline BitcoinTransactionReply& operator=(BitcoinTransactionReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const BitcoinTransactionReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const BitcoinTransactionReply* internal_default_instance() {
+    return reinterpret_cast<const BitcoinTransactionReply*>(
+               &_BitcoinTransactionReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    46;
+
+  friend void swap(BitcoinTransactionReply& a, BitcoinTransactionReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(BitcoinTransactionReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline BitcoinTransactionReply* New() const final {
+    return CreateMaybeMessage<BitcoinTransactionReply>(nullptr);
+  }
+
+  BitcoinTransactionReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<BitcoinTransactionReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const BitcoinTransactionReply& from);
+  void MergeFrom(const BitcoinTransactionReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(BitcoinTransactionReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.BitcoinTransactionReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kTransactionFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.BitcoinTransaction transaction = 2;
+  bool has_transaction() const;
+  void clear_transaction();
+  const ::VeriBlock::BitcoinTransaction& transaction() const;
+  ::VeriBlock::BitcoinTransaction* release_transaction();
+  ::VeriBlock::BitcoinTransaction* mutable_transaction();
+  void set_allocated_transaction(::VeriBlock::BitcoinTransaction* transaction);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.BitcoinTransactionReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::BitcoinTransaction* transaction_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class VeriBlockBlockReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.VeriBlockBlockReply) */ {
+ public:
+  VeriBlockBlockReply();
+  virtual ~VeriBlockBlockReply();
+
+  VeriBlockBlockReply(const VeriBlockBlockReply& from);
+  VeriBlockBlockReply(VeriBlockBlockReply&& from) noexcept
+    : VeriBlockBlockReply() {
+    *this = ::std::move(from);
+  }
+
+  inline VeriBlockBlockReply& operator=(const VeriBlockBlockReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline VeriBlockBlockReply& operator=(VeriBlockBlockReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const VeriBlockBlockReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const VeriBlockBlockReply* internal_default_instance() {
+    return reinterpret_cast<const VeriBlockBlockReply*>(
+               &_VeriBlockBlockReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    47;
+
+  friend void swap(VeriBlockBlockReply& a, VeriBlockBlockReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(VeriBlockBlockReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline VeriBlockBlockReply* New() const final {
+    return CreateMaybeMessage<VeriBlockBlockReply>(nullptr);
+  }
+
+  VeriBlockBlockReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<VeriBlockBlockReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const VeriBlockBlockReply& from);
+  void MergeFrom(const VeriBlockBlockReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(VeriBlockBlockReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.VeriBlockBlockReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kBlockFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.VeriBlockBlock block = 2;
+  bool has_block() const;
+  void clear_block();
+  const ::VeriBlock::VeriBlockBlock& block() const;
+  ::VeriBlock::VeriBlockBlock* release_block();
+  ::VeriBlock::VeriBlockBlock* mutable_block();
+  void set_allocated_block(::VeriBlock::VeriBlockBlock* block);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.VeriBlockBlockReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::VeriBlockBlock* block_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class VeriBlockTransactionReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.VeriBlockTransactionReply) */ {
+ public:
+  VeriBlockTransactionReply();
+  virtual ~VeriBlockTransactionReply();
+
+  VeriBlockTransactionReply(const VeriBlockTransactionReply& from);
+  VeriBlockTransactionReply(VeriBlockTransactionReply&& from) noexcept
+    : VeriBlockTransactionReply() {
+    *this = ::std::move(from);
+  }
+
+  inline VeriBlockTransactionReply& operator=(const VeriBlockTransactionReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline VeriBlockTransactionReply& operator=(VeriBlockTransactionReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const VeriBlockTransactionReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const VeriBlockTransactionReply* internal_default_instance() {
+    return reinterpret_cast<const VeriBlockTransactionReply*>(
+               &_VeriBlockTransactionReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    48;
+
+  friend void swap(VeriBlockTransactionReply& a, VeriBlockTransactionReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(VeriBlockTransactionReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline VeriBlockTransactionReply* New() const final {
+    return CreateMaybeMessage<VeriBlockTransactionReply>(nullptr);
+  }
+
+  VeriBlockTransactionReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<VeriBlockTransactionReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const VeriBlockTransactionReply& from);
+  void MergeFrom(const VeriBlockTransactionReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(VeriBlockTransactionReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.VeriBlockTransactionReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kTransactionFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.VeriBlockTransaction transaction = 2;
+  bool has_transaction() const;
+  void clear_transaction();
+  const ::VeriBlock::VeriBlockTransaction& transaction() const;
+  ::VeriBlock::VeriBlockTransaction* release_transaction();
+  ::VeriBlock::VeriBlockTransaction* mutable_transaction();
+  void set_allocated_transaction(::VeriBlock::VeriBlockTransaction* transaction);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.VeriBlockTransactionReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::VeriBlockTransaction* transaction_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class VeriBlockPublicationReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.VeriBlockPublicationReply) */ {
+ public:
+  VeriBlockPublicationReply();
+  virtual ~VeriBlockPublicationReply();
+
+  VeriBlockPublicationReply(const VeriBlockPublicationReply& from);
+  VeriBlockPublicationReply(VeriBlockPublicationReply&& from) noexcept
+    : VeriBlockPublicationReply() {
+    *this = ::std::move(from);
+  }
+
+  inline VeriBlockPublicationReply& operator=(const VeriBlockPublicationReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline VeriBlockPublicationReply& operator=(VeriBlockPublicationReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const VeriBlockPublicationReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const VeriBlockPublicationReply* internal_default_instance() {
+    return reinterpret_cast<const VeriBlockPublicationReply*>(
+               &_VeriBlockPublicationReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    49;
+
+  friend void swap(VeriBlockPublicationReply& a, VeriBlockPublicationReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(VeriBlockPublicationReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline VeriBlockPublicationReply* New() const final {
+    return CreateMaybeMessage<VeriBlockPublicationReply>(nullptr);
+  }
+
+  VeriBlockPublicationReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<VeriBlockPublicationReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const VeriBlockPublicationReply& from);
+  void MergeFrom(const VeriBlockPublicationReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(VeriBlockPublicationReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.VeriBlockPublicationReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kPublicationFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.VeriBlockPublication publication = 2;
+  bool has_publication() const;
+  void clear_publication();
+  const ::VeriBlock::VeriBlockPublication& publication() const;
+  ::VeriBlock::VeriBlockPublication* release_publication();
+  ::VeriBlock::VeriBlockPublication* mutable_publication();
+  void set_allocated_publication(::VeriBlock::VeriBlockPublication* publication);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.VeriBlockPublicationReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::VeriBlockPublication* publication_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class VeriBlockPoPTransactionReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.VeriBlockPoPTransactionReply) */ {
+ public:
+  VeriBlockPoPTransactionReply();
+  virtual ~VeriBlockPoPTransactionReply();
+
+  VeriBlockPoPTransactionReply(const VeriBlockPoPTransactionReply& from);
+  VeriBlockPoPTransactionReply(VeriBlockPoPTransactionReply&& from) noexcept
+    : VeriBlockPoPTransactionReply() {
+    *this = ::std::move(from);
+  }
+
+  inline VeriBlockPoPTransactionReply& operator=(const VeriBlockPoPTransactionReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline VeriBlockPoPTransactionReply& operator=(VeriBlockPoPTransactionReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const VeriBlockPoPTransactionReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const VeriBlockPoPTransactionReply* internal_default_instance() {
+    return reinterpret_cast<const VeriBlockPoPTransactionReply*>(
+               &_VeriBlockPoPTransactionReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    50;
+
+  friend void swap(VeriBlockPoPTransactionReply& a, VeriBlockPoPTransactionReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(VeriBlockPoPTransactionReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline VeriBlockPoPTransactionReply* New() const final {
+    return CreateMaybeMessage<VeriBlockPoPTransactionReply>(nullptr);
+  }
+
+  VeriBlockPoPTransactionReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<VeriBlockPoPTransactionReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const VeriBlockPoPTransactionReply& from);
+  void MergeFrom(const VeriBlockPoPTransactionReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(VeriBlockPoPTransactionReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.VeriBlockPoPTransactionReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kTransactionFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.VeriBlockPoPTransaction transaction = 2;
+  bool has_transaction() const;
+  void clear_transaction();
+  const ::VeriBlock::VeriBlockPoPTransaction& transaction() const;
+  ::VeriBlock::VeriBlockPoPTransaction* release_transaction();
+  ::VeriBlock::VeriBlockPoPTransaction* mutable_transaction();
+  void set_allocated_transaction(::VeriBlock::VeriBlockPoPTransaction* transaction);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.VeriBlockPoPTransactionReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::VeriBlockPoPTransaction* transaction_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class OutputReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.OutputReply) */ {
+ public:
+  OutputReply();
+  virtual ~OutputReply();
+
+  OutputReply(const OutputReply& from);
+  OutputReply(OutputReply&& from) noexcept
+    : OutputReply() {
+    *this = ::std::move(from);
+  }
+
+  inline OutputReply& operator=(const OutputReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline OutputReply& operator=(OutputReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const OutputReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const OutputReply* internal_default_instance() {
+    return reinterpret_cast<const OutputReply*>(
+               &_OutputReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    51;
+
+  friend void swap(OutputReply& a, OutputReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(OutputReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline OutputReply* New() const final {
+    return CreateMaybeMessage<OutputReply>(nullptr);
+  }
+
+  OutputReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<OutputReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const OutputReply& from);
+  void MergeFrom(const OutputReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(OutputReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.OutputReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kOutputFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.Output output = 2;
+  bool has_output() const;
+  void clear_output();
+  const ::VeriBlock::Output& output() const;
+  ::VeriBlock::Output* release_output();
+  ::VeriBlock::Output* mutable_output();
+  void set_allocated_output(::VeriBlock::Output* output);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.OutputReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::Output* output_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AddressReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.AddressReply) */ {
+ public:
+  AddressReply();
+  virtual ~AddressReply();
+
+  AddressReply(const AddressReply& from);
+  AddressReply(AddressReply&& from) noexcept
+    : AddressReply() {
+    *this = ::std::move(from);
+  }
+
+  inline AddressReply& operator=(const AddressReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AddressReply& operator=(AddressReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AddressReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AddressReply* internal_default_instance() {
+    return reinterpret_cast<const AddressReply*>(
+               &_AddressReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    52;
+
+  friend void swap(AddressReply& a, AddressReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AddressReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AddressReply* New() const final {
+    return CreateMaybeMessage<AddressReply>(nullptr);
+  }
+
+  AddressReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AddressReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AddressReply& from);
+  void MergeFrom(const AddressReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AddressReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.AddressReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kAddressFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.Address address = 2;
+  bool has_address() const;
+  void clear_address();
+  const ::VeriBlock::Address& address() const;
+  ::VeriBlock::Address* release_address();
+  ::VeriBlock::Address* mutable_address();
+  void set_allocated_address(::VeriBlock::Address* address);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.AddressReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::Address* address_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class BitcoinBlockReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.BitcoinBlockReply) */ {
+ public:
+  BitcoinBlockReply();
+  virtual ~BitcoinBlockReply();
+
+  BitcoinBlockReply(const BitcoinBlockReply& from);
+  BitcoinBlockReply(BitcoinBlockReply&& from) noexcept
+    : BitcoinBlockReply() {
+    *this = ::std::move(from);
+  }
+
+  inline BitcoinBlockReply& operator=(const BitcoinBlockReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline BitcoinBlockReply& operator=(BitcoinBlockReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const BitcoinBlockReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const BitcoinBlockReply* internal_default_instance() {
+    return reinterpret_cast<const BitcoinBlockReply*>(
+               &_BitcoinBlockReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    53;
+
+  friend void swap(BitcoinBlockReply& a, BitcoinBlockReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(BitcoinBlockReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline BitcoinBlockReply* New() const final {
+    return CreateMaybeMessage<BitcoinBlockReply>(nullptr);
+  }
+
+  BitcoinBlockReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<BitcoinBlockReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const BitcoinBlockReply& from);
+  void MergeFrom(const BitcoinBlockReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(BitcoinBlockReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.BitcoinBlockReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kBlockFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.BitcoinBlock block = 2;
+  bool has_block() const;
+  void clear_block();
+  const ::VeriBlock::BitcoinBlock& block() const;
+  ::VeriBlock::BitcoinBlock* release_block();
+  ::VeriBlock::BitcoinBlock* mutable_block();
+  void set_allocated_block(::VeriBlock::BitcoinBlock* block);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.BitcoinBlockReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::BitcoinBlock* block_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class VeriBlockMerklePathReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.VeriBlockMerklePathReply) */ {
+ public:
+  VeriBlockMerklePathReply();
+  virtual ~VeriBlockMerklePathReply();
+
+  VeriBlockMerklePathReply(const VeriBlockMerklePathReply& from);
+  VeriBlockMerklePathReply(VeriBlockMerklePathReply&& from) noexcept
+    : VeriBlockMerklePathReply() {
+    *this = ::std::move(from);
+  }
+
+  inline VeriBlockMerklePathReply& operator=(const VeriBlockMerklePathReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline VeriBlockMerklePathReply& operator=(VeriBlockMerklePathReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const VeriBlockMerklePathReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const VeriBlockMerklePathReply* internal_default_instance() {
+    return reinterpret_cast<const VeriBlockMerklePathReply*>(
+               &_VeriBlockMerklePathReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    54;
+
+  friend void swap(VeriBlockMerklePathReply& a, VeriBlockMerklePathReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(VeriBlockMerklePathReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline VeriBlockMerklePathReply* New() const final {
+    return CreateMaybeMessage<VeriBlockMerklePathReply>(nullptr);
+  }
+
+  VeriBlockMerklePathReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<VeriBlockMerklePathReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const VeriBlockMerklePathReply& from);
+  void MergeFrom(const VeriBlockMerklePathReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(VeriBlockMerklePathReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.VeriBlockMerklePathReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kMerklePathFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.VeriBlockMerklePath merklePath = 2;
+  bool has_merklepath() const;
+  void clear_merklepath();
+  const ::VeriBlock::VeriBlockMerklePath& merklepath() const;
+  ::VeriBlock::VeriBlockMerklePath* release_merklepath();
+  ::VeriBlock::VeriBlockMerklePath* mutable_merklepath();
+  void set_allocated_merklepath(::VeriBlock::VeriBlockMerklePath* merklepath);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.VeriBlockMerklePathReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::VeriBlockMerklePath* merklepath_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class MerklePathReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.MerklePathReply) */ {
+ public:
+  MerklePathReply();
+  virtual ~MerklePathReply();
+
+  MerklePathReply(const MerklePathReply& from);
+  MerklePathReply(MerklePathReply&& from) noexcept
+    : MerklePathReply() {
+    *this = ::std::move(from);
+  }
+
+  inline MerklePathReply& operator=(const MerklePathReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline MerklePathReply& operator=(MerklePathReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const MerklePathReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const MerklePathReply* internal_default_instance() {
+    return reinterpret_cast<const MerklePathReply*>(
+               &_MerklePathReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    55;
+
+  friend void swap(MerklePathReply& a, MerklePathReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(MerklePathReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline MerklePathReply* New() const final {
+    return CreateMaybeMessage<MerklePathReply>(nullptr);
+  }
+
+  MerklePathReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<MerklePathReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const MerklePathReply& from);
+  void MergeFrom(const MerklePathReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(MerklePathReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.MerklePathReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kMerklePathFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // .VeriBlock.MerklePath merklePath = 2;
+  bool has_merklepath() const;
+  void clear_merklepath();
+  const ::VeriBlock::MerklePath& merklepath() const;
+  ::VeriBlock::MerklePath* release_merklepath();
+  ::VeriBlock::MerklePath* mutable_merklepath();
+  void set_allocated_merklepath(::VeriBlock::MerklePath* merklepath);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.MerklePathReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::VeriBlock::MerklePath* merklepath_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AltChainBlock :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.AltChainBlock) */ {
+ public:
+  AltChainBlock();
+  virtual ~AltChainBlock();
+
+  AltChainBlock(const AltChainBlock& from);
+  AltChainBlock(AltChainBlock&& from) noexcept
+    : AltChainBlock() {
+    *this = ::std::move(from);
+  }
+
+  inline AltChainBlock& operator=(const AltChainBlock& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AltChainBlock& operator=(AltChainBlock&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AltChainBlock& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AltChainBlock* internal_default_instance() {
+    return reinterpret_cast<const AltChainBlock*>(
+               &_AltChainBlock_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    56;
+
+  friend void swap(AltChainBlock& a, AltChainBlock& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AltChainBlock* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AltChainBlock* New() const final {
+    return CreateMaybeMessage<AltChainBlock>(nullptr);
+  }
+
+  AltChainBlock* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AltChainBlock>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AltChainBlock& from);
+  void MergeFrom(const AltChainBlock& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AltChainBlock* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.AltChainBlock";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBlockIndexFieldNumber = 1,
+    kTimestampFieldNumber = 2,
+  };
+  // .VeriBlock.BlockIndex blockIndex = 1;
+  bool has_blockindex() const;
+  void clear_blockindex();
+  const ::VeriBlock::BlockIndex& blockindex() const;
+  ::VeriBlock::BlockIndex* release_blockindex();
+  ::VeriBlock::BlockIndex* mutable_blockindex();
+  void set_allocated_blockindex(::VeriBlock::BlockIndex* blockindex);
+
+  // int32 timestamp = 2;
+  void clear_timestamp();
+  ::PROTOBUF_NAMESPACE_ID::int32 timestamp() const;
+  void set_timestamp(::PROTOBUF_NAMESPACE_ID::int32 value);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.AltChainBlock)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::BlockIndex* blockindex_;
+  ::PROTOBUF_NAMESPACE_ID::int32 timestamp_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class TwoBranchesRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.TwoBranchesRequest) */ {
+ public:
+  TwoBranchesRequest();
+  virtual ~TwoBranchesRequest();
+
+  TwoBranchesRequest(const TwoBranchesRequest& from);
+  TwoBranchesRequest(TwoBranchesRequest&& from) noexcept
+    : TwoBranchesRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline TwoBranchesRequest& operator=(const TwoBranchesRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TwoBranchesRequest& operator=(TwoBranchesRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const TwoBranchesRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TwoBranchesRequest* internal_default_instance() {
+    return reinterpret_cast<const TwoBranchesRequest*>(
+               &_TwoBranchesRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    57;
+
+  friend void swap(TwoBranchesRequest& a, TwoBranchesRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(TwoBranchesRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TwoBranchesRequest* New() const final {
+    return CreateMaybeMessage<TwoBranchesRequest>(nullptr);
+  }
+
+  TwoBranchesRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TwoBranchesRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const TwoBranchesRequest& from);
+  void MergeFrom(const TwoBranchesRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TwoBranchesRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.TwoBranchesRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kLeftForkFieldNumber = 1,
+    kRightForkFieldNumber = 2,
+  };
+  // repeated .VeriBlock.AltChainBlock leftFork = 1;
+  int leftfork_size() const;
+  void clear_leftfork();
+  ::VeriBlock::AltChainBlock* mutable_leftfork(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >*
+      mutable_leftfork();
+  const ::VeriBlock::AltChainBlock& leftfork(int index) const;
+  ::VeriBlock::AltChainBlock* add_leftfork();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >&
+      leftfork() const;
+
+  // repeated .VeriBlock.AltChainBlock rightFork = 2;
+  int rightfork_size() const;
+  void clear_rightfork();
+  ::VeriBlock::AltChainBlock* mutable_rightfork(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >*
+      mutable_rightfork();
+  const ::VeriBlock::AltChainBlock& rightfork(int index) const;
+  ::VeriBlock::AltChainBlock* add_rightfork();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >&
+      rightfork() const;
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.TwoBranchesRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock > leftfork_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock > rightfork_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CompareReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.CompareReply) */ {
+ public:
+  CompareReply();
+  virtual ~CompareReply();
+
+  CompareReply(const CompareReply& from);
+  CompareReply(CompareReply&& from) noexcept
+    : CompareReply() {
+    *this = ::std::move(from);
+  }
+
+  inline CompareReply& operator=(const CompareReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CompareReply& operator=(CompareReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const CompareReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CompareReply* internal_default_instance() {
+    return reinterpret_cast<const CompareReply*>(
+               &_CompareReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    58;
+
+  friend void swap(CompareReply& a, CompareReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CompareReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CompareReply* New() const final {
+    return CreateMaybeMessage<CompareReply>(nullptr);
+  }
+
+  CompareReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CompareReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const CompareReply& from);
+  void MergeFrom(const CompareReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CompareReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.CompareReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+    kComparingsResultFieldNumber = 2,
+  };
+  // .VeriBlock.GeneralReply result = 1;
+  bool has_result() const;
+  void clear_result();
+  const ::VeriBlock::GeneralReply& result() const;
+  ::VeriBlock::GeneralReply* release_result();
+  ::VeriBlock::GeneralReply* mutable_result();
+  void set_allocated_result(::VeriBlock::GeneralReply* result);
+
+  // int32 comparingsResult = 2;
+  void clear_comparingsresult();
+  ::PROTOBUF_NAMESPACE_ID::int32 comparingsresult() const;
+  void set_comparingsresult(::PROTOBUF_NAMESPACE_ID::int32 value);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.CompareReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::GeneralReply* result_;
+  ::PROTOBUF_NAMESPACE_ID::int32 comparingsresult_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ForkresolutionConfigRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.ForkresolutionConfigRequest) */ {
+ public:
+  ForkresolutionConfigRequest();
+  virtual ~ForkresolutionConfigRequest();
+
+  ForkresolutionConfigRequest(const ForkresolutionConfigRequest& from);
+  ForkresolutionConfigRequest(ForkresolutionConfigRequest&& from) noexcept
+    : ForkresolutionConfigRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline ForkresolutionConfigRequest& operator=(const ForkresolutionConfigRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ForkresolutionConfigRequest& operator=(ForkresolutionConfigRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ForkresolutionConfigRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ForkresolutionConfigRequest* internal_default_instance() {
+    return reinterpret_cast<const ForkresolutionConfigRequest*>(
+               &_ForkresolutionConfigRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    59;
+
+  friend void swap(ForkresolutionConfigRequest& a, ForkresolutionConfigRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ForkresolutionConfigRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ForkresolutionConfigRequest* New() const final {
+    return CreateMaybeMessage<ForkresolutionConfigRequest>(nullptr);
+  }
+
+  ForkresolutionConfigRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ForkresolutionConfigRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ForkresolutionConfigRequest& from);
+  void MergeFrom(const ForkresolutionConfigRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ForkresolutionConfigRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.ForkresolutionConfigRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kKeystoneFinalityDelayFieldNumber = 1,
+    kAmnestyPeriodFieldNumber = 2,
+  };
+  // int32 keystoneFinalityDelay = 1;
+  void clear_keystonefinalitydelay();
+  ::PROTOBUF_NAMESPACE_ID::int32 keystonefinalitydelay() const;
+  void set_keystonefinalitydelay(::PROTOBUF_NAMESPACE_ID::int32 value);
+
+  // int32 amnestyPeriod = 2;
+  void clear_amnestyperiod();
+  ::PROTOBUF_NAMESPACE_ID::int32 amnestyperiod() const;
+  void set_amnestyperiod(::PROTOBUF_NAMESPACE_ID::int32 value);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.ForkresolutionConfigRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::int32 keystonefinalitydelay_;
+  ::PROTOBUF_NAMESPACE_ID::int32 amnestyperiod_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_integration_2eproto;
 };
@@ -9242,6 +12191,282 @@ inline void RemovePayloadsRequest::set_allocated_blockindex(::VeriBlock::BlockIn
 
 // -------------------------------------------------------------------
 
+// AltChainConfigRequest
+
+// int32 keystoneInterval = 1;
+inline void AltChainConfigRequest::clear_keystoneinterval() {
+  keystoneinterval_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AltChainConfigRequest::keystoneinterval() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.AltChainConfigRequest.keystoneInterval)
+  return keystoneinterval_;
+}
+inline void AltChainConfigRequest::set_keystoneinterval(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  keystoneinterval_ = value;
+  // @@protoc_insertion_point(field_set:VeriBlock.AltChainConfigRequest.keystoneInterval)
+}
+
+// -------------------------------------------------------------------
+
+// GetLastKnownBlocksRequest
+
+// int32 maxBlockCount = 1;
+inline void GetLastKnownBlocksRequest::clear_maxblockcount() {
+  maxblockcount_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 GetLastKnownBlocksRequest::maxblockcount() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.GetLastKnownBlocksRequest.maxBlockCount)
+  return maxblockcount_;
+}
+inline void GetLastKnownBlocksRequest::set_maxblockcount(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  maxblockcount_ = value;
+  // @@protoc_insertion_point(field_set:VeriBlock.GetLastKnownBlocksRequest.maxBlockCount)
+}
+
+// -------------------------------------------------------------------
+
+// GetLastKnownVBKBlocksReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool GetLastKnownVBKBlocksReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void GetLastKnownVBKBlocksReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& GetLastKnownVBKBlocksReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.GetLastKnownVBKBlocksReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* GetLastKnownVBKBlocksReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.GetLastKnownVBKBlocksReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* GetLastKnownVBKBlocksReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.GetLastKnownVBKBlocksReply.result)
+  return result_;
+}
+inline void GetLastKnownVBKBlocksReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.GetLastKnownVBKBlocksReply.result)
+}
+
+// repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+inline int GetLastKnownVBKBlocksReply::blocks_size() const {
+  return blocks_.size();
+}
+inline void GetLastKnownVBKBlocksReply::clear_blocks() {
+  blocks_.Clear();
+}
+inline const std::string& GetLastKnownVBKBlocksReply::blocks(int index) const {
+  // @@protoc_insertion_point(field_get:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+  return blocks_.Get(index);
+}
+inline std::string* GetLastKnownVBKBlocksReply::mutable_blocks(int index) {
+  // @@protoc_insertion_point(field_mutable:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+  return blocks_.Mutable(index);
+}
+inline void GetLastKnownVBKBlocksReply::set_blocks(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+  blocks_.Mutable(index)->assign(value);
+}
+inline void GetLastKnownVBKBlocksReply::set_blocks(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+  blocks_.Mutable(index)->assign(std::move(value));
+}
+inline void GetLastKnownVBKBlocksReply::set_blocks(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  blocks_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+}
+inline void GetLastKnownVBKBlocksReply::set_blocks(int index, const void* value, size_t size) {
+  blocks_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+}
+inline std::string* GetLastKnownVBKBlocksReply::add_blocks() {
+  // @@protoc_insertion_point(field_add_mutable:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+  return blocks_.Add();
+}
+inline void GetLastKnownVBKBlocksReply::add_blocks(const std::string& value) {
+  blocks_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+}
+inline void GetLastKnownVBKBlocksReply::add_blocks(std::string&& value) {
+  blocks_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+}
+inline void GetLastKnownVBKBlocksReply::add_blocks(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  blocks_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+}
+inline void GetLastKnownVBKBlocksReply::add_blocks(const void* value, size_t size) {
+  blocks_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+GetLastKnownVBKBlocksReply::blocks() const {
+  // @@protoc_insertion_point(field_list:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+  return blocks_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+GetLastKnownVBKBlocksReply::mutable_blocks() {
+  // @@protoc_insertion_point(field_mutable_list:VeriBlock.GetLastKnownVBKBlocksReply.blocks)
+  return &blocks_;
+}
+
+// -------------------------------------------------------------------
+
+// GetLastKnownBTCBlocksReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool GetLastKnownBTCBlocksReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void GetLastKnownBTCBlocksReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& GetLastKnownBTCBlocksReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.GetLastKnownBTCBlocksReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* GetLastKnownBTCBlocksReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.GetLastKnownBTCBlocksReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* GetLastKnownBTCBlocksReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.GetLastKnownBTCBlocksReply.result)
+  return result_;
+}
+inline void GetLastKnownBTCBlocksReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.GetLastKnownBTCBlocksReply.result)
+}
+
+// repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+inline int GetLastKnownBTCBlocksReply::blocks_size() const {
+  return blocks_.size();
+}
+inline void GetLastKnownBTCBlocksReply::clear_blocks() {
+  blocks_.Clear();
+}
+inline const std::string& GetLastKnownBTCBlocksReply::blocks(int index) const {
+  // @@protoc_insertion_point(field_get:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+  return blocks_.Get(index);
+}
+inline std::string* GetLastKnownBTCBlocksReply::mutable_blocks(int index) {
+  // @@protoc_insertion_point(field_mutable:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+  return blocks_.Mutable(index);
+}
+inline void GetLastKnownBTCBlocksReply::set_blocks(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+  blocks_.Mutable(index)->assign(value);
+}
+inline void GetLastKnownBTCBlocksReply::set_blocks(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+  blocks_.Mutable(index)->assign(std::move(value));
+}
+inline void GetLastKnownBTCBlocksReply::set_blocks(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  blocks_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+}
+inline void GetLastKnownBTCBlocksReply::set_blocks(int index, const void* value, size_t size) {
+  blocks_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+}
+inline std::string* GetLastKnownBTCBlocksReply::add_blocks() {
+  // @@protoc_insertion_point(field_add_mutable:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+  return blocks_.Add();
+}
+inline void GetLastKnownBTCBlocksReply::add_blocks(const std::string& value) {
+  blocks_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+}
+inline void GetLastKnownBTCBlocksReply::add_blocks(std::string&& value) {
+  blocks_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+}
+inline void GetLastKnownBTCBlocksReply::add_blocks(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  blocks_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+}
+inline void GetLastKnownBTCBlocksReply::add_blocks(const void* value, size_t size) {
+  blocks_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+GetLastKnownBTCBlocksReply::blocks() const {
+  // @@protoc_insertion_point(field_list:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+  return blocks_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+GetLastKnownBTCBlocksReply::mutable_blocks() {
+  // @@protoc_insertion_point(field_mutable_list:VeriBlock.GetLastKnownBTCBlocksReply.blocks)
+  return &blocks_;
+}
+
+// -------------------------------------------------------------------
+
 // RoundRatioConfig
 
 // repeated string roundRatio = 1;
@@ -9750,20 +12975,6 @@ inline void CalculatorConfig::set_keystoneround(::PROTOBUF_NAMESPACE_ID::int32 v
   
   keystoneround_ = value;
   // @@protoc_insertion_point(field_set:VeriBlock.CalculatorConfig.keystoneRound)
-}
-
-// int32 keystoneInterval = 4;
-inline void CalculatorConfig::clear_keystoneinterval() {
-  keystoneinterval_ = 0;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 CalculatorConfig::keystoneinterval() const {
-  // @@protoc_insertion_point(field_get:VeriBlock.CalculatorConfig.keystoneInterval)
-  return keystoneinterval_;
-}
-inline void CalculatorConfig::set_keystoneinterval(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  keystoneinterval_ = value;
-  // @@protoc_insertion_point(field_set:VeriBlock.CalculatorConfig.keystoneInterval)
 }
 
 // .VeriBlock.RoundRatioConfig roundRatios = 5;
@@ -10978,7 +14189,58 @@ inline void BytesArrayRequest::set_allocated_data(std::string* data) {
 
 // BytesArrayReply
 
-// bytes data = 1;
+// .VeriBlock.GeneralReply result = 1;
+inline bool BytesArrayReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void BytesArrayReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& BytesArrayReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.BytesArrayReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* BytesArrayReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.BytesArrayReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* BytesArrayReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.BytesArrayReply.result)
+  return result_;
+}
+inline void BytesArrayReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.BytesArrayReply.result)
+}
+
+// bytes data = 2;
 inline void BytesArrayReply::clear_data() {
   data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -11245,9 +14507,1555 @@ inline void VeriBlockMerklePath::set_allocated_merklepath(std::string* merklepat
   // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockMerklePath.merklePath)
 }
 
+// -------------------------------------------------------------------
+
+// AltPublicationReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool AltPublicationReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void AltPublicationReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& AltPublicationReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.AltPublicationReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* AltPublicationReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.AltPublicationReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* AltPublicationReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.AltPublicationReply.result)
+  return result_;
+}
+inline void AltPublicationReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.AltPublicationReply.result)
+}
+
+// .VeriBlock.AltPublication publication = 2;
+inline bool AltPublicationReply::has_publication() const {
+  return this != internal_default_instance() && publication_ != nullptr;
+}
+inline void AltPublicationReply::clear_publication() {
+  if (GetArenaNoVirtual() == nullptr && publication_ != nullptr) {
+    delete publication_;
+  }
+  publication_ = nullptr;
+}
+inline const ::VeriBlock::AltPublication& AltPublicationReply::publication() const {
+  const ::VeriBlock::AltPublication* p = publication_;
+  // @@protoc_insertion_point(field_get:VeriBlock.AltPublicationReply.publication)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::AltPublication*>(
+      &::VeriBlock::_AltPublication_default_instance_);
+}
+inline ::VeriBlock::AltPublication* AltPublicationReply::release_publication() {
+  // @@protoc_insertion_point(field_release:VeriBlock.AltPublicationReply.publication)
+  
+  ::VeriBlock::AltPublication* temp = publication_;
+  publication_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::AltPublication* AltPublicationReply::mutable_publication() {
+  
+  if (publication_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::AltPublication>(GetArenaNoVirtual());
+    publication_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.AltPublicationReply.publication)
+  return publication_;
+}
+inline void AltPublicationReply::set_allocated_publication(::VeriBlock::AltPublication* publication) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete publication_;
+  }
+  if (publication) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      publication = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, publication, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  publication_ = publication;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.AltPublicationReply.publication)
+}
+
+// -------------------------------------------------------------------
+
+// PublicationDataReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool PublicationDataReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void PublicationDataReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& PublicationDataReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.PublicationDataReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* PublicationDataReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.PublicationDataReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* PublicationDataReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.PublicationDataReply.result)
+  return result_;
+}
+inline void PublicationDataReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.PublicationDataReply.result)
+}
+
+// .VeriBlock.PublicationData publication = 2;
+inline bool PublicationDataReply::has_publication() const {
+  return this != internal_default_instance() && publication_ != nullptr;
+}
+inline void PublicationDataReply::clear_publication() {
+  if (GetArenaNoVirtual() == nullptr && publication_ != nullptr) {
+    delete publication_;
+  }
+  publication_ = nullptr;
+}
+inline const ::VeriBlock::PublicationData& PublicationDataReply::publication() const {
+  const ::VeriBlock::PublicationData* p = publication_;
+  // @@protoc_insertion_point(field_get:VeriBlock.PublicationDataReply.publication)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::PublicationData*>(
+      &::VeriBlock::_PublicationData_default_instance_);
+}
+inline ::VeriBlock::PublicationData* PublicationDataReply::release_publication() {
+  // @@protoc_insertion_point(field_release:VeriBlock.PublicationDataReply.publication)
+  
+  ::VeriBlock::PublicationData* temp = publication_;
+  publication_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::PublicationData* PublicationDataReply::mutable_publication() {
+  
+  if (publication_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::PublicationData>(GetArenaNoVirtual());
+    publication_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.PublicationDataReply.publication)
+  return publication_;
+}
+inline void PublicationDataReply::set_allocated_publication(::VeriBlock::PublicationData* publication) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete publication_;
+  }
+  if (publication) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      publication = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, publication, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  publication_ = publication;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.PublicationDataReply.publication)
+}
+
+// -------------------------------------------------------------------
+
+// BitcoinTransactionReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool BitcoinTransactionReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void BitcoinTransactionReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& BitcoinTransactionReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.BitcoinTransactionReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* BitcoinTransactionReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.BitcoinTransactionReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* BitcoinTransactionReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.BitcoinTransactionReply.result)
+  return result_;
+}
+inline void BitcoinTransactionReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.BitcoinTransactionReply.result)
+}
+
+// .VeriBlock.BitcoinTransaction transaction = 2;
+inline bool BitcoinTransactionReply::has_transaction() const {
+  return this != internal_default_instance() && transaction_ != nullptr;
+}
+inline void BitcoinTransactionReply::clear_transaction() {
+  if (GetArenaNoVirtual() == nullptr && transaction_ != nullptr) {
+    delete transaction_;
+  }
+  transaction_ = nullptr;
+}
+inline const ::VeriBlock::BitcoinTransaction& BitcoinTransactionReply::transaction() const {
+  const ::VeriBlock::BitcoinTransaction* p = transaction_;
+  // @@protoc_insertion_point(field_get:VeriBlock.BitcoinTransactionReply.transaction)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::BitcoinTransaction*>(
+      &::VeriBlock::_BitcoinTransaction_default_instance_);
+}
+inline ::VeriBlock::BitcoinTransaction* BitcoinTransactionReply::release_transaction() {
+  // @@protoc_insertion_point(field_release:VeriBlock.BitcoinTransactionReply.transaction)
+  
+  ::VeriBlock::BitcoinTransaction* temp = transaction_;
+  transaction_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::BitcoinTransaction* BitcoinTransactionReply::mutable_transaction() {
+  
+  if (transaction_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::BitcoinTransaction>(GetArenaNoVirtual());
+    transaction_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.BitcoinTransactionReply.transaction)
+  return transaction_;
+}
+inline void BitcoinTransactionReply::set_allocated_transaction(::VeriBlock::BitcoinTransaction* transaction) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete transaction_;
+  }
+  if (transaction) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      transaction = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, transaction, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  transaction_ = transaction;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.BitcoinTransactionReply.transaction)
+}
+
+// -------------------------------------------------------------------
+
+// VeriBlockBlockReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool VeriBlockBlockReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void VeriBlockBlockReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& VeriBlockBlockReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockBlockReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* VeriBlockBlockReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockBlockReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* VeriBlockBlockReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockBlockReply.result)
+  return result_;
+}
+inline void VeriBlockBlockReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockBlockReply.result)
+}
+
+// .VeriBlock.VeriBlockBlock block = 2;
+inline bool VeriBlockBlockReply::has_block() const {
+  return this != internal_default_instance() && block_ != nullptr;
+}
+inline void VeriBlockBlockReply::clear_block() {
+  if (GetArenaNoVirtual() == nullptr && block_ != nullptr) {
+    delete block_;
+  }
+  block_ = nullptr;
+}
+inline const ::VeriBlock::VeriBlockBlock& VeriBlockBlockReply::block() const {
+  const ::VeriBlock::VeriBlockBlock* p = block_;
+  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockBlockReply.block)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::VeriBlockBlock*>(
+      &::VeriBlock::_VeriBlockBlock_default_instance_);
+}
+inline ::VeriBlock::VeriBlockBlock* VeriBlockBlockReply::release_block() {
+  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockBlockReply.block)
+  
+  ::VeriBlock::VeriBlockBlock* temp = block_;
+  block_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::VeriBlockBlock* VeriBlockBlockReply::mutable_block() {
+  
+  if (block_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::VeriBlockBlock>(GetArenaNoVirtual());
+    block_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockBlockReply.block)
+  return block_;
+}
+inline void VeriBlockBlockReply::set_allocated_block(::VeriBlock::VeriBlockBlock* block) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete block_;
+  }
+  if (block) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      block = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, block, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  block_ = block;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockBlockReply.block)
+}
+
+// -------------------------------------------------------------------
+
+// VeriBlockTransactionReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool VeriBlockTransactionReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void VeriBlockTransactionReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& VeriBlockTransactionReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockTransactionReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* VeriBlockTransactionReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockTransactionReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* VeriBlockTransactionReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockTransactionReply.result)
+  return result_;
+}
+inline void VeriBlockTransactionReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockTransactionReply.result)
+}
+
+// .VeriBlock.VeriBlockTransaction transaction = 2;
+inline bool VeriBlockTransactionReply::has_transaction() const {
+  return this != internal_default_instance() && transaction_ != nullptr;
+}
+inline void VeriBlockTransactionReply::clear_transaction() {
+  if (GetArenaNoVirtual() == nullptr && transaction_ != nullptr) {
+    delete transaction_;
+  }
+  transaction_ = nullptr;
+}
+inline const ::VeriBlock::VeriBlockTransaction& VeriBlockTransactionReply::transaction() const {
+  const ::VeriBlock::VeriBlockTransaction* p = transaction_;
+  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockTransactionReply.transaction)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::VeriBlockTransaction*>(
+      &::VeriBlock::_VeriBlockTransaction_default_instance_);
+}
+inline ::VeriBlock::VeriBlockTransaction* VeriBlockTransactionReply::release_transaction() {
+  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockTransactionReply.transaction)
+  
+  ::VeriBlock::VeriBlockTransaction* temp = transaction_;
+  transaction_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::VeriBlockTransaction* VeriBlockTransactionReply::mutable_transaction() {
+  
+  if (transaction_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::VeriBlockTransaction>(GetArenaNoVirtual());
+    transaction_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockTransactionReply.transaction)
+  return transaction_;
+}
+inline void VeriBlockTransactionReply::set_allocated_transaction(::VeriBlock::VeriBlockTransaction* transaction) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete transaction_;
+  }
+  if (transaction) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      transaction = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, transaction, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  transaction_ = transaction;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockTransactionReply.transaction)
+}
+
+// -------------------------------------------------------------------
+
+// VeriBlockPublicationReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool VeriBlockPublicationReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void VeriBlockPublicationReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& VeriBlockPublicationReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockPublicationReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* VeriBlockPublicationReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockPublicationReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* VeriBlockPublicationReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockPublicationReply.result)
+  return result_;
+}
+inline void VeriBlockPublicationReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockPublicationReply.result)
+}
+
+// .VeriBlock.VeriBlockPublication publication = 2;
+inline bool VeriBlockPublicationReply::has_publication() const {
+  return this != internal_default_instance() && publication_ != nullptr;
+}
+inline void VeriBlockPublicationReply::clear_publication() {
+  if (GetArenaNoVirtual() == nullptr && publication_ != nullptr) {
+    delete publication_;
+  }
+  publication_ = nullptr;
+}
+inline const ::VeriBlock::VeriBlockPublication& VeriBlockPublicationReply::publication() const {
+  const ::VeriBlock::VeriBlockPublication* p = publication_;
+  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockPublicationReply.publication)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::VeriBlockPublication*>(
+      &::VeriBlock::_VeriBlockPublication_default_instance_);
+}
+inline ::VeriBlock::VeriBlockPublication* VeriBlockPublicationReply::release_publication() {
+  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockPublicationReply.publication)
+  
+  ::VeriBlock::VeriBlockPublication* temp = publication_;
+  publication_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::VeriBlockPublication* VeriBlockPublicationReply::mutable_publication() {
+  
+  if (publication_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::VeriBlockPublication>(GetArenaNoVirtual());
+    publication_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockPublicationReply.publication)
+  return publication_;
+}
+inline void VeriBlockPublicationReply::set_allocated_publication(::VeriBlock::VeriBlockPublication* publication) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete publication_;
+  }
+  if (publication) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      publication = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, publication, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  publication_ = publication;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockPublicationReply.publication)
+}
+
+// -------------------------------------------------------------------
+
+// VeriBlockPoPTransactionReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool VeriBlockPoPTransactionReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void VeriBlockPoPTransactionReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& VeriBlockPoPTransactionReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockPoPTransactionReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* VeriBlockPoPTransactionReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockPoPTransactionReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* VeriBlockPoPTransactionReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockPoPTransactionReply.result)
+  return result_;
+}
+inline void VeriBlockPoPTransactionReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockPoPTransactionReply.result)
+}
+
+// .VeriBlock.VeriBlockPoPTransaction transaction = 2;
+inline bool VeriBlockPoPTransactionReply::has_transaction() const {
+  return this != internal_default_instance() && transaction_ != nullptr;
+}
+inline void VeriBlockPoPTransactionReply::clear_transaction() {
+  if (GetArenaNoVirtual() == nullptr && transaction_ != nullptr) {
+    delete transaction_;
+  }
+  transaction_ = nullptr;
+}
+inline const ::VeriBlock::VeriBlockPoPTransaction& VeriBlockPoPTransactionReply::transaction() const {
+  const ::VeriBlock::VeriBlockPoPTransaction* p = transaction_;
+  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockPoPTransactionReply.transaction)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::VeriBlockPoPTransaction*>(
+      &::VeriBlock::_VeriBlockPoPTransaction_default_instance_);
+}
+inline ::VeriBlock::VeriBlockPoPTransaction* VeriBlockPoPTransactionReply::release_transaction() {
+  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockPoPTransactionReply.transaction)
+  
+  ::VeriBlock::VeriBlockPoPTransaction* temp = transaction_;
+  transaction_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::VeriBlockPoPTransaction* VeriBlockPoPTransactionReply::mutable_transaction() {
+  
+  if (transaction_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::VeriBlockPoPTransaction>(GetArenaNoVirtual());
+    transaction_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockPoPTransactionReply.transaction)
+  return transaction_;
+}
+inline void VeriBlockPoPTransactionReply::set_allocated_transaction(::VeriBlock::VeriBlockPoPTransaction* transaction) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete transaction_;
+  }
+  if (transaction) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      transaction = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, transaction, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  transaction_ = transaction;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockPoPTransactionReply.transaction)
+}
+
+// -------------------------------------------------------------------
+
+// OutputReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool OutputReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void OutputReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& OutputReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.OutputReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* OutputReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.OutputReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* OutputReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.OutputReply.result)
+  return result_;
+}
+inline void OutputReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.OutputReply.result)
+}
+
+// .VeriBlock.Output output = 2;
+inline bool OutputReply::has_output() const {
+  return this != internal_default_instance() && output_ != nullptr;
+}
+inline void OutputReply::clear_output() {
+  if (GetArenaNoVirtual() == nullptr && output_ != nullptr) {
+    delete output_;
+  }
+  output_ = nullptr;
+}
+inline const ::VeriBlock::Output& OutputReply::output() const {
+  const ::VeriBlock::Output* p = output_;
+  // @@protoc_insertion_point(field_get:VeriBlock.OutputReply.output)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::Output*>(
+      &::VeriBlock::_Output_default_instance_);
+}
+inline ::VeriBlock::Output* OutputReply::release_output() {
+  // @@protoc_insertion_point(field_release:VeriBlock.OutputReply.output)
+  
+  ::VeriBlock::Output* temp = output_;
+  output_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::Output* OutputReply::mutable_output() {
+  
+  if (output_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::Output>(GetArenaNoVirtual());
+    output_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.OutputReply.output)
+  return output_;
+}
+inline void OutputReply::set_allocated_output(::VeriBlock::Output* output) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete output_;
+  }
+  if (output) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      output = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, output, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  output_ = output;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.OutputReply.output)
+}
+
+// -------------------------------------------------------------------
+
+// AddressReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool AddressReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void AddressReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& AddressReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.AddressReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* AddressReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.AddressReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* AddressReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.AddressReply.result)
+  return result_;
+}
+inline void AddressReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.AddressReply.result)
+}
+
+// .VeriBlock.Address address = 2;
+inline bool AddressReply::has_address() const {
+  return this != internal_default_instance() && address_ != nullptr;
+}
+inline void AddressReply::clear_address() {
+  if (GetArenaNoVirtual() == nullptr && address_ != nullptr) {
+    delete address_;
+  }
+  address_ = nullptr;
+}
+inline const ::VeriBlock::Address& AddressReply::address() const {
+  const ::VeriBlock::Address* p = address_;
+  // @@protoc_insertion_point(field_get:VeriBlock.AddressReply.address)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::Address*>(
+      &::VeriBlock::_Address_default_instance_);
+}
+inline ::VeriBlock::Address* AddressReply::release_address() {
+  // @@protoc_insertion_point(field_release:VeriBlock.AddressReply.address)
+  
+  ::VeriBlock::Address* temp = address_;
+  address_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::Address* AddressReply::mutable_address() {
+  
+  if (address_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::Address>(GetArenaNoVirtual());
+    address_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.AddressReply.address)
+  return address_;
+}
+inline void AddressReply::set_allocated_address(::VeriBlock::Address* address) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete address_;
+  }
+  if (address) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      address = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, address, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  address_ = address;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.AddressReply.address)
+}
+
+// -------------------------------------------------------------------
+
+// BitcoinBlockReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool BitcoinBlockReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void BitcoinBlockReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& BitcoinBlockReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.BitcoinBlockReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* BitcoinBlockReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.BitcoinBlockReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* BitcoinBlockReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.BitcoinBlockReply.result)
+  return result_;
+}
+inline void BitcoinBlockReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.BitcoinBlockReply.result)
+}
+
+// .VeriBlock.BitcoinBlock block = 2;
+inline bool BitcoinBlockReply::has_block() const {
+  return this != internal_default_instance() && block_ != nullptr;
+}
+inline void BitcoinBlockReply::clear_block() {
+  if (GetArenaNoVirtual() == nullptr && block_ != nullptr) {
+    delete block_;
+  }
+  block_ = nullptr;
+}
+inline const ::VeriBlock::BitcoinBlock& BitcoinBlockReply::block() const {
+  const ::VeriBlock::BitcoinBlock* p = block_;
+  // @@protoc_insertion_point(field_get:VeriBlock.BitcoinBlockReply.block)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::BitcoinBlock*>(
+      &::VeriBlock::_BitcoinBlock_default_instance_);
+}
+inline ::VeriBlock::BitcoinBlock* BitcoinBlockReply::release_block() {
+  // @@protoc_insertion_point(field_release:VeriBlock.BitcoinBlockReply.block)
+  
+  ::VeriBlock::BitcoinBlock* temp = block_;
+  block_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::BitcoinBlock* BitcoinBlockReply::mutable_block() {
+  
+  if (block_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::BitcoinBlock>(GetArenaNoVirtual());
+    block_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.BitcoinBlockReply.block)
+  return block_;
+}
+inline void BitcoinBlockReply::set_allocated_block(::VeriBlock::BitcoinBlock* block) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete block_;
+  }
+  if (block) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      block = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, block, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  block_ = block;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.BitcoinBlockReply.block)
+}
+
+// -------------------------------------------------------------------
+
+// VeriBlockMerklePathReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool VeriBlockMerklePathReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void VeriBlockMerklePathReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& VeriBlockMerklePathReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockMerklePathReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* VeriBlockMerklePathReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockMerklePathReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* VeriBlockMerklePathReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockMerklePathReply.result)
+  return result_;
+}
+inline void VeriBlockMerklePathReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockMerklePathReply.result)
+}
+
+// .VeriBlock.VeriBlockMerklePath merklePath = 2;
+inline bool VeriBlockMerklePathReply::has_merklepath() const {
+  return this != internal_default_instance() && merklepath_ != nullptr;
+}
+inline void VeriBlockMerklePathReply::clear_merklepath() {
+  if (GetArenaNoVirtual() == nullptr && merklepath_ != nullptr) {
+    delete merklepath_;
+  }
+  merklepath_ = nullptr;
+}
+inline const ::VeriBlock::VeriBlockMerklePath& VeriBlockMerklePathReply::merklepath() const {
+  const ::VeriBlock::VeriBlockMerklePath* p = merklepath_;
+  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockMerklePathReply.merklePath)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::VeriBlockMerklePath*>(
+      &::VeriBlock::_VeriBlockMerklePath_default_instance_);
+}
+inline ::VeriBlock::VeriBlockMerklePath* VeriBlockMerklePathReply::release_merklepath() {
+  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockMerklePathReply.merklePath)
+  
+  ::VeriBlock::VeriBlockMerklePath* temp = merklepath_;
+  merklepath_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::VeriBlockMerklePath* VeriBlockMerklePathReply::mutable_merklepath() {
+  
+  if (merklepath_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::VeriBlockMerklePath>(GetArenaNoVirtual());
+    merklepath_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockMerklePathReply.merklePath)
+  return merklepath_;
+}
+inline void VeriBlockMerklePathReply::set_allocated_merklepath(::VeriBlock::VeriBlockMerklePath* merklepath) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete merklepath_;
+  }
+  if (merklepath) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      merklepath = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, merklepath, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  merklepath_ = merklepath;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockMerklePathReply.merklePath)
+}
+
+// -------------------------------------------------------------------
+
+// MerklePathReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool MerklePathReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void MerklePathReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& MerklePathReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.MerklePathReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* MerklePathReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.MerklePathReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* MerklePathReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.MerklePathReply.result)
+  return result_;
+}
+inline void MerklePathReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.MerklePathReply.result)
+}
+
+// .VeriBlock.MerklePath merklePath = 2;
+inline bool MerklePathReply::has_merklepath() const {
+  return this != internal_default_instance() && merklepath_ != nullptr;
+}
+inline void MerklePathReply::clear_merklepath() {
+  if (GetArenaNoVirtual() == nullptr && merklepath_ != nullptr) {
+    delete merklepath_;
+  }
+  merklepath_ = nullptr;
+}
+inline const ::VeriBlock::MerklePath& MerklePathReply::merklepath() const {
+  const ::VeriBlock::MerklePath* p = merklepath_;
+  // @@protoc_insertion_point(field_get:VeriBlock.MerklePathReply.merklePath)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::MerklePath*>(
+      &::VeriBlock::_MerklePath_default_instance_);
+}
+inline ::VeriBlock::MerklePath* MerklePathReply::release_merklepath() {
+  // @@protoc_insertion_point(field_release:VeriBlock.MerklePathReply.merklePath)
+  
+  ::VeriBlock::MerklePath* temp = merklepath_;
+  merklepath_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::MerklePath* MerklePathReply::mutable_merklepath() {
+  
+  if (merklepath_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::MerklePath>(GetArenaNoVirtual());
+    merklepath_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.MerklePathReply.merklePath)
+  return merklepath_;
+}
+inline void MerklePathReply::set_allocated_merklepath(::VeriBlock::MerklePath* merklepath) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete merklepath_;
+  }
+  if (merklepath) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      merklepath = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, merklepath, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  merklepath_ = merklepath;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.MerklePathReply.merklePath)
+}
+
+// -------------------------------------------------------------------
+
+// AltChainBlock
+
+// .VeriBlock.BlockIndex blockIndex = 1;
+inline bool AltChainBlock::has_blockindex() const {
+  return this != internal_default_instance() && blockindex_ != nullptr;
+}
+inline void AltChainBlock::clear_blockindex() {
+  if (GetArenaNoVirtual() == nullptr && blockindex_ != nullptr) {
+    delete blockindex_;
+  }
+  blockindex_ = nullptr;
+}
+inline const ::VeriBlock::BlockIndex& AltChainBlock::blockindex() const {
+  const ::VeriBlock::BlockIndex* p = blockindex_;
+  // @@protoc_insertion_point(field_get:VeriBlock.AltChainBlock.blockIndex)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::BlockIndex*>(
+      &::VeriBlock::_BlockIndex_default_instance_);
+}
+inline ::VeriBlock::BlockIndex* AltChainBlock::release_blockindex() {
+  // @@protoc_insertion_point(field_release:VeriBlock.AltChainBlock.blockIndex)
+  
+  ::VeriBlock::BlockIndex* temp = blockindex_;
+  blockindex_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::BlockIndex* AltChainBlock::mutable_blockindex() {
+  
+  if (blockindex_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::BlockIndex>(GetArenaNoVirtual());
+    blockindex_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.AltChainBlock.blockIndex)
+  return blockindex_;
+}
+inline void AltChainBlock::set_allocated_blockindex(::VeriBlock::BlockIndex* blockindex) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete blockindex_;
+  }
+  if (blockindex) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      blockindex = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, blockindex, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  blockindex_ = blockindex;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.AltChainBlock.blockIndex)
+}
+
+// int32 timestamp = 2;
+inline void AltChainBlock::clear_timestamp() {
+  timestamp_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AltChainBlock::timestamp() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.AltChainBlock.timestamp)
+  return timestamp_;
+}
+inline void AltChainBlock::set_timestamp(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  timestamp_ = value;
+  // @@protoc_insertion_point(field_set:VeriBlock.AltChainBlock.timestamp)
+}
+
+// -------------------------------------------------------------------
+
+// TwoBranchesRequest
+
+// repeated .VeriBlock.AltChainBlock leftFork = 1;
+inline int TwoBranchesRequest::leftfork_size() const {
+  return leftfork_.size();
+}
+inline void TwoBranchesRequest::clear_leftfork() {
+  leftfork_.Clear();
+}
+inline ::VeriBlock::AltChainBlock* TwoBranchesRequest::mutable_leftfork(int index) {
+  // @@protoc_insertion_point(field_mutable:VeriBlock.TwoBranchesRequest.leftFork)
+  return leftfork_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >*
+TwoBranchesRequest::mutable_leftfork() {
+  // @@protoc_insertion_point(field_mutable_list:VeriBlock.TwoBranchesRequest.leftFork)
+  return &leftfork_;
+}
+inline const ::VeriBlock::AltChainBlock& TwoBranchesRequest::leftfork(int index) const {
+  // @@protoc_insertion_point(field_get:VeriBlock.TwoBranchesRequest.leftFork)
+  return leftfork_.Get(index);
+}
+inline ::VeriBlock::AltChainBlock* TwoBranchesRequest::add_leftfork() {
+  // @@protoc_insertion_point(field_add:VeriBlock.TwoBranchesRequest.leftFork)
+  return leftfork_.Add();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >&
+TwoBranchesRequest::leftfork() const {
+  // @@protoc_insertion_point(field_list:VeriBlock.TwoBranchesRequest.leftFork)
+  return leftfork_;
+}
+
+// repeated .VeriBlock.AltChainBlock rightFork = 2;
+inline int TwoBranchesRequest::rightfork_size() const {
+  return rightfork_.size();
+}
+inline void TwoBranchesRequest::clear_rightfork() {
+  rightfork_.Clear();
+}
+inline ::VeriBlock::AltChainBlock* TwoBranchesRequest::mutable_rightfork(int index) {
+  // @@protoc_insertion_point(field_mutable:VeriBlock.TwoBranchesRequest.rightFork)
+  return rightfork_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >*
+TwoBranchesRequest::mutable_rightfork() {
+  // @@protoc_insertion_point(field_mutable_list:VeriBlock.TwoBranchesRequest.rightFork)
+  return &rightfork_;
+}
+inline const ::VeriBlock::AltChainBlock& TwoBranchesRequest::rightfork(int index) const {
+  // @@protoc_insertion_point(field_get:VeriBlock.TwoBranchesRequest.rightFork)
+  return rightfork_.Get(index);
+}
+inline ::VeriBlock::AltChainBlock* TwoBranchesRequest::add_rightfork() {
+  // @@protoc_insertion_point(field_add:VeriBlock.TwoBranchesRequest.rightFork)
+  return rightfork_.Add();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >&
+TwoBranchesRequest::rightfork() const {
+  // @@protoc_insertion_point(field_list:VeriBlock.TwoBranchesRequest.rightFork)
+  return rightfork_;
+}
+
+// -------------------------------------------------------------------
+
+// CompareReply
+
+// .VeriBlock.GeneralReply result = 1;
+inline bool CompareReply::has_result() const {
+  return this != internal_default_instance() && result_ != nullptr;
+}
+inline void CompareReply::clear_result() {
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+}
+inline const ::VeriBlock::GeneralReply& CompareReply::result() const {
+  const ::VeriBlock::GeneralReply* p = result_;
+  // @@protoc_insertion_point(field_get:VeriBlock.CompareReply.result)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::GeneralReply*>(
+      &::VeriBlock::_GeneralReply_default_instance_);
+}
+inline ::VeriBlock::GeneralReply* CompareReply::release_result() {
+  // @@protoc_insertion_point(field_release:VeriBlock.CompareReply.result)
+  
+  ::VeriBlock::GeneralReply* temp = result_;
+  result_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::GeneralReply* CompareReply::mutable_result() {
+  
+  if (result_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::GeneralReply>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.CompareReply.result)
+  return result_;
+}
+inline void CompareReply::set_allocated_result(::VeriBlock::GeneralReply* result) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete result_;
+  }
+  if (result) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.CompareReply.result)
+}
+
+// int32 comparingsResult = 2;
+inline void CompareReply::clear_comparingsresult() {
+  comparingsresult_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 CompareReply::comparingsresult() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.CompareReply.comparingsResult)
+  return comparingsresult_;
+}
+inline void CompareReply::set_comparingsresult(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  comparingsresult_ = value;
+  // @@protoc_insertion_point(field_set:VeriBlock.CompareReply.comparingsResult)
+}
+
+// -------------------------------------------------------------------
+
+// ForkresolutionConfigRequest
+
+// int32 keystoneFinalityDelay = 1;
+inline void ForkresolutionConfigRequest::clear_keystonefinalitydelay() {
+  keystonefinalitydelay_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ForkresolutionConfigRequest::keystonefinalitydelay() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.ForkresolutionConfigRequest.keystoneFinalityDelay)
+  return keystonefinalitydelay_;
+}
+inline void ForkresolutionConfigRequest::set_keystonefinalitydelay(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  keystonefinalitydelay_ = value;
+  // @@protoc_insertion_point(field_set:VeriBlock.ForkresolutionConfigRequest.keystoneFinalityDelay)
+}
+
+// int32 amnestyPeriod = 2;
+inline void ForkresolutionConfigRequest::clear_amnestyperiod() {
+  amnestyperiod_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ForkresolutionConfigRequest::amnestyperiod() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.ForkresolutionConfigRequest.amnestyPeriod)
+  return amnestyperiod_;
+}
+inline void ForkresolutionConfigRequest::set_amnestyperiod(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  amnestyperiod_ = value;
+  // @@protoc_insertion_point(field_set:VeriBlock.ForkresolutionConfigRequest.amnestyPeriod)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

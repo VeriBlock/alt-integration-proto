@@ -31,6 +31,9 @@ static const char* IntegrationService_method_names[] = {
   "/VeriBlock.IntegrationService/CheckVTBInternally",
   "/VeriBlock.IntegrationService/CheckATVInternally",
   "/VeriBlock.IntegrationService/GetMainVBKHeightOfATV",
+  "/VeriBlock.IntegrationService/SetAltChainParametersConfig",
+  "/VeriBlock.IntegrationService/GetLastKnownVBKBlocks",
+  "/VeriBlock.IntegrationService/GetLastKnownBTCBlocks",
 };
 
 std::unique_ptr< IntegrationService::Stub> IntegrationService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -52,6 +55,9 @@ IntegrationService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>&
   , rpcmethod_CheckVTBInternally_(IntegrationService_method_names[9], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_CheckATVInternally_(IntegrationService_method_names[10], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetMainVBKHeightOfATV_(IntegrationService_method_names[11], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_SetAltChainParametersConfig_(IntegrationService_method_names[12], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetLastKnownVBKBlocks_(IntegrationService_method_names[13], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetLastKnownBTCBlocks_(IntegrationService_method_names[14], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status IntegrationService::Stub::ResetSecurity(::grpc::ClientContext* context, const ::VeriBlock::EmptyRequest& request, ::VeriBlock::GeneralReply* response) {
@@ -390,6 +396,90 @@ void IntegrationService::Stub::experimental_async::GetMainVBKHeightOfATV(::grpc:
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::GetMainVBKHeightOfATVReply>::Create(channel_.get(), cq, rpcmethod_GetMainVBKHeightOfATV_, context, request, false);
 }
 
+::grpc::Status IntegrationService::Stub::SetAltChainParametersConfig(::grpc::ClientContext* context, const ::VeriBlock::AltChainConfigRequest& request, ::VeriBlock::GeneralReply* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_SetAltChainParametersConfig_, context, request, response);
+}
+
+void IntegrationService::Stub::experimental_async::SetAltChainParametersConfig(::grpc::ClientContext* context, const ::VeriBlock::AltChainConfigRequest* request, ::VeriBlock::GeneralReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_SetAltChainParametersConfig_, context, request, response, std::move(f));
+}
+
+void IntegrationService::Stub::experimental_async::SetAltChainParametersConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::GeneralReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_SetAltChainParametersConfig_, context, request, response, std::move(f));
+}
+
+void IntegrationService::Stub::experimental_async::SetAltChainParametersConfig(::grpc::ClientContext* context, const ::VeriBlock::AltChainConfigRequest* request, ::VeriBlock::GeneralReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_SetAltChainParametersConfig_, context, request, response, reactor);
+}
+
+void IntegrationService::Stub::experimental_async::SetAltChainParametersConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::GeneralReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_SetAltChainParametersConfig_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::VeriBlock::GeneralReply>* IntegrationService::Stub::AsyncSetAltChainParametersConfigRaw(::grpc::ClientContext* context, const ::VeriBlock::AltChainConfigRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::GeneralReply>::Create(channel_.get(), cq, rpcmethod_SetAltChainParametersConfig_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::VeriBlock::GeneralReply>* IntegrationService::Stub::PrepareAsyncSetAltChainParametersConfigRaw(::grpc::ClientContext* context, const ::VeriBlock::AltChainConfigRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::GeneralReply>::Create(channel_.get(), cq, rpcmethod_SetAltChainParametersConfig_, context, request, false);
+}
+
+::grpc::Status IntegrationService::Stub::GetLastKnownVBKBlocks(::grpc::ClientContext* context, const ::VeriBlock::GetLastKnownBlocksRequest& request, ::VeriBlock::GetLastKnownVBKBlocksReply* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetLastKnownVBKBlocks_, context, request, response);
+}
+
+void IntegrationService::Stub::experimental_async::GetLastKnownVBKBlocks(::grpc::ClientContext* context, const ::VeriBlock::GetLastKnownBlocksRequest* request, ::VeriBlock::GetLastKnownVBKBlocksReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetLastKnownVBKBlocks_, context, request, response, std::move(f));
+}
+
+void IntegrationService::Stub::experimental_async::GetLastKnownVBKBlocks(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::GetLastKnownVBKBlocksReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetLastKnownVBKBlocks_, context, request, response, std::move(f));
+}
+
+void IntegrationService::Stub::experimental_async::GetLastKnownVBKBlocks(::grpc::ClientContext* context, const ::VeriBlock::GetLastKnownBlocksRequest* request, ::VeriBlock::GetLastKnownVBKBlocksReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_GetLastKnownVBKBlocks_, context, request, response, reactor);
+}
+
+void IntegrationService::Stub::experimental_async::GetLastKnownVBKBlocks(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::GetLastKnownVBKBlocksReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_GetLastKnownVBKBlocks_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::VeriBlock::GetLastKnownVBKBlocksReply>* IntegrationService::Stub::AsyncGetLastKnownVBKBlocksRaw(::grpc::ClientContext* context, const ::VeriBlock::GetLastKnownBlocksRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::GetLastKnownVBKBlocksReply>::Create(channel_.get(), cq, rpcmethod_GetLastKnownVBKBlocks_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::VeriBlock::GetLastKnownVBKBlocksReply>* IntegrationService::Stub::PrepareAsyncGetLastKnownVBKBlocksRaw(::grpc::ClientContext* context, const ::VeriBlock::GetLastKnownBlocksRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::GetLastKnownVBKBlocksReply>::Create(channel_.get(), cq, rpcmethod_GetLastKnownVBKBlocks_, context, request, false);
+}
+
+::grpc::Status IntegrationService::Stub::GetLastKnownBTCBlocks(::grpc::ClientContext* context, const ::VeriBlock::GetLastKnownBlocksRequest& request, ::VeriBlock::GetLastKnownBTCBlocksReply* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetLastKnownBTCBlocks_, context, request, response);
+}
+
+void IntegrationService::Stub::experimental_async::GetLastKnownBTCBlocks(::grpc::ClientContext* context, const ::VeriBlock::GetLastKnownBlocksRequest* request, ::VeriBlock::GetLastKnownBTCBlocksReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetLastKnownBTCBlocks_, context, request, response, std::move(f));
+}
+
+void IntegrationService::Stub::experimental_async::GetLastKnownBTCBlocks(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::GetLastKnownBTCBlocksReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetLastKnownBTCBlocks_, context, request, response, std::move(f));
+}
+
+void IntegrationService::Stub::experimental_async::GetLastKnownBTCBlocks(::grpc::ClientContext* context, const ::VeriBlock::GetLastKnownBlocksRequest* request, ::VeriBlock::GetLastKnownBTCBlocksReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_GetLastKnownBTCBlocks_, context, request, response, reactor);
+}
+
+void IntegrationService::Stub::experimental_async::GetLastKnownBTCBlocks(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::GetLastKnownBTCBlocksReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_GetLastKnownBTCBlocks_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::VeriBlock::GetLastKnownBTCBlocksReply>* IntegrationService::Stub::AsyncGetLastKnownBTCBlocksRaw(::grpc::ClientContext* context, const ::VeriBlock::GetLastKnownBlocksRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::GetLastKnownBTCBlocksReply>::Create(channel_.get(), cq, rpcmethod_GetLastKnownBTCBlocks_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::VeriBlock::GetLastKnownBTCBlocksReply>* IntegrationService::Stub::PrepareAsyncGetLastKnownBTCBlocksRaw(::grpc::ClientContext* context, const ::VeriBlock::GetLastKnownBlocksRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::GetLastKnownBTCBlocksReply>::Create(channel_.get(), cq, rpcmethod_GetLastKnownBTCBlocks_, context, request, false);
+}
+
 IntegrationService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       IntegrationService_method_names[0],
@@ -451,6 +541,21 @@ IntegrationService::Service::Service() {
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< IntegrationService::Service, ::VeriBlock::AltPublication, ::VeriBlock::GetMainVBKHeightOfATVReply>(
           std::mem_fn(&IntegrationService::Service::GetMainVBKHeightOfATV), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      IntegrationService_method_names[12],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< IntegrationService::Service, ::VeriBlock::AltChainConfigRequest, ::VeriBlock::GeneralReply>(
+          std::mem_fn(&IntegrationService::Service::SetAltChainParametersConfig), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      IntegrationService_method_names[13],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< IntegrationService::Service, ::VeriBlock::GetLastKnownBlocksRequest, ::VeriBlock::GetLastKnownVBKBlocksReply>(
+          std::mem_fn(&IntegrationService::Service::GetLastKnownVBKBlocks), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      IntegrationService_method_names[14],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< IntegrationService::Service, ::VeriBlock::GetLastKnownBlocksRequest, ::VeriBlock::GetLastKnownBTCBlocksReply>(
+          std::mem_fn(&IntegrationService::Service::GetLastKnownBTCBlocks), this)));
 }
 
 IntegrationService::Service::~Service() {
@@ -534,6 +639,27 @@ IntegrationService::Service::~Service() {
 }
 
 ::grpc::Status IntegrationService::Service::GetMainVBKHeightOfATV(::grpc::ServerContext* context, const ::VeriBlock::AltPublication* request, ::VeriBlock::GetMainVBKHeightOfATVReply* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status IntegrationService::Service::SetAltChainParametersConfig(::grpc::ServerContext* context, const ::VeriBlock::AltChainConfigRequest* request, ::VeriBlock::GeneralReply* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status IntegrationService::Service::GetLastKnownVBKBlocks(::grpc::ServerContext* context, const ::VeriBlock::GetLastKnownBlocksRequest* request, ::VeriBlock::GetLastKnownVBKBlocksReply* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status IntegrationService::Service::GetLastKnownBTCBlocks(::grpc::ServerContext* context, const ::VeriBlock::GetLastKnownBlocksRequest* request, ::VeriBlock::GetLastKnownBTCBlocksReply* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -777,7 +903,7 @@ static const char* DeserializeService_method_names[] = {
   "/VeriBlock.DeserializeService/ParseVeriBlockBlock",
   "/VeriBlock.DeserializeService/ParseVeriBlockTransaction",
   "/VeriBlock.DeserializeService/ParseVeriBlockPublication",
-  "/VeriBlock.DeserializeService/parseVeriBlockPopTx",
+  "/VeriBlock.DeserializeService/ParseVeriBlockPopTx",
   "/VeriBlock.DeserializeService/ParseOutput",
   "/VeriBlock.DeserializeService/ParseAddress",
   "/VeriBlock.DeserializeService/ParseBitcoinBlock",
@@ -798,7 +924,7 @@ DeserializeService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>&
   , rpcmethod_ParseVeriBlockBlock_(DeserializeService_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ParseVeriBlockTransaction_(DeserializeService_method_names[4], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ParseVeriBlockPublication_(DeserializeService_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_parseVeriBlockPopTx_(DeserializeService_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ParseVeriBlockPopTx_(DeserializeService_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ParseOutput_(DeserializeService_method_names[7], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ParseAddress_(DeserializeService_method_names[8], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ParseBitcoinBlock_(DeserializeService_method_names[9], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
@@ -806,486 +932,486 @@ DeserializeService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>&
   , rpcmethod_ParseMerklePath_(DeserializeService_method_names[11], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status DeserializeService::Stub::ParseAltPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::AltPublication* response) {
+::grpc::Status DeserializeService::Stub::ParseAltPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::AltPublicationReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseAltPublication_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParseAltPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::AltPublication* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseAltPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::AltPublicationReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseAltPublication_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseAltPublication(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::AltPublication* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseAltPublication(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::AltPublicationReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseAltPublication_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseAltPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::AltPublication* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseAltPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::AltPublicationReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseAltPublication_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParseAltPublication(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::AltPublication* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseAltPublication(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::AltPublicationReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseAltPublication_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::AltPublication>* DeserializeService::Stub::AsyncParseAltPublicationRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::AltPublication>::Create(channel_.get(), cq, rpcmethod_ParseAltPublication_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::AltPublicationReply>* DeserializeService::Stub::AsyncParseAltPublicationRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::AltPublicationReply>::Create(channel_.get(), cq, rpcmethod_ParseAltPublication_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::AltPublication>* DeserializeService::Stub::PrepareAsyncParseAltPublicationRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::AltPublication>::Create(channel_.get(), cq, rpcmethod_ParseAltPublication_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::AltPublicationReply>* DeserializeService::Stub::PrepareAsyncParseAltPublicationRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::AltPublicationReply>::Create(channel_.get(), cq, rpcmethod_ParseAltPublication_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::ParsePublicationData(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::PublicationData* response) {
+::grpc::Status DeserializeService::Stub::ParsePublicationData(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::PublicationDataReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParsePublicationData_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParsePublicationData(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::PublicationData* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParsePublicationData(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::PublicationDataReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParsePublicationData_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParsePublicationData(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::PublicationData* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParsePublicationData(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::PublicationDataReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParsePublicationData_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParsePublicationData(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::PublicationData* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParsePublicationData(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::PublicationDataReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParsePublicationData_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParsePublicationData(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::PublicationData* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParsePublicationData(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::PublicationDataReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParsePublicationData_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::PublicationData>* DeserializeService::Stub::AsyncParsePublicationDataRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::PublicationData>::Create(channel_.get(), cq, rpcmethod_ParsePublicationData_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::PublicationDataReply>* DeserializeService::Stub::AsyncParsePublicationDataRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::PublicationDataReply>::Create(channel_.get(), cq, rpcmethod_ParsePublicationData_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::PublicationData>* DeserializeService::Stub::PrepareAsyncParsePublicationDataRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::PublicationData>::Create(channel_.get(), cq, rpcmethod_ParsePublicationData_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::PublicationDataReply>* DeserializeService::Stub::PrepareAsyncParsePublicationDataRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::PublicationDataReply>::Create(channel_.get(), cq, rpcmethod_ParsePublicationData_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::ParseBitcoinTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::BitcoinTransaction* response) {
+::grpc::Status DeserializeService::Stub::ParseBitcoinTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::BitcoinTransactionReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseBitcoinTransaction_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParseBitcoinTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinTransaction* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseBitcoinTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinTransactionReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseBitcoinTransaction_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseBitcoinTransaction(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::BitcoinTransaction* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseBitcoinTransaction(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::BitcoinTransactionReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseBitcoinTransaction_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseBitcoinTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinTransaction* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseBitcoinTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinTransactionReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseBitcoinTransaction_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParseBitcoinTransaction(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::BitcoinTransaction* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseBitcoinTransaction(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::BitcoinTransactionReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseBitcoinTransaction_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::BitcoinTransaction>* DeserializeService::Stub::AsyncParseBitcoinTransactionRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::BitcoinTransaction>::Create(channel_.get(), cq, rpcmethod_ParseBitcoinTransaction_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::BitcoinTransactionReply>* DeserializeService::Stub::AsyncParseBitcoinTransactionRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::BitcoinTransactionReply>::Create(channel_.get(), cq, rpcmethod_ParseBitcoinTransaction_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::BitcoinTransaction>* DeserializeService::Stub::PrepareAsyncParseBitcoinTransactionRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::BitcoinTransaction>::Create(channel_.get(), cq, rpcmethod_ParseBitcoinTransaction_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::BitcoinTransactionReply>* DeserializeService::Stub::PrepareAsyncParseBitcoinTransactionRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::BitcoinTransactionReply>::Create(channel_.get(), cq, rpcmethod_ParseBitcoinTransaction_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::ParseVeriBlockBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::VeriBlockBlock* response) {
+::grpc::Status DeserializeService::Stub::ParseVeriBlockBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::VeriBlockBlockReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseVeriBlockBlock_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockBlock* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockBlockReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockBlock_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockBlock(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockBlock* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockBlock(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockBlockReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockBlock_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockBlock* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockBlockReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockBlock_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockBlock(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockBlock* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockBlock(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockBlockReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockBlock_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockBlock>* DeserializeService::Stub::AsyncParseVeriBlockBlockRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockBlock>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockBlock_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockBlockReply>* DeserializeService::Stub::AsyncParseVeriBlockBlockRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockBlockReply>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockBlock_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockBlock>* DeserializeService::Stub::PrepareAsyncParseVeriBlockBlockRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockBlock>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockBlock_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockBlockReply>* DeserializeService::Stub::PrepareAsyncParseVeriBlockBlockRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockBlockReply>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockBlock_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::ParseVeriBlockTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::VeriBlockTransaction* response) {
+::grpc::Status DeserializeService::Stub::ParseVeriBlockTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::VeriBlockTransactionReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseVeriBlockTransaction_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockTransaction* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockTransactionReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockTransaction_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockTransaction(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockTransaction* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockTransaction(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockTransactionReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockTransaction_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockTransaction* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockTransaction(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockTransactionReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockTransaction_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockTransaction(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockTransaction* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockTransaction(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockTransactionReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockTransaction_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockTransaction>* DeserializeService::Stub::AsyncParseVeriBlockTransactionRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockTransaction>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockTransaction_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockTransactionReply>* DeserializeService::Stub::AsyncParseVeriBlockTransactionRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockTransactionReply>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockTransaction_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockTransaction>* DeserializeService::Stub::PrepareAsyncParseVeriBlockTransactionRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockTransaction>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockTransaction_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockTransactionReply>* DeserializeService::Stub::PrepareAsyncParseVeriBlockTransactionRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockTransactionReply>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockTransaction_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::ParseVeriBlockPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::VeriBlockPublication* response) {
+::grpc::Status DeserializeService::Stub::ParseVeriBlockPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::VeriBlockPublicationReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseVeriBlockPublication_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPublication* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPublicationReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockPublication_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockPublication(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockPublication* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockPublication(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockPublicationReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockPublication_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPublication* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockPublication(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPublicationReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockPublication_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockPublication(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockPublication* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockPublication(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockPublicationReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockPublication_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockPublication>* DeserializeService::Stub::AsyncParseVeriBlockPublicationRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockPublication>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockPublication_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockPublicationReply>* DeserializeService::Stub::AsyncParseVeriBlockPublicationRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockPublicationReply>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockPublication_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockPublication>* DeserializeService::Stub::PrepareAsyncParseVeriBlockPublicationRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockPublication>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockPublication_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockPublicationReply>* DeserializeService::Stub::PrepareAsyncParseVeriBlockPublicationRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockPublicationReply>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockPublication_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::parseVeriBlockPopTx(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::VeriBlockPoPTransaction* response) {
-  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_parseVeriBlockPopTx_, context, request, response);
+::grpc::Status DeserializeService::Stub::ParseVeriBlockPopTx(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::VeriBlockPoPTransactionReply* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseVeriBlockPopTx_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::parseVeriBlockPopTx(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPoPTransaction* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_parseVeriBlockPopTx_, context, request, response, std::move(f));
+void DeserializeService::Stub::experimental_async::ParseVeriBlockPopTx(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPoPTransactionReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockPopTx_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::parseVeriBlockPopTx(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockPoPTransaction* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_parseVeriBlockPopTx_, context, request, response, std::move(f));
+void DeserializeService::Stub::experimental_async::ParseVeriBlockPopTx(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockPoPTransactionReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockPopTx_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::parseVeriBlockPopTx(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPoPTransaction* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_parseVeriBlockPopTx_, context, request, response, reactor);
+void DeserializeService::Stub::experimental_async::ParseVeriBlockPopTx(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPoPTransactionReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockPopTx_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::parseVeriBlockPopTx(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockPoPTransaction* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_parseVeriBlockPopTx_, context, request, response, reactor);
+void DeserializeService::Stub::experimental_async::ParseVeriBlockPopTx(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockPoPTransactionReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockPopTx_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockPoPTransaction>* DeserializeService::Stub::AsyncparseVeriBlockPopTxRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockPoPTransaction>::Create(channel_.get(), cq, rpcmethod_parseVeriBlockPopTx_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockPoPTransactionReply>* DeserializeService::Stub::AsyncParseVeriBlockPopTxRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockPoPTransactionReply>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockPopTx_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockPoPTransaction>* DeserializeService::Stub::PrepareAsyncparseVeriBlockPopTxRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockPoPTransaction>::Create(channel_.get(), cq, rpcmethod_parseVeriBlockPopTx_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockPoPTransactionReply>* DeserializeService::Stub::PrepareAsyncParseVeriBlockPopTxRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockPoPTransactionReply>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockPopTx_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::ParseOutput(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::Output* response) {
+::grpc::Status DeserializeService::Stub::ParseOutput(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::OutputReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseOutput_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParseOutput(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::Output* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseOutput(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::OutputReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseOutput_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseOutput(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::Output* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseOutput(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::OutputReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseOutput_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseOutput(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::Output* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseOutput(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::OutputReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseOutput_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParseOutput(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::Output* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseOutput(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::OutputReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseOutput_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::Output>* DeserializeService::Stub::AsyncParseOutputRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::Output>::Create(channel_.get(), cq, rpcmethod_ParseOutput_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::OutputReply>* DeserializeService::Stub::AsyncParseOutputRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::OutputReply>::Create(channel_.get(), cq, rpcmethod_ParseOutput_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::Output>* DeserializeService::Stub::PrepareAsyncParseOutputRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::Output>::Create(channel_.get(), cq, rpcmethod_ParseOutput_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::OutputReply>* DeserializeService::Stub::PrepareAsyncParseOutputRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::OutputReply>::Create(channel_.get(), cq, rpcmethod_ParseOutput_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::ParseAddress(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::Address* response) {
+::grpc::Status DeserializeService::Stub::ParseAddress(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::AddressReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseAddress_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParseAddress(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::Address* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseAddress(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::AddressReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseAddress_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseAddress(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::Address* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseAddress(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::AddressReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseAddress_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseAddress(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::Address* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseAddress(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::AddressReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseAddress_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParseAddress(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::Address* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseAddress(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::AddressReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseAddress_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::Address>* DeserializeService::Stub::AsyncParseAddressRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::Address>::Create(channel_.get(), cq, rpcmethod_ParseAddress_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::AddressReply>* DeserializeService::Stub::AsyncParseAddressRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::AddressReply>::Create(channel_.get(), cq, rpcmethod_ParseAddress_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::Address>* DeserializeService::Stub::PrepareAsyncParseAddressRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::Address>::Create(channel_.get(), cq, rpcmethod_ParseAddress_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::AddressReply>* DeserializeService::Stub::PrepareAsyncParseAddressRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::AddressReply>::Create(channel_.get(), cq, rpcmethod_ParseAddress_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::ParseBitcoinBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::BitcoinBlock* response) {
+::grpc::Status DeserializeService::Stub::ParseBitcoinBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::BitcoinBlockReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseBitcoinBlock_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParseBitcoinBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinBlock* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseBitcoinBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinBlockReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseBitcoinBlock_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseBitcoinBlock(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::BitcoinBlock* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseBitcoinBlock(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::BitcoinBlockReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseBitcoinBlock_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseBitcoinBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinBlock* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseBitcoinBlock(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinBlockReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseBitcoinBlock_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParseBitcoinBlock(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::BitcoinBlock* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseBitcoinBlock(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::BitcoinBlockReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseBitcoinBlock_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::BitcoinBlock>* DeserializeService::Stub::AsyncParseBitcoinBlockRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::BitcoinBlock>::Create(channel_.get(), cq, rpcmethod_ParseBitcoinBlock_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::BitcoinBlockReply>* DeserializeService::Stub::AsyncParseBitcoinBlockRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::BitcoinBlockReply>::Create(channel_.get(), cq, rpcmethod_ParseBitcoinBlock_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::BitcoinBlock>* DeserializeService::Stub::PrepareAsyncParseBitcoinBlockRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::BitcoinBlock>::Create(channel_.get(), cq, rpcmethod_ParseBitcoinBlock_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::BitcoinBlockReply>* DeserializeService::Stub::PrepareAsyncParseBitcoinBlockRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::BitcoinBlockReply>::Create(channel_.get(), cq, rpcmethod_ParseBitcoinBlock_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::ParseVeriBlockMerklePath(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::VeriBlockMerklePath* response) {
+::grpc::Status DeserializeService::Stub::ParseVeriBlockMerklePath(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::VeriBlock::VeriBlockMerklePathReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseVeriBlockMerklePath_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockMerklePath(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockMerklePath* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockMerklePath(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockMerklePathReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockMerklePath_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockMerklePath(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockMerklePath* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockMerklePath(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockMerklePathReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockMerklePath_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockMerklePath(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockMerklePath* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockMerklePath(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockMerklePathReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockMerklePath_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParseVeriBlockMerklePath(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockMerklePath* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseVeriBlockMerklePath(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::VeriBlockMerklePathReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseVeriBlockMerklePath_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockMerklePath>* DeserializeService::Stub::AsyncParseVeriBlockMerklePathRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockMerklePath>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockMerklePath_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockMerklePathReply>* DeserializeService::Stub::AsyncParseVeriBlockMerklePathRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockMerklePathReply>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockMerklePath_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockMerklePath>* DeserializeService::Stub::PrepareAsyncParseVeriBlockMerklePathRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockMerklePath>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockMerklePath_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::VeriBlockMerklePathReply>* DeserializeService::Stub::PrepareAsyncParseVeriBlockMerklePathRaw(::grpc::ClientContext* context, const ::VeriBlock::BytesArrayRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::VeriBlockMerklePathReply>::Create(channel_.get(), cq, rpcmethod_ParseVeriBlockMerklePath_, context, request, false);
 }
 
-::grpc::Status DeserializeService::Stub::ParseMerklePath(::grpc::ClientContext* context, const ::VeriBlock::MerklePathRequest& request, ::VeriBlock::MerklePath* response) {
+::grpc::Status DeserializeService::Stub::ParseMerklePath(::grpc::ClientContext* context, const ::VeriBlock::MerklePathRequest& request, ::VeriBlock::MerklePathReply* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ParseMerklePath_, context, request, response);
 }
 
-void DeserializeService::Stub::experimental_async::ParseMerklePath(::grpc::ClientContext* context, const ::VeriBlock::MerklePathRequest* request, ::VeriBlock::MerklePath* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseMerklePath(::grpc::ClientContext* context, const ::VeriBlock::MerklePathRequest* request, ::VeriBlock::MerklePathReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseMerklePath_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseMerklePath(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::MerklePath* response, std::function<void(::grpc::Status)> f) {
+void DeserializeService::Stub::experimental_async::ParseMerklePath(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::MerklePathReply* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ParseMerklePath_, context, request, response, std::move(f));
 }
 
-void DeserializeService::Stub::experimental_async::ParseMerklePath(::grpc::ClientContext* context, const ::VeriBlock::MerklePathRequest* request, ::VeriBlock::MerklePath* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseMerklePath(::grpc::ClientContext* context, const ::VeriBlock::MerklePathRequest* request, ::VeriBlock::MerklePathReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseMerklePath_, context, request, response, reactor);
 }
 
-void DeserializeService::Stub::experimental_async::ParseMerklePath(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::MerklePath* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void DeserializeService::Stub::experimental_async::ParseMerklePath(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::MerklePathReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ParseMerklePath_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::MerklePath>* DeserializeService::Stub::AsyncParseMerklePathRaw(::grpc::ClientContext* context, const ::VeriBlock::MerklePathRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::MerklePath>::Create(channel_.get(), cq, rpcmethod_ParseMerklePath_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::MerklePathReply>* DeserializeService::Stub::AsyncParseMerklePathRaw(::grpc::ClientContext* context, const ::VeriBlock::MerklePathRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::MerklePathReply>::Create(channel_.get(), cq, rpcmethod_ParseMerklePath_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::VeriBlock::MerklePath>* DeserializeService::Stub::PrepareAsyncParseMerklePathRaw(::grpc::ClientContext* context, const ::VeriBlock::MerklePathRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::MerklePath>::Create(channel_.get(), cq, rpcmethod_ParseMerklePath_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::VeriBlock::MerklePathReply>* DeserializeService::Stub::PrepareAsyncParseMerklePathRaw(::grpc::ClientContext* context, const ::VeriBlock::MerklePathRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::MerklePathReply>::Create(channel_.get(), cq, rpcmethod_ParseMerklePath_, context, request, false);
 }
 
 DeserializeService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::AltPublication>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::AltPublicationReply>(
           std::mem_fn(&DeserializeService::Service::ParseAltPublication), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::PublicationData>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::PublicationDataReply>(
           std::mem_fn(&DeserializeService::Service::ParsePublicationData), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::BitcoinTransaction>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::BitcoinTransactionReply>(
           std::mem_fn(&DeserializeService::Service::ParseBitcoinTransaction), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::VeriBlockBlock>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::VeriBlockBlockReply>(
           std::mem_fn(&DeserializeService::Service::ParseVeriBlockBlock), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::VeriBlockTransaction>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::VeriBlockTransactionReply>(
           std::mem_fn(&DeserializeService::Service::ParseVeriBlockTransaction), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::VeriBlockPublication>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::VeriBlockPublicationReply>(
           std::mem_fn(&DeserializeService::Service::ParseVeriBlockPublication), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[6],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::VeriBlockPoPTransaction>(
-          std::mem_fn(&DeserializeService::Service::parseVeriBlockPopTx), this)));
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::VeriBlockPoPTransactionReply>(
+          std::mem_fn(&DeserializeService::Service::ParseVeriBlockPopTx), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[7],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::Output>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::OutputReply>(
           std::mem_fn(&DeserializeService::Service::ParseOutput), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[8],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::Address>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::AddressReply>(
           std::mem_fn(&DeserializeService::Service::ParseAddress), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[9],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::BitcoinBlock>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::BitcoinBlockReply>(
           std::mem_fn(&DeserializeService::Service::ParseBitcoinBlock), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[10],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::VeriBlockMerklePath>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::BytesArrayRequest, ::VeriBlock::VeriBlockMerklePathReply>(
           std::mem_fn(&DeserializeService::Service::ParseVeriBlockMerklePath), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       DeserializeService_method_names[11],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::MerklePathRequest, ::VeriBlock::MerklePath>(
+      new ::grpc::internal::RpcMethodHandler< DeserializeService::Service, ::VeriBlock::MerklePathRequest, ::VeriBlock::MerklePathReply>(
           std::mem_fn(&DeserializeService::Service::ParseMerklePath), this)));
 }
 
 DeserializeService::Service::~Service() {
 }
 
-::grpc::Status DeserializeService::Service::ParseAltPublication(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::AltPublication* response) {
+::grpc::Status DeserializeService::Service::ParseAltPublication(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::AltPublicationReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::ParsePublicationData(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::PublicationData* response) {
+::grpc::Status DeserializeService::Service::ParsePublicationData(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::PublicationDataReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::ParseBitcoinTransaction(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinTransaction* response) {
+::grpc::Status DeserializeService::Service::ParseBitcoinTransaction(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinTransactionReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::ParseVeriBlockBlock(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockBlock* response) {
+::grpc::Status DeserializeService::Service::ParseVeriBlockBlock(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockBlockReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::ParseVeriBlockTransaction(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockTransaction* response) {
+::grpc::Status DeserializeService::Service::ParseVeriBlockTransaction(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockTransactionReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::ParseVeriBlockPublication(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPublication* response) {
+::grpc::Status DeserializeService::Service::ParseVeriBlockPublication(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPublicationReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::parseVeriBlockPopTx(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPoPTransaction* response) {
+::grpc::Status DeserializeService::Service::ParseVeriBlockPopTx(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockPoPTransactionReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::ParseOutput(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::Output* response) {
+::grpc::Status DeserializeService::Service::ParseOutput(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::OutputReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::ParseAddress(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::Address* response) {
+::grpc::Status DeserializeService::Service::ParseAddress(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::AddressReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::ParseBitcoinBlock(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinBlock* response) {
+::grpc::Status DeserializeService::Service::ParseBitcoinBlock(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::BitcoinBlockReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::ParseVeriBlockMerklePath(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockMerklePath* response) {
+::grpc::Status DeserializeService::Service::ParseVeriBlockMerklePath(::grpc::ServerContext* context, const ::VeriBlock::BytesArrayRequest* request, ::VeriBlock::VeriBlockMerklePathReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status DeserializeService::Service::ParseMerklePath(::grpc::ServerContext* context, const ::VeriBlock::MerklePathRequest* request, ::VeriBlock::MerklePath* response) {
+::grpc::Status DeserializeService::Service::ParseMerklePath(::grpc::ServerContext* context, const ::VeriBlock::MerklePathRequest* request, ::VeriBlock::MerklePathReply* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -2626,6 +2752,109 @@ ValidationService::Service::~Service() {
 }
 
 ::grpc::Status ValidationService::Service::CheckBlocksAltPublication(::grpc::ServerContext* context, const ::VeriBlock::AltPublication* request, ::VeriBlock::GeneralReply* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+
+static const char* ForkresolutionService_method_names[] = {
+  "/VeriBlock.ForkresolutionService/CompareTwoBranches",
+  "/VeriBlock.ForkresolutionService/SetForkresolutionConfig",
+};
+
+std::unique_ptr< ForkresolutionService::Stub> ForkresolutionService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+  (void)options;
+  std::unique_ptr< ForkresolutionService::Stub> stub(new ForkresolutionService::Stub(channel));
+  return stub;
+}
+
+ForkresolutionService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
+  : channel_(channel), rpcmethod_CompareTwoBranches_(ForkresolutionService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_SetForkresolutionConfig_(ForkresolutionService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  {}
+
+::grpc::Status ForkresolutionService::Stub::CompareTwoBranches(::grpc::ClientContext* context, const ::VeriBlock::TwoBranchesRequest& request, ::VeriBlock::CompareReply* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_CompareTwoBranches_, context, request, response);
+}
+
+void ForkresolutionService::Stub::experimental_async::CompareTwoBranches(::grpc::ClientContext* context, const ::VeriBlock::TwoBranchesRequest* request, ::VeriBlock::CompareReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_CompareTwoBranches_, context, request, response, std::move(f));
+}
+
+void ForkresolutionService::Stub::experimental_async::CompareTwoBranches(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::CompareReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_CompareTwoBranches_, context, request, response, std::move(f));
+}
+
+void ForkresolutionService::Stub::experimental_async::CompareTwoBranches(::grpc::ClientContext* context, const ::VeriBlock::TwoBranchesRequest* request, ::VeriBlock::CompareReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_CompareTwoBranches_, context, request, response, reactor);
+}
+
+void ForkresolutionService::Stub::experimental_async::CompareTwoBranches(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::CompareReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_CompareTwoBranches_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::VeriBlock::CompareReply>* ForkresolutionService::Stub::AsyncCompareTwoBranchesRaw(::grpc::ClientContext* context, const ::VeriBlock::TwoBranchesRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::CompareReply>::Create(channel_.get(), cq, rpcmethod_CompareTwoBranches_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::VeriBlock::CompareReply>* ForkresolutionService::Stub::PrepareAsyncCompareTwoBranchesRaw(::grpc::ClientContext* context, const ::VeriBlock::TwoBranchesRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::CompareReply>::Create(channel_.get(), cq, rpcmethod_CompareTwoBranches_, context, request, false);
+}
+
+::grpc::Status ForkresolutionService::Stub::SetForkresolutionConfig(::grpc::ClientContext* context, const ::VeriBlock::ForkresolutionConfigRequest& request, ::VeriBlock::GeneralReply* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_SetForkresolutionConfig_, context, request, response);
+}
+
+void ForkresolutionService::Stub::experimental_async::SetForkresolutionConfig(::grpc::ClientContext* context, const ::VeriBlock::ForkresolutionConfigRequest* request, ::VeriBlock::GeneralReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_SetForkresolutionConfig_, context, request, response, std::move(f));
+}
+
+void ForkresolutionService::Stub::experimental_async::SetForkresolutionConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::GeneralReply* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_SetForkresolutionConfig_, context, request, response, std::move(f));
+}
+
+void ForkresolutionService::Stub::experimental_async::SetForkresolutionConfig(::grpc::ClientContext* context, const ::VeriBlock::ForkresolutionConfigRequest* request, ::VeriBlock::GeneralReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_SetForkresolutionConfig_, context, request, response, reactor);
+}
+
+void ForkresolutionService::Stub::experimental_async::SetForkresolutionConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::VeriBlock::GeneralReply* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_SetForkresolutionConfig_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::VeriBlock::GeneralReply>* ForkresolutionService::Stub::AsyncSetForkresolutionConfigRaw(::grpc::ClientContext* context, const ::VeriBlock::ForkresolutionConfigRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::GeneralReply>::Create(channel_.get(), cq, rpcmethod_SetForkresolutionConfig_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::VeriBlock::GeneralReply>* ForkresolutionService::Stub::PrepareAsyncSetForkresolutionConfigRaw(::grpc::ClientContext* context, const ::VeriBlock::ForkresolutionConfigRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::VeriBlock::GeneralReply>::Create(channel_.get(), cq, rpcmethod_SetForkresolutionConfig_, context, request, false);
+}
+
+ForkresolutionService::Service::Service() {
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      ForkresolutionService_method_names[0],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< ForkresolutionService::Service, ::VeriBlock::TwoBranchesRequest, ::VeriBlock::CompareReply>(
+          std::mem_fn(&ForkresolutionService::Service::CompareTwoBranches), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      ForkresolutionService_method_names[1],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< ForkresolutionService::Service, ::VeriBlock::ForkresolutionConfigRequest, ::VeriBlock::GeneralReply>(
+          std::mem_fn(&ForkresolutionService::Service::SetForkresolutionConfig), this)));
+}
+
+ForkresolutionService::Service::~Service() {
+}
+
+::grpc::Status ForkresolutionService::Service::CompareTwoBranches(::grpc::ServerContext* context, const ::VeriBlock::TwoBranchesRequest* request, ::VeriBlock::CompareReply* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status ForkresolutionService::Service::SetForkresolutionConfig(::grpc::ServerContext* context, const ::VeriBlock::ForkresolutionConfigRequest* request, ::VeriBlock::GeneralReply* response) {
   (void) context;
   (void) request;
   (void) response;

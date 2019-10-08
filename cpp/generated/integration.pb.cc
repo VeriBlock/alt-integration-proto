@@ -16,6 +16,7 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Address_integration_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AltChainBlock_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_AltPublication_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BitcoinBlock_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BitcoinTransaction_integration_2eproto;
@@ -24,6 +25,7 @@ extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::int
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Coin_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FlatScoreRoundConfig_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GeneralReply_integration_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MerklePath_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NetworkByte_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Output_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PopEndorsement_integration_2eproto;
@@ -34,6 +36,7 @@ extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::int
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RewardOutput_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoundRatioConfig_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VeriBlockBlock_integration_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VeriBlockMerklePath_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_VeriBlockPoPTransaction_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_VeriBlockPublication_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_VeriBlockTransaction_integration_2eproto;
@@ -122,6 +125,22 @@ class RemovePayloadsRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RemovePayloadsRequest> _instance;
 } _RemovePayloadsRequest_default_instance_;
+class AltChainConfigRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AltChainConfigRequest> _instance;
+} _AltChainConfigRequest_default_instance_;
+class GetLastKnownBlocksRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetLastKnownBlocksRequest> _instance;
+} _GetLastKnownBlocksRequest_default_instance_;
+class GetLastKnownVBKBlocksReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetLastKnownVBKBlocksReply> _instance;
+} _GetLastKnownVBKBlocksReply_default_instance_;
+class GetLastKnownBTCBlocksReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetLastKnownBTCBlocksReply> _instance;
+} _GetLastKnownBTCBlocksReply_default_instance_;
 class RoundRatioConfigDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoundRatioConfig> _instance;
@@ -198,6 +217,70 @@ class VeriBlockMerklePathDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VeriBlockMerklePath> _instance;
 } _VeriBlockMerklePath_default_instance_;
+class AltPublicationReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AltPublicationReply> _instance;
+} _AltPublicationReply_default_instance_;
+class PublicationDataReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PublicationDataReply> _instance;
+} _PublicationDataReply_default_instance_;
+class BitcoinTransactionReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BitcoinTransactionReply> _instance;
+} _BitcoinTransactionReply_default_instance_;
+class VeriBlockBlockReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VeriBlockBlockReply> _instance;
+} _VeriBlockBlockReply_default_instance_;
+class VeriBlockTransactionReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VeriBlockTransactionReply> _instance;
+} _VeriBlockTransactionReply_default_instance_;
+class VeriBlockPublicationReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VeriBlockPublicationReply> _instance;
+} _VeriBlockPublicationReply_default_instance_;
+class VeriBlockPoPTransactionReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VeriBlockPoPTransactionReply> _instance;
+} _VeriBlockPoPTransactionReply_default_instance_;
+class OutputReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OutputReply> _instance;
+} _OutputReply_default_instance_;
+class AddressReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AddressReply> _instance;
+} _AddressReply_default_instance_;
+class BitcoinBlockReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BitcoinBlockReply> _instance;
+} _BitcoinBlockReply_default_instance_;
+class VeriBlockMerklePathReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VeriBlockMerklePathReply> _instance;
+} _VeriBlockMerklePathReply_default_instance_;
+class MerklePathReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<MerklePathReply> _instance;
+} _MerklePathReply_default_instance_;
+class AltChainBlockDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AltChainBlock> _instance;
+} _AltChainBlock_default_instance_;
+class TwoBranchesRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TwoBranchesRequest> _instance;
+} _TwoBranchesRequest_default_instance_;
+class CompareReplyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CompareReply> _instance;
+} _CompareReply_default_instance_;
+class ForkresolutionConfigRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ForkresolutionConfigRequest> _instance;
+} _ForkresolutionConfigRequest_default_instance_;
 }  // namespace VeriBlock
 static void InitDefaultsscc_info_AddPayloadsRequest_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -246,6 +329,51 @@ static void InitDefaultsscc_info_Address_integration_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Address_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Address_integration_2eproto}, {}};
 
+static void InitDefaultsscc_info_AddressReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_AddressReply_default_instance_;
+    new (ptr) ::VeriBlock::AddressReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::AddressReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_AddressReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_AddressReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_Address_integration_2eproto.base,}};
+
+static void InitDefaultsscc_info_AltChainBlock_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_AltChainBlock_default_instance_;
+    new (ptr) ::VeriBlock::AltChainBlock();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::AltChainBlock::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AltChainBlock_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_AltChainBlock_integration_2eproto}, {
+      &scc_info_BlockIndex_integration_2eproto.base,}};
+
+static void InitDefaultsscc_info_AltChainConfigRequest_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_AltChainConfigRequest_default_instance_;
+    new (ptr) ::VeriBlock::AltChainConfigRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::AltChainConfigRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AltChainConfigRequest_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AltChainConfigRequest_integration_2eproto}, {}};
+
 static void InitDefaultsscc_info_AltPublication_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -262,6 +390,22 @@ static void InitDefaultsscc_info_AltPublication_integration_2eproto() {
       &scc_info_VeriBlockTransaction_integration_2eproto.base,
       &scc_info_VeriBlockBlock_integration_2eproto.base,}};
 
+static void InitDefaultsscc_info_AltPublicationReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_AltPublicationReply_default_instance_;
+    new (ptr) ::VeriBlock::AltPublicationReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::AltPublicationReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_AltPublicationReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_AltPublicationReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_AltPublication_integration_2eproto.base,}};
+
 static void InitDefaultsscc_info_BitcoinBlock_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -276,6 +420,22 @@ static void InitDefaultsscc_info_BitcoinBlock_integration_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BitcoinBlock_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_BitcoinBlock_integration_2eproto}, {}};
 
+static void InitDefaultsscc_info_BitcoinBlockReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_BitcoinBlockReply_default_instance_;
+    new (ptr) ::VeriBlock::BitcoinBlockReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::BitcoinBlockReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_BitcoinBlockReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_BitcoinBlockReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_BitcoinBlock_integration_2eproto.base,}};
+
 static void InitDefaultsscc_info_BitcoinTransaction_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -289,6 +449,22 @@ static void InitDefaultsscc_info_BitcoinTransaction_integration_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BitcoinTransaction_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_BitcoinTransaction_integration_2eproto}, {}};
+
+static void InitDefaultsscc_info_BitcoinTransactionReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_BitcoinTransactionReply_default_instance_;
+    new (ptr) ::VeriBlock::BitcoinTransactionReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::BitcoinTransactionReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_BitcoinTransactionReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_BitcoinTransactionReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_BitcoinTransaction_integration_2eproto.base,}};
 
 static void InitDefaultsscc_info_BlockIndex_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -315,8 +491,9 @@ static void InitDefaultsscc_info_BytesArrayReply_integration_2eproto() {
   ::VeriBlock::BytesArrayReply::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BytesArrayReply_integration_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_BytesArrayReply_integration_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_BytesArrayReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_BytesArrayReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,}};
 
 static void InitDefaultsscc_info_BytesArrayRequest_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -364,6 +541,21 @@ static void InitDefaultsscc_info_Coin_integration_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Coin_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Coin_integration_2eproto}, {}};
 
+static void InitDefaultsscc_info_CompareReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_CompareReply_default_instance_;
+    new (ptr) ::VeriBlock::CompareReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::CompareReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CompareReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_CompareReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,}};
+
 static void InitDefaultsscc_info_EmptyRequest_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -391,6 +583,20 @@ static void InitDefaultsscc_info_FlatScoreRoundConfig_integration_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FlatScoreRoundConfig_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_FlatScoreRoundConfig_integration_2eproto}, {}};
+
+static void InitDefaultsscc_info_ForkresolutionConfigRequest_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_ForkresolutionConfigRequest_default_instance_;
+    new (ptr) ::VeriBlock::ForkresolutionConfigRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::ForkresolutionConfigRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ForkresolutionConfigRequest_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_ForkresolutionConfigRequest_integration_2eproto}, {}};
 
 static void InitDefaultsscc_info_GeneralReply_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -422,6 +628,50 @@ static void InitDefaultsscc_info_GetCalculatorReply_integration_2eproto() {
       &scc_info_GeneralReply_integration_2eproto.base,
       &scc_info_CalculatorConfig_integration_2eproto.base,}};
 
+static void InitDefaultsscc_info_GetLastKnownBTCBlocksReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_GetLastKnownBTCBlocksReply_default_instance_;
+    new (ptr) ::VeriBlock::GetLastKnownBTCBlocksReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::GetLastKnownBTCBlocksReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_GetLastKnownBTCBlocksReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_GetLastKnownBTCBlocksReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,}};
+
+static void InitDefaultsscc_info_GetLastKnownBlocksRequest_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_GetLastKnownBlocksRequest_default_instance_;
+    new (ptr) ::VeriBlock::GetLastKnownBlocksRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::GetLastKnownBlocksRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetLastKnownBlocksRequest_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_GetLastKnownBlocksRequest_integration_2eproto}, {}};
+
+static void InitDefaultsscc_info_GetLastKnownVBKBlocksReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_GetLastKnownVBKBlocksReply_default_instance_;
+    new (ptr) ::VeriBlock::GetLastKnownVBKBlocksReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::GetLastKnownVBKBlocksReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_GetLastKnownVBKBlocksReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_GetLastKnownVBKBlocksReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,}};
+
 static void InitDefaultsscc_info_GetMainVBKHeightOfATVReply_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -450,6 +700,22 @@ static void InitDefaultsscc_info_MerklePath_integration_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MerklePath_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_MerklePath_integration_2eproto}, {}};
+
+static void InitDefaultsscc_info_MerklePathReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_MerklePathReply_default_instance_;
+    new (ptr) ::VeriBlock::MerklePathReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::MerklePathReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_MerklePathReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_MerklePathReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_MerklePath_integration_2eproto.base,}};
 
 static void InitDefaultsscc_info_MerklePathRequest_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -495,6 +761,22 @@ static void InitDefaultsscc_info_Output_integration_2eproto() {
       &scc_info_Address_integration_2eproto.base,
       &scc_info_Coin_integration_2eproto.base,}};
 
+static void InitDefaultsscc_info_OutputReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_OutputReply_default_instance_;
+    new (ptr) ::VeriBlock::OutputReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::OutputReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_OutputReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_OutputReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_Output_integration_2eproto.base,}};
+
 static void InitDefaultsscc_info_PopEndorsement_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -522,6 +804,22 @@ static void InitDefaultsscc_info_PublicationData_integration_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PublicationData_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_PublicationData_integration_2eproto}, {}};
+
+static void InitDefaultsscc_info_PublicationDataReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_PublicationDataReply_default_instance_;
+    new (ptr) ::VeriBlock::PublicationDataReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::PublicationDataReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PublicationDataReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_PublicationDataReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_PublicationData_integration_2eproto.base,}};
 
 static void InitDefaultsscc_info_RelativeScoreConfig_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -716,6 +1014,21 @@ static void InitDefaultsscc_info_SimplifyVTBsRequest_integration_2eproto() {
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_SimplifyVTBsRequest_integration_2eproto}, {
       &scc_info_VeriBlockPublication_integration_2eproto.base,}};
 
+static void InitDefaultsscc_info_TwoBranchesRequest_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_TwoBranchesRequest_default_instance_;
+    new (ptr) ::VeriBlock::TwoBranchesRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::TwoBranchesRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TwoBranchesRequest_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_TwoBranchesRequest_integration_2eproto}, {
+      &scc_info_AltChainBlock_integration_2eproto.base,}};
+
 static void InitDefaultsscc_info_VeriBlockBlock_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -730,6 +1043,22 @@ static void InitDefaultsscc_info_VeriBlockBlock_integration_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VeriBlockBlock_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_VeriBlockBlock_integration_2eproto}, {}};
 
+static void InitDefaultsscc_info_VeriBlockBlockReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_VeriBlockBlockReply_default_instance_;
+    new (ptr) ::VeriBlock::VeriBlockBlockReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::VeriBlockBlockReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_VeriBlockBlockReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_VeriBlockBlockReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_VeriBlockBlock_integration_2eproto.base,}};
+
 static void InitDefaultsscc_info_VeriBlockMerklePath_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -743,6 +1072,22 @@ static void InitDefaultsscc_info_VeriBlockMerklePath_integration_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VeriBlockMerklePath_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_VeriBlockMerklePath_integration_2eproto}, {}};
+
+static void InitDefaultsscc_info_VeriBlockMerklePathReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_VeriBlockMerklePathReply_default_instance_;
+    new (ptr) ::VeriBlock::VeriBlockMerklePathReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::VeriBlockMerklePathReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_VeriBlockMerklePathReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_VeriBlockMerklePathReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_VeriBlockMerklePath_integration_2eproto.base,}};
 
 static void InitDefaultsscc_info_VeriBlockPoPTransaction_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -763,6 +1108,22 @@ static void InitDefaultsscc_info_VeriBlockPoPTransaction_integration_2eproto() {
       &scc_info_BitcoinBlock_integration_2eproto.base,
       &scc_info_NetworkByte_integration_2eproto.base,}};
 
+static void InitDefaultsscc_info_VeriBlockPoPTransactionReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_VeriBlockPoPTransactionReply_default_instance_;
+    new (ptr) ::VeriBlock::VeriBlockPoPTransactionReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::VeriBlockPoPTransactionReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_VeriBlockPoPTransactionReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_VeriBlockPoPTransactionReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_VeriBlockPoPTransaction_integration_2eproto.base,}};
+
 static void InitDefaultsscc_info_VeriBlockPublication_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -778,6 +1139,22 @@ static void InitDefaultsscc_info_VeriBlockPublication_integration_2eproto() {
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_VeriBlockPublication_integration_2eproto}, {
       &scc_info_VeriBlockPoPTransaction_integration_2eproto.base,
       &scc_info_VeriBlockBlock_integration_2eproto.base,}};
+
+static void InitDefaultsscc_info_VeriBlockPublicationReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_VeriBlockPublicationReply_default_instance_;
+    new (ptr) ::VeriBlock::VeriBlockPublicationReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::VeriBlockPublicationReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_VeriBlockPublicationReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_VeriBlockPublicationReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_VeriBlockPublication_integration_2eproto.base,}};
 
 static void InitDefaultsscc_info_VeriBlockTransaction_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -798,7 +1175,23 @@ static void InitDefaultsscc_info_VeriBlockTransaction_integration_2eproto() {
       &scc_info_PublicationData_integration_2eproto.base,
       &scc_info_NetworkByte_integration_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_integration_2eproto[40];
+static void InitDefaultsscc_info_VeriBlockTransactionReply_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_VeriBlockTransactionReply_default_instance_;
+    new (ptr) ::VeriBlock::VeriBlockTransactionReply();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::VeriBlockTransactionReply::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_VeriBlockTransactionReply_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_VeriBlockTransactionReply_integration_2eproto}, {
+      &scc_info_GeneralReply_integration_2eproto.base,
+      &scc_info_VeriBlockTransaction_integration_2eproto.base,}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_integration_2eproto[60];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_integration_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_integration_2eproto = nullptr;
 
@@ -979,6 +1372,32 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RemovePayloadsRequest, blockindex_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AltChainConfigRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AltChainConfigRequest, keystoneinterval_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::GetLastKnownBlocksRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::GetLastKnownBlocksRequest, maxblockcount_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::GetLastKnownVBKBlocksReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::GetLastKnownVBKBlocksReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::GetLastKnownVBKBlocksReply, blocks_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::GetLastKnownBTCBlocksReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::GetLastKnownBTCBlocksReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::GetLastKnownBTCBlocksReply, blocks_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RoundRatioConfig, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -1015,7 +1434,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, basicreward_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, payoutrounds_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, keystoneround_),
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, keystoneinterval_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, roundratios_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, rewardcurve_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, maxrewardthresholdnormal_),
@@ -1097,6 +1515,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::BytesArrayReply, result_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::BytesArrayReply, data_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::MerklePath, _internal_metadata_),
@@ -1117,6 +1536,118 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockMerklePath, merklepath_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AltPublicationReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AltPublicationReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AltPublicationReply, publication_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::PublicationDataReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::PublicationDataReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::PublicationDataReply, publication_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::BitcoinTransactionReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::BitcoinTransactionReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::BitcoinTransactionReply, transaction_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockBlockReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockBlockReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockBlockReply, block_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockTransactionReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockTransactionReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockTransactionReply, transaction_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockPublicationReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockPublicationReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockPublicationReply, publication_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockPoPTransactionReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockPoPTransactionReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockPoPTransactionReply, transaction_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::OutputReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::OutputReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::OutputReply, output_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AddressReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AddressReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AddressReply, address_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::BitcoinBlockReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::BitcoinBlockReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::BitcoinBlockReply, block_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockMerklePathReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockMerklePathReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockMerklePathReply, merklepath_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::MerklePathReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::MerklePathReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::MerklePathReply, merklepath_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AltChainBlock, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AltChainBlock, blockindex_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::AltChainBlock, timestamp_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::TwoBranchesRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::TwoBranchesRequest, leftfork_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::TwoBranchesRequest, rightfork_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::CompareReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::CompareReply, result_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::CompareReply, comparingsresult_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::ForkresolutionConfigRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::ForkresolutionConfigRequest, keystonefinalitydelay_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::ForkresolutionConfigRequest, amnestyperiod_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::VeriBlock::PublicationData)},
@@ -1140,25 +1671,45 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 155, -1, sizeof(::VeriBlock::SimplifyVTBsReply)},
   { 162, -1, sizeof(::VeriBlock::GetMainVBKHeightOfATVReply)},
   { 169, -1, sizeof(::VeriBlock::RemovePayloadsRequest)},
-  { 175, -1, sizeof(::VeriBlock::RoundRatioConfig)},
-  { 181, -1, sizeof(::VeriBlock::RewardCurveConfig)},
-  { 191, -1, sizeof(::VeriBlock::RelativeScoreConfig)},
-  { 197, -1, sizeof(::VeriBlock::FlatScoreRoundConfig)},
-  { 204, -1, sizeof(::VeriBlock::CalculatorConfig)},
-  { 219, -1, sizeof(::VeriBlock::SetCalculatorRequest)},
-  { 225, -1, sizeof(::VeriBlock::GetCalculatorReply)},
-  { 232, -1, sizeof(::VeriBlock::RewardOutput)},
-  { 239, -1, sizeof(::VeriBlock::PopEndorsement)},
-  { 246, -1, sizeof(::VeriBlock::RewardEndorsement)},
-  { 253, -1, sizeof(::VeriBlock::RewardsCalculateScoreRequest)},
-  { 259, -1, sizeof(::VeriBlock::RewardsCalculateScoreReply)},
-  { 266, -1, sizeof(::VeriBlock::RewardsCalculateOutputsRequest)},
-  { 274, -1, sizeof(::VeriBlock::RewardsCalculateOutputsReply)},
-  { 283, -1, sizeof(::VeriBlock::BytesArrayRequest)},
-  { 289, -1, sizeof(::VeriBlock::BytesArrayReply)},
-  { 295, -1, sizeof(::VeriBlock::MerklePath)},
-  { 301, -1, sizeof(::VeriBlock::MerklePathRequest)},
-  { 308, -1, sizeof(::VeriBlock::VeriBlockMerklePath)},
+  { 175, -1, sizeof(::VeriBlock::AltChainConfigRequest)},
+  { 181, -1, sizeof(::VeriBlock::GetLastKnownBlocksRequest)},
+  { 187, -1, sizeof(::VeriBlock::GetLastKnownVBKBlocksReply)},
+  { 194, -1, sizeof(::VeriBlock::GetLastKnownBTCBlocksReply)},
+  { 201, -1, sizeof(::VeriBlock::RoundRatioConfig)},
+  { 207, -1, sizeof(::VeriBlock::RewardCurveConfig)},
+  { 217, -1, sizeof(::VeriBlock::RelativeScoreConfig)},
+  { 223, -1, sizeof(::VeriBlock::FlatScoreRoundConfig)},
+  { 230, -1, sizeof(::VeriBlock::CalculatorConfig)},
+  { 244, -1, sizeof(::VeriBlock::SetCalculatorRequest)},
+  { 250, -1, sizeof(::VeriBlock::GetCalculatorReply)},
+  { 257, -1, sizeof(::VeriBlock::RewardOutput)},
+  { 264, -1, sizeof(::VeriBlock::PopEndorsement)},
+  { 271, -1, sizeof(::VeriBlock::RewardEndorsement)},
+  { 278, -1, sizeof(::VeriBlock::RewardsCalculateScoreRequest)},
+  { 284, -1, sizeof(::VeriBlock::RewardsCalculateScoreReply)},
+  { 291, -1, sizeof(::VeriBlock::RewardsCalculateOutputsRequest)},
+  { 299, -1, sizeof(::VeriBlock::RewardsCalculateOutputsReply)},
+  { 308, -1, sizeof(::VeriBlock::BytesArrayRequest)},
+  { 314, -1, sizeof(::VeriBlock::BytesArrayReply)},
+  { 321, -1, sizeof(::VeriBlock::MerklePath)},
+  { 327, -1, sizeof(::VeriBlock::MerklePathRequest)},
+  { 334, -1, sizeof(::VeriBlock::VeriBlockMerklePath)},
+  { 340, -1, sizeof(::VeriBlock::AltPublicationReply)},
+  { 347, -1, sizeof(::VeriBlock::PublicationDataReply)},
+  { 354, -1, sizeof(::VeriBlock::BitcoinTransactionReply)},
+  { 361, -1, sizeof(::VeriBlock::VeriBlockBlockReply)},
+  { 368, -1, sizeof(::VeriBlock::VeriBlockTransactionReply)},
+  { 375, -1, sizeof(::VeriBlock::VeriBlockPublicationReply)},
+  { 382, -1, sizeof(::VeriBlock::VeriBlockPoPTransactionReply)},
+  { 389, -1, sizeof(::VeriBlock::OutputReply)},
+  { 396, -1, sizeof(::VeriBlock::AddressReply)},
+  { 403, -1, sizeof(::VeriBlock::BitcoinBlockReply)},
+  { 410, -1, sizeof(::VeriBlock::VeriBlockMerklePathReply)},
+  { 417, -1, sizeof(::VeriBlock::MerklePathReply)},
+  { 424, -1, sizeof(::VeriBlock::AltChainBlock)},
+  { 431, -1, sizeof(::VeriBlock::TwoBranchesRequest)},
+  { 438, -1, sizeof(::VeriBlock::CompareReply)},
+  { 445, -1, sizeof(::VeriBlock::ForkresolutionConfigRequest)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -1183,6 +1734,10 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_SimplifyVTBsReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_GetMainVBKHeightOfATVReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RemovePayloadsRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_AltChainConfigRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_GetLastKnownBlocksRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_GetLastKnownVBKBlocksReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_GetLastKnownBTCBlocksReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RoundRatioConfig_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RewardCurveConfig_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RelativeScoreConfig_default_instance_),
@@ -1202,6 +1757,22 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_MerklePath_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_MerklePathRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_VeriBlockMerklePath_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_AltPublicationReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_PublicationDataReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_BitcoinTransactionReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_VeriBlockBlockReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_VeriBlockTransactionReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_VeriBlockPublicationReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_VeriBlockPoPTransactionReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_OutputReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_AddressReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_BitcoinBlockReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_VeriBlockMerklePathReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_MerklePathReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_AltChainBlock_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_TwoBranchesRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_CompareReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_ForkresolutionConfigRequest_default_instance_),
 };
 
 const char descriptor_table_protodef_integration_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -1273,217 +1844,295 @@ const char descriptor_table_protodef_integration_2eproto[] PROTOBUF_SECTION_VARI
   "\"U\n\032GetMainVBKHeightOfATVReply\022\'\n\006result"
   "\030\001 \001(\0132\027.VeriBlock.GeneralReply\022\016\n\006heigh"
   "t\030\002 \001(\005\"B\n\025RemovePayloadsRequest\022)\n\nbloc"
-  "kIndex\030\001 \001(\0132\025.VeriBlock.BlockIndex\"&\n\020R"
-  "oundRatioConfig\022\022\n\nroundRatio\030\001 \003(\t\"\332\001\n\021"
-  "RewardCurveConfig\022\035\n\025startOfDecreasingLi"
-  "ne\030\001 \001(\t\022#\n\033widthOfDecreasingLineNormal\030"
-  "\002 \001(\t\022%\n\035widthOfDecreasingLineKeystone\030\003"
-  " \001(\t\022+\n#aboveIntendedPayoutMultiplierNor"
-  "mal\030\004 \001(\t\022-\n%aboveIntendedPayoutMultipli"
-  "erKeystone\030\005 \001(\t\"$\n\023RelativeScoreConfig\022"
-  "\r\n\005score\030\001 \003(\t\"5\n\024FlatScoreRoundConfig\022\r"
-  "\n\005round\030\001 \001(\005\022\016\n\006active\030\002 \001(\010\"\224\003\n\020Calcul"
-  "atorConfig\022\023\n\013basicReward\030\001 \001(\t\022\024\n\014payou"
-  "tRounds\030\002 \001(\005\022\025\n\rkeystoneRound\030\003 \001(\005\022\030\n\020"
-  "keystoneInterval\030\004 \001(\005\0220\n\013roundRatios\030\005 "
-  "\001(\0132\033.VeriBlock.RoundRatioConfig\0221\n\013rewa"
-  "rdCurve\030\006 \001(\0132\034.VeriBlock.RewardCurveCon"
-  "fig\022 \n\030maxRewardThresholdNormal\030\007 \001(\t\022\"\n"
-  "\032maxRewardThresholdKeystone\030\010 \001(\t\022@\n\030rel"
-  "ativeScoreLookupTable\030\t \001(\0132\036.VeriBlock."
-  "RelativeScoreConfig\0227\n\016flatScoreRound\030\n "
-  "\001(\0132\037.VeriBlock.FlatScoreRoundConfig\"G\n\024"
-  "SetCalculatorRequest\022/\n\ncalculator\030\001 \001(\013"
-  "2\033.VeriBlock.CalculatorConfig\"n\n\022GetCalc"
-  "ulatorReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock."
-  "GeneralReply\022/\n\ncalculator\030\002 \001(\0132\033.VeriB"
-  "lock.CalculatorConfig\"/\n\014RewardOutput\022\017\n"
-  "\007address\030\001 \001(\t\022\016\n\006reward\030\002 \001(\t\"/\n\016PopEnd"
-  "orsement\022\017\n\007address\030\001 \001(\t\022\014\n\004txid\030\002 \001(\t\""
-  "c\n\021RewardEndorsement\022\026\n\016blockVbkHeight\030\001"
-  " \001(\005\0226\n\023endorsementsInBlock\030\002 \003(\0132\031.Veri"
-  "Block.PopEndorsement\"Z\n\034RewardsCalculate"
-  "ScoreRequest\022:\n\024endorsementsForBlock\030\001 \003"
-  "(\0132\034.VeriBlock.RewardEndorsement\"T\n\032Rewa"
-  "rdsCalculateScoreReply\022\'\n\006result\030\001 \001(\0132\027"
-  ".VeriBlock.GeneralReply\022\r\n\005score\030\002 \001(\t\"\210"
-  "\001\n\036RewardsCalculateOutputsRequest\022\026\n\016blo"
-  "ckAltHeight\030\001 \001(\005\022:\n\024endorsementsForBloc"
-  "k\030\002 \003(\0132\034.VeriBlock.RewardEndorsement\022\022\n"
-  "\ndifficulty\030\003 \001(\t\"\233\001\n\034RewardsCalculateOu"
-  "tputsReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.G"
-  "eneralReply\022\023\n\013totalReward\030\002 \001(\t\022\023\n\013bloc"
-  "kReward\030\003 \001(\t\022(\n\007outputs\030\004 \003(\0132\027.VeriBlo"
-  "ck.RewardOutput\"!\n\021BytesArrayRequest\022\014\n\004"
-  "data\030\001 \001(\014\"\037\n\017BytesArrayReply\022\014\n\004data\030\001 "
-  "\001(\014\" \n\nMerklePath\022\022\n\nmerklePath\030\001 \001(\t\"8\n"
-  "\021MerklePathRequest\022\014\n\004data\030\001 \001(\014\022\025\n\007subj"
-  "ect\030\002 \001(\014B\004\200\265\030\001\")\n\023VeriBlockMerklePath\022\022"
-  "\n\nmerklePath\030\001 \001(\t2\310\007\n\022IntegrationServic"
-  "e\022C\n\rResetSecurity\022\027.VeriBlock.EmptyRequ"
-  "est\032\027.VeriBlock.GeneralReply\"\000\022K\n\023AddGen"
-  "esisVeriBlock\022\031.VeriBlock.VeriBlockBlock"
-  "\032\027.VeriBlock.GeneralReply\"\000\022G\n\021AddGenesi"
-  "sBitcoin\022\027.VeriBlock.BitcoinBlock\032\027.Veri"
-  "Block.GeneralReply\"\000\022G\n\013AddPayloads\022\035.Ve"
-  "riBlock.AddPayloadsRequest\032\027.VeriBlock.G"
-  "eneralReply\"\000\022M\n\016RemovePayloads\022 .VeriBl"
-  "ock.RemovePayloadsRequest\032\027.VeriBlock.Ge"
-  "neralReply\"\000\022Y\n\024AddTemporaryPayloads\022&.V"
-  "eriBlock.AddTemporaryPayloadsRequest\032\027.V"
-  "eriBlock.GeneralReply\"\000\022L\n\026ClearTemporar"
-  "yPayloads\022\027.VeriBlock.EmptyRequest\032\027.Ver"
-  "iBlock.GeneralReply\"\000\022N\n\014SimplifyVTBs\022\036."
-  "VeriBlock.SimplifyVTBsRequest\032\034.VeriBloc"
-  "k.SimplifyVTBsReply\"\000\022K\n\023CheckATVAgainst"
-  "View\022\031.VeriBlock.AltPublication\032\027.VeriBl"
-  "ock.GeneralReply\"\000\022P\n\022CheckVTBInternally"
+  "kIndex\030\001 \001(\0132\025.VeriBlock.BlockIndex\"1\n\025A"
+  "ltChainConfigRequest\022\030\n\020keystoneInterval"
+  "\030\001 \001(\005\"2\n\031GetLastKnownBlocksRequest\022\025\n\rm"
+  "axBlockCount\030\001 \001(\005\"[\n\032GetLastKnownVBKBlo"
+  "cksReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gen"
+  "eralReply\022\024\n\006blocks\030\002 \003(\014B\004\200\265\030\001\"[\n\032GetLa"
+  "stKnownBTCBlocksReply\022\'\n\006result\030\001 \001(\0132\027."
+  "VeriBlock.GeneralReply\022\024\n\006blocks\030\002 \003(\014B\004"
+  "\200\265\030\001\"&\n\020RoundRatioConfig\022\022\n\nroundRatio\030\001"
+  " \003(\t\"\332\001\n\021RewardCurveConfig\022\035\n\025startOfDec"
+  "reasingLine\030\001 \001(\t\022#\n\033widthOfDecreasingLi"
+  "neNormal\030\002 \001(\t\022%\n\035widthOfDecreasingLineK"
+  "eystone\030\003 \001(\t\022+\n#aboveIntendedPayoutMult"
+  "iplierNormal\030\004 \001(\t\022-\n%aboveIntendedPayou"
+  "tMultiplierKeystone\030\005 \001(\t\"$\n\023RelativeSco"
+  "reConfig\022\r\n\005score\030\001 \003(\t\"5\n\024FlatScoreRoun"
+  "dConfig\022\r\n\005round\030\001 \001(\005\022\016\n\006active\030\002 \001(\010\"\372"
+  "\002\n\020CalculatorConfig\022\023\n\013basicReward\030\001 \001(\t"
+  "\022\024\n\014payoutRounds\030\002 \001(\005\022\025\n\rkeystoneRound\030"
+  "\003 \001(\005\0220\n\013roundRatios\030\005 \001(\0132\033.VeriBlock.R"
+  "oundRatioConfig\0221\n\013rewardCurve\030\006 \001(\0132\034.V"
+  "eriBlock.RewardCurveConfig\022 \n\030maxRewardT"
+  "hresholdNormal\030\007 \001(\t\022\"\n\032maxRewardThresho"
+  "ldKeystone\030\010 \001(\t\022@\n\030relativeScoreLookupT"
+  "able\030\t \001(\0132\036.VeriBlock.RelativeScoreConf"
+  "ig\0227\n\016flatScoreRound\030\n \001(\0132\037.VeriBlock.F"
+  "latScoreRoundConfig\"G\n\024SetCalculatorRequ"
+  "est\022/\n\ncalculator\030\001 \001(\0132\033.VeriBlock.Calc"
+  "ulatorConfig\"n\n\022GetCalculatorReply\022\'\n\006re"
+  "sult\030\001 \001(\0132\027.VeriBlock.GeneralReply\022/\n\nc"
+  "alculator\030\002 \001(\0132\033.VeriBlock.CalculatorCo"
+  "nfig\"/\n\014RewardOutput\022\017\n\007address\030\001 \001(\t\022\016\n"
+  "\006reward\030\002 \001(\t\"/\n\016PopEndorsement\022\017\n\007addre"
+  "ss\030\001 \001(\t\022\014\n\004txid\030\002 \001(\t\"c\n\021RewardEndorsem"
+  "ent\022\026\n\016blockVbkHeight\030\001 \001(\005\0226\n\023endorseme"
+  "ntsInBlock\030\002 \003(\0132\031.VeriBlock.PopEndorsem"
+  "ent\"Z\n\034RewardsCalculateScoreRequest\022:\n\024e"
+  "ndorsementsForBlock\030\001 \003(\0132\034.VeriBlock.Re"
+  "wardEndorsement\"T\n\032RewardsCalculateScore"
+  "Reply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Genera"
+  "lReply\022\r\n\005score\030\002 \001(\t\"\210\001\n\036RewardsCalcula"
+  "teOutputsRequest\022\026\n\016blockAltHeight\030\001 \001(\005"
+  "\022:\n\024endorsementsForBlock\030\002 \003(\0132\034.VeriBlo"
+  "ck.RewardEndorsement\022\022\n\ndifficulty\030\003 \001(\t"
+  "\"\233\001\n\034RewardsCalculateOutputsReply\022\'\n\006res"
+  "ult\030\001 \001(\0132\027.VeriBlock.GeneralReply\022\023\n\013to"
+  "talReward\030\002 \001(\t\022\023\n\013blockReward\030\003 \001(\t\022(\n\007"
+  "outputs\030\004 \003(\0132\027.VeriBlock.RewardOutput\"!"
+  "\n\021BytesArrayRequest\022\014\n\004data\030\001 \001(\014\"H\n\017Byt"
+  "esArrayReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock"
+  ".GeneralReply\022\014\n\004data\030\002 \001(\014\" \n\nMerklePat"
+  "h\022\022\n\nmerklePath\030\001 \001(\t\"8\n\021MerklePathReque"
+  "st\022\014\n\004data\030\001 \001(\014\022\025\n\007subject\030\002 \001(\014B\004\200\265\030\001\""
+  ")\n\023VeriBlockMerklePath\022\022\n\nmerklePath\030\001 \001"
+  "(\t\"n\n\023AltPublicationReply\022\'\n\006result\030\001 \001("
+  "\0132\027.VeriBlock.GeneralReply\022.\n\013publicatio"
+  "n\030\002 \001(\0132\031.VeriBlock.AltPublication\"p\n\024Pu"
+  "blicationDataReply\022\'\n\006result\030\001 \001(\0132\027.Ver"
+  "iBlock.GeneralReply\022/\n\013publication\030\002 \001(\013"
+  "2\032.VeriBlock.PublicationData\"v\n\027BitcoinT"
+  "ransactionReply\022\'\n\006result\030\001 \001(\0132\027.VeriBl"
+  "ock.GeneralReply\0222\n\013transaction\030\002 \001(\0132\035."
+  "VeriBlock.BitcoinTransaction\"h\n\023VeriBloc"
+  "kBlockReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock."
+  "GeneralReply\022(\n\005block\030\002 \001(\0132\031.VeriBlock."
+  "VeriBlockBlock\"z\n\031VeriBlockTransactionRe"
+  "ply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralR"
+  "eply\0224\n\013transaction\030\002 \001(\0132\037.VeriBlock.Ve"
+  "riBlockTransaction\"z\n\031VeriBlockPublicati"
+  "onReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gene"
+  "ralReply\0224\n\013publication\030\002 \001(\0132\037.VeriBloc"
+  "k.VeriBlockPublication\"\200\001\n\034VeriBlockPoPT"
+  "ransactionReply\022\'\n\006result\030\001 \001(\0132\027.VeriBl"
+  "ock.GeneralReply\0227\n\013transaction\030\002 \001(\0132\"."
+  "VeriBlock.VeriBlockPoPTransaction\"Y\n\013Out"
+  "putReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gen"
+  "eralReply\022!\n\006output\030\002 \001(\0132\021.VeriBlock.Ou"
+  "tput\"\\\n\014AddressReply\022\'\n\006result\030\001 \001(\0132\027.V"
+  "eriBlock.GeneralReply\022#\n\007address\030\002 \001(\0132\022"
+  ".VeriBlock.Address\"d\n\021BitcoinBlockReply\022"
+  "\'\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralReply"
+  "\022&\n\005block\030\002 \001(\0132\027.VeriBlock.BitcoinBlock"
+  "\"w\n\030VeriBlockMerklePathReply\022\'\n\006result\030\001"
+  " \001(\0132\027.VeriBlock.GeneralReply\0222\n\nmerkleP"
+  "ath\030\002 \001(\0132\036.VeriBlock.VeriBlockMerklePat"
+  "h\"e\n\017MerklePathReply\022\'\n\006result\030\001 \001(\0132\027.V"
+  "eriBlock.GeneralReply\022)\n\nmerklePath\030\002 \001("
+  "\0132\025.VeriBlock.MerklePath\"M\n\rAltChainBloc"
+  "k\022)\n\nblockIndex\030\001 \001(\0132\025.VeriBlock.BlockI"
+  "ndex\022\021\n\ttimestamp\030\002 \001(\005\"m\n\022TwoBranchesRe"
+  "quest\022*\n\010leftFork\030\001 \003(\0132\030.VeriBlock.AltC"
+  "hainBlock\022+\n\trightFork\030\002 \003(\0132\030.VeriBlock"
+  ".AltChainBlock\"Q\n\014CompareReply\022\'\n\006result"
+  "\030\001 \001(\0132\027.VeriBlock.GeneralReply\022\030\n\020compa"
+  "ringsResult\030\002 \001(\005\"S\n\033ForkresolutionConfi"
+  "gRequest\022\035\n\025keystoneFinalityDelay\030\001 \001(\005\022"
+  "\025\n\ramnestyPeriod\030\002 \001(\0052\364\t\n\022IntegrationSe"
+  "rvice\022C\n\rResetSecurity\022\027.VeriBlock.Empty"
+  "Request\032\027.VeriBlock.GeneralReply\"\000\022K\n\023Ad"
+  "dGenesisVeriBlock\022\031.VeriBlock.VeriBlockB"
+  "lock\032\027.VeriBlock.GeneralReply\"\000\022G\n\021AddGe"
+  "nesisBitcoin\022\027.VeriBlock.BitcoinBlock\032\027."
+  "VeriBlock.GeneralReply\"\000\022G\n\013AddPayloads\022"
+  "\035.VeriBlock.AddPayloadsRequest\032\027.VeriBlo"
+  "ck.GeneralReply\"\000\022M\n\016RemovePayloads\022 .Ve"
+  "riBlock.RemovePayloadsRequest\032\027.VeriBloc"
+  "k.GeneralReply\"\000\022Y\n\024AddTemporaryPayloads"
+  "\022&.VeriBlock.AddTemporaryPayloadsRequest"
+  "\032\027.VeriBlock.GeneralReply\"\000\022L\n\026ClearTemp"
+  "oraryPayloads\022\027.VeriBlock.EmptyRequest\032\027"
+  ".VeriBlock.GeneralReply\"\000\022N\n\014SimplifyVTB"
+  "s\022\036.VeriBlock.SimplifyVTBsRequest\032\034.Veri"
+  "Block.SimplifyVTBsReply\"\000\022K\n\023CheckATVAga"
+  "instView\022\031.VeriBlock.AltPublication\032\027.Ve"
+  "riBlock.GeneralReply\"\000\022P\n\022CheckVTBIntern"
+  "ally\022\037.VeriBlock.VeriBlockPublication\032\027."
+  "VeriBlock.GeneralReply\"\000\022J\n\022CheckATVInte"
+  "rnally\022\031.VeriBlock.AltPublication\032\027.Veri"
+  "Block.GeneralReply\"\000\022[\n\025GetMainVBKHeight"
+  "OfATV\022\031.VeriBlock.AltPublication\032%.VeriB"
+  "lock.GetMainVBKHeightOfATVReply\"\000\022Z\n\033Set"
+  "AltChainParametersConfig\022 .VeriBlock.Alt"
+  "ChainConfigRequest\032\027.VeriBlock.GeneralRe"
+  "ply\"\000\022f\n\025GetLastKnownVBKBlocks\022$.VeriBlo"
+  "ck.GetLastKnownBlocksRequest\032%.VeriBlock"
+  ".GetLastKnownVBKBlocksReply\"\000\022f\n\025GetLast"
+  "KnownBTCBlocks\022$.VeriBlock.GetLastKnownB"
+  "locksRequest\032%.VeriBlock.GetLastKnownBTC"
+  "BlocksReply\"\0002\310\003\n\016RewardsService\022B\n\014Rese"
+  "tRewards\022\027.VeriBlock.EmptyRequest\032\027.Veri"
+  "Block.GeneralReply\"\000\022I\n\rGetCalculator\022\027."
+  "VeriBlock.EmptyRequest\032\035.VeriBlock.GetCa"
+  "lculatorReply\"\000\022K\n\rSetCalculator\022\037.VeriB"
+  "lock.SetCalculatorRequest\032\027.VeriBlock.Ge"
+  "neralReply\"\000\022i\n\025RewardsCalculateScore\022\'."
+  "VeriBlock.RewardsCalculateScoreRequest\032%"
+  ".VeriBlock.RewardsCalculateScoreReply\"\000\022"
+  "o\n\027RewardsCalculateOutputs\022).VeriBlock.R"
+  "ewardsCalculateOutputsRequest\032\'.VeriBloc"
+  "k.RewardsCalculateOutputsReply\"\0002\263\010\n\022Des"
+  "erializeService\022U\n\023ParseAltPublication\022\034"
+  ".VeriBlock.BytesArrayRequest\032\036.VeriBlock"
+  ".AltPublicationReply\"\000\022W\n\024ParsePublicati"
+  "onData\022\034.VeriBlock.BytesArrayRequest\032\037.V"
+  "eriBlock.PublicationDataReply\"\000\022]\n\027Parse"
+  "BitcoinTransaction\022\034.VeriBlock.BytesArra"
+  "yRequest\032\".VeriBlock.BitcoinTransactionR"
+  "eply\"\000\022U\n\023ParseVeriBlockBlock\022\034.VeriBloc"
+  "k.BytesArrayRequest\032\036.VeriBlock.VeriBloc"
+  "kBlockReply\"\000\022a\n\031ParseVeriBlockTransacti"
+  "on\022\034.VeriBlock.BytesArrayRequest\032$.VeriB"
+  "lock.VeriBlockTransactionReply\"\000\022a\n\031Pars"
+  "eVeriBlockPublication\022\034.VeriBlock.BytesA"
+  "rrayRequest\032$.VeriBlock.VeriBlockPublica"
+  "tionReply\"\000\022^\n\023ParseVeriBlockPopTx\022\034.Ver"
+  "iBlock.BytesArrayRequest\032\'.VeriBlock.Ver"
+  "iBlockPoPTransactionReply\"\000\022E\n\013ParseOutp"
+  "ut\022\034.VeriBlock.BytesArrayRequest\032\026.VeriB"
+  "lock.OutputReply\"\000\022G\n\014ParseAddress\022\034.Ver"
+  "iBlock.BytesArrayRequest\032\027.VeriBlock.Add"
+  "ressReply\"\000\022Q\n\021ParseBitcoinBlock\022\034.VeriB"
+  "lock.BytesArrayRequest\032\034.VeriBlock.Bitco"
+  "inBlockReply\"\000\022_\n\030ParseVeriBlockMerklePa"
+  "th\022\034.VeriBlock.BytesArrayRequest\032#.VeriB"
+  "lock.VeriBlockMerklePathReply\"\000\022M\n\017Parse"
+  "MerklePath\022\034.VeriBlock.MerklePathRequest"
+  "\032\032.VeriBlock.MerklePathReply\"\0002\215\010\n\020Seria"
+  "lizeService\022R\n\027SerializeAltPublication\022\031"
+  ".VeriBlock.AltPublication\032\032.VeriBlock.By"
+  "tesArrayReply\"\000\022T\n\030SerializePublicationD"
+  "ata\022\032.VeriBlock.PublicationData\032\032.VeriBl"
+  "ock.BytesArrayReply\"\000\022Z\n\033SerializeBitcoi"
+  "nTransaction\022\035.VeriBlock.BitcoinTransact"
+  "ion\032\032.VeriBlock.BytesArrayReply\"\000\022R\n\027Ser"
+  "ializeVeriBlockBlock\022\031.VeriBlock.VeriBlo"
+  "ckBlock\032\032.VeriBlock.BytesArrayReply\"\000\022^\n"
+  "\035SerializeVeriBlockTransaction\022\037.VeriBlo"
+  "ck.VeriBlockTransaction\032\032.VeriBlock.Byte"
+  "sArrayReply\"\000\022^\n\035SerializeVeriBlockPubli"
+  "cation\022\037.VeriBlock.VeriBlockPublication\032"
+  "\032.VeriBlock.BytesArrayReply\"\000\022[\n\027Seriali"
+  "zeVeriBlockPopTx\022\".VeriBlock.VeriBlockPo"
+  "PTransaction\032\032.VeriBlock.BytesArrayReply"
+  "\"\000\022B\n\017SerializeOutput\022\021.VeriBlock.Output"
+  "\032\032.VeriBlock.BytesArrayReply\"\000\022D\n\020Serial"
+  "izeAddress\022\022.VeriBlock.Address\032\032.VeriBlo"
+  "ck.BytesArrayReply\"\000\022N\n\025SerializeBitcoin"
+  "Block\022\027.VeriBlock.BitcoinBlock\032\032.VeriBlo"
+  "ck.BytesArrayReply\"\000\022\\\n\034SerializeVeriBlo"
+  "ckMerklePath\022\036.VeriBlock.VeriBlockMerkle"
+  "Path\032\032.VeriBlock.BytesArrayReply\"\000\022J\n\023Se"
+  "rializeMerklePath\022\025.VeriBlock.MerklePath"
+  "\032\032.VeriBlock.BytesArrayReply\"\0002\271\r\n\021Valid"
+  "ationService\022U\n\024VerifyVeriBlockPoPTx\022\".V"
+  "eriBlock.VeriBlockPoPTransaction\032\027.VeriB"
+  "lock.GeneralReply\"\000\022]\n\034CheckSignatureVer"
+  "iBlockPoPTx\022\".VeriBlock.VeriBlockPoPTran"
+  "saction\032\027.VeriBlock.GeneralReply\"\000\022b\n!Ch"
+  "eckBitcoinTransactionForPoPData\022\".VeriBl"
+  "ock.VeriBlockPoPTransaction\032\027.VeriBlock."
+  "GeneralReply\"\000\022e\n$CheckBitcoinMerklePath"
+  "VeriBlockPoPTx\022\".VeriBlock.VeriBlockPoPT"
+  "ransaction\032\027.VeriBlock.GeneralReply\"\000\022a\n"
+  " CheckBitcoinBlocksVeriBlockPoPTx\022\".Veri"
+  "Block.VeriBlockPoPTransaction\032\027.VeriBloc"
+  "k.GeneralReply\"\000\022X\n\032VerifyVeriBlockPubli"
+  "cation\022\037.VeriBlock.VeriBlockPublication\032"
+  "\027.VeriBlock.GeneralReply\"\000\022]\n\037CheckBlock"
+  "sVeriBlockPublication\022\037.VeriBlock.VeriBl"
+  "ockPublication\032\027.VeriBlock.GeneralReply\""
+  "\000\022a\n#CheckMerklePathVeriBlockPublication"
   "\022\037.VeriBlock.VeriBlockPublication\032\027.Veri"
-  "Block.GeneralReply\"\000\022J\n\022CheckATVInternal"
-  "ly\022\031.VeriBlock.AltPublication\032\027.VeriBloc"
-  "k.GeneralReply\"\000\022[\n\025GetMainVBKHeightOfAT"
-  "V\022\031.VeriBlock.AltPublication\032%.VeriBlock"
-  ".GetMainVBKHeightOfATVReply\"\0002\310\003\n\016Reward"
-  "sService\022B\n\014ResetRewards\022\027.VeriBlock.Emp"
-  "tyRequest\032\027.VeriBlock.GeneralReply\"\000\022I\n\r"
-  "GetCalculator\022\027.VeriBlock.EmptyRequest\032\035"
-  ".VeriBlock.GetCalculatorReply\"\000\022K\n\rSetCa"
-  "lculator\022\037.VeriBlock.SetCalculatorReques"
-  "t\032\027.VeriBlock.GeneralReply\"\000\022i\n\025RewardsC"
-  "alculateScore\022\'.VeriBlock.RewardsCalcula"
-  "teScoreRequest\032%.VeriBlock.RewardsCalcul"
-  "ateScoreReply\"\000\022o\n\027RewardsCalculateOutpu"
-  "ts\022).VeriBlock.RewardsCalculateOutputsRe"
-  "quest\032\'.VeriBlock.RewardsCalculateOutput"
-  "sReply\"\0002\367\007\n\022DeserializeService\022P\n\023Parse"
-  "AltPublication\022\034.VeriBlock.BytesArrayReq"
-  "uest\032\031.VeriBlock.AltPublication\"\000\022R\n\024Par"
-  "sePublicationData\022\034.VeriBlock.BytesArray"
-  "Request\032\032.VeriBlock.PublicationData\"\000\022X\n"
-  "\027ParseBitcoinTransaction\022\034.VeriBlock.Byt"
-  "esArrayRequest\032\035.VeriBlock.BitcoinTransa"
-  "ction\"\000\022P\n\023ParseVeriBlockBlock\022\034.VeriBlo"
-  "ck.BytesArrayRequest\032\031.VeriBlock.VeriBlo"
-  "ckBlock\"\000\022\\\n\031ParseVeriBlockTransaction\022\034"
-  ".VeriBlock.BytesArrayRequest\032\037.VeriBlock"
-  ".VeriBlockTransaction\"\000\022\\\n\031ParseVeriBloc"
-  "kPublication\022\034.VeriBlock.BytesArrayReque"
-  "st\032\037.VeriBlock.VeriBlockPublication\"\000\022Y\n"
-  "\023parseVeriBlockPopTx\022\034.VeriBlock.BytesAr"
-  "rayRequest\032\".VeriBlock.VeriBlockPoPTrans"
-  "action\"\000\022@\n\013ParseOutput\022\034.VeriBlock.Byte"
-  "sArrayRequest\032\021.VeriBlock.Output\"\000\022B\n\014Pa"
-  "rseAddress\022\034.VeriBlock.BytesArrayRequest"
-  "\032\022.VeriBlock.Address\"\000\022L\n\021ParseBitcoinBl"
-  "ock\022\034.VeriBlock.BytesArrayRequest\032\027.Veri"
-  "Block.BitcoinBlock\"\000\022Z\n\030ParseVeriBlockMe"
-  "rklePath\022\034.VeriBlock.BytesArrayRequest\032\036"
-  ".VeriBlock.VeriBlockMerklePath\"\000\022H\n\017Pars"
-  "eMerklePath\022\034.VeriBlock.MerklePathReques"
-  "t\032\025.VeriBlock.MerklePath\"\0002\215\010\n\020Serialize"
-  "Service\022R\n\027SerializeAltPublication\022\031.Ver"
-  "iBlock.AltPublication\032\032.VeriBlock.BytesA"
-  "rrayReply\"\000\022T\n\030SerializePublicationData\022"
-  "\032.VeriBlock.PublicationData\032\032.VeriBlock."
-  "BytesArrayReply\"\000\022Z\n\033SerializeBitcoinTra"
-  "nsaction\022\035.VeriBlock.BitcoinTransaction\032"
-  "\032.VeriBlock.BytesArrayReply\"\000\022R\n\027Seriali"
-  "zeVeriBlockBlock\022\031.VeriBlock.VeriBlockBl"
-  "ock\032\032.VeriBlock.BytesArrayReply\"\000\022^\n\035Ser"
-  "ializeVeriBlockTransaction\022\037.VeriBlock.V"
-  "eriBlockTransaction\032\032.VeriBlock.BytesArr"
-  "ayReply\"\000\022^\n\035SerializeVeriBlockPublicati"
-  "on\022\037.VeriBlock.VeriBlockPublication\032\032.Ve"
-  "riBlock.BytesArrayReply\"\000\022[\n\027SerializeVe"
-  "riBlockPopTx\022\".VeriBlock.VeriBlockPoPTra"
-  "nsaction\032\032.VeriBlock.BytesArrayReply\"\000\022B"
-  "\n\017SerializeOutput\022\021.VeriBlock.Output\032\032.V"
-  "eriBlock.BytesArrayReply\"\000\022D\n\020SerializeA"
-  "ddress\022\022.VeriBlock.Address\032\032.VeriBlock.B"
-  "ytesArrayReply\"\000\022N\n\025SerializeBitcoinBloc"
-  "k\022\027.VeriBlock.BitcoinBlock\032\032.VeriBlock.B"
-  "ytesArrayReply\"\000\022\\\n\034SerializeVeriBlockMe"
-  "rklePath\022\036.VeriBlock.VeriBlockMerklePath"
-  "\032\032.VeriBlock.BytesArrayReply\"\000\022J\n\023Serial"
-  "izeMerklePath\022\025.VeriBlock.MerklePath\032\032.V"
-  "eriBlock.BytesArrayReply\"\0002\271\r\n\021Validatio"
-  "nService\022U\n\024VerifyVeriBlockPoPTx\022\".VeriB"
-  "lock.VeriBlockPoPTransaction\032\027.VeriBlock"
-  ".GeneralReply\"\000\022]\n\034CheckSignatureVeriBlo"
-  "ckPoPTx\022\".VeriBlock.VeriBlockPoPTransact"
-  "ion\032\027.VeriBlock.GeneralReply\"\000\022b\n!CheckB"
-  "itcoinTransactionForPoPData\022\".VeriBlock."
-  "VeriBlockPoPTransaction\032\027.VeriBlock.Gene"
-  "ralReply\"\000\022e\n$CheckBitcoinMerklePathVeri"
-  "BlockPoPTx\022\".VeriBlock.VeriBlockPoPTrans"
-  "action\032\027.VeriBlock.GeneralReply\"\000\022a\n Che"
-  "ckBitcoinBlocksVeriBlockPoPTx\022\".VeriBloc"
-  "k.VeriBlockPoPTransaction\032\027.VeriBlock.Ge"
-  "neralReply\"\000\022X\n\032VerifyVeriBlockPublicati"
-  "on\022\037.VeriBlock.VeriBlockPublication\032\027.Ve"
-  "riBlock.GeneralReply\"\000\022]\n\037CheckBlocksVer"
-  "iBlockPublication\022\037.VeriBlock.VeriBlockP"
-  "ublication\032\027.VeriBlock.GeneralReply\"\000\022a\n"
-  "#CheckMerklePathVeriBlockPublication\022\037.V"
-  "eriBlock.VeriBlockPublication\032\027.VeriBloc"
-  "k.GeneralReply\"\000\022X\n\032VerifyVeriBlockTrans"
-  "action\022\037.VeriBlock.VeriBlockTransaction\032"
-  "\027.VeriBlock.GeneralReply\"\000\022`\n\"CheckSigna"
-  "tureVeriBlockTransaction\022\037.VeriBlock.Ver"
-  "iBlockTransaction\032\027.VeriBlock.GeneralRep"
-  "ly\"\000\022L\n\024VerifyVeriBlockBlock\022\031.VeriBlock"
-  ".VeriBlockBlock\032\027.VeriBlock.GeneralReply"
-  "\"\000\022V\n\036CheckProofOfWorkVeriBlockBlock\022\031.V"
-  "eriBlock.VeriBlockBlock\032\027.VeriBlock.Gene"
-  "ralReply\"\000\022W\n\037CheckMaximumDriftVeriBlock"
-  "Block\022\031.VeriBlock.VeriBlockBlock\032\027.VeriB"
-  "lock.GeneralReply\"\000\022H\n\022VerifyBitcoinBloc"
-  "k\022\027.VeriBlock.BitcoinBlock\032\027.VeriBlock.G"
-  "eneralReply\"\000\022R\n\034CheckProofOfWorkBitcoin"
+  "Block.GeneralReply\"\000\022X\n\032VerifyVeriBlockT"
+  "ransaction\022\037.VeriBlock.VeriBlockTransact"
+  "ion\032\027.VeriBlock.GeneralReply\"\000\022`\n\"CheckS"
+  "ignatureVeriBlockTransaction\022\037.VeriBlock"
+  ".VeriBlockTransaction\032\027.VeriBlock.Genera"
+  "lReply\"\000\022L\n\024VerifyVeriBlockBlock\022\031.VeriB"
+  "lock.VeriBlockBlock\032\027.VeriBlock.GeneralR"
+  "eply\"\000\022V\n\036CheckProofOfWorkVeriBlockBlock"
+  "\022\031.VeriBlock.VeriBlockBlock\032\027.VeriBlock."
+  "GeneralReply\"\000\022W\n\037CheckMaximumDriftVeriB"
+  "lockBlock\022\031.VeriBlock.VeriBlockBlock\032\027.V"
+  "eriBlock.GeneralReply\"\000\022H\n\022VerifyBitcoin"
   "Block\022\027.VeriBlock.BitcoinBlock\032\027.VeriBlo"
-  "ck.GeneralReply\"\000\022S\n\035CheckMaximumDriftBi"
-  "tcoinBlock\022\027.VeriBlock.BitcoinBlock\032\027.Ve"
-  "riBlock.GeneralReply\"\000\022L\n\024VerifyAltPubli"
-  "cation\022\031.VeriBlock.AltPublication\032\027.Veri"
-  "Block.GeneralReply\"\000\022U\n\035CheckMerklePathA"
-  "ltPublication\022\031.VeriBlock.AltPublication"
-  "\032\027.VeriBlock.GeneralReply\"\000\022Q\n\031CheckBloc"
-  "ksAltPublication\022\031.VeriBlock.AltPublicat"
-  "ion\032\027.VeriBlock.GeneralReply\"\000:4\n\013hex_en"
-  "coded\022\035.google.protobuf.FieldOptions\030\320\206\003"
-  " \001(\010:8\n\017address_encoded\022\035.google.protobu"
-  "f.FieldOptions\030\321\206\003 \001(\010:6\n\rascii_encoded\022"
-  "\035.google.protobuf.FieldOptions\030\322\206\003 \001(\010:5"
-  "\n\014utf8_encoded\022\035.google.protobuf.FieldOp"
-  "tions\030\323\206\003 \001(\010B,\n\024integration.api.grpcB\021V"
-  "eriBlockMessages\210\001\001b\006proto3"
+  "ck.GeneralReply\"\000\022R\n\034CheckProofOfWorkBit"
+  "coinBlock\022\027.VeriBlock.BitcoinBlock\032\027.Ver"
+  "iBlock.GeneralReply\"\000\022S\n\035CheckMaximumDri"
+  "ftBitcoinBlock\022\027.VeriBlock.BitcoinBlock\032"
+  "\027.VeriBlock.GeneralReply\"\000\022L\n\024VerifyAltP"
+  "ublication\022\031.VeriBlock.AltPublication\032\027."
+  "VeriBlock.GeneralReply\"\000\022U\n\035CheckMerkleP"
+  "athAltPublication\022\031.VeriBlock.AltPublica"
+  "tion\032\027.VeriBlock.GeneralReply\"\000\022Q\n\031Check"
+  "BlocksAltPublication\022\031.VeriBlock.AltPubl"
+  "ication\032\027.VeriBlock.GeneralReply\"\0002\305\001\n\025F"
+  "orkresolutionService\022N\n\022CompareTwoBranch"
+  "es\022\035.VeriBlock.TwoBranchesRequest\032\027.Veri"
+  "Block.CompareReply\"\000\022\\\n\027SetForkresolutio"
+  "nConfig\022&.VeriBlock.ForkresolutionConfig"
+  "Request\032\027.VeriBlock.GeneralReply\"\000:4\n\013he"
+  "x_encoded\022\035.google.protobuf.FieldOptions"
+  "\030\320\206\003 \001(\010:8\n\017address_encoded\022\035.google.pro"
+  "tobuf.FieldOptions\030\321\206\003 \001(\010:6\n\rascii_enco"
+  "ded\022\035.google.protobuf.FieldOptions\030\322\206\003 \001"
+  "(\010:5\n\014utf8_encoded\022\035.google.protobuf.Fie"
+  "ldOptions\030\323\206\003 \001(\010B,\n\024integration.api.grp"
+  "cB\021VeriBlockMessages\210\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_integration_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2fdescriptor_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_integration_2eproto_sccs[40] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_integration_2eproto_sccs[60] = {
   &scc_info_AddPayloadsRequest_integration_2eproto.base,
   &scc_info_AddTemporaryPayloadsRequest_integration_2eproto.base,
   &scc_info_Address_integration_2eproto.base,
+  &scc_info_AddressReply_integration_2eproto.base,
+  &scc_info_AltChainBlock_integration_2eproto.base,
+  &scc_info_AltChainConfigRequest_integration_2eproto.base,
   &scc_info_AltPublication_integration_2eproto.base,
+  &scc_info_AltPublicationReply_integration_2eproto.base,
   &scc_info_BitcoinBlock_integration_2eproto.base,
+  &scc_info_BitcoinBlockReply_integration_2eproto.base,
   &scc_info_BitcoinTransaction_integration_2eproto.base,
+  &scc_info_BitcoinTransactionReply_integration_2eproto.base,
   &scc_info_BlockIndex_integration_2eproto.base,
   &scc_info_BytesArrayReply_integration_2eproto.base,
   &scc_info_BytesArrayRequest_integration_2eproto.base,
   &scc_info_CalculatorConfig_integration_2eproto.base,
   &scc_info_Coin_integration_2eproto.base,
+  &scc_info_CompareReply_integration_2eproto.base,
   &scc_info_EmptyRequest_integration_2eproto.base,
   &scc_info_FlatScoreRoundConfig_integration_2eproto.base,
+  &scc_info_ForkresolutionConfigRequest_integration_2eproto.base,
   &scc_info_GeneralReply_integration_2eproto.base,
   &scc_info_GetCalculatorReply_integration_2eproto.base,
+  &scc_info_GetLastKnownBTCBlocksReply_integration_2eproto.base,
+  &scc_info_GetLastKnownBlocksRequest_integration_2eproto.base,
+  &scc_info_GetLastKnownVBKBlocksReply_integration_2eproto.base,
   &scc_info_GetMainVBKHeightOfATVReply_integration_2eproto.base,
   &scc_info_MerklePath_integration_2eproto.base,
+  &scc_info_MerklePathReply_integration_2eproto.base,
   &scc_info_MerklePathRequest_integration_2eproto.base,
   &scc_info_NetworkByte_integration_2eproto.base,
   &scc_info_Output_integration_2eproto.base,
+  &scc_info_OutputReply_integration_2eproto.base,
   &scc_info_PopEndorsement_integration_2eproto.base,
   &scc_info_PublicationData_integration_2eproto.base,
+  &scc_info_PublicationDataReply_integration_2eproto.base,
   &scc_info_RelativeScoreConfig_integration_2eproto.base,
   &scc_info_RemovePayloadsRequest_integration_2eproto.base,
   &scc_info_RewardCurveConfig_integration_2eproto.base,
@@ -1497,19 +2146,25 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_int
   &scc_info_SetCalculatorRequest_integration_2eproto.base,
   &scc_info_SimplifyVTBsReply_integration_2eproto.base,
   &scc_info_SimplifyVTBsRequest_integration_2eproto.base,
+  &scc_info_TwoBranchesRequest_integration_2eproto.base,
   &scc_info_VeriBlockBlock_integration_2eproto.base,
+  &scc_info_VeriBlockBlockReply_integration_2eproto.base,
   &scc_info_VeriBlockMerklePath_integration_2eproto.base,
+  &scc_info_VeriBlockMerklePathReply_integration_2eproto.base,
   &scc_info_VeriBlockPoPTransaction_integration_2eproto.base,
+  &scc_info_VeriBlockPoPTransactionReply_integration_2eproto.base,
   &scc_info_VeriBlockPublication_integration_2eproto.base,
+  &scc_info_VeriBlockPublicationReply_integration_2eproto.base,
   &scc_info_VeriBlockTransaction_integration_2eproto.base,
+  &scc_info_VeriBlockTransactionReply_integration_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_integration_2eproto_once;
 static bool descriptor_table_integration_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_integration_2eproto = {
-  &descriptor_table_integration_2eproto_initialized, descriptor_table_protodef_integration_2eproto, "integration.proto", 10067,
-  &descriptor_table_integration_2eproto_once, descriptor_table_integration_2eproto_sccs, descriptor_table_integration_2eproto_deps, 40, 1,
+  &descriptor_table_integration_2eproto_initialized, descriptor_table_protodef_integration_2eproto, "integration.proto", 12631,
+  &descriptor_table_integration_2eproto_once, descriptor_table_integration_2eproto_sccs, descriptor_table_integration_2eproto_deps, 60, 1,
   schemas, file_default_instances, TableStruct_integration_2eproto::offsets,
-  file_level_metadata_integration_2eproto, 40, file_level_enum_descriptors_integration_2eproto, file_level_service_descriptors_integration_2eproto,
+  file_level_metadata_integration_2eproto, 60, file_level_enum_descriptors_integration_2eproto, file_level_service_descriptors_integration_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -9553,6 +10208,1130 @@ void RemovePayloadsRequest::InternalSwap(RemovePayloadsRequest* other) {
 
 // ===================================================================
 
+void AltChainConfigRequest::InitAsDefaultInstance() {
+}
+class AltChainConfigRequest::_Internal {
+ public:
+};
+
+AltChainConfigRequest::AltChainConfigRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.AltChainConfigRequest)
+}
+AltChainConfigRequest::AltChainConfigRequest(const AltChainConfigRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  keystoneinterval_ = from.keystoneinterval_;
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.AltChainConfigRequest)
+}
+
+void AltChainConfigRequest::SharedCtor() {
+  keystoneinterval_ = 0;
+}
+
+AltChainConfigRequest::~AltChainConfigRequest() {
+  // @@protoc_insertion_point(destructor:VeriBlock.AltChainConfigRequest)
+  SharedDtor();
+}
+
+void AltChainConfigRequest::SharedDtor() {
+}
+
+void AltChainConfigRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const AltChainConfigRequest& AltChainConfigRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AltChainConfigRequest_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void AltChainConfigRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.AltChainConfigRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  keystoneinterval_ = 0;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* AltChainConfigRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int32 keystoneInterval = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          keystoneinterval_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool AltChainConfigRequest::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.AltChainConfigRequest)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 keystoneInterval = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
+                 input, &keystoneinterval_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.AltChainConfigRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.AltChainConfigRequest)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void AltChainConfigRequest::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.AltChainConfigRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 keystoneInterval = 1;
+  if (this->keystoneinterval() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->keystoneinterval(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.AltChainConfigRequest)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AltChainConfigRequest::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.AltChainConfigRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 keystoneInterval = 1;
+  if (this->keystoneinterval() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->keystoneinterval(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.AltChainConfigRequest)
+  return target;
+}
+
+size_t AltChainConfigRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.AltChainConfigRequest)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 keystoneInterval = 1;
+  if (this->keystoneinterval() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->keystoneinterval());
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AltChainConfigRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.AltChainConfigRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AltChainConfigRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AltChainConfigRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.AltChainConfigRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.AltChainConfigRequest)
+    MergeFrom(*source);
+  }
+}
+
+void AltChainConfigRequest::MergeFrom(const AltChainConfigRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.AltChainConfigRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.keystoneinterval() != 0) {
+    set_keystoneinterval(from.keystoneinterval());
+  }
+}
+
+void AltChainConfigRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.AltChainConfigRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AltChainConfigRequest::CopyFrom(const AltChainConfigRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.AltChainConfigRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AltChainConfigRequest::IsInitialized() const {
+  return true;
+}
+
+void AltChainConfigRequest::InternalSwap(AltChainConfigRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(keystoneinterval_, other->keystoneinterval_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AltChainConfigRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void GetLastKnownBlocksRequest::InitAsDefaultInstance() {
+}
+class GetLastKnownBlocksRequest::_Internal {
+ public:
+};
+
+GetLastKnownBlocksRequest::GetLastKnownBlocksRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.GetLastKnownBlocksRequest)
+}
+GetLastKnownBlocksRequest::GetLastKnownBlocksRequest(const GetLastKnownBlocksRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  maxblockcount_ = from.maxblockcount_;
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.GetLastKnownBlocksRequest)
+}
+
+void GetLastKnownBlocksRequest::SharedCtor() {
+  maxblockcount_ = 0;
+}
+
+GetLastKnownBlocksRequest::~GetLastKnownBlocksRequest() {
+  // @@protoc_insertion_point(destructor:VeriBlock.GetLastKnownBlocksRequest)
+  SharedDtor();
+}
+
+void GetLastKnownBlocksRequest::SharedDtor() {
+}
+
+void GetLastKnownBlocksRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const GetLastKnownBlocksRequest& GetLastKnownBlocksRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetLastKnownBlocksRequest_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void GetLastKnownBlocksRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.GetLastKnownBlocksRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  maxblockcount_ = 0;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GetLastKnownBlocksRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int32 maxBlockCount = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          maxblockcount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GetLastKnownBlocksRequest::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.GetLastKnownBlocksRequest)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 maxBlockCount = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
+                 input, &maxblockcount_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.GetLastKnownBlocksRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.GetLastKnownBlocksRequest)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GetLastKnownBlocksRequest::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.GetLastKnownBlocksRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 maxBlockCount = 1;
+  if (this->maxblockcount() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->maxblockcount(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.GetLastKnownBlocksRequest)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* GetLastKnownBlocksRequest::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.GetLastKnownBlocksRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 maxBlockCount = 1;
+  if (this->maxblockcount() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->maxblockcount(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.GetLastKnownBlocksRequest)
+  return target;
+}
+
+size_t GetLastKnownBlocksRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.GetLastKnownBlocksRequest)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 maxBlockCount = 1;
+  if (this->maxblockcount() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->maxblockcount());
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void GetLastKnownBlocksRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.GetLastKnownBlocksRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const GetLastKnownBlocksRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetLastKnownBlocksRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.GetLastKnownBlocksRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.GetLastKnownBlocksRequest)
+    MergeFrom(*source);
+  }
+}
+
+void GetLastKnownBlocksRequest::MergeFrom(const GetLastKnownBlocksRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.GetLastKnownBlocksRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.maxblockcount() != 0) {
+    set_maxblockcount(from.maxblockcount());
+  }
+}
+
+void GetLastKnownBlocksRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.GetLastKnownBlocksRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void GetLastKnownBlocksRequest::CopyFrom(const GetLastKnownBlocksRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.GetLastKnownBlocksRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetLastKnownBlocksRequest::IsInitialized() const {
+  return true;
+}
+
+void GetLastKnownBlocksRequest::InternalSwap(GetLastKnownBlocksRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(maxblockcount_, other->maxblockcount_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetLastKnownBlocksRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void GetLastKnownVBKBlocksReply::InitAsDefaultInstance() {
+  ::VeriBlock::_GetLastKnownVBKBlocksReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+}
+class GetLastKnownVBKBlocksReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const GetLastKnownVBKBlocksReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+GetLastKnownVBKBlocksReply::_Internal::result(const GetLastKnownVBKBlocksReply* msg) {
+  return *msg->result_;
+}
+GetLastKnownVBKBlocksReply::GetLastKnownVBKBlocksReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.GetLastKnownVBKBlocksReply)
+}
+GetLastKnownVBKBlocksReply::GetLastKnownVBKBlocksReply(const GetLastKnownVBKBlocksReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      blocks_(from.blocks_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.GetLastKnownVBKBlocksReply)
+}
+
+void GetLastKnownVBKBlocksReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetLastKnownVBKBlocksReply_integration_2eproto.base);
+  result_ = nullptr;
+}
+
+GetLastKnownVBKBlocksReply::~GetLastKnownVBKBlocksReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.GetLastKnownVBKBlocksReply)
+  SharedDtor();
+}
+
+void GetLastKnownVBKBlocksReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+}
+
+void GetLastKnownVBKBlocksReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const GetLastKnownVBKBlocksReply& GetLastKnownVBKBlocksReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetLastKnownVBKBlocksReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void GetLastKnownVBKBlocksReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.GetLastKnownVBKBlocksReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  blocks_.Clear();
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GetLastKnownVBKBlocksReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(add_blocks(), ptr, ctx);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GetLastKnownVBKBlocksReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.GetLastKnownVBKBlocksReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
+                input, this->add_blocks()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.GetLastKnownVBKBlocksReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.GetLastKnownVBKBlocksReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GetLastKnownVBKBlocksReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.GetLastKnownVBKBlocksReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+  for (int i = 0, n = this->blocks_size(); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytes(
+      2, this->blocks(i), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.GetLastKnownVBKBlocksReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* GetLastKnownVBKBlocksReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.GetLastKnownVBKBlocksReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+  for (int i = 0, n = this->blocks_size(); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      WriteBytesToArray(2, this->blocks(i), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.GetLastKnownVBKBlocksReply)
+  return target;
+}
+
+size_t GetLastKnownVBKBlocksReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.GetLastKnownVBKBlocksReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->blocks_size());
+  for (int i = 0, n = this->blocks_size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      this->blocks(i));
+  }
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void GetLastKnownVBKBlocksReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.GetLastKnownVBKBlocksReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const GetLastKnownVBKBlocksReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetLastKnownVBKBlocksReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.GetLastKnownVBKBlocksReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.GetLastKnownVBKBlocksReply)
+    MergeFrom(*source);
+  }
+}
+
+void GetLastKnownVBKBlocksReply::MergeFrom(const GetLastKnownVBKBlocksReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.GetLastKnownVBKBlocksReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  blocks_.MergeFrom(from.blocks_);
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+}
+
+void GetLastKnownVBKBlocksReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.GetLastKnownVBKBlocksReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void GetLastKnownVBKBlocksReply::CopyFrom(const GetLastKnownVBKBlocksReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.GetLastKnownVBKBlocksReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetLastKnownVBKBlocksReply::IsInitialized() const {
+  return true;
+}
+
+void GetLastKnownVBKBlocksReply::InternalSwap(GetLastKnownVBKBlocksReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  blocks_.InternalSwap(CastToBase(&other->blocks_));
+  swap(result_, other->result_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetLastKnownVBKBlocksReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void GetLastKnownBTCBlocksReply::InitAsDefaultInstance() {
+  ::VeriBlock::_GetLastKnownBTCBlocksReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+}
+class GetLastKnownBTCBlocksReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const GetLastKnownBTCBlocksReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+GetLastKnownBTCBlocksReply::_Internal::result(const GetLastKnownBTCBlocksReply* msg) {
+  return *msg->result_;
+}
+GetLastKnownBTCBlocksReply::GetLastKnownBTCBlocksReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.GetLastKnownBTCBlocksReply)
+}
+GetLastKnownBTCBlocksReply::GetLastKnownBTCBlocksReply(const GetLastKnownBTCBlocksReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      blocks_(from.blocks_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.GetLastKnownBTCBlocksReply)
+}
+
+void GetLastKnownBTCBlocksReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetLastKnownBTCBlocksReply_integration_2eproto.base);
+  result_ = nullptr;
+}
+
+GetLastKnownBTCBlocksReply::~GetLastKnownBTCBlocksReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.GetLastKnownBTCBlocksReply)
+  SharedDtor();
+}
+
+void GetLastKnownBTCBlocksReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+}
+
+void GetLastKnownBTCBlocksReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const GetLastKnownBTCBlocksReply& GetLastKnownBTCBlocksReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetLastKnownBTCBlocksReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void GetLastKnownBTCBlocksReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.GetLastKnownBTCBlocksReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  blocks_.Clear();
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GetLastKnownBTCBlocksReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(add_blocks(), ptr, ctx);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GetLastKnownBTCBlocksReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.GetLastKnownBTCBlocksReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
+                input, this->add_blocks()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.GetLastKnownBTCBlocksReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.GetLastKnownBTCBlocksReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GetLastKnownBTCBlocksReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.GetLastKnownBTCBlocksReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+  for (int i = 0, n = this->blocks_size(); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytes(
+      2, this->blocks(i), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.GetLastKnownBTCBlocksReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* GetLastKnownBTCBlocksReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.GetLastKnownBTCBlocksReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+  for (int i = 0, n = this->blocks_size(); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      WriteBytesToArray(2, this->blocks(i), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.GetLastKnownBTCBlocksReply)
+  return target;
+}
+
+size_t GetLastKnownBTCBlocksReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.GetLastKnownBTCBlocksReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated bytes blocks = 2 [(.VeriBlock.hex_encoded) = true];
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->blocks_size());
+  for (int i = 0, n = this->blocks_size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      this->blocks(i));
+  }
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void GetLastKnownBTCBlocksReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.GetLastKnownBTCBlocksReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const GetLastKnownBTCBlocksReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetLastKnownBTCBlocksReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.GetLastKnownBTCBlocksReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.GetLastKnownBTCBlocksReply)
+    MergeFrom(*source);
+  }
+}
+
+void GetLastKnownBTCBlocksReply::MergeFrom(const GetLastKnownBTCBlocksReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.GetLastKnownBTCBlocksReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  blocks_.MergeFrom(from.blocks_);
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+}
+
+void GetLastKnownBTCBlocksReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.GetLastKnownBTCBlocksReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void GetLastKnownBTCBlocksReply::CopyFrom(const GetLastKnownBTCBlocksReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.GetLastKnownBTCBlocksReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetLastKnownBTCBlocksReply::IsInitialized() const {
+  return true;
+}
+
+void GetLastKnownBTCBlocksReply::InternalSwap(GetLastKnownBTCBlocksReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  blocks_.InternalSwap(CastToBase(&other->blocks_));
+  swap(result_, other->result_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetLastKnownBTCBlocksReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 void RoundRatioConfig::InitAsDefaultInstance() {
 }
 class RoundRatioConfig::_Internal {
@@ -10976,8 +12755,8 @@ CalculatorConfig::CalculatorConfig(const CalculatorConfig& from)
     flatscoreround_ = nullptr;
   }
   ::memcpy(&payoutrounds_, &from.payoutrounds_,
-    static_cast<size_t>(reinterpret_cast<char*>(&keystoneinterval_) -
-    reinterpret_cast<char*>(&payoutrounds_)) + sizeof(keystoneinterval_));
+    static_cast<size_t>(reinterpret_cast<char*>(&keystoneround_) -
+    reinterpret_cast<char*>(&payoutrounds_)) + sizeof(keystoneround_));
   // @@protoc_insertion_point(copy_constructor:VeriBlock.CalculatorConfig)
 }
 
@@ -10987,8 +12766,8 @@ void CalculatorConfig::SharedCtor() {
   maxrewardthresholdnormal_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   maxrewardthresholdkeystone_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&roundratios_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&keystoneinterval_) -
-      reinterpret_cast<char*>(&roundratios_)) + sizeof(keystoneinterval_));
+      reinterpret_cast<char*>(&keystoneround_) -
+      reinterpret_cast<char*>(&roundratios_)) + sizeof(keystoneround_));
 }
 
 CalculatorConfig::~CalculatorConfig() {
@@ -11041,8 +12820,8 @@ void CalculatorConfig::Clear() {
   }
   flatscoreround_ = nullptr;
   ::memset(&payoutrounds_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&keystoneinterval_) -
-      reinterpret_cast<char*>(&payoutrounds_)) + sizeof(keystoneinterval_));
+      reinterpret_cast<char*>(&keystoneround_) -
+      reinterpret_cast<char*>(&payoutrounds_)) + sizeof(keystoneround_));
   _internal_metadata_.Clear();
 }
 
@@ -11072,13 +12851,6 @@ const char* CalculatorConfig::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
           keystoneround_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 keystoneInterval = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          keystoneinterval_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -11189,19 +12961,6 @@ bool CalculatorConfig::MergePartialFromCodedStream(
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
                    ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
                  input, &keystoneround_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 keystoneInterval = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &keystoneinterval_)));
         } else {
           goto handle_unusual;
         }
@@ -11329,11 +13088,6 @@ void CalculatorConfig::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(3, this->keystoneround(), output);
   }
 
-  // int32 keystoneInterval = 4;
-  if (this->keystoneinterval() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(4, this->keystoneinterval(), output);
-  }
-
   // .VeriBlock.RoundRatioConfig roundRatios = 5;
   if (this->has_roundratios()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -11410,11 +13164,6 @@ void CalculatorConfig::SerializeWithCachedSizes(
   // int32 keystoneRound = 3;
   if (this->keystoneround() != 0) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->keystoneround(), target);
-  }
-
-  // int32 keystoneInterval = 4;
-  if (this->keystoneinterval() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->keystoneinterval(), target);
   }
 
   // .VeriBlock.RoundRatioConfig roundRatios = 5;
@@ -11551,13 +13300,6 @@ size_t CalculatorConfig::ByteSizeLong() const {
         this->keystoneround());
   }
 
-  // int32 keystoneInterval = 4;
-  if (this->keystoneinterval() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->keystoneinterval());
-  }
-
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -11615,9 +13357,6 @@ void CalculatorConfig::MergeFrom(const CalculatorConfig& from) {
   if (from.keystoneround() != 0) {
     set_keystoneround(from.keystoneround());
   }
-  if (from.keystoneinterval() != 0) {
-    set_keystoneinterval(from.keystoneinterval());
-  }
 }
 
 void CalculatorConfig::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -11653,7 +13392,6 @@ void CalculatorConfig::InternalSwap(CalculatorConfig* other) {
   swap(flatscoreround_, other->flatscoreround_);
   swap(payoutrounds_, other->payoutrounds_);
   swap(keystoneround_, other->keystoneround_);
-  swap(keystoneinterval_, other->keystoneinterval_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CalculatorConfig::GetMetadata() const {
@@ -14888,11 +16626,18 @@ void BytesArrayRequest::InternalSwap(BytesArrayRequest* other) {
 // ===================================================================
 
 void BytesArrayReply::InitAsDefaultInstance() {
+  ::VeriBlock::_BytesArrayReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
 }
 class BytesArrayReply::_Internal {
  public:
+  static const ::VeriBlock::GeneralReply& result(const BytesArrayReply* msg);
 };
 
+const ::VeriBlock::GeneralReply&
+BytesArrayReply::_Internal::result(const BytesArrayReply* msg) {
+  return *msg->result_;
+}
 BytesArrayReply::BytesArrayReply()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -14906,12 +16651,18 @@ BytesArrayReply::BytesArrayReply(const BytesArrayReply& from)
   if (!from.data().empty()) {
     data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
   // @@protoc_insertion_point(copy_constructor:VeriBlock.BytesArrayReply)
 }
 
 void BytesArrayReply::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BytesArrayReply_integration_2eproto.base);
   data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  result_ = nullptr;
 }
 
 BytesArrayReply::~BytesArrayReply() {
@@ -14921,6 +16672,7 @@ BytesArrayReply::~BytesArrayReply() {
 
 void BytesArrayReply::SharedDtor() {
   data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete result_;
 }
 
 void BytesArrayReply::SetCachedSize(int size) const {
@@ -14939,6 +16691,10 @@ void BytesArrayReply::Clear() {
   (void) cached_has_bits;
 
   data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
   _internal_metadata_.Clear();
 }
 
@@ -14950,9 +16706,16 @@ const char* BytesArrayReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // bytes data = 1;
+      // .VeriBlock.GeneralReply result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bytes data = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(mutable_data(), ptr, ctx);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -14987,9 +16750,20 @@ bool BytesArrayReply::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // bytes data = 1;
+      // .VeriBlock.GeneralReply result = 1;
       case 1: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes data = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_data()));
         } else {
@@ -15025,10 +16799,16 @@ void BytesArrayReply::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes data = 1;
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // bytes data = 2;
   if (this->data().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesMaybeAliased(
-      1, this->data(), output);
+      2, this->data(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -15044,11 +16824,18 @@ void BytesArrayReply::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes data = 1;
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // bytes data = 2;
   if (this->data().size() > 0) {
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesToArray(
-        1, this->data(), target);
+        2, this->data(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -15072,11 +16859,18 @@ size_t BytesArrayReply::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // bytes data = 1;
+  // bytes data = 2;
   if (this->data().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->data());
+  }
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
   }
 
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
@@ -15110,6 +16904,9 @@ void BytesArrayReply::MergeFrom(const BytesArrayReply& from) {
 
     data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
 }
 
 void BytesArrayReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -15135,6 +16932,7 @@ void BytesArrayReply::InternalSwap(BytesArrayReply* other) {
   _internal_metadata_.Swap(&other->_internal_metadata_);
   data_.Swap(&other->data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  swap(result_, other->result_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BytesArrayReply::GetMetadata() const {
@@ -15987,6 +17785,5164 @@ void VeriBlockMerklePath::InternalSwap(VeriBlockMerklePath* other) {
   return GetMetadataStatic();
 }
 
+
+// ===================================================================
+
+void AltPublicationReply::InitAsDefaultInstance() {
+  ::VeriBlock::_AltPublicationReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_AltPublicationReply_default_instance_._instance.get_mutable()->publication_ = const_cast< ::VeriBlock::AltPublication*>(
+      ::VeriBlock::AltPublication::internal_default_instance());
+}
+class AltPublicationReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const AltPublicationReply* msg);
+  static const ::VeriBlock::AltPublication& publication(const AltPublicationReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+AltPublicationReply::_Internal::result(const AltPublicationReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::AltPublication&
+AltPublicationReply::_Internal::publication(const AltPublicationReply* msg) {
+  return *msg->publication_;
+}
+AltPublicationReply::AltPublicationReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.AltPublicationReply)
+}
+AltPublicationReply::AltPublicationReply(const AltPublicationReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_publication()) {
+    publication_ = new ::VeriBlock::AltPublication(*from.publication_);
+  } else {
+    publication_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.AltPublicationReply)
+}
+
+void AltPublicationReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AltPublicationReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&publication_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(publication_));
+}
+
+AltPublicationReply::~AltPublicationReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.AltPublicationReply)
+  SharedDtor();
+}
+
+void AltPublicationReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete publication_;
+}
+
+void AltPublicationReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const AltPublicationReply& AltPublicationReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AltPublicationReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void AltPublicationReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.AltPublicationReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && publication_ != nullptr) {
+    delete publication_;
+  }
+  publication_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* AltPublicationReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.AltPublication publication = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_publication(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool AltPublicationReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.AltPublicationReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.AltPublication publication = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_publication()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.AltPublicationReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.AltPublicationReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void AltPublicationReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.AltPublicationReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.AltPublication publication = 2;
+  if (this->has_publication()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::publication(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.AltPublicationReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AltPublicationReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.AltPublicationReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.AltPublication publication = 2;
+  if (this->has_publication()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::publication(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.AltPublicationReply)
+  return target;
+}
+
+size_t AltPublicationReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.AltPublicationReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.AltPublication publication = 2;
+  if (this->has_publication()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *publication_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AltPublicationReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.AltPublicationReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AltPublicationReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AltPublicationReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.AltPublicationReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.AltPublicationReply)
+    MergeFrom(*source);
+  }
+}
+
+void AltPublicationReply::MergeFrom(const AltPublicationReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.AltPublicationReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_publication()) {
+    mutable_publication()->::VeriBlock::AltPublication::MergeFrom(from.publication());
+  }
+}
+
+void AltPublicationReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.AltPublicationReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AltPublicationReply::CopyFrom(const AltPublicationReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.AltPublicationReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AltPublicationReply::IsInitialized() const {
+  return true;
+}
+
+void AltPublicationReply::InternalSwap(AltPublicationReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(publication_, other->publication_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AltPublicationReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void PublicationDataReply::InitAsDefaultInstance() {
+  ::VeriBlock::_PublicationDataReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_PublicationDataReply_default_instance_._instance.get_mutable()->publication_ = const_cast< ::VeriBlock::PublicationData*>(
+      ::VeriBlock::PublicationData::internal_default_instance());
+}
+class PublicationDataReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const PublicationDataReply* msg);
+  static const ::VeriBlock::PublicationData& publication(const PublicationDataReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+PublicationDataReply::_Internal::result(const PublicationDataReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::PublicationData&
+PublicationDataReply::_Internal::publication(const PublicationDataReply* msg) {
+  return *msg->publication_;
+}
+PublicationDataReply::PublicationDataReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.PublicationDataReply)
+}
+PublicationDataReply::PublicationDataReply(const PublicationDataReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_publication()) {
+    publication_ = new ::VeriBlock::PublicationData(*from.publication_);
+  } else {
+    publication_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.PublicationDataReply)
+}
+
+void PublicationDataReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PublicationDataReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&publication_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(publication_));
+}
+
+PublicationDataReply::~PublicationDataReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.PublicationDataReply)
+  SharedDtor();
+}
+
+void PublicationDataReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete publication_;
+}
+
+void PublicationDataReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const PublicationDataReply& PublicationDataReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PublicationDataReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void PublicationDataReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.PublicationDataReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && publication_ != nullptr) {
+    delete publication_;
+  }
+  publication_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* PublicationDataReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.PublicationData publication = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_publication(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool PublicationDataReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.PublicationDataReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.PublicationData publication = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_publication()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.PublicationDataReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.PublicationDataReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void PublicationDataReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.PublicationDataReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.PublicationData publication = 2;
+  if (this->has_publication()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::publication(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.PublicationDataReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* PublicationDataReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.PublicationDataReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.PublicationData publication = 2;
+  if (this->has_publication()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::publication(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.PublicationDataReply)
+  return target;
+}
+
+size_t PublicationDataReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.PublicationDataReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.PublicationData publication = 2;
+  if (this->has_publication()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *publication_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void PublicationDataReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.PublicationDataReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const PublicationDataReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PublicationDataReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.PublicationDataReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.PublicationDataReply)
+    MergeFrom(*source);
+  }
+}
+
+void PublicationDataReply::MergeFrom(const PublicationDataReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.PublicationDataReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_publication()) {
+    mutable_publication()->::VeriBlock::PublicationData::MergeFrom(from.publication());
+  }
+}
+
+void PublicationDataReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.PublicationDataReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void PublicationDataReply::CopyFrom(const PublicationDataReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.PublicationDataReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PublicationDataReply::IsInitialized() const {
+  return true;
+}
+
+void PublicationDataReply::InternalSwap(PublicationDataReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(publication_, other->publication_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PublicationDataReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void BitcoinTransactionReply::InitAsDefaultInstance() {
+  ::VeriBlock::_BitcoinTransactionReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_BitcoinTransactionReply_default_instance_._instance.get_mutable()->transaction_ = const_cast< ::VeriBlock::BitcoinTransaction*>(
+      ::VeriBlock::BitcoinTransaction::internal_default_instance());
+}
+class BitcoinTransactionReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const BitcoinTransactionReply* msg);
+  static const ::VeriBlock::BitcoinTransaction& transaction(const BitcoinTransactionReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+BitcoinTransactionReply::_Internal::result(const BitcoinTransactionReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::BitcoinTransaction&
+BitcoinTransactionReply::_Internal::transaction(const BitcoinTransactionReply* msg) {
+  return *msg->transaction_;
+}
+BitcoinTransactionReply::BitcoinTransactionReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.BitcoinTransactionReply)
+}
+BitcoinTransactionReply::BitcoinTransactionReply(const BitcoinTransactionReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_transaction()) {
+    transaction_ = new ::VeriBlock::BitcoinTransaction(*from.transaction_);
+  } else {
+    transaction_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.BitcoinTransactionReply)
+}
+
+void BitcoinTransactionReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BitcoinTransactionReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&transaction_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(transaction_));
+}
+
+BitcoinTransactionReply::~BitcoinTransactionReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.BitcoinTransactionReply)
+  SharedDtor();
+}
+
+void BitcoinTransactionReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete transaction_;
+}
+
+void BitcoinTransactionReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const BitcoinTransactionReply& BitcoinTransactionReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BitcoinTransactionReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void BitcoinTransactionReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.BitcoinTransactionReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && transaction_ != nullptr) {
+    delete transaction_;
+  }
+  transaction_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* BitcoinTransactionReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.BitcoinTransaction transaction = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_transaction(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool BitcoinTransactionReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.BitcoinTransactionReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.BitcoinTransaction transaction = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_transaction()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.BitcoinTransactionReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.BitcoinTransactionReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void BitcoinTransactionReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.BitcoinTransactionReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.BitcoinTransaction transaction = 2;
+  if (this->has_transaction()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::transaction(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.BitcoinTransactionReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* BitcoinTransactionReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.BitcoinTransactionReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.BitcoinTransaction transaction = 2;
+  if (this->has_transaction()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::transaction(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.BitcoinTransactionReply)
+  return target;
+}
+
+size_t BitcoinTransactionReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.BitcoinTransactionReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.BitcoinTransaction transaction = 2;
+  if (this->has_transaction()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *transaction_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void BitcoinTransactionReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.BitcoinTransactionReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const BitcoinTransactionReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BitcoinTransactionReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.BitcoinTransactionReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.BitcoinTransactionReply)
+    MergeFrom(*source);
+  }
+}
+
+void BitcoinTransactionReply::MergeFrom(const BitcoinTransactionReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.BitcoinTransactionReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_transaction()) {
+    mutable_transaction()->::VeriBlock::BitcoinTransaction::MergeFrom(from.transaction());
+  }
+}
+
+void BitcoinTransactionReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.BitcoinTransactionReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void BitcoinTransactionReply::CopyFrom(const BitcoinTransactionReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.BitcoinTransactionReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool BitcoinTransactionReply::IsInitialized() const {
+  return true;
+}
+
+void BitcoinTransactionReply::InternalSwap(BitcoinTransactionReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(transaction_, other->transaction_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata BitcoinTransactionReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void VeriBlockBlockReply::InitAsDefaultInstance() {
+  ::VeriBlock::_VeriBlockBlockReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_VeriBlockBlockReply_default_instance_._instance.get_mutable()->block_ = const_cast< ::VeriBlock::VeriBlockBlock*>(
+      ::VeriBlock::VeriBlockBlock::internal_default_instance());
+}
+class VeriBlockBlockReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const VeriBlockBlockReply* msg);
+  static const ::VeriBlock::VeriBlockBlock& block(const VeriBlockBlockReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+VeriBlockBlockReply::_Internal::result(const VeriBlockBlockReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::VeriBlockBlock&
+VeriBlockBlockReply::_Internal::block(const VeriBlockBlockReply* msg) {
+  return *msg->block_;
+}
+VeriBlockBlockReply::VeriBlockBlockReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.VeriBlockBlockReply)
+}
+VeriBlockBlockReply::VeriBlockBlockReply(const VeriBlockBlockReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_block()) {
+    block_ = new ::VeriBlock::VeriBlockBlock(*from.block_);
+  } else {
+    block_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.VeriBlockBlockReply)
+}
+
+void VeriBlockBlockReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VeriBlockBlockReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&block_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(block_));
+}
+
+VeriBlockBlockReply::~VeriBlockBlockReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.VeriBlockBlockReply)
+  SharedDtor();
+}
+
+void VeriBlockBlockReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete block_;
+}
+
+void VeriBlockBlockReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const VeriBlockBlockReply& VeriBlockBlockReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VeriBlockBlockReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void VeriBlockBlockReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.VeriBlockBlockReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && block_ != nullptr) {
+    delete block_;
+  }
+  block_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* VeriBlockBlockReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.VeriBlockBlock block = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_block(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool VeriBlockBlockReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.VeriBlockBlockReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.VeriBlockBlock block = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_block()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.VeriBlockBlockReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.VeriBlockBlockReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void VeriBlockBlockReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.VeriBlockBlockReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.VeriBlockBlock block = 2;
+  if (this->has_block()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::block(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.VeriBlockBlockReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* VeriBlockBlockReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.VeriBlockBlockReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.VeriBlockBlock block = 2;
+  if (this->has_block()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::block(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.VeriBlockBlockReply)
+  return target;
+}
+
+size_t VeriBlockBlockReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.VeriBlockBlockReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.VeriBlockBlock block = 2;
+  if (this->has_block()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *block_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void VeriBlockBlockReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.VeriBlockBlockReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const VeriBlockBlockReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VeriBlockBlockReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.VeriBlockBlockReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.VeriBlockBlockReply)
+    MergeFrom(*source);
+  }
+}
+
+void VeriBlockBlockReply::MergeFrom(const VeriBlockBlockReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.VeriBlockBlockReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_block()) {
+    mutable_block()->::VeriBlock::VeriBlockBlock::MergeFrom(from.block());
+  }
+}
+
+void VeriBlockBlockReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.VeriBlockBlockReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void VeriBlockBlockReply::CopyFrom(const VeriBlockBlockReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.VeriBlockBlockReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool VeriBlockBlockReply::IsInitialized() const {
+  return true;
+}
+
+void VeriBlockBlockReply::InternalSwap(VeriBlockBlockReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(block_, other->block_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata VeriBlockBlockReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void VeriBlockTransactionReply::InitAsDefaultInstance() {
+  ::VeriBlock::_VeriBlockTransactionReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_VeriBlockTransactionReply_default_instance_._instance.get_mutable()->transaction_ = const_cast< ::VeriBlock::VeriBlockTransaction*>(
+      ::VeriBlock::VeriBlockTransaction::internal_default_instance());
+}
+class VeriBlockTransactionReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const VeriBlockTransactionReply* msg);
+  static const ::VeriBlock::VeriBlockTransaction& transaction(const VeriBlockTransactionReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+VeriBlockTransactionReply::_Internal::result(const VeriBlockTransactionReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::VeriBlockTransaction&
+VeriBlockTransactionReply::_Internal::transaction(const VeriBlockTransactionReply* msg) {
+  return *msg->transaction_;
+}
+VeriBlockTransactionReply::VeriBlockTransactionReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.VeriBlockTransactionReply)
+}
+VeriBlockTransactionReply::VeriBlockTransactionReply(const VeriBlockTransactionReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_transaction()) {
+    transaction_ = new ::VeriBlock::VeriBlockTransaction(*from.transaction_);
+  } else {
+    transaction_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.VeriBlockTransactionReply)
+}
+
+void VeriBlockTransactionReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VeriBlockTransactionReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&transaction_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(transaction_));
+}
+
+VeriBlockTransactionReply::~VeriBlockTransactionReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.VeriBlockTransactionReply)
+  SharedDtor();
+}
+
+void VeriBlockTransactionReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete transaction_;
+}
+
+void VeriBlockTransactionReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const VeriBlockTransactionReply& VeriBlockTransactionReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VeriBlockTransactionReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void VeriBlockTransactionReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.VeriBlockTransactionReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && transaction_ != nullptr) {
+    delete transaction_;
+  }
+  transaction_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* VeriBlockTransactionReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.VeriBlockTransaction transaction = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_transaction(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool VeriBlockTransactionReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.VeriBlockTransactionReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.VeriBlockTransaction transaction = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_transaction()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.VeriBlockTransactionReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.VeriBlockTransactionReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void VeriBlockTransactionReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.VeriBlockTransactionReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.VeriBlockTransaction transaction = 2;
+  if (this->has_transaction()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::transaction(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.VeriBlockTransactionReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* VeriBlockTransactionReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.VeriBlockTransactionReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.VeriBlockTransaction transaction = 2;
+  if (this->has_transaction()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::transaction(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.VeriBlockTransactionReply)
+  return target;
+}
+
+size_t VeriBlockTransactionReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.VeriBlockTransactionReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.VeriBlockTransaction transaction = 2;
+  if (this->has_transaction()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *transaction_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void VeriBlockTransactionReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.VeriBlockTransactionReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const VeriBlockTransactionReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VeriBlockTransactionReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.VeriBlockTransactionReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.VeriBlockTransactionReply)
+    MergeFrom(*source);
+  }
+}
+
+void VeriBlockTransactionReply::MergeFrom(const VeriBlockTransactionReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.VeriBlockTransactionReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_transaction()) {
+    mutable_transaction()->::VeriBlock::VeriBlockTransaction::MergeFrom(from.transaction());
+  }
+}
+
+void VeriBlockTransactionReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.VeriBlockTransactionReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void VeriBlockTransactionReply::CopyFrom(const VeriBlockTransactionReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.VeriBlockTransactionReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool VeriBlockTransactionReply::IsInitialized() const {
+  return true;
+}
+
+void VeriBlockTransactionReply::InternalSwap(VeriBlockTransactionReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(transaction_, other->transaction_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata VeriBlockTransactionReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void VeriBlockPublicationReply::InitAsDefaultInstance() {
+  ::VeriBlock::_VeriBlockPublicationReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_VeriBlockPublicationReply_default_instance_._instance.get_mutable()->publication_ = const_cast< ::VeriBlock::VeriBlockPublication*>(
+      ::VeriBlock::VeriBlockPublication::internal_default_instance());
+}
+class VeriBlockPublicationReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const VeriBlockPublicationReply* msg);
+  static const ::VeriBlock::VeriBlockPublication& publication(const VeriBlockPublicationReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+VeriBlockPublicationReply::_Internal::result(const VeriBlockPublicationReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::VeriBlockPublication&
+VeriBlockPublicationReply::_Internal::publication(const VeriBlockPublicationReply* msg) {
+  return *msg->publication_;
+}
+VeriBlockPublicationReply::VeriBlockPublicationReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.VeriBlockPublicationReply)
+}
+VeriBlockPublicationReply::VeriBlockPublicationReply(const VeriBlockPublicationReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_publication()) {
+    publication_ = new ::VeriBlock::VeriBlockPublication(*from.publication_);
+  } else {
+    publication_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.VeriBlockPublicationReply)
+}
+
+void VeriBlockPublicationReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VeriBlockPublicationReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&publication_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(publication_));
+}
+
+VeriBlockPublicationReply::~VeriBlockPublicationReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.VeriBlockPublicationReply)
+  SharedDtor();
+}
+
+void VeriBlockPublicationReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete publication_;
+}
+
+void VeriBlockPublicationReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const VeriBlockPublicationReply& VeriBlockPublicationReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VeriBlockPublicationReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void VeriBlockPublicationReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.VeriBlockPublicationReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && publication_ != nullptr) {
+    delete publication_;
+  }
+  publication_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* VeriBlockPublicationReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.VeriBlockPublication publication = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_publication(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool VeriBlockPublicationReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.VeriBlockPublicationReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.VeriBlockPublication publication = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_publication()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.VeriBlockPublicationReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.VeriBlockPublicationReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void VeriBlockPublicationReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.VeriBlockPublicationReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.VeriBlockPublication publication = 2;
+  if (this->has_publication()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::publication(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.VeriBlockPublicationReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* VeriBlockPublicationReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.VeriBlockPublicationReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.VeriBlockPublication publication = 2;
+  if (this->has_publication()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::publication(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.VeriBlockPublicationReply)
+  return target;
+}
+
+size_t VeriBlockPublicationReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.VeriBlockPublicationReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.VeriBlockPublication publication = 2;
+  if (this->has_publication()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *publication_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void VeriBlockPublicationReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.VeriBlockPublicationReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const VeriBlockPublicationReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VeriBlockPublicationReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.VeriBlockPublicationReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.VeriBlockPublicationReply)
+    MergeFrom(*source);
+  }
+}
+
+void VeriBlockPublicationReply::MergeFrom(const VeriBlockPublicationReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.VeriBlockPublicationReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_publication()) {
+    mutable_publication()->::VeriBlock::VeriBlockPublication::MergeFrom(from.publication());
+  }
+}
+
+void VeriBlockPublicationReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.VeriBlockPublicationReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void VeriBlockPublicationReply::CopyFrom(const VeriBlockPublicationReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.VeriBlockPublicationReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool VeriBlockPublicationReply::IsInitialized() const {
+  return true;
+}
+
+void VeriBlockPublicationReply::InternalSwap(VeriBlockPublicationReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(publication_, other->publication_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata VeriBlockPublicationReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void VeriBlockPoPTransactionReply::InitAsDefaultInstance() {
+  ::VeriBlock::_VeriBlockPoPTransactionReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_VeriBlockPoPTransactionReply_default_instance_._instance.get_mutable()->transaction_ = const_cast< ::VeriBlock::VeriBlockPoPTransaction*>(
+      ::VeriBlock::VeriBlockPoPTransaction::internal_default_instance());
+}
+class VeriBlockPoPTransactionReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const VeriBlockPoPTransactionReply* msg);
+  static const ::VeriBlock::VeriBlockPoPTransaction& transaction(const VeriBlockPoPTransactionReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+VeriBlockPoPTransactionReply::_Internal::result(const VeriBlockPoPTransactionReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::VeriBlockPoPTransaction&
+VeriBlockPoPTransactionReply::_Internal::transaction(const VeriBlockPoPTransactionReply* msg) {
+  return *msg->transaction_;
+}
+VeriBlockPoPTransactionReply::VeriBlockPoPTransactionReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.VeriBlockPoPTransactionReply)
+}
+VeriBlockPoPTransactionReply::VeriBlockPoPTransactionReply(const VeriBlockPoPTransactionReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_transaction()) {
+    transaction_ = new ::VeriBlock::VeriBlockPoPTransaction(*from.transaction_);
+  } else {
+    transaction_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.VeriBlockPoPTransactionReply)
+}
+
+void VeriBlockPoPTransactionReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VeriBlockPoPTransactionReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&transaction_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(transaction_));
+}
+
+VeriBlockPoPTransactionReply::~VeriBlockPoPTransactionReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.VeriBlockPoPTransactionReply)
+  SharedDtor();
+}
+
+void VeriBlockPoPTransactionReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete transaction_;
+}
+
+void VeriBlockPoPTransactionReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const VeriBlockPoPTransactionReply& VeriBlockPoPTransactionReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VeriBlockPoPTransactionReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void VeriBlockPoPTransactionReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.VeriBlockPoPTransactionReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && transaction_ != nullptr) {
+    delete transaction_;
+  }
+  transaction_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* VeriBlockPoPTransactionReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.VeriBlockPoPTransaction transaction = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_transaction(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool VeriBlockPoPTransactionReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.VeriBlockPoPTransactionReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.VeriBlockPoPTransaction transaction = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_transaction()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.VeriBlockPoPTransactionReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.VeriBlockPoPTransactionReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void VeriBlockPoPTransactionReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.VeriBlockPoPTransactionReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.VeriBlockPoPTransaction transaction = 2;
+  if (this->has_transaction()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::transaction(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.VeriBlockPoPTransactionReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* VeriBlockPoPTransactionReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.VeriBlockPoPTransactionReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.VeriBlockPoPTransaction transaction = 2;
+  if (this->has_transaction()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::transaction(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.VeriBlockPoPTransactionReply)
+  return target;
+}
+
+size_t VeriBlockPoPTransactionReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.VeriBlockPoPTransactionReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.VeriBlockPoPTransaction transaction = 2;
+  if (this->has_transaction()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *transaction_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void VeriBlockPoPTransactionReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.VeriBlockPoPTransactionReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const VeriBlockPoPTransactionReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VeriBlockPoPTransactionReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.VeriBlockPoPTransactionReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.VeriBlockPoPTransactionReply)
+    MergeFrom(*source);
+  }
+}
+
+void VeriBlockPoPTransactionReply::MergeFrom(const VeriBlockPoPTransactionReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.VeriBlockPoPTransactionReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_transaction()) {
+    mutable_transaction()->::VeriBlock::VeriBlockPoPTransaction::MergeFrom(from.transaction());
+  }
+}
+
+void VeriBlockPoPTransactionReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.VeriBlockPoPTransactionReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void VeriBlockPoPTransactionReply::CopyFrom(const VeriBlockPoPTransactionReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.VeriBlockPoPTransactionReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool VeriBlockPoPTransactionReply::IsInitialized() const {
+  return true;
+}
+
+void VeriBlockPoPTransactionReply::InternalSwap(VeriBlockPoPTransactionReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(transaction_, other->transaction_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata VeriBlockPoPTransactionReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void OutputReply::InitAsDefaultInstance() {
+  ::VeriBlock::_OutputReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_OutputReply_default_instance_._instance.get_mutable()->output_ = const_cast< ::VeriBlock::Output*>(
+      ::VeriBlock::Output::internal_default_instance());
+}
+class OutputReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const OutputReply* msg);
+  static const ::VeriBlock::Output& output(const OutputReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+OutputReply::_Internal::result(const OutputReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::Output&
+OutputReply::_Internal::output(const OutputReply* msg) {
+  return *msg->output_;
+}
+OutputReply::OutputReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.OutputReply)
+}
+OutputReply::OutputReply(const OutputReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_output()) {
+    output_ = new ::VeriBlock::Output(*from.output_);
+  } else {
+    output_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.OutputReply)
+}
+
+void OutputReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_OutputReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&output_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(output_));
+}
+
+OutputReply::~OutputReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.OutputReply)
+  SharedDtor();
+}
+
+void OutputReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete output_;
+}
+
+void OutputReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const OutputReply& OutputReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_OutputReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void OutputReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.OutputReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && output_ != nullptr) {
+    delete output_;
+  }
+  output_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* OutputReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.Output output = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_output(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool OutputReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.OutputReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.Output output = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_output()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.OutputReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.OutputReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void OutputReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.OutputReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.Output output = 2;
+  if (this->has_output()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::output(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.OutputReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* OutputReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.OutputReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.Output output = 2;
+  if (this->has_output()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::output(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.OutputReply)
+  return target;
+}
+
+size_t OutputReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.OutputReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.Output output = 2;
+  if (this->has_output()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *output_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void OutputReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.OutputReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const OutputReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OutputReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.OutputReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.OutputReply)
+    MergeFrom(*source);
+  }
+}
+
+void OutputReply::MergeFrom(const OutputReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.OutputReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_output()) {
+    mutable_output()->::VeriBlock::Output::MergeFrom(from.output());
+  }
+}
+
+void OutputReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.OutputReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void OutputReply::CopyFrom(const OutputReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.OutputReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool OutputReply::IsInitialized() const {
+  return true;
+}
+
+void OutputReply::InternalSwap(OutputReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(output_, other->output_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata OutputReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void AddressReply::InitAsDefaultInstance() {
+  ::VeriBlock::_AddressReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_AddressReply_default_instance_._instance.get_mutable()->address_ = const_cast< ::VeriBlock::Address*>(
+      ::VeriBlock::Address::internal_default_instance());
+}
+class AddressReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const AddressReply* msg);
+  static const ::VeriBlock::Address& address(const AddressReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+AddressReply::_Internal::result(const AddressReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::Address&
+AddressReply::_Internal::address(const AddressReply* msg) {
+  return *msg->address_;
+}
+AddressReply::AddressReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.AddressReply)
+}
+AddressReply::AddressReply(const AddressReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_address()) {
+    address_ = new ::VeriBlock::Address(*from.address_);
+  } else {
+    address_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.AddressReply)
+}
+
+void AddressReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AddressReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&address_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(address_));
+}
+
+AddressReply::~AddressReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.AddressReply)
+  SharedDtor();
+}
+
+void AddressReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete address_;
+}
+
+void AddressReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const AddressReply& AddressReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AddressReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void AddressReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.AddressReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && address_ != nullptr) {
+    delete address_;
+  }
+  address_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* AddressReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.Address address = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_address(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool AddressReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.AddressReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.Address address = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_address()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.AddressReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.AddressReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void AddressReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.AddressReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.Address address = 2;
+  if (this->has_address()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::address(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.AddressReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AddressReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.AddressReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.Address address = 2;
+  if (this->has_address()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::address(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.AddressReply)
+  return target;
+}
+
+size_t AddressReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.AddressReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.Address address = 2;
+  if (this->has_address()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *address_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AddressReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.AddressReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AddressReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AddressReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.AddressReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.AddressReply)
+    MergeFrom(*source);
+  }
+}
+
+void AddressReply::MergeFrom(const AddressReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.AddressReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_address()) {
+    mutable_address()->::VeriBlock::Address::MergeFrom(from.address());
+  }
+}
+
+void AddressReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.AddressReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AddressReply::CopyFrom(const AddressReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.AddressReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AddressReply::IsInitialized() const {
+  return true;
+}
+
+void AddressReply::InternalSwap(AddressReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(address_, other->address_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AddressReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void BitcoinBlockReply::InitAsDefaultInstance() {
+  ::VeriBlock::_BitcoinBlockReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_BitcoinBlockReply_default_instance_._instance.get_mutable()->block_ = const_cast< ::VeriBlock::BitcoinBlock*>(
+      ::VeriBlock::BitcoinBlock::internal_default_instance());
+}
+class BitcoinBlockReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const BitcoinBlockReply* msg);
+  static const ::VeriBlock::BitcoinBlock& block(const BitcoinBlockReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+BitcoinBlockReply::_Internal::result(const BitcoinBlockReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::BitcoinBlock&
+BitcoinBlockReply::_Internal::block(const BitcoinBlockReply* msg) {
+  return *msg->block_;
+}
+BitcoinBlockReply::BitcoinBlockReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.BitcoinBlockReply)
+}
+BitcoinBlockReply::BitcoinBlockReply(const BitcoinBlockReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_block()) {
+    block_ = new ::VeriBlock::BitcoinBlock(*from.block_);
+  } else {
+    block_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.BitcoinBlockReply)
+}
+
+void BitcoinBlockReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BitcoinBlockReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&block_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(block_));
+}
+
+BitcoinBlockReply::~BitcoinBlockReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.BitcoinBlockReply)
+  SharedDtor();
+}
+
+void BitcoinBlockReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete block_;
+}
+
+void BitcoinBlockReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const BitcoinBlockReply& BitcoinBlockReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BitcoinBlockReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void BitcoinBlockReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.BitcoinBlockReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && block_ != nullptr) {
+    delete block_;
+  }
+  block_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* BitcoinBlockReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.BitcoinBlock block = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_block(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool BitcoinBlockReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.BitcoinBlockReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.BitcoinBlock block = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_block()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.BitcoinBlockReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.BitcoinBlockReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void BitcoinBlockReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.BitcoinBlockReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.BitcoinBlock block = 2;
+  if (this->has_block()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::block(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.BitcoinBlockReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* BitcoinBlockReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.BitcoinBlockReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.BitcoinBlock block = 2;
+  if (this->has_block()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::block(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.BitcoinBlockReply)
+  return target;
+}
+
+size_t BitcoinBlockReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.BitcoinBlockReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.BitcoinBlock block = 2;
+  if (this->has_block()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *block_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void BitcoinBlockReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.BitcoinBlockReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const BitcoinBlockReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BitcoinBlockReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.BitcoinBlockReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.BitcoinBlockReply)
+    MergeFrom(*source);
+  }
+}
+
+void BitcoinBlockReply::MergeFrom(const BitcoinBlockReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.BitcoinBlockReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_block()) {
+    mutable_block()->::VeriBlock::BitcoinBlock::MergeFrom(from.block());
+  }
+}
+
+void BitcoinBlockReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.BitcoinBlockReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void BitcoinBlockReply::CopyFrom(const BitcoinBlockReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.BitcoinBlockReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool BitcoinBlockReply::IsInitialized() const {
+  return true;
+}
+
+void BitcoinBlockReply::InternalSwap(BitcoinBlockReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(block_, other->block_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata BitcoinBlockReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void VeriBlockMerklePathReply::InitAsDefaultInstance() {
+  ::VeriBlock::_VeriBlockMerklePathReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_VeriBlockMerklePathReply_default_instance_._instance.get_mutable()->merklepath_ = const_cast< ::VeriBlock::VeriBlockMerklePath*>(
+      ::VeriBlock::VeriBlockMerklePath::internal_default_instance());
+}
+class VeriBlockMerklePathReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const VeriBlockMerklePathReply* msg);
+  static const ::VeriBlock::VeriBlockMerklePath& merklepath(const VeriBlockMerklePathReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+VeriBlockMerklePathReply::_Internal::result(const VeriBlockMerklePathReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::VeriBlockMerklePath&
+VeriBlockMerklePathReply::_Internal::merklepath(const VeriBlockMerklePathReply* msg) {
+  return *msg->merklepath_;
+}
+VeriBlockMerklePathReply::VeriBlockMerklePathReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.VeriBlockMerklePathReply)
+}
+VeriBlockMerklePathReply::VeriBlockMerklePathReply(const VeriBlockMerklePathReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_merklepath()) {
+    merklepath_ = new ::VeriBlock::VeriBlockMerklePath(*from.merklepath_);
+  } else {
+    merklepath_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.VeriBlockMerklePathReply)
+}
+
+void VeriBlockMerklePathReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VeriBlockMerklePathReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&merklepath_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(merklepath_));
+}
+
+VeriBlockMerklePathReply::~VeriBlockMerklePathReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.VeriBlockMerklePathReply)
+  SharedDtor();
+}
+
+void VeriBlockMerklePathReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete merklepath_;
+}
+
+void VeriBlockMerklePathReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const VeriBlockMerklePathReply& VeriBlockMerklePathReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VeriBlockMerklePathReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void VeriBlockMerklePathReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.VeriBlockMerklePathReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && merklepath_ != nullptr) {
+    delete merklepath_;
+  }
+  merklepath_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* VeriBlockMerklePathReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.VeriBlockMerklePath merklePath = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_merklepath(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool VeriBlockMerklePathReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.VeriBlockMerklePathReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.VeriBlockMerklePath merklePath = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_merklepath()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.VeriBlockMerklePathReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.VeriBlockMerklePathReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void VeriBlockMerklePathReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.VeriBlockMerklePathReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.VeriBlockMerklePath merklePath = 2;
+  if (this->has_merklepath()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::merklepath(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.VeriBlockMerklePathReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* VeriBlockMerklePathReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.VeriBlockMerklePathReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.VeriBlockMerklePath merklePath = 2;
+  if (this->has_merklepath()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::merklepath(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.VeriBlockMerklePathReply)
+  return target;
+}
+
+size_t VeriBlockMerklePathReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.VeriBlockMerklePathReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.VeriBlockMerklePath merklePath = 2;
+  if (this->has_merklepath()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *merklepath_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void VeriBlockMerklePathReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.VeriBlockMerklePathReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const VeriBlockMerklePathReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VeriBlockMerklePathReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.VeriBlockMerklePathReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.VeriBlockMerklePathReply)
+    MergeFrom(*source);
+  }
+}
+
+void VeriBlockMerklePathReply::MergeFrom(const VeriBlockMerklePathReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.VeriBlockMerklePathReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_merklepath()) {
+    mutable_merklepath()->::VeriBlock::VeriBlockMerklePath::MergeFrom(from.merklepath());
+  }
+}
+
+void VeriBlockMerklePathReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.VeriBlockMerklePathReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void VeriBlockMerklePathReply::CopyFrom(const VeriBlockMerklePathReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.VeriBlockMerklePathReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool VeriBlockMerklePathReply::IsInitialized() const {
+  return true;
+}
+
+void VeriBlockMerklePathReply::InternalSwap(VeriBlockMerklePathReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(merklepath_, other->merklepath_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata VeriBlockMerklePathReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void MerklePathReply::InitAsDefaultInstance() {
+  ::VeriBlock::_MerklePathReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+  ::VeriBlock::_MerklePathReply_default_instance_._instance.get_mutable()->merklepath_ = const_cast< ::VeriBlock::MerklePath*>(
+      ::VeriBlock::MerklePath::internal_default_instance());
+}
+class MerklePathReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const MerklePathReply* msg);
+  static const ::VeriBlock::MerklePath& merklepath(const MerklePathReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+MerklePathReply::_Internal::result(const MerklePathReply* msg) {
+  return *msg->result_;
+}
+const ::VeriBlock::MerklePath&
+MerklePathReply::_Internal::merklepath(const MerklePathReply* msg) {
+  return *msg->merklepath_;
+}
+MerklePathReply::MerklePathReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.MerklePathReply)
+}
+MerklePathReply::MerklePathReply(const MerklePathReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  if (from.has_merklepath()) {
+    merklepath_ = new ::VeriBlock::MerklePath(*from.merklepath_);
+  } else {
+    merklepath_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.MerklePathReply)
+}
+
+void MerklePathReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_MerklePathReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&merklepath_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(merklepath_));
+}
+
+MerklePathReply::~MerklePathReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.MerklePathReply)
+  SharedDtor();
+}
+
+void MerklePathReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+  if (this != internal_default_instance()) delete merklepath_;
+}
+
+void MerklePathReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const MerklePathReply& MerklePathReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_MerklePathReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void MerklePathReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.MerklePathReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && merklepath_ != nullptr) {
+    delete merklepath_;
+  }
+  merklepath_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* MerklePathReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.MerklePath merklePath = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_merklepath(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool MerklePathReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.MerklePathReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.MerklePath merklePath = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_merklepath()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.MerklePathReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.MerklePathReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void MerklePathReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.MerklePathReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // .VeriBlock.MerklePath merklePath = 2;
+  if (this->has_merklepath()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::merklepath(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.MerklePathReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* MerklePathReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.MerklePathReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // .VeriBlock.MerklePath merklePath = 2;
+  if (this->has_merklepath()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::merklepath(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.MerklePathReply)
+  return target;
+}
+
+size_t MerklePathReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.MerklePathReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // .VeriBlock.MerklePath merklePath = 2;
+  if (this->has_merklepath()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *merklepath_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void MerklePathReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.MerklePathReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const MerklePathReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<MerklePathReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.MerklePathReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.MerklePathReply)
+    MergeFrom(*source);
+  }
+}
+
+void MerklePathReply::MergeFrom(const MerklePathReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.MerklePathReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.has_merklepath()) {
+    mutable_merklepath()->::VeriBlock::MerklePath::MergeFrom(from.merklepath());
+  }
+}
+
+void MerklePathReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.MerklePathReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void MerklePathReply::CopyFrom(const MerklePathReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.MerklePathReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MerklePathReply::IsInitialized() const {
+  return true;
+}
+
+void MerklePathReply::InternalSwap(MerklePathReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(merklepath_, other->merklepath_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata MerklePathReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void AltChainBlock::InitAsDefaultInstance() {
+  ::VeriBlock::_AltChainBlock_default_instance_._instance.get_mutable()->blockindex_ = const_cast< ::VeriBlock::BlockIndex*>(
+      ::VeriBlock::BlockIndex::internal_default_instance());
+}
+class AltChainBlock::_Internal {
+ public:
+  static const ::VeriBlock::BlockIndex& blockindex(const AltChainBlock* msg);
+};
+
+const ::VeriBlock::BlockIndex&
+AltChainBlock::_Internal::blockindex(const AltChainBlock* msg) {
+  return *msg->blockindex_;
+}
+AltChainBlock::AltChainBlock()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.AltChainBlock)
+}
+AltChainBlock::AltChainBlock(const AltChainBlock& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_blockindex()) {
+    blockindex_ = new ::VeriBlock::BlockIndex(*from.blockindex_);
+  } else {
+    blockindex_ = nullptr;
+  }
+  timestamp_ = from.timestamp_;
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.AltChainBlock)
+}
+
+void AltChainBlock::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AltChainBlock_integration_2eproto.base);
+  ::memset(&blockindex_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&timestamp_) -
+      reinterpret_cast<char*>(&blockindex_)) + sizeof(timestamp_));
+}
+
+AltChainBlock::~AltChainBlock() {
+  // @@protoc_insertion_point(destructor:VeriBlock.AltChainBlock)
+  SharedDtor();
+}
+
+void AltChainBlock::SharedDtor() {
+  if (this != internal_default_instance()) delete blockindex_;
+}
+
+void AltChainBlock::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const AltChainBlock& AltChainBlock::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AltChainBlock_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void AltChainBlock::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.AltChainBlock)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && blockindex_ != nullptr) {
+    delete blockindex_;
+  }
+  blockindex_ = nullptr;
+  timestamp_ = 0;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* AltChainBlock::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.BlockIndex blockIndex = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_blockindex(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 timestamp = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool AltChainBlock::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.AltChainBlock)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.BlockIndex blockIndex = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_blockindex()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 timestamp = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
+                 input, &timestamp_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.AltChainBlock)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.AltChainBlock)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void AltChainBlock::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.AltChainBlock)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.BlockIndex blockIndex = 1;
+  if (this->has_blockindex()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::blockindex(this), output);
+  }
+
+  // int32 timestamp = 2;
+  if (this->timestamp() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->timestamp(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.AltChainBlock)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AltChainBlock::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.AltChainBlock)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.BlockIndex blockIndex = 1;
+  if (this->has_blockindex()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::blockindex(this), target);
+  }
+
+  // int32 timestamp = 2;
+  if (this->timestamp() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->timestamp(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.AltChainBlock)
+  return target;
+}
+
+size_t AltChainBlock::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.AltChainBlock)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.BlockIndex blockIndex = 1;
+  if (this->has_blockindex()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *blockindex_);
+  }
+
+  // int32 timestamp = 2;
+  if (this->timestamp() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->timestamp());
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AltChainBlock::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.AltChainBlock)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AltChainBlock* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AltChainBlock>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.AltChainBlock)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.AltChainBlock)
+    MergeFrom(*source);
+  }
+}
+
+void AltChainBlock::MergeFrom(const AltChainBlock& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.AltChainBlock)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_blockindex()) {
+    mutable_blockindex()->::VeriBlock::BlockIndex::MergeFrom(from.blockindex());
+  }
+  if (from.timestamp() != 0) {
+    set_timestamp(from.timestamp());
+  }
+}
+
+void AltChainBlock::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.AltChainBlock)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AltChainBlock::CopyFrom(const AltChainBlock& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.AltChainBlock)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AltChainBlock::IsInitialized() const {
+  return true;
+}
+
+void AltChainBlock::InternalSwap(AltChainBlock* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(blockindex_, other->blockindex_);
+  swap(timestamp_, other->timestamp_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AltChainBlock::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void TwoBranchesRequest::InitAsDefaultInstance() {
+}
+class TwoBranchesRequest::_Internal {
+ public:
+};
+
+TwoBranchesRequest::TwoBranchesRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.TwoBranchesRequest)
+}
+TwoBranchesRequest::TwoBranchesRequest(const TwoBranchesRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      leftfork_(from.leftfork_),
+      rightfork_(from.rightfork_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.TwoBranchesRequest)
+}
+
+void TwoBranchesRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TwoBranchesRequest_integration_2eproto.base);
+}
+
+TwoBranchesRequest::~TwoBranchesRequest() {
+  // @@protoc_insertion_point(destructor:VeriBlock.TwoBranchesRequest)
+  SharedDtor();
+}
+
+void TwoBranchesRequest::SharedDtor() {
+}
+
+void TwoBranchesRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const TwoBranchesRequest& TwoBranchesRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TwoBranchesRequest_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void TwoBranchesRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.TwoBranchesRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  leftfork_.Clear();
+  rightfork_.Clear();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* TwoBranchesRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // repeated .VeriBlock.AltChainBlock leftFork = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(add_leftfork(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 10);
+        } else goto handle_unusual;
+        continue;
+      // repeated .VeriBlock.AltChainBlock rightFork = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(add_rightfork(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool TwoBranchesRequest::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.TwoBranchesRequest)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .VeriBlock.AltChainBlock leftFork = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+                input, add_leftfork()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated .VeriBlock.AltChainBlock rightFork = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+                input, add_rightfork()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.TwoBranchesRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.TwoBranchesRequest)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void TwoBranchesRequest::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.TwoBranchesRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .VeriBlock.AltChainBlock leftFork = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->leftfork_size()); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1,
+      this->leftfork(static_cast<int>(i)),
+      output);
+  }
+
+  // repeated .VeriBlock.AltChainBlock rightFork = 2;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->rightfork_size()); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2,
+      this->rightfork(static_cast<int>(i)),
+      output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.TwoBranchesRequest)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* TwoBranchesRequest::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.TwoBranchesRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .VeriBlock.AltChainBlock leftFork = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->leftfork_size()); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->leftfork(static_cast<int>(i)), target);
+  }
+
+  // repeated .VeriBlock.AltChainBlock rightFork = 2;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->rightfork_size()); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, this->rightfork(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.TwoBranchesRequest)
+  return target;
+}
+
+size_t TwoBranchesRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.TwoBranchesRequest)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .VeriBlock.AltChainBlock leftFork = 1;
+  {
+    unsigned int count = static_cast<unsigned int>(this->leftfork_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          this->leftfork(static_cast<int>(i)));
+    }
+  }
+
+  // repeated .VeriBlock.AltChainBlock rightFork = 2;
+  {
+    unsigned int count = static_cast<unsigned int>(this->rightfork_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          this->rightfork(static_cast<int>(i)));
+    }
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void TwoBranchesRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.TwoBranchesRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const TwoBranchesRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TwoBranchesRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.TwoBranchesRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.TwoBranchesRequest)
+    MergeFrom(*source);
+  }
+}
+
+void TwoBranchesRequest::MergeFrom(const TwoBranchesRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.TwoBranchesRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  leftfork_.MergeFrom(from.leftfork_);
+  rightfork_.MergeFrom(from.rightfork_);
+}
+
+void TwoBranchesRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.TwoBranchesRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TwoBranchesRequest::CopyFrom(const TwoBranchesRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.TwoBranchesRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TwoBranchesRequest::IsInitialized() const {
+  return true;
+}
+
+void TwoBranchesRequest::InternalSwap(TwoBranchesRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&leftfork_)->InternalSwap(CastToBase(&other->leftfork_));
+  CastToBase(&rightfork_)->InternalSwap(CastToBase(&other->rightfork_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata TwoBranchesRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void CompareReply::InitAsDefaultInstance() {
+  ::VeriBlock::_CompareReply_default_instance_._instance.get_mutable()->result_ = const_cast< ::VeriBlock::GeneralReply*>(
+      ::VeriBlock::GeneralReply::internal_default_instance());
+}
+class CompareReply::_Internal {
+ public:
+  static const ::VeriBlock::GeneralReply& result(const CompareReply* msg);
+};
+
+const ::VeriBlock::GeneralReply&
+CompareReply::_Internal::result(const CompareReply* msg) {
+  return *msg->result_;
+}
+CompareReply::CompareReply()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.CompareReply)
+}
+CompareReply::CompareReply(const CompareReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_result()) {
+    result_ = new ::VeriBlock::GeneralReply(*from.result_);
+  } else {
+    result_ = nullptr;
+  }
+  comparingsresult_ = from.comparingsresult_;
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.CompareReply)
+}
+
+void CompareReply::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CompareReply_integration_2eproto.base);
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&comparingsresult_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(comparingsresult_));
+}
+
+CompareReply::~CompareReply() {
+  // @@protoc_insertion_point(destructor:VeriBlock.CompareReply)
+  SharedDtor();
+}
+
+void CompareReply::SharedDtor() {
+  if (this != internal_default_instance()) delete result_;
+}
+
+void CompareReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const CompareReply& CompareReply::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CompareReply_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void CompareReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.CompareReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && result_ != nullptr) {
+    delete result_;
+  }
+  result_ = nullptr;
+  comparingsresult_ = 0;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* CompareReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_result(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 comparingsResult = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          comparingsresult_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool CompareReply::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.CompareReply)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.GeneralReply result = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_result()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 comparingsResult = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
+                 input, &comparingsresult_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.CompareReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.CompareReply)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void CompareReply::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.CompareReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::result(this), output);
+  }
+
+  // int32 comparingsResult = 2;
+  if (this->comparingsresult() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->comparingsresult(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.CompareReply)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* CompareReply::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.CompareReply)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::result(this), target);
+  }
+
+  // int32 comparingsResult = 2;
+  if (this->comparingsresult() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->comparingsresult(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.CompareReply)
+  return target;
+}
+
+size_t CompareReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.CompareReply)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.GeneralReply result = 1;
+  if (this->has_result()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *result_);
+  }
+
+  // int32 comparingsResult = 2;
+  if (this->comparingsresult() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->comparingsresult());
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void CompareReply::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.CompareReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CompareReply* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CompareReply>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.CompareReply)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.CompareReply)
+    MergeFrom(*source);
+  }
+}
+
+void CompareReply::MergeFrom(const CompareReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.CompareReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_result()) {
+    mutable_result()->::VeriBlock::GeneralReply::MergeFrom(from.result());
+  }
+  if (from.comparingsresult() != 0) {
+    set_comparingsresult(from.comparingsresult());
+  }
+}
+
+void CompareReply::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.CompareReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CompareReply::CopyFrom(const CompareReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.CompareReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CompareReply::IsInitialized() const {
+  return true;
+}
+
+void CompareReply::InternalSwap(CompareReply* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(comparingsresult_, other->comparingsresult_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata CompareReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void ForkresolutionConfigRequest::InitAsDefaultInstance() {
+}
+class ForkresolutionConfigRequest::_Internal {
+ public:
+};
+
+ForkresolutionConfigRequest::ForkresolutionConfigRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.ForkresolutionConfigRequest)
+}
+ForkresolutionConfigRequest::ForkresolutionConfigRequest(const ForkresolutionConfigRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&keystonefinalitydelay_, &from.keystonefinalitydelay_,
+    static_cast<size_t>(reinterpret_cast<char*>(&amnestyperiod_) -
+    reinterpret_cast<char*>(&keystonefinalitydelay_)) + sizeof(amnestyperiod_));
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.ForkresolutionConfigRequest)
+}
+
+void ForkresolutionConfigRequest::SharedCtor() {
+  ::memset(&keystonefinalitydelay_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&amnestyperiod_) -
+      reinterpret_cast<char*>(&keystonefinalitydelay_)) + sizeof(amnestyperiod_));
+}
+
+ForkresolutionConfigRequest::~ForkresolutionConfigRequest() {
+  // @@protoc_insertion_point(destructor:VeriBlock.ForkresolutionConfigRequest)
+  SharedDtor();
+}
+
+void ForkresolutionConfigRequest::SharedDtor() {
+}
+
+void ForkresolutionConfigRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ForkresolutionConfigRequest& ForkresolutionConfigRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ForkresolutionConfigRequest_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ForkresolutionConfigRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.ForkresolutionConfigRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&keystonefinalitydelay_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&amnestyperiod_) -
+      reinterpret_cast<char*>(&keystonefinalitydelay_)) + sizeof(amnestyperiod_));
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ForkresolutionConfigRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int32 keystoneFinalityDelay = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          keystonefinalitydelay_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 amnestyPeriod = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          amnestyperiod_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ForkresolutionConfigRequest::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.ForkresolutionConfigRequest)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 keystoneFinalityDelay = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
+                 input, &keystonefinalitydelay_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 amnestyPeriod = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
+                 input, &amnestyperiod_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.ForkresolutionConfigRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.ForkresolutionConfigRequest)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ForkresolutionConfigRequest::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.ForkresolutionConfigRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 keystoneFinalityDelay = 1;
+  if (this->keystonefinalitydelay() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->keystonefinalitydelay(), output);
+  }
+
+  // int32 amnestyPeriod = 2;
+  if (this->amnestyperiod() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->amnestyperiod(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.ForkresolutionConfigRequest)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ForkresolutionConfigRequest::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.ForkresolutionConfigRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 keystoneFinalityDelay = 1;
+  if (this->keystonefinalitydelay() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->keystonefinalitydelay(), target);
+  }
+
+  // int32 amnestyPeriod = 2;
+  if (this->amnestyperiod() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->amnestyperiod(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.ForkresolutionConfigRequest)
+  return target;
+}
+
+size_t ForkresolutionConfigRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.ForkresolutionConfigRequest)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 keystoneFinalityDelay = 1;
+  if (this->keystonefinalitydelay() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->keystonefinalitydelay());
+  }
+
+  // int32 amnestyPeriod = 2;
+  if (this->amnestyperiod() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->amnestyperiod());
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ForkresolutionConfigRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.ForkresolutionConfigRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ForkresolutionConfigRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ForkresolutionConfigRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.ForkresolutionConfigRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.ForkresolutionConfigRequest)
+    MergeFrom(*source);
+  }
+}
+
+void ForkresolutionConfigRequest::MergeFrom(const ForkresolutionConfigRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.ForkresolutionConfigRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.keystonefinalitydelay() != 0) {
+    set_keystonefinalitydelay(from.keystonefinalitydelay());
+  }
+  if (from.amnestyperiod() != 0) {
+    set_amnestyperiod(from.amnestyperiod());
+  }
+}
+
+void ForkresolutionConfigRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.ForkresolutionConfigRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ForkresolutionConfigRequest::CopyFrom(const ForkresolutionConfigRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.ForkresolutionConfigRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ForkresolutionConfigRequest::IsInitialized() const {
+  return true;
+}
+
+void ForkresolutionConfigRequest::InternalSwap(ForkresolutionConfigRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(keystonefinalitydelay_, other->keystonefinalitydelay_);
+  swap(amnestyperiod_, other->amnestyperiod_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ForkresolutionConfigRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
   hex_encoded(kHexEncodedFieldNumber, false);
@@ -16066,6 +23022,18 @@ template<> PROTOBUF_NOINLINE ::VeriBlock::GetMainVBKHeightOfATVReply* Arena::Cre
 template<> PROTOBUF_NOINLINE ::VeriBlock::RemovePayloadsRequest* Arena::CreateMaybeMessage< ::VeriBlock::RemovePayloadsRequest >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::RemovePayloadsRequest >(arena);
 }
+template<> PROTOBUF_NOINLINE ::VeriBlock::AltChainConfigRequest* Arena::CreateMaybeMessage< ::VeriBlock::AltChainConfigRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::AltChainConfigRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::GetLastKnownBlocksRequest* Arena::CreateMaybeMessage< ::VeriBlock::GetLastKnownBlocksRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::GetLastKnownBlocksRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::GetLastKnownVBKBlocksReply* Arena::CreateMaybeMessage< ::VeriBlock::GetLastKnownVBKBlocksReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::GetLastKnownVBKBlocksReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::GetLastKnownBTCBlocksReply* Arena::CreateMaybeMessage< ::VeriBlock::GetLastKnownBTCBlocksReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::GetLastKnownBTCBlocksReply >(arena);
+}
 template<> PROTOBUF_NOINLINE ::VeriBlock::RoundRatioConfig* Arena::CreateMaybeMessage< ::VeriBlock::RoundRatioConfig >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::RoundRatioConfig >(arena);
 }
@@ -16122,6 +23090,54 @@ template<> PROTOBUF_NOINLINE ::VeriBlock::MerklePathRequest* Arena::CreateMaybeM
 }
 template<> PROTOBUF_NOINLINE ::VeriBlock::VeriBlockMerklePath* Arena::CreateMaybeMessage< ::VeriBlock::VeriBlockMerklePath >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::VeriBlockMerklePath >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::AltPublicationReply* Arena::CreateMaybeMessage< ::VeriBlock::AltPublicationReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::AltPublicationReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::PublicationDataReply* Arena::CreateMaybeMessage< ::VeriBlock::PublicationDataReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::PublicationDataReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::BitcoinTransactionReply* Arena::CreateMaybeMessage< ::VeriBlock::BitcoinTransactionReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::BitcoinTransactionReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::VeriBlockBlockReply* Arena::CreateMaybeMessage< ::VeriBlock::VeriBlockBlockReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::VeriBlockBlockReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::VeriBlockTransactionReply* Arena::CreateMaybeMessage< ::VeriBlock::VeriBlockTransactionReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::VeriBlockTransactionReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::VeriBlockPublicationReply* Arena::CreateMaybeMessage< ::VeriBlock::VeriBlockPublicationReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::VeriBlockPublicationReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::VeriBlockPoPTransactionReply* Arena::CreateMaybeMessage< ::VeriBlock::VeriBlockPoPTransactionReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::VeriBlockPoPTransactionReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::OutputReply* Arena::CreateMaybeMessage< ::VeriBlock::OutputReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::OutputReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::AddressReply* Arena::CreateMaybeMessage< ::VeriBlock::AddressReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::AddressReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::BitcoinBlockReply* Arena::CreateMaybeMessage< ::VeriBlock::BitcoinBlockReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::BitcoinBlockReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::VeriBlockMerklePathReply* Arena::CreateMaybeMessage< ::VeriBlock::VeriBlockMerklePathReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::VeriBlockMerklePathReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::MerklePathReply* Arena::CreateMaybeMessage< ::VeriBlock::MerklePathReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::MerklePathReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::AltChainBlock* Arena::CreateMaybeMessage< ::VeriBlock::AltChainBlock >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::AltChainBlock >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::TwoBranchesRequest* Arena::CreateMaybeMessage< ::VeriBlock::TwoBranchesRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::TwoBranchesRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::CompareReply* Arena::CreateMaybeMessage< ::VeriBlock::CompareReply >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::CompareReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::ForkresolutionConfigRequest* Arena::CreateMaybeMessage< ::VeriBlock::ForkresolutionConfigRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::ForkresolutionConfigRequest >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
