@@ -186,6 +186,7 @@ message CalculatorConfig{
     string basicReward = 1;
     int32 payoutRounds = 2;
     int32 keystoneRound = 3;
+    int32 keystoneInterval = 4;
     RoundRatioConfig roundRatios = 5;
     RewardCurveConfig rewardCurve = 6;
     string maxRewardThresholdNormal = 7;

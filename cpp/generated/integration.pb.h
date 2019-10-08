@@ -4953,6 +4953,7 @@ class CalculatorConfig :
     kFlatScoreRoundFieldNumber = 10,
     kPayoutRoundsFieldNumber = 2,
     kKeystoneRoundFieldNumber = 3,
+    kKeystoneIntervalFieldNumber = 4,
   };
   // string basicReward = 1;
   void clear_basicreward();
@@ -5029,6 +5030,11 @@ class CalculatorConfig :
   ::PROTOBUF_NAMESPACE_ID::int32 keystoneround() const;
   void set_keystoneround(::PROTOBUF_NAMESPACE_ID::int32 value);
 
+  // int32 keystoneInterval = 4;
+  void clear_keystoneinterval();
+  ::PROTOBUF_NAMESPACE_ID::int32 keystoneinterval() const;
+  void set_keystoneinterval(::PROTOBUF_NAMESPACE_ID::int32 value);
+
   // @@protoc_insertion_point(class_scope:VeriBlock.CalculatorConfig)
  private:
   class _Internal;
@@ -5043,6 +5049,7 @@ class CalculatorConfig :
   ::VeriBlock::FlatScoreRoundConfig* flatscoreround_;
   ::PROTOBUF_NAMESPACE_ID::int32 payoutrounds_;
   ::PROTOBUF_NAMESPACE_ID::int32 keystoneround_;
+  ::PROTOBUF_NAMESPACE_ID::int32 keystoneinterval_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_integration_2eproto;
 };
@@ -12975,6 +12982,20 @@ inline void CalculatorConfig::set_keystoneround(::PROTOBUF_NAMESPACE_ID::int32 v
   
   keystoneround_ = value;
   // @@protoc_insertion_point(field_set:VeriBlock.CalculatorConfig.keystoneRound)
+}
+
+// int32 keystoneInterval = 4;
+inline void CalculatorConfig::clear_keystoneinterval() {
+  keystoneinterval_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 CalculatorConfig::keystoneinterval() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.CalculatorConfig.keystoneInterval)
+  return keystoneinterval_;
+}
+inline void CalculatorConfig::set_keystoneinterval(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  keystoneinterval_ = value;
+  // @@protoc_insertion_point(field_set:VeriBlock.CalculatorConfig.keystoneInterval)
 }
 
 // .VeriBlock.RoundRatioConfig roundRatios = 5;
