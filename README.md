@@ -1,7 +1,7 @@
 
 ## Preparation
 
-1) Unzip the protoc binaries according to your OS on the package **protoc/** (to avoid any installation).
+Unzip the protoc binaries according to your OS on the package **protoc/** (to avoid any installation).
 You can find other options at <https://github.com/protocolbuffers/protobuf/releases/tag/v3.9.1>
 
 ##  Generate Proto classes
@@ -25,6 +25,7 @@ Generate services: `$ ./protoc/protoc-3.9.1-?????/bin/protoc --plugin=protoc-gen
 
 ### C++
 <https://github.com/grpc/grpc/blob/master/examples/cpp/cpptutorial.md>
+
 <https://github.com/grpc/grpc/tree/master/src/cpp>
 
 Build grpc lib: `vcpkg install grpc --triplet x86-windows-static`
