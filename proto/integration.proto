@@ -1,0 +1,415 @@
+syntax = "proto3";
+option java_package = "integration.api.grpc";
+option java_outer_classname = "VeriBlockMessages";
+option java_generic_services = true;
+
+package VeriBlock;
+
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.FieldOptions {
+    bool hex_encoded = 50000;
+    bool address_encoded = 50001;
+    bool ascii_encoded = 50002;
+    bool utf8_encoded = 50003;
+}
+message PublicationData {
+    int64 identifier = 1;
+    bytes header = 2 [(hex_encoded)=true];
+    bytes payoutInfo = 3 [(hex_encoded)=true];
+    bytes veriblockContext = 4 [(hex_encoded)=true];
+}
+message BitcoinBlock {
+    int32 version = 1;
+    bytes previousBlock = 2 [(hex_encoded)=true];
+    bytes merkleRoot = 3 [(hex_encoded)=true];
+    int32 timestamp = 4;
+    int32 bits = 5;
+    int32 nonce = 6;
+}
+message BitcoinTransaction{
+    bytes raw = 1;
+}
+message VeriBlockBlock{
+    int32 height = 1;
+    int32 version = 2;
+    bytes previousBlock = 3 [(hex_encoded)=true];
+    bytes previousKeystone = 4 [(hex_encoded)=true];
+    bytes secondPreviousKeystone = 5 [(hex_encoded)=true];
+    bytes merkleRoot = 6 [(hex_encoded)=true];
+    int32 timestamp = 7;
+    int32 difficulty = 8;
+    int32 nonce = 9;
+}
+message NetworkByte{
+    bool byteExists = 1;
+    int32 networkByte = 2;
+}
+message VeriBlockTransaction{
+    bytes id = 1 [(hex_encoded)=true];
+    int32 type = 2;
+    Address sourceAddress = 3;
+    Coin sourceAmount = 4;
+    repeated Output outputs = 5;
+    int64 signatureIndex = 6;
+    bytes data = 7 [(hex_encoded)=true];
+    PublicationData publicationData = 8;
+    bytes signature = 9 [(hex_encoded)=true];
+    bytes publicKey = 10 [(hex_encoded)=true];
+    NetworkByte networkByte = 11;
+}
+message Address{
+    string address = 1;
+}
+message Coin{
+    int64 atomicUnits = 1;
+}
+message Output{
+    Address address = 1;
+    Coin amount = 2;
+}
+message AltPublication{
+    VeriBlockTransaction transaction = 1;
+    string merklePath = 2;
+    VeriBlockBlock containingBlock = 3;
+    repeated VeriBlockBlock context = 4;
+}
+message VeriBlockPoPTransaction{
+    bytes id = 1 [(hex_encoded)=true];
+    Address address = 2;
+    VeriBlockBlock publishedBlock = 3;
+    BitcoinTransaction bitcoinTransaction = 4;
+    string merklePath = 5;
+    BitcoinBlock blockOfProof = 6;
+    repeated BitcoinBlock blockOfProofContext = 7;
+    bytes signature = 8 [(hex_encoded)=true];
+    bytes publicKey = 9 [(hex_encoded)=true];
+    NetworkByte networkByte = 10;
+}
+message VeriBlockPublication{
+    VeriBlockPoPTransaction transaction = 1;
+    string merklePath = 2;
+    VeriBlockBlock containingBlock = 3;
+    repeated VeriBlockBlock context = 4;
+}
+// -----------------------------
+message EmptyRequest{
+}
+message GeneralReply{
+    bool result = 1;
+    string resultMessage = 2;
+}
+message BlockIndex{
+    int64 height = 1;
+    string hash = 2;
+}
+message AddPayloadsRequest{
+    BlockIndex blockIndex = 1;
+    repeated VeriBlockPublication veriblockPublications = 2;
+    repeated AltPublication altPublications = 3;
+}
+message AddTemporaryPayloadsRequest{
+    repeated VeriBlockPublication veriblockPublications = 1;
+    repeated AltPublication altPublications = 2;
+}
+message SimplifyVTBsRequest{
+    repeated VeriBlockPublication veriblockPublications = 1;
+}
+message SimplifyVTBsReply{
+    GeneralReply result = 1;
+    repeated VeriBlockPublication veriblockPublications = 2;
+}
+message GetMainVBKHeightOfATVReply{
+    GeneralReply result = 1;
+    int32 height = 2;
+}
+message RemovePayloadsRequest{
+    BlockIndex blockIndex = 1;
+}
+
+message AltChainConfigRequest{
+    int32 keystoneInterval = 1;
+}
+
+message GetLastKnownBlocksRequest{
+    int32 maxBlockCount = 1;
+}
+message GetLastKnownVBKBlocksReply{
+    GeneralReply result = 1;
+    repeated bytes blocks = 2 [(hex_encoded)=true];
+}
+message GetLastKnownBTCBlocksReply{
+    GeneralReply result = 1;
+    repeated bytes blocks = 2 [(hex_encoded)=true];
+}
+
+service IntegrationService {
+    rpc ResetSecurity(EmptyRequest) returns (GeneralReply){}
+    rpc AddGenesisVeriBlock(VeriBlockBlock) returns (GeneralReply){}
+    rpc AddGenesisBitcoin(BitcoinBlock) returns (GeneralReply){}
+    rpc AddPayloads(AddPayloadsRequest) returns (GeneralReply){}
+    rpc RemovePayloads(RemovePayloadsRequest) returns (GeneralReply){}
+    rpc AddTemporaryPayloads(AddTemporaryPayloadsRequest) returns (GeneralReply){}
+    rpc ClearTemporaryPayloads(EmptyRequest) returns (GeneralReply){}
+    rpc SimplifyVTBs(SimplifyVTBsRequest) returns (SimplifyVTBsReply){}
+    rpc CheckATVAgainstView(AltPublication) returns (GeneralReply){}
+    rpc CheckVTBInternally(VeriBlockPublication) returns (GeneralReply){}
+    rpc CheckATVInternally(AltPublication) returns (GeneralReply){}
+    rpc GetMainVBKHeightOfATV(AltPublication) returns (GetMainVBKHeightOfATVReply){}
+    rpc SetAltChainParametersConfig(AltChainConfigRequest) returns (GeneralReply) {}
+    rpc GetLastKnownVBKBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownVBKBlocksReply){}
+    rpc GetLastKnownBTCBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBTCBlocksReply){}
+}
+
+message RoundRatioConfig{
+    repeated string roundRatio = 1;
+}
+
+message RewardCurveConfig{
+    string startOfDecreasingLine = 1;
+    string widthOfDecreasingLineNormal = 2;
+    string widthOfDecreasingLineKeystone = 3;
+    string aboveIntendedPayoutMultiplierNormal = 4;
+    string aboveIntendedPayoutMultiplierKeystone = 5;
+}
+
+message RelativeScoreConfig{
+    repeated string score = 1;
+}
+
+message FlatScoreRoundConfig{
+    int32 round = 1;
+    bool active = 2;
+}
+
+message CalculatorConfig{
+    string basicReward = 1;
+    int32 payoutRounds = 2;
+    int32 keystoneRound = 3;
+    RoundRatioConfig roundRatios = 5;
+    RewardCurveConfig rewardCurve = 6;
+    string maxRewardThresholdNormal = 7;
+    string maxRewardThresholdKeystone = 8;
+    RelativeScoreConfig relativeScoreLookupTable = 9;
+    FlatScoreRoundConfig flatScoreRound = 10;
+}
+
+message SetCalculatorRequest{
+    CalculatorConfig calculator = 1;
+}
+
+message GetCalculatorReply{
+    GeneralReply result = 1;
+    CalculatorConfig calculator = 2;
+}
+
+message RewardOutput{
+    string address = 1;
+    string reward = 2;
+}
+
+message PopEndorsement{
+    string address = 1;
+    string txid = 2;
+}
+
+message RewardEndorsement{
+    int32 blockVbkHeight = 1;
+    repeated PopEndorsement endorsementsInBlock = 2;
+}
+
+message RewardsCalculateScoreRequest{
+    repeated RewardEndorsement endorsementsForBlock = 1;
+}
+
+message RewardsCalculateScoreReply{
+    GeneralReply result = 1;
+    string score = 2;
+}
+
+message RewardsCalculateOutputsRequest{
+    int32 blockAltHeight = 1;
+    repeated RewardEndorsement endorsementsForBlock = 2;
+    string difficulty = 3;
+}
+
+message RewardsCalculateOutputsReply{
+    GeneralReply result = 1;
+    string totalReward = 2;
+    string blockReward = 3;
+    repeated RewardOutput outputs = 4;
+}
+
+service RewardsService {
+    rpc ResetRewards(EmptyRequest) returns (GeneralReply){}
+    rpc GetCalculator(EmptyRequest) returns (GetCalculatorReply){}
+    rpc SetCalculator(SetCalculatorRequest) returns (GeneralReply){}
+    rpc RewardsCalculateScore(RewardsCalculateScoreRequest) returns (RewardsCalculateScoreReply){}
+    rpc RewardsCalculateOutputs(RewardsCalculateOutputsRequest) returns (RewardsCalculateOutputsReply){}
+}
+
+message BytesArrayRequest{
+    bytes data = 1;
+}
+
+message BytesArrayReply{
+    GeneralReply result = 1;
+    bytes data = 2;
+}
+
+message MerklePath{
+    string merklePath = 1;
+}
+
+message MerklePathRequest{
+    bytes data = 1;
+    bytes subject = 2 [(hex_encoded)=true];
+}
+
+message VeriBlockMerklePath{
+    string merklePath = 1;
+}
+
+message AltPublicationReply{
+    GeneralReply result = 1;
+    AltPublication publication = 2;
+}
+
+message PublicationDataReply{
+    GeneralReply result = 1;
+    PublicationData publication = 2;
+}
+
+message BitcoinTransactionReply{
+    GeneralReply result = 1;
+    BitcoinTransaction transaction = 2;
+}
+
+message VeriBlockBlockReply{
+    GeneralReply result = 1;
+    VeriBlockBlock block = 2;
+}
+
+message VeriBlockTransactionReply{
+    GeneralReply result = 1;
+    VeriBlockTransaction transaction = 2;
+}
+
+message VeriBlockPublicationReply{
+    GeneralReply result = 1;
+    VeriBlockPublication publication = 2;
+}
+
+message VeriBlockPoPTransactionReply{
+    GeneralReply result = 1;
+    VeriBlockPoPTransaction transaction = 2;
+}
+
+message OutputReply{
+    GeneralReply result = 1;
+    Output output = 2;
+}
+
+message AddressReply{
+    GeneralReply result = 1;
+    Address address = 2;
+}
+
+message BitcoinBlockReply{
+    GeneralReply result = 1;
+    BitcoinBlock block = 2;
+}
+
+message VeriBlockMerklePathReply{
+    GeneralReply result = 1;
+    VeriBlockMerklePath merklePath = 2;
+}
+
+message MerklePathReply{
+    GeneralReply result = 1;
+    MerklePath merklePath = 2;
+}
+
+service DeserializeService{
+    rpc ParseAltPublication(BytesArrayRequest) returns (AltPublicationReply){}
+    rpc ParsePublicationData(BytesArrayRequest) returns (PublicationDataReply){}
+    rpc ParseBitcoinTransaction(BytesArrayRequest) returns (BitcoinTransactionReply){}
+    rpc ParseVeriBlockBlock(BytesArrayRequest) returns (VeriBlockBlockReply){}
+    rpc ParseVeriBlockTransaction(BytesArrayRequest) returns (VeriBlockTransactionReply){}
+    rpc ParseVeriBlockPublication(BytesArrayRequest) returns (VeriBlockPublicationReply){}
+    rpc ParseVeriBlockPopTx(BytesArrayRequest) returns (VeriBlockPoPTransactionReply){}
+
+    rpc ParseOutput(BytesArrayRequest) returns (OutputReply){}
+    rpc ParseAddress(BytesArrayRequest) returns (AddressReply){}
+    rpc ParseBitcoinBlock(BytesArrayRequest) returns (BitcoinBlockReply){}
+    rpc ParseVeriBlockMerklePath(BytesArrayRequest) returns (VeriBlockMerklePathReply){}
+    rpc ParseMerklePath(MerklePathRequest) returns (MerklePathReply){}
+}
+
+service SerializeService{
+    rpc SerializeAltPublication(AltPublication) returns (BytesArrayReply){}
+    rpc SerializePublicationData(PublicationData) returns (BytesArrayReply){}
+    rpc SerializeBitcoinTransaction(BitcoinTransaction) returns (BytesArrayReply){}
+    rpc SerializeVeriBlockBlock(VeriBlockBlock) returns (BytesArrayReply){}
+    rpc SerializeVeriBlockTransaction(VeriBlockTransaction) returns (BytesArrayReply){}
+    rpc SerializeVeriBlockPublication(VeriBlockPublication) returns (BytesArrayReply){}
+    rpc SerializeVeriBlockPopTx(VeriBlockPoPTransaction) returns (BytesArrayReply){}
+
+    rpc SerializeOutput(Output) returns (BytesArrayReply){}
+    rpc SerializeAddress(Address) returns (BytesArrayReply){}
+    rpc SerializeBitcoinBlock(BitcoinBlock) returns (BytesArrayReply){}
+    rpc SerializeVeriBlockMerklePath(VeriBlockMerklePath) returns (BytesArrayReply){}
+    rpc SerializeMerklePath(MerklePath) returns (BytesArrayReply){}
+}
+
+service ValidationService{
+    rpc VerifyVeriBlockPoPTx(VeriBlockPoPTransaction) returns (GeneralReply){}
+    rpc CheckSignatureVeriBlockPoPTx(VeriBlockPoPTransaction) returns (GeneralReply){}
+    rpc CheckBitcoinTransactionForPoPData(VeriBlockPoPTransaction) returns (GeneralReply){}
+    rpc CheckBitcoinMerklePathVeriBlockPoPTx(VeriBlockPoPTransaction) returns (GeneralReply){}
+    rpc CheckBitcoinBlocksVeriBlockPoPTx(VeriBlockPoPTransaction) returns (GeneralReply){}
+
+    rpc VerifyVeriBlockPublication(VeriBlockPublication) returns (GeneralReply){}
+    rpc CheckBlocksVeriBlockPublication(VeriBlockPublication) returns (GeneralReply){}
+    rpc CheckMerklePathVeriBlockPublication(VeriBlockPublication) returns (GeneralReply){}
+
+    rpc VerifyVeriBlockTransaction(VeriBlockTransaction) returns (GeneralReply){}
+    rpc CheckSignatureVeriBlockTransaction(VeriBlockTransaction) returns (GeneralReply){}
+
+    rpc VerifyVeriBlockBlock(VeriBlockBlock) returns (GeneralReply){}
+    rpc CheckProofOfWorkVeriBlockBlock(VeriBlockBlock) returns (GeneralReply){}
+    rpc CheckMaximumDriftVeriBlockBlock(VeriBlockBlock) returns (GeneralReply){}
+
+    rpc VerifyBitcoinBlock(BitcoinBlock) returns (GeneralReply){}
+    rpc CheckProofOfWorkBitcoinBlock(BitcoinBlock) returns (GeneralReply){}
+    rpc CheckMaximumDriftBitcoinBlock(BitcoinBlock) returns (GeneralReply){}
+
+    rpc VerifyAltPublication(AltPublication) returns (GeneralReply){}
+    rpc CheckMerklePathAltPublication(AltPublication) returns (GeneralReply){}
+    rpc CheckBlocksAltPublication(AltPublication) returns (GeneralReply){}
+}
+
+message AltChainBlock{
+    BlockIndex blockIndex = 1;
+    int32 timestamp = 2;
+}
+
+message TwoBranchesRequest{
+    repeated AltChainBlock leftFork = 1;
+    repeated AltChainBlock rightFork = 2;
+}
+
+message CompareReply{
+    GeneralReply result = 1;
+    int32 comparingsResult = 2;
+}
+
+message ForkresolutionConfigRequest{
+    int32 keystoneFinalityDelay = 1;
+    int32 amnestyPeriod = 2;
+}
+
+service ForkresolutionService{
+    rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareReply) {}
+    rpc SetForkresolutionConfig(ForkresolutionConfigRequest) returns (GeneralReply){}
+}
