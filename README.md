@@ -53,4 +53,4 @@ Generate services: `.\protoc\protoc-3.9.1-win64\bin\protoc -I=proto --grpc_out=c
 
 Prepare Java Jar package: `mvn clean install`
 
-Result Java library is available at: ./java/target/alt-integration-proto-java-?????.jar
+Result Java library is available at: `./java/target/alt-integration-proto-java-?????.jar`
