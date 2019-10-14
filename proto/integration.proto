@@ -100,6 +100,13 @@ message VeriBlockPublication{
     VeriBlockBlock containingBlock = 3;
     repeated VeriBlockBlock context = 4;
 }
+
+message PoPTransactionData{
+    string hash = 1;
+    AltPublication altPublication = 2;
+    repeated VeriBlockPublication veriblockPublications = 3;
+}
+
 // -----------------------------
 message EmptyRequest{
 }
@@ -151,6 +158,12 @@ message GetLastKnownBTCBlocksReply{
     repeated bytes blocks = 2 [(hex_encoded)=true];
 }
 
+message SavePoPTransactionDataRequest{
+    AltChainBlock containingBlock = 1;
+    AltChainBlock endorsedBlock = 2;
+    PoPTransactionData popTx = 3;
+}
+
 service IntegrationService {
     rpc ResetSecurity(EmptyRequest) returns (GeneralReply){}
     rpc AddGenesisVeriBlock(VeriBlockBlock) returns (GeneralReply){}
@@ -167,6 +180,7 @@ service IntegrationService {
     rpc SetAltChainParametersConfig(AltChainConfigRequest) returns (GeneralReply) {}
     rpc GetLastKnownVBKBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownVBKBlocksReply){}
     rpc GetLastKnownBTCBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBTCBlocksReply){}
+    rpc SavePoPTransactionData(SavePoPTransactionDataRequest) returns (GeneralReply) {}
 }
 
 message RoundRatioConfig{
