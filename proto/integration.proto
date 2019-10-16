@@ -100,6 +100,13 @@ message VeriBlockPublication{
     VeriBlockBlock containingBlock = 3;
     repeated VeriBlockBlock context = 4;
 }
+
+message PoPTransactionData{
+    string hash = 1;
+    AltPublication altPublication = 2;
+    repeated VeriBlockPublication veriblockPublications = 3;
+}
+
 // -----------------------------
 message EmptyRequest{
 }
@@ -151,6 +158,12 @@ message GetLastKnownBTCBlocksReply{
     repeated bytes blocks = 2 [(hex_encoded)=true];
 }
 
+message SavePoPTransactionDataRequest{
+    AltChainBlock containingBlock = 1;
+    AltChainBlock endorsedBlock = 2;
+    PoPTransactionData popTx = 3;
+}
+
 service IntegrationService {
     rpc ResetSecurity(EmptyRequest) returns (GeneralReply){}
     rpc AddGenesisVeriBlock(VeriBlockBlock) returns (GeneralReply){}
@@ -167,6 +180,7 @@ service IntegrationService {
     rpc SetAltChainParametersConfig(AltChainConfigRequest) returns (GeneralReply) {}
     rpc GetLastKnownVBKBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownVBKBlocksReply){}
     rpc GetLastKnownBTCBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBTCBlocksReply){}
+    rpc SavePoPTransactionData(SavePoPTransactionDataRequest) returns (GeneralReply) {}
 }
 
 message RoundRatioConfig{
@@ -212,22 +226,13 @@ message GetCalculatorReply{
 }
 
 message RewardOutput{
-    string address = 1;
+    bytes payoutInfo = 1;
     string reward = 2;
 }
 
-message PopEndorsement{
-    string address = 1;
-    string txid = 2;
-}
-
-message RewardEndorsement{
-    int32 blockVbkHeight = 1;
-    repeated PopEndorsement endorsementsInBlock = 2;
-}
-
 message RewardsCalculateScoreRequest{
-    repeated RewardEndorsement endorsementsForBlock = 1;
+    AltChainBlock endorsedBlock = 1;
+    repeated AltChainBlock endorsmentBlocks = 2;
 }
 
 message RewardsCalculateScoreReply{
@@ -237,8 +242,9 @@ message RewardsCalculateScoreReply{
 
 message RewardsCalculateOutputsRequest{
     int32 blockAltHeight = 1;
-    repeated RewardEndorsement endorsementsForBlock = 2;
-    string difficulty = 3;
+    AltChainBlock endorsedBlock = 2;
+    repeated AltChainBlock endorsmentBlocks = 3;
+    string difficulty = 4;
 }
 
 message RewardsCalculateOutputsReply{
