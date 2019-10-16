@@ -3584,6 +3584,11 @@ public final class VeriBlockMessages {
     long getSignatureIndex();
 
     /**
+     * <code>bytes data = 7 [(.VeriBlock.hex_encoded) = true];</code>
+     */
+    com.google.protobuf.ByteString getData();
+
+    /**
      * <code>.VeriBlock.PublicationData publicationData = 8;</code>
      */
     boolean hasPublicationData();
@@ -3634,6 +3639,7 @@ public final class VeriBlockMessages {
     private VeriBlockTransaction() {
       id_ = com.google.protobuf.ByteString.EMPTY;
       outputs_ = java.util.Collections.emptyList();
+      data_ = com.google.protobuf.ByteString.EMPTY;
       signature_ = com.google.protobuf.ByteString.EMPTY;
       publicKey_ = com.google.protobuf.ByteString.EMPTY;
     }
@@ -3717,6 +3723,11 @@ public final class VeriBlockMessages {
             case 48: {
 
               signatureIndex_ = input.readInt64();
+              break;
+            }
+            case 58: {
+
+              data_ = input.readBytes();
               break;
             }
             case 66: {
@@ -3894,6 +3905,15 @@ public final class VeriBlockMessages {
       return signatureIndex_;
     }
 
+    public static final int DATA_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString data_;
+    /**
+     * <code>bytes data = 7 [(.VeriBlock.hex_encoded) = true];</code>
+     */
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
     public static final int PUBLICATIONDATA_FIELD_NUMBER = 8;
     private integration.api.grpc.VeriBlockMessages.PublicationData publicationData_;
     /**
@@ -3986,6 +4006,9 @@ public final class VeriBlockMessages {
       if (signatureIndex_ != 0L) {
         output.writeInt64(6, signatureIndex_);
       }
+      if (!data_.isEmpty()) {
+        output.writeBytes(7, data_);
+      }
       if (publicationData_ != null) {
         output.writeMessage(8, getPublicationData());
       }
@@ -4030,6 +4053,10 @@ public final class VeriBlockMessages {
       if (signatureIndex_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, signatureIndex_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, data_);
       }
       if (publicationData_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -4080,6 +4107,8 @@ public final class VeriBlockMessages {
           .equals(other.getOutputsList())) return false;
       if (getSignatureIndex()
           != other.getSignatureIndex()) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
       if (hasPublicationData() != other.hasPublicationData()) return false;
       if (hasPublicationData()) {
         if (!getPublicationData()
@@ -4124,6 +4153,8 @@ public final class VeriBlockMessages {
       hash = (37 * hash) + SIGNATUREINDEX_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSignatureIndex());
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
       if (hasPublicationData()) {
         hash = (37 * hash) + PUBLICATIONDATA_FIELD_NUMBER;
         hash = (53 * hash) + getPublicationData().hashCode();
@@ -4294,6 +4325,8 @@ public final class VeriBlockMessages {
         }
         signatureIndex_ = 0L;
 
+        data_ = com.google.protobuf.ByteString.EMPTY;
+
         if (publicationDataBuilder_ == null) {
           publicationData_ = null;
         } else {
@@ -4359,6 +4392,7 @@ public final class VeriBlockMessages {
           result.outputs_ = outputsBuilder_.build();
         }
         result.signatureIndex_ = signatureIndex_;
+        result.data_ = data_;
         if (publicationDataBuilder_ == null) {
           result.publicationData_ = publicationData_;
         } else {
@@ -4459,6 +4493,9 @@ public final class VeriBlockMessages {
         }
         if (other.getSignatureIndex() != 0L) {
           setSignatureIndex(other.getSignatureIndex());
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
         }
         if (other.hasPublicationData()) {
           mergePublicationData(other.getPublicationData());
@@ -5053,6 +5090,35 @@ public final class VeriBlockMessages {
       public Builder clearSignatureIndex() {
         
         signatureIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 7 [(.VeriBlock.hex_encoded) = true];</code>
+       */
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 7 [(.VeriBlock.hex_encoded) = true];</code>
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 7 [(.VeriBlock.hex_encoded) = true];</code>
+       */
+      public Builder clearData() {
+        
+        data_ = getDefaultInstance().getData();
         onChanged();
         return this;
       }
@@ -26694,74 +26760,79 @@ public final class VeriBlockMessages {
     int getKeystoneRound();
 
     /**
-     * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+     * <code>int32 keystoneInterval = 4;</code>
+     */
+    int getKeystoneInterval();
+
+    /**
+     * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
      */
     boolean hasRoundRatios();
     /**
-     * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+     * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
      */
     integration.api.grpc.VeriBlockMessages.RoundRatioConfig getRoundRatios();
     /**
-     * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+     * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
      */
     integration.api.grpc.VeriBlockMessages.RoundRatioConfigOrBuilder getRoundRatiosOrBuilder();
 
     /**
-     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
      */
     boolean hasRewardCurve();
     /**
-     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
      */
     integration.api.grpc.VeriBlockMessages.RewardCurveConfig getRewardCurve();
     /**
-     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
      */
     integration.api.grpc.VeriBlockMessages.RewardCurveConfigOrBuilder getRewardCurveOrBuilder();
 
     /**
-     * <code>string maxRewardThresholdNormal = 6;</code>
+     * <code>string maxRewardThresholdNormal = 7;</code>
      */
     java.lang.String getMaxRewardThresholdNormal();
     /**
-     * <code>string maxRewardThresholdNormal = 6;</code>
+     * <code>string maxRewardThresholdNormal = 7;</code>
      */
     com.google.protobuf.ByteString
         getMaxRewardThresholdNormalBytes();
 
     /**
-     * <code>string maxRewardThresholdKeystone = 7;</code>
+     * <code>string maxRewardThresholdKeystone = 8;</code>
      */
     java.lang.String getMaxRewardThresholdKeystone();
     /**
-     * <code>string maxRewardThresholdKeystone = 7;</code>
+     * <code>string maxRewardThresholdKeystone = 8;</code>
      */
     com.google.protobuf.ByteString
         getMaxRewardThresholdKeystoneBytes();
 
     /**
-     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
      */
     boolean hasRelativeScoreLookupTable();
     /**
-     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
      */
     integration.api.grpc.VeriBlockMessages.RelativeScoreConfig getRelativeScoreLookupTable();
     /**
-     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
      */
     integration.api.grpc.VeriBlockMessages.RelativeScoreConfigOrBuilder getRelativeScoreLookupTableOrBuilder();
 
     /**
-     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
      */
     boolean hasFlatScoreRound();
     /**
-     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
      */
     integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig getFlatScoreRound();
     /**
-     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
      */
     integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfigOrBuilder getFlatScoreRoundOrBuilder();
   }
@@ -26829,7 +26900,12 @@ public final class VeriBlockMessages {
               keystoneRound_ = input.readInt32();
               break;
             }
-            case 34: {
+            case 32: {
+
+              keystoneInterval_ = input.readInt32();
+              break;
+            }
+            case 42: {
               integration.api.grpc.VeriBlockMessages.RoundRatioConfig.Builder subBuilder = null;
               if (roundRatios_ != null) {
                 subBuilder = roundRatios_.toBuilder();
@@ -26842,7 +26918,7 @@ public final class VeriBlockMessages {
 
               break;
             }
-            case 42: {
+            case 50: {
               integration.api.grpc.VeriBlockMessages.RewardCurveConfig.Builder subBuilder = null;
               if (rewardCurve_ != null) {
                 subBuilder = rewardCurve_.toBuilder();
@@ -26855,19 +26931,19 @@ public final class VeriBlockMessages {
 
               break;
             }
-            case 50: {
+            case 58: {
               java.lang.String s = input.readStringRequireUtf8();
 
               maxRewardThresholdNormal_ = s;
               break;
             }
-            case 58: {
+            case 66: {
               java.lang.String s = input.readStringRequireUtf8();
 
               maxRewardThresholdKeystone_ = s;
               break;
             }
-            case 66: {
+            case 74: {
               integration.api.grpc.VeriBlockMessages.RelativeScoreConfig.Builder subBuilder = null;
               if (relativeScoreLookupTable_ != null) {
                 subBuilder = relativeScoreLookupTable_.toBuilder();
@@ -26880,7 +26956,7 @@ public final class VeriBlockMessages {
 
               break;
             }
-            case 74: {
+            case 82: {
               integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig.Builder subBuilder = null;
               if (flatScoreRound_ != null) {
                 subBuilder = flatScoreRound_.toBuilder();
@@ -26977,52 +27053,61 @@ public final class VeriBlockMessages {
       return keystoneRound_;
     }
 
-    public static final int ROUNDRATIOS_FIELD_NUMBER = 4;
+    public static final int KEYSTONEINTERVAL_FIELD_NUMBER = 4;
+    private int keystoneInterval_;
+    /**
+     * <code>int32 keystoneInterval = 4;</code>
+     */
+    public int getKeystoneInterval() {
+      return keystoneInterval_;
+    }
+
+    public static final int ROUNDRATIOS_FIELD_NUMBER = 5;
     private integration.api.grpc.VeriBlockMessages.RoundRatioConfig roundRatios_;
     /**
-     * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+     * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
      */
     public boolean hasRoundRatios() {
       return roundRatios_ != null;
     }
     /**
-     * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+     * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
      */
     public integration.api.grpc.VeriBlockMessages.RoundRatioConfig getRoundRatios() {
       return roundRatios_ == null ? integration.api.grpc.VeriBlockMessages.RoundRatioConfig.getDefaultInstance() : roundRatios_;
     }
     /**
-     * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+     * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
      */
     public integration.api.grpc.VeriBlockMessages.RoundRatioConfigOrBuilder getRoundRatiosOrBuilder() {
       return getRoundRatios();
     }
 
-    public static final int REWARDCURVE_FIELD_NUMBER = 5;
+    public static final int REWARDCURVE_FIELD_NUMBER = 6;
     private integration.api.grpc.VeriBlockMessages.RewardCurveConfig rewardCurve_;
     /**
-     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
      */
     public boolean hasRewardCurve() {
       return rewardCurve_ != null;
     }
     /**
-     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
      */
     public integration.api.grpc.VeriBlockMessages.RewardCurveConfig getRewardCurve() {
       return rewardCurve_ == null ? integration.api.grpc.VeriBlockMessages.RewardCurveConfig.getDefaultInstance() : rewardCurve_;
     }
     /**
-     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+     * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
      */
     public integration.api.grpc.VeriBlockMessages.RewardCurveConfigOrBuilder getRewardCurveOrBuilder() {
       return getRewardCurve();
     }
 
-    public static final int MAXREWARDTHRESHOLDNORMAL_FIELD_NUMBER = 6;
+    public static final int MAXREWARDTHRESHOLDNORMAL_FIELD_NUMBER = 7;
     private volatile java.lang.Object maxRewardThresholdNormal_;
     /**
-     * <code>string maxRewardThresholdNormal = 6;</code>
+     * <code>string maxRewardThresholdNormal = 7;</code>
      */
     public java.lang.String getMaxRewardThresholdNormal() {
       java.lang.Object ref = maxRewardThresholdNormal_;
@@ -27037,7 +27122,7 @@ public final class VeriBlockMessages {
       }
     }
     /**
-     * <code>string maxRewardThresholdNormal = 6;</code>
+     * <code>string maxRewardThresholdNormal = 7;</code>
      */
     public com.google.protobuf.ByteString
         getMaxRewardThresholdNormalBytes() {
@@ -27053,10 +27138,10 @@ public final class VeriBlockMessages {
       }
     }
 
-    public static final int MAXREWARDTHRESHOLDKEYSTONE_FIELD_NUMBER = 7;
+    public static final int MAXREWARDTHRESHOLDKEYSTONE_FIELD_NUMBER = 8;
     private volatile java.lang.Object maxRewardThresholdKeystone_;
     /**
-     * <code>string maxRewardThresholdKeystone = 7;</code>
+     * <code>string maxRewardThresholdKeystone = 8;</code>
      */
     public java.lang.String getMaxRewardThresholdKeystone() {
       java.lang.Object ref = maxRewardThresholdKeystone_;
@@ -27071,7 +27156,7 @@ public final class VeriBlockMessages {
       }
     }
     /**
-     * <code>string maxRewardThresholdKeystone = 7;</code>
+     * <code>string maxRewardThresholdKeystone = 8;</code>
      */
     public com.google.protobuf.ByteString
         getMaxRewardThresholdKeystoneBytes() {
@@ -27087,43 +27172,43 @@ public final class VeriBlockMessages {
       }
     }
 
-    public static final int RELATIVESCORELOOKUPTABLE_FIELD_NUMBER = 8;
+    public static final int RELATIVESCORELOOKUPTABLE_FIELD_NUMBER = 9;
     private integration.api.grpc.VeriBlockMessages.RelativeScoreConfig relativeScoreLookupTable_;
     /**
-     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
      */
     public boolean hasRelativeScoreLookupTable() {
       return relativeScoreLookupTable_ != null;
     }
     /**
-     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
      */
     public integration.api.grpc.VeriBlockMessages.RelativeScoreConfig getRelativeScoreLookupTable() {
       return relativeScoreLookupTable_ == null ? integration.api.grpc.VeriBlockMessages.RelativeScoreConfig.getDefaultInstance() : relativeScoreLookupTable_;
     }
     /**
-     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+     * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
      */
     public integration.api.grpc.VeriBlockMessages.RelativeScoreConfigOrBuilder getRelativeScoreLookupTableOrBuilder() {
       return getRelativeScoreLookupTable();
     }
 
-    public static final int FLATSCOREROUND_FIELD_NUMBER = 9;
+    public static final int FLATSCOREROUND_FIELD_NUMBER = 10;
     private integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig flatScoreRound_;
     /**
-     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
      */
     public boolean hasFlatScoreRound() {
       return flatScoreRound_ != null;
     }
     /**
-     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
      */
     public integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig getFlatScoreRound() {
       return flatScoreRound_ == null ? integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig.getDefaultInstance() : flatScoreRound_;
     }
     /**
-     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+     * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
      */
     public integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfigOrBuilder getFlatScoreRoundOrBuilder() {
       return getFlatScoreRound();
@@ -27152,23 +27237,26 @@ public final class VeriBlockMessages {
       if (keystoneRound_ != 0) {
         output.writeInt32(3, keystoneRound_);
       }
+      if (keystoneInterval_ != 0) {
+        output.writeInt32(4, keystoneInterval_);
+      }
       if (roundRatios_ != null) {
-        output.writeMessage(4, getRoundRatios());
+        output.writeMessage(5, getRoundRatios());
       }
       if (rewardCurve_ != null) {
-        output.writeMessage(5, getRewardCurve());
+        output.writeMessage(6, getRewardCurve());
       }
       if (!getMaxRewardThresholdNormalBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, maxRewardThresholdNormal_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, maxRewardThresholdNormal_);
       }
       if (!getMaxRewardThresholdKeystoneBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, maxRewardThresholdKeystone_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, maxRewardThresholdKeystone_);
       }
       if (relativeScoreLookupTable_ != null) {
-        output.writeMessage(8, getRelativeScoreLookupTable());
+        output.writeMessage(9, getRelativeScoreLookupTable());
       }
       if (flatScoreRound_ != null) {
-        output.writeMessage(9, getFlatScoreRound());
+        output.writeMessage(10, getFlatScoreRound());
       }
       unknownFields.writeTo(output);
     }
@@ -27190,27 +27278,31 @@ public final class VeriBlockMessages {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, keystoneRound_);
       }
+      if (keystoneInterval_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, keystoneInterval_);
+      }
       if (roundRatios_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getRoundRatios());
+          .computeMessageSize(5, getRoundRatios());
       }
       if (rewardCurve_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getRewardCurve());
+          .computeMessageSize(6, getRewardCurve());
       }
       if (!getMaxRewardThresholdNormalBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, maxRewardThresholdNormal_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, maxRewardThresholdNormal_);
       }
       if (!getMaxRewardThresholdKeystoneBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, maxRewardThresholdKeystone_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, maxRewardThresholdKeystone_);
       }
       if (relativeScoreLookupTable_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getRelativeScoreLookupTable());
+          .computeMessageSize(9, getRelativeScoreLookupTable());
       }
       if (flatScoreRound_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getFlatScoreRound());
+          .computeMessageSize(10, getFlatScoreRound());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -27233,6 +27325,8 @@ public final class VeriBlockMessages {
           != other.getPayoutRounds()) return false;
       if (getKeystoneRound()
           != other.getKeystoneRound()) return false;
+      if (getKeystoneInterval()
+          != other.getKeystoneInterval()) return false;
       if (hasRoundRatios() != other.hasRoundRatios()) return false;
       if (hasRoundRatios()) {
         if (!getRoundRatios()
@@ -27274,6 +27368,8 @@ public final class VeriBlockMessages {
       hash = (53 * hash) + getPayoutRounds();
       hash = (37 * hash) + KEYSTONEROUND_FIELD_NUMBER;
       hash = (53 * hash) + getKeystoneRound();
+      hash = (37 * hash) + KEYSTONEINTERVAL_FIELD_NUMBER;
+      hash = (53 * hash) + getKeystoneInterval();
       if (hasRoundRatios()) {
         hash = (37 * hash) + ROUNDRATIOS_FIELD_NUMBER;
         hash = (53 * hash) + getRoundRatios().hashCode();
@@ -27433,6 +27529,8 @@ public final class VeriBlockMessages {
 
         keystoneRound_ = 0;
 
+        keystoneInterval_ = 0;
+
         if (roundRatiosBuilder_ == null) {
           roundRatios_ = null;
         } else {
@@ -27490,6 +27588,7 @@ public final class VeriBlockMessages {
         result.basicReward_ = basicReward_;
         result.payoutRounds_ = payoutRounds_;
         result.keystoneRound_ = keystoneRound_;
+        result.keystoneInterval_ = keystoneInterval_;
         if (roundRatiosBuilder_ == null) {
           result.roundRatios_ = roundRatios_;
         } else {
@@ -27569,6 +27668,9 @@ public final class VeriBlockMessages {
         }
         if (other.getKeystoneRound() != 0) {
           setKeystoneRound(other.getKeystoneRound());
+        }
+        if (other.getKeystoneInterval() != 0) {
+          setKeystoneInterval(other.getKeystoneInterval());
         }
         if (other.hasRoundRatios()) {
           mergeRoundRatios(other.getRoundRatios());
@@ -27740,17 +27842,43 @@ public final class VeriBlockMessages {
         return this;
       }
 
+      private int keystoneInterval_ ;
+      /**
+       * <code>int32 keystoneInterval = 4;</code>
+       */
+      public int getKeystoneInterval() {
+        return keystoneInterval_;
+      }
+      /**
+       * <code>int32 keystoneInterval = 4;</code>
+       */
+      public Builder setKeystoneInterval(int value) {
+        
+        keystoneInterval_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 keystoneInterval = 4;</code>
+       */
+      public Builder clearKeystoneInterval() {
+        
+        keystoneInterval_ = 0;
+        onChanged();
+        return this;
+      }
+
       private integration.api.grpc.VeriBlockMessages.RoundRatioConfig roundRatios_;
       private com.google.protobuf.SingleFieldBuilderV3<
           integration.api.grpc.VeriBlockMessages.RoundRatioConfig, integration.api.grpc.VeriBlockMessages.RoundRatioConfig.Builder, integration.api.grpc.VeriBlockMessages.RoundRatioConfigOrBuilder> roundRatiosBuilder_;
       /**
-       * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+       * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
        */
       public boolean hasRoundRatios() {
         return roundRatiosBuilder_ != null || roundRatios_ != null;
       }
       /**
-       * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+       * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
        */
       public integration.api.grpc.VeriBlockMessages.RoundRatioConfig getRoundRatios() {
         if (roundRatiosBuilder_ == null) {
@@ -27760,7 +27888,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+       * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
        */
       public Builder setRoundRatios(integration.api.grpc.VeriBlockMessages.RoundRatioConfig value) {
         if (roundRatiosBuilder_ == null) {
@@ -27776,7 +27904,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+       * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
        */
       public Builder setRoundRatios(
           integration.api.grpc.VeriBlockMessages.RoundRatioConfig.Builder builderForValue) {
@@ -27790,7 +27918,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+       * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
        */
       public Builder mergeRoundRatios(integration.api.grpc.VeriBlockMessages.RoundRatioConfig value) {
         if (roundRatiosBuilder_ == null) {
@@ -27808,7 +27936,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+       * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
        */
       public Builder clearRoundRatios() {
         if (roundRatiosBuilder_ == null) {
@@ -27822,7 +27950,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+       * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
        */
       public integration.api.grpc.VeriBlockMessages.RoundRatioConfig.Builder getRoundRatiosBuilder() {
         
@@ -27830,7 +27958,7 @@ public final class VeriBlockMessages {
         return getRoundRatiosFieldBuilder().getBuilder();
       }
       /**
-       * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+       * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
        */
       public integration.api.grpc.VeriBlockMessages.RoundRatioConfigOrBuilder getRoundRatiosOrBuilder() {
         if (roundRatiosBuilder_ != null) {
@@ -27841,7 +27969,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>.VeriBlock.RoundRatioConfig roundRatios = 4;</code>
+       * <code>.VeriBlock.RoundRatioConfig roundRatios = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           integration.api.grpc.VeriBlockMessages.RoundRatioConfig, integration.api.grpc.VeriBlockMessages.RoundRatioConfig.Builder, integration.api.grpc.VeriBlockMessages.RoundRatioConfigOrBuilder> 
@@ -27861,13 +27989,13 @@ public final class VeriBlockMessages {
       private com.google.protobuf.SingleFieldBuilderV3<
           integration.api.grpc.VeriBlockMessages.RewardCurveConfig, integration.api.grpc.VeriBlockMessages.RewardCurveConfig.Builder, integration.api.grpc.VeriBlockMessages.RewardCurveConfigOrBuilder> rewardCurveBuilder_;
       /**
-       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
        */
       public boolean hasRewardCurve() {
         return rewardCurveBuilder_ != null || rewardCurve_ != null;
       }
       /**
-       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
        */
       public integration.api.grpc.VeriBlockMessages.RewardCurveConfig getRewardCurve() {
         if (rewardCurveBuilder_ == null) {
@@ -27877,7 +28005,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
        */
       public Builder setRewardCurve(integration.api.grpc.VeriBlockMessages.RewardCurveConfig value) {
         if (rewardCurveBuilder_ == null) {
@@ -27893,7 +28021,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
        */
       public Builder setRewardCurve(
           integration.api.grpc.VeriBlockMessages.RewardCurveConfig.Builder builderForValue) {
@@ -27907,7 +28035,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
        */
       public Builder mergeRewardCurve(integration.api.grpc.VeriBlockMessages.RewardCurveConfig value) {
         if (rewardCurveBuilder_ == null) {
@@ -27925,7 +28053,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
        */
       public Builder clearRewardCurve() {
         if (rewardCurveBuilder_ == null) {
@@ -27939,7 +28067,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
        */
       public integration.api.grpc.VeriBlockMessages.RewardCurveConfig.Builder getRewardCurveBuilder() {
         
@@ -27947,7 +28075,7 @@ public final class VeriBlockMessages {
         return getRewardCurveFieldBuilder().getBuilder();
       }
       /**
-       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
        */
       public integration.api.grpc.VeriBlockMessages.RewardCurveConfigOrBuilder getRewardCurveOrBuilder() {
         if (rewardCurveBuilder_ != null) {
@@ -27958,7 +28086,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 5;</code>
+       * <code>.VeriBlock.RewardCurveConfig rewardCurve = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           integration.api.grpc.VeriBlockMessages.RewardCurveConfig, integration.api.grpc.VeriBlockMessages.RewardCurveConfig.Builder, integration.api.grpc.VeriBlockMessages.RewardCurveConfigOrBuilder> 
@@ -27976,7 +28104,7 @@ public final class VeriBlockMessages {
 
       private java.lang.Object maxRewardThresholdNormal_ = "";
       /**
-       * <code>string maxRewardThresholdNormal = 6;</code>
+       * <code>string maxRewardThresholdNormal = 7;</code>
        */
       public java.lang.String getMaxRewardThresholdNormal() {
         java.lang.Object ref = maxRewardThresholdNormal_;
@@ -27991,7 +28119,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>string maxRewardThresholdNormal = 6;</code>
+       * <code>string maxRewardThresholdNormal = 7;</code>
        */
       public com.google.protobuf.ByteString
           getMaxRewardThresholdNormalBytes() {
@@ -28007,7 +28135,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>string maxRewardThresholdNormal = 6;</code>
+       * <code>string maxRewardThresholdNormal = 7;</code>
        */
       public Builder setMaxRewardThresholdNormal(
           java.lang.String value) {
@@ -28020,7 +28148,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>string maxRewardThresholdNormal = 6;</code>
+       * <code>string maxRewardThresholdNormal = 7;</code>
        */
       public Builder clearMaxRewardThresholdNormal() {
         
@@ -28029,7 +28157,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>string maxRewardThresholdNormal = 6;</code>
+       * <code>string maxRewardThresholdNormal = 7;</code>
        */
       public Builder setMaxRewardThresholdNormalBytes(
           com.google.protobuf.ByteString value) {
@@ -28045,7 +28173,7 @@ public final class VeriBlockMessages {
 
       private java.lang.Object maxRewardThresholdKeystone_ = "";
       /**
-       * <code>string maxRewardThresholdKeystone = 7;</code>
+       * <code>string maxRewardThresholdKeystone = 8;</code>
        */
       public java.lang.String getMaxRewardThresholdKeystone() {
         java.lang.Object ref = maxRewardThresholdKeystone_;
@@ -28060,7 +28188,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>string maxRewardThresholdKeystone = 7;</code>
+       * <code>string maxRewardThresholdKeystone = 8;</code>
        */
       public com.google.protobuf.ByteString
           getMaxRewardThresholdKeystoneBytes() {
@@ -28076,7 +28204,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>string maxRewardThresholdKeystone = 7;</code>
+       * <code>string maxRewardThresholdKeystone = 8;</code>
        */
       public Builder setMaxRewardThresholdKeystone(
           java.lang.String value) {
@@ -28089,7 +28217,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>string maxRewardThresholdKeystone = 7;</code>
+       * <code>string maxRewardThresholdKeystone = 8;</code>
        */
       public Builder clearMaxRewardThresholdKeystone() {
         
@@ -28098,7 +28226,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>string maxRewardThresholdKeystone = 7;</code>
+       * <code>string maxRewardThresholdKeystone = 8;</code>
        */
       public Builder setMaxRewardThresholdKeystoneBytes(
           com.google.protobuf.ByteString value) {
@@ -28116,13 +28244,13 @@ public final class VeriBlockMessages {
       private com.google.protobuf.SingleFieldBuilderV3<
           integration.api.grpc.VeriBlockMessages.RelativeScoreConfig, integration.api.grpc.VeriBlockMessages.RelativeScoreConfig.Builder, integration.api.grpc.VeriBlockMessages.RelativeScoreConfigOrBuilder> relativeScoreLookupTableBuilder_;
       /**
-       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
        */
       public boolean hasRelativeScoreLookupTable() {
         return relativeScoreLookupTableBuilder_ != null || relativeScoreLookupTable_ != null;
       }
       /**
-       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
        */
       public integration.api.grpc.VeriBlockMessages.RelativeScoreConfig getRelativeScoreLookupTable() {
         if (relativeScoreLookupTableBuilder_ == null) {
@@ -28132,7 +28260,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
        */
       public Builder setRelativeScoreLookupTable(integration.api.grpc.VeriBlockMessages.RelativeScoreConfig value) {
         if (relativeScoreLookupTableBuilder_ == null) {
@@ -28148,7 +28276,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
        */
       public Builder setRelativeScoreLookupTable(
           integration.api.grpc.VeriBlockMessages.RelativeScoreConfig.Builder builderForValue) {
@@ -28162,7 +28290,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
        */
       public Builder mergeRelativeScoreLookupTable(integration.api.grpc.VeriBlockMessages.RelativeScoreConfig value) {
         if (relativeScoreLookupTableBuilder_ == null) {
@@ -28180,7 +28308,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
        */
       public Builder clearRelativeScoreLookupTable() {
         if (relativeScoreLookupTableBuilder_ == null) {
@@ -28194,7 +28322,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
        */
       public integration.api.grpc.VeriBlockMessages.RelativeScoreConfig.Builder getRelativeScoreLookupTableBuilder() {
         
@@ -28202,7 +28330,7 @@ public final class VeriBlockMessages {
         return getRelativeScoreLookupTableFieldBuilder().getBuilder();
       }
       /**
-       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
        */
       public integration.api.grpc.VeriBlockMessages.RelativeScoreConfigOrBuilder getRelativeScoreLookupTableOrBuilder() {
         if (relativeScoreLookupTableBuilder_ != null) {
@@ -28213,7 +28341,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;</code>
+       * <code>.VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           integration.api.grpc.VeriBlockMessages.RelativeScoreConfig, integration.api.grpc.VeriBlockMessages.RelativeScoreConfig.Builder, integration.api.grpc.VeriBlockMessages.RelativeScoreConfigOrBuilder> 
@@ -28233,13 +28361,13 @@ public final class VeriBlockMessages {
       private com.google.protobuf.SingleFieldBuilderV3<
           integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig, integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig.Builder, integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfigOrBuilder> flatScoreRoundBuilder_;
       /**
-       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
        */
       public boolean hasFlatScoreRound() {
         return flatScoreRoundBuilder_ != null || flatScoreRound_ != null;
       }
       /**
-       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
        */
       public integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig getFlatScoreRound() {
         if (flatScoreRoundBuilder_ == null) {
@@ -28249,7 +28377,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
        */
       public Builder setFlatScoreRound(integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig value) {
         if (flatScoreRoundBuilder_ == null) {
@@ -28265,7 +28393,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
        */
       public Builder setFlatScoreRound(
           integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig.Builder builderForValue) {
@@ -28279,7 +28407,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
        */
       public Builder mergeFlatScoreRound(integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig value) {
         if (flatScoreRoundBuilder_ == null) {
@@ -28297,7 +28425,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
        */
       public Builder clearFlatScoreRound() {
         if (flatScoreRoundBuilder_ == null) {
@@ -28311,7 +28439,7 @@ public final class VeriBlockMessages {
         return this;
       }
       /**
-       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
        */
       public integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig.Builder getFlatScoreRoundBuilder() {
         
@@ -28319,7 +28447,7 @@ public final class VeriBlockMessages {
         return getFlatScoreRoundFieldBuilder().getBuilder();
       }
       /**
-       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
        */
       public integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfigOrBuilder getFlatScoreRoundOrBuilder() {
         if (flatScoreRoundBuilder_ != null) {
@@ -28330,7 +28458,7 @@ public final class VeriBlockMessages {
         }
       }
       /**
-       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
+       * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig, integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfig.Builder, integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfigOrBuilder> 
@@ -56165,315 +56293,316 @@ public final class VeriBlockMessages {
       "\030\006 \001(\014B\004\200\265\030\001\022\021\n\ttimestamp\030\007 \001(\005\022\022\n\ndiffi" +
       "culty\030\010 \001(\005\022\r\n\005nonce\030\t \001(\005\"6\n\013NetworkByt" +
       "e\022\022\n\nbyteExists\030\001 \001(\010\022\023\n\013networkByte\030\002 \001" +
-      "(\005\"\330\002\n\024VeriBlockTransaction\022\020\n\002id\030\001 \001(\014B" +
+      "(\005\"\354\002\n\024VeriBlockTransaction\022\020\n\002id\030\001 \001(\014B" +
       "\004\200\265\030\001\022\014\n\004type\030\002 \001(\005\022)\n\rsourceAddress\030\003 \001" +
       "(\0132\022.VeriBlock.Address\022%\n\014sourceAmount\030\004" +
       " \001(\0132\017.VeriBlock.Coin\022\"\n\007outputs\030\005 \003(\0132\021" +
       ".VeriBlock.Output\022\026\n\016signatureIndex\030\006 \001(" +
-      "\003\0223\n\017publicationData\030\010 \001(\0132\032.VeriBlock.P" +
-      "ublicationData\022\027\n\tsignature\030\t \001(\014B\004\200\265\030\001\022" +
-      "\027\n\tpublicKey\030\n \001(\014B\004\200\265\030\001\022+\n\013networkByte\030" +
-      "\013 \001(\0132\026.VeriBlock.NetworkByte\"\032\n\007Address" +
-      "\022\017\n\007address\030\001 \001(\t\"\033\n\004Coin\022\023\n\013atomicUnits" +
-      "\030\001 \001(\003\"N\n\006Output\022#\n\007address\030\001 \001(\0132\022.Veri" +
-      "Block.Address\022\037\n\006amount\030\002 \001(\0132\017.VeriBloc" +
-      "k.Coin\"\272\001\n\016AltPublication\0224\n\013transaction" +
-      "\030\001 \001(\0132\037.VeriBlock.VeriBlockTransaction\022" +
-      "\022\n\nmerklePath\030\002 \001(\t\0222\n\017containingBlock\030\003" +
-      " \001(\0132\031.VeriBlock.VeriBlockBlock\022*\n\007conte" +
-      "xt\030\004 \003(\0132\031.VeriBlock.VeriBlockBlock\"\226\003\n\027" +
-      "VeriBlockPoPTransaction\022\020\n\002id\030\001 \001(\014B\004\200\265\030" +
-      "\001\022#\n\007address\030\002 \001(\0132\022.VeriBlock.Address\0221" +
-      "\n\016publishedBlock\030\003 \001(\0132\031.VeriBlock.VeriB" +
-      "lockBlock\0229\n\022bitcoinTransaction\030\004 \001(\0132\035." +
-      "VeriBlock.BitcoinTransaction\022\022\n\nmerklePa" +
-      "th\030\005 \001(\t\022-\n\014blockOfProof\030\006 \001(\0132\027.VeriBlo" +
-      "ck.BitcoinBlock\0224\n\023blockOfProofContext\030\007" +
-      " \003(\0132\027.VeriBlock.BitcoinBlock\022\027\n\tsignatu" +
-      "re\030\010 \001(\014B\004\200\265\030\001\022\027\n\tpublicKey\030\t \001(\014B\004\200\265\030\001\022" +
-      "+\n\013networkByte\030\n \001(\0132\026.VeriBlock.Network" +
-      "Byte\"\303\001\n\024VeriBlockPublication\0227\n\013transac" +
-      "tion\030\001 \001(\0132\".VeriBlock.VeriBlockPoPTrans" +
-      "action\022\022\n\nmerklePath\030\002 \001(\t\0222\n\017containing" +
-      "Block\030\003 \001(\0132\031.VeriBlock.VeriBlockBlock\022*" +
-      "\n\007context\030\004 \003(\0132\031.VeriBlock.VeriBlockBlo" +
-      "ck\"\225\001\n\022PoPTransactionData\022\014\n\004hash\030\001 \001(\t\022" +
-      "1\n\016altPublication\030\002 \001(\0132\031.VeriBlock.AltP" +
-      "ublication\022>\n\025veriblockPublications\030\003 \003(" +
-      "\0132\037.VeriBlock.VeriBlockPublication\"\016\n\014Em" +
-      "ptyRequest\"5\n\014GeneralReply\022\016\n\006result\030\001 \001" +
-      "(\010\022\025\n\rresultMessage\030\002 \001(\t\"*\n\nBlockIndex\022" +
-      "\016\n\006height\030\001 \001(\003\022\014\n\004hash\030\002 \001(\t\"\263\001\n\022AddPay" +
-      "loadsRequest\022)\n\nblockIndex\030\001 \001(\0132\025.VeriB" +
-      "lock.BlockIndex\022>\n\025veriblockPublications" +
-      "\030\002 \003(\0132\037.VeriBlock.VeriBlockPublication\022" +
-      "2\n\017altPublications\030\003 \003(\0132\031.VeriBlock.Alt" +
-      "Publication\"\221\001\n\033AddTemporaryPayloadsRequ" +
-      "est\022>\n\025veriblockPublications\030\001 \003(\0132\037.Ver" +
-      "iBlock.VeriBlockPublication\0222\n\017altPublic" +
-      "ations\030\002 \003(\0132\031.VeriBlock.AltPublication\"" +
-      "U\n\023SimplifyVTBsRequest\022>\n\025veriblockPubli" +
-      "cations\030\001 \003(\0132\037.VeriBlock.VeriBlockPubli" +
-      "cation\"|\n\021SimplifyVTBsReply\022\'\n\006result\030\001 " +
-      "\001(\0132\027.VeriBlock.GeneralReply\022>\n\025veribloc" +
-      "kPublications\030\002 \003(\0132\037.VeriBlock.VeriBloc" +
-      "kPublication\"U\n\032GetMainVBKHeightOfATVRep" +
+      "\003\022\022\n\004data\030\007 \001(\014B\004\200\265\030\001\0223\n\017publicationData" +
+      "\030\010 \001(\0132\032.VeriBlock.PublicationData\022\027\n\tsi" +
+      "gnature\030\t \001(\014B\004\200\265\030\001\022\027\n\tpublicKey\030\n \001(\014B\004" +
+      "\200\265\030\001\022+\n\013networkByte\030\013 \001(\0132\026.VeriBlock.Ne" +
+      "tworkByte\"\032\n\007Address\022\017\n\007address\030\001 \001(\t\"\033\n" +
+      "\004Coin\022\023\n\013atomicUnits\030\001 \001(\003\"N\n\006Output\022#\n\007" +
+      "address\030\001 \001(\0132\022.VeriBlock.Address\022\037\n\006amo" +
+      "unt\030\002 \001(\0132\017.VeriBlock.Coin\"\272\001\n\016AltPublic" +
+      "ation\0224\n\013transaction\030\001 \001(\0132\037.VeriBlock.V" +
+      "eriBlockTransaction\022\022\n\nmerklePath\030\002 \001(\t\022" +
+      "2\n\017containingBlock\030\003 \001(\0132\031.VeriBlock.Ver" +
+      "iBlockBlock\022*\n\007context\030\004 \003(\0132\031.VeriBlock" +
+      ".VeriBlockBlock\"\226\003\n\027VeriBlockPoPTransact" +
+      "ion\022\020\n\002id\030\001 \001(\014B\004\200\265\030\001\022#\n\007address\030\002 \001(\0132\022" +
+      ".VeriBlock.Address\0221\n\016publishedBlock\030\003 \001" +
+      "(\0132\031.VeriBlock.VeriBlockBlock\0229\n\022bitcoin" +
+      "Transaction\030\004 \001(\0132\035.VeriBlock.BitcoinTra" +
+      "nsaction\022\022\n\nmerklePath\030\005 \001(\t\022-\n\014blockOfP" +
+      "roof\030\006 \001(\0132\027.VeriBlock.BitcoinBlock\0224\n\023b" +
+      "lockOfProofContext\030\007 \003(\0132\027.VeriBlock.Bit" +
+      "coinBlock\022\027\n\tsignature\030\010 \001(\014B\004\200\265\030\001\022\027\n\tpu" +
+      "blicKey\030\t \001(\014B\004\200\265\030\001\022+\n\013networkByte\030\n \001(\013" +
+      "2\026.VeriBlock.NetworkByte\"\303\001\n\024VeriBlockPu" +
+      "blication\0227\n\013transaction\030\001 \001(\0132\".VeriBlo" +
+      "ck.VeriBlockPoPTransaction\022\022\n\nmerklePath" +
+      "\030\002 \001(\t\0222\n\017containingBlock\030\003 \001(\0132\031.VeriBl" +
+      "ock.VeriBlockBlock\022*\n\007context\030\004 \003(\0132\031.Ve" +
+      "riBlock.VeriBlockBlock\"\225\001\n\022PoPTransactio" +
+      "nData\022\014\n\004hash\030\001 \001(\t\0221\n\016altPublication\030\002 " +
+      "\001(\0132\031.VeriBlock.AltPublication\022>\n\025veribl" +
+      "ockPublications\030\003 \003(\0132\037.VeriBlock.VeriBl" +
+      "ockPublication\"\016\n\014EmptyRequest\"5\n\014Genera" +
+      "lReply\022\016\n\006result\030\001 \001(\010\022\025\n\rresultMessage\030" +
+      "\002 \001(\t\"*\n\nBlockIndex\022\016\n\006height\030\001 \001(\003\022\014\n\004h" +
+      "ash\030\002 \001(\t\"\263\001\n\022AddPayloadsRequest\022)\n\nbloc" +
+      "kIndex\030\001 \001(\0132\025.VeriBlock.BlockIndex\022>\n\025v" +
+      "eriblockPublications\030\002 \003(\0132\037.VeriBlock.V" +
+      "eriBlockPublication\0222\n\017altPublications\030\003" +
+      " \003(\0132\031.VeriBlock.AltPublication\"\221\001\n\033AddT" +
+      "emporaryPayloadsRequest\022>\n\025veriblockPubl" +
+      "ications\030\001 \003(\0132\037.VeriBlock.VeriBlockPubl" +
+      "ication\0222\n\017altPublications\030\002 \003(\0132\031.VeriB" +
+      "lock.AltPublication\"U\n\023SimplifyVTBsReque" +
+      "st\022>\n\025veriblockPublications\030\001 \003(\0132\037.Veri" +
+      "Block.VeriBlockPublication\"|\n\021SimplifyVT" +
+      "BsReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gene" +
+      "ralReply\022>\n\025veriblockPublications\030\002 \003(\0132" +
+      "\037.VeriBlock.VeriBlockPublication\"U\n\032GetM" +
+      "ainVBKHeightOfATVReply\022\'\n\006result\030\001 \001(\0132\027" +
+      ".VeriBlock.GeneralReply\022\016\n\006height\030\002 \001(\005\"" +
+      "B\n\025RemovePayloadsRequest\022)\n\nblockIndex\030\001" +
+      " \001(\0132\025.VeriBlock.BlockIndex\"1\n\025AltChainC" +
+      "onfigRequest\022\030\n\020keystoneInterval\030\001 \001(\005\"2" +
+      "\n\031GetLastKnownBlocksRequest\022\025\n\rmaxBlockC" +
+      "ount\030\001 \001(\005\"[\n\032GetLastKnownVBKBlocksReply" +
+      "\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralRepl" +
+      "y\022\024\n\006blocks\030\002 \003(\014B\004\200\265\030\001\"[\n\032GetLastKnownB" +
+      "TCBlocksReply\022\'\n\006result\030\001 \001(\0132\027.VeriBloc" +
+      "k.GeneralReply\022\024\n\006blocks\030\002 \003(\014B\004\200\265\030\001\"\261\001\n" +
+      "\035SavePoPTransactionDataRequest\0221\n\017contai" +
+      "ningBlock\030\001 \001(\0132\030.VeriBlock.AltChainBloc" +
+      "k\022/\n\rendorsedBlock\030\002 \001(\0132\030.VeriBlock.Alt" +
+      "ChainBlock\022,\n\005popTx\030\003 \001(\0132\035.VeriBlock.Po" +
+      "PTransactionData\"&\n\020RoundRatioConfig\022\022\n\n" +
+      "roundRatio\030\001 \003(\t\"\332\001\n\021RewardCurveConfig\022\035" +
+      "\n\025startOfDecreasingLine\030\001 \001(\t\022#\n\033widthOf" +
+      "DecreasingLineNormal\030\002 \001(\t\022%\n\035widthOfDec" +
+      "reasingLineKeystone\030\003 \001(\t\022+\n#aboveIntend" +
+      "edPayoutMultiplierNormal\030\004 \001(\t\022-\n%aboveI" +
+      "ntendedPayoutMultiplierKeystone\030\005 \001(\t\"$\n" +
+      "\023RelativeScoreConfig\022\r\n\005score\030\001 \003(\t\"5\n\024F" +
+      "latScoreRoundConfig\022\r\n\005round\030\001 \001(\005\022\016\n\006ac" +
+      "tive\030\002 \001(\010\"\224\003\n\020CalculatorConfig\022\023\n\013basic" +
+      "Reward\030\001 \001(\t\022\024\n\014payoutRounds\030\002 \001(\005\022\025\n\rke" +
+      "ystoneRound\030\003 \001(\005\022\030\n\020keystoneInterval\030\004 " +
+      "\001(\005\0220\n\013roundRatios\030\005 \001(\0132\033.VeriBlock.Rou" +
+      "ndRatioConfig\0221\n\013rewardCurve\030\006 \001(\0132\034.Ver" +
+      "iBlock.RewardCurveConfig\022 \n\030maxRewardThr" +
+      "esholdNormal\030\007 \001(\t\022\"\n\032maxRewardThreshold" +
+      "Keystone\030\010 \001(\t\022@\n\030relativeScoreLookupTab" +
+      "le\030\t \001(\0132\036.VeriBlock.RelativeScoreConfig" +
+      "\0227\n\016flatScoreRound\030\n \001(\0132\037.VeriBlock.Fla" +
+      "tScoreRoundConfig\"G\n\024SetCalculatorReques" +
+      "t\022/\n\ncalculator\030\001 \001(\0132\033.VeriBlock.Calcul" +
+      "atorConfig\"n\n\022GetCalculatorReply\022\'\n\006resu" +
+      "lt\030\001 \001(\0132\027.VeriBlock.GeneralReply\022/\n\ncal" +
+      "culator\030\002 \001(\0132\033.VeriBlock.CalculatorConf" +
+      "ig\"2\n\014RewardOutput\022\022\n\npayoutInfo\030\001 \001(\014\022\016" +
+      "\n\006reward\030\002 \001(\t\"\203\001\n\034RewardsCalculateScore" +
+      "Request\022/\n\rendorsedBlock\030\001 \001(\0132\030.VeriBlo" +
+      "ck.AltChainBlock\0222\n\020endorsmentBlocks\030\002 \003" +
+      "(\0132\030.VeriBlock.AltChainBlock\"T\n\032RewardsC" +
+      "alculateScoreReply\022\'\n\006result\030\001 \001(\0132\027.Ver" +
+      "iBlock.GeneralReply\022\r\n\005score\030\002 \001(\t\"\261\001\n\036R" +
+      "ewardsCalculateOutputsRequest\022\026\n\016blockAl" +
+      "tHeight\030\001 \001(\005\022/\n\rendorsedBlock\030\002 \001(\0132\030.V" +
+      "eriBlock.AltChainBlock\0222\n\020endorsmentBloc" +
+      "ks\030\003 \003(\0132\030.VeriBlock.AltChainBlock\022\022\n\ndi" +
+      "fficulty\030\004 \001(\t\"\233\001\n\034RewardsCalculateOutpu" +
+      "tsReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gene" +
+      "ralReply\022\023\n\013totalReward\030\002 \001(\t\022\023\n\013blockRe" +
+      "ward\030\003 \001(\t\022(\n\007outputs\030\004 \003(\0132\027.VeriBlock." +
+      "RewardOutput\"!\n\021BytesArrayRequest\022\014\n\004dat" +
+      "a\030\001 \001(\014\"H\n\017BytesArrayReply\022\'\n\006result\030\001 \001" +
+      "(\0132\027.VeriBlock.GeneralReply\022\014\n\004data\030\002 \001(" +
+      "\014\" \n\nMerklePath\022\022\n\nmerklePath\030\001 \001(\t\"8\n\021M" +
+      "erklePathRequest\022\014\n\004data\030\001 \001(\014\022\025\n\007subjec" +
+      "t\030\002 \001(\014B\004\200\265\030\001\")\n\023VeriBlockMerklePath\022\022\n\n" +
+      "merklePath\030\001 \001(\t\"n\n\023AltPublicationReply\022" +
+      "\'\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralReply" +
+      "\022.\n\013publication\030\002 \001(\0132\031.VeriBlock.AltPub" +
+      "lication\"p\n\024PublicationDataReply\022\'\n\006resu" +
+      "lt\030\001 \001(\0132\027.VeriBlock.GeneralReply\022/\n\013pub" +
+      "lication\030\002 \001(\0132\032.VeriBlock.PublicationDa" +
+      "ta\"v\n\027BitcoinTransactionReply\022\'\n\006result\030" +
+      "\001 \001(\0132\027.VeriBlock.GeneralReply\0222\n\013transa" +
+      "ction\030\002 \001(\0132\035.VeriBlock.BitcoinTransacti" +
+      "on\"h\n\023VeriBlockBlockReply\022\'\n\006result\030\001 \001(" +
+      "\0132\027.VeriBlock.GeneralReply\022(\n\005block\030\002 \001(" +
+      "\0132\031.VeriBlock.VeriBlockBlock\"z\n\031VeriBloc" +
+      "kTransactionReply\022\'\n\006result\030\001 \001(\0132\027.Veri" +
+      "Block.GeneralReply\0224\n\013transaction\030\002 \001(\0132" +
+      "\037.VeriBlock.VeriBlockTransaction\"z\n\031Veri" +
+      "BlockPublicationReply\022\'\n\006result\030\001 \001(\0132\027." +
+      "VeriBlock.GeneralReply\0224\n\013publication\030\002 " +
+      "\001(\0132\037.VeriBlock.VeriBlockPublication\"\200\001\n" +
+      "\034VeriBlockPoPTransactionReply\022\'\n\006result\030" +
+      "\001 \001(\0132\027.VeriBlock.GeneralReply\0227\n\013transa" +
+      "ction\030\002 \001(\0132\".VeriBlock.VeriBlockPoPTran" +
+      "saction\"Y\n\013OutputReply\022\'\n\006result\030\001 \001(\0132\027" +
+      ".VeriBlock.GeneralReply\022!\n\006output\030\002 \001(\0132" +
+      "\021.VeriBlock.Output\"\\\n\014AddressReply\022\'\n\006re" +
+      "sult\030\001 \001(\0132\027.VeriBlock.GeneralReply\022#\n\007a" +
+      "ddress\030\002 \001(\0132\022.VeriBlock.Address\"d\n\021Bitc" +
+      "oinBlockReply\022\'\n\006result\030\001 \001(\0132\027.VeriBloc" +
+      "k.GeneralReply\022&\n\005block\030\002 \001(\0132\027.VeriBloc" +
+      "k.BitcoinBlock\"w\n\030VeriBlockMerklePathRep" +
       "ly\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralRe" +
-      "ply\022\016\n\006height\030\002 \001(\005\"B\n\025RemovePayloadsReq" +
-      "uest\022)\n\nblockIndex\030\001 \001(\0132\025.VeriBlock.Blo" +
-      "ckIndex\"1\n\025AltChainConfigRequest\022\030\n\020keys" +
-      "toneInterval\030\001 \001(\005\"2\n\031GetLastKnownBlocks" +
-      "Request\022\025\n\rmaxBlockCount\030\001 \001(\005\"[\n\032GetLas" +
-      "tKnownVBKBlocksReply\022\'\n\006result\030\001 \001(\0132\027.V" +
-      "eriBlock.GeneralReply\022\024\n\006blocks\030\002 \003(\014B\004\200" +
-      "\265\030\001\"[\n\032GetLastKnownBTCBlocksReply\022\'\n\006res" +
-      "ult\030\001 \001(\0132\027.VeriBlock.GeneralReply\022\024\n\006bl" +
-      "ocks\030\002 \003(\014B\004\200\265\030\001\"\261\001\n\035SavePoPTransactionD" +
-      "ataRequest\0221\n\017containingBlock\030\001 \001(\0132\030.Ve" +
-      "riBlock.AltChainBlock\022/\n\rendorsedBlock\030\002" +
-      " \001(\0132\030.VeriBlock.AltChainBlock\022,\n\005popTx\030" +
-      "\003 \001(\0132\035.VeriBlock.PoPTransactionData\"&\n\020" +
-      "RoundRatioConfig\022\022\n\nroundRatio\030\001 \003(\t\"\332\001\n" +
-      "\021RewardCurveConfig\022\035\n\025startOfDecreasingL" +
-      "ine\030\001 \001(\t\022#\n\033widthOfDecreasingLineNormal" +
-      "\030\002 \001(\t\022%\n\035widthOfDecreasingLineKeystone\030" +
-      "\003 \001(\t\022+\n#aboveIntendedPayoutMultiplierNo" +
-      "rmal\030\004 \001(\t\022-\n%aboveIntendedPayoutMultipl" +
-      "ierKeystone\030\005 \001(\t\"$\n\023RelativeScoreConfig" +
-      "\022\r\n\005score\030\001 \003(\t\"5\n\024FlatScoreRoundConfig\022" +
-      "\r\n\005round\030\001 \001(\005\022\016\n\006active\030\002 \001(\010\"\372\002\n\020Calcu" +
-      "latorConfig\022\023\n\013basicReward\030\001 \001(\t\022\024\n\014payo" +
-      "utRounds\030\002 \001(\005\022\025\n\rkeystoneRound\030\003 \001(\005\0220\n" +
-      "\013roundRatios\030\004 \001(\0132\033.VeriBlock.RoundRati" +
-      "oConfig\0221\n\013rewardCurve\030\005 \001(\0132\034.VeriBlock" +
-      ".RewardCurveConfig\022 \n\030maxRewardThreshold" +
-      "Normal\030\006 \001(\t\022\"\n\032maxRewardThresholdKeysto" +
-      "ne\030\007 \001(\t\022@\n\030relativeScoreLookupTable\030\010 \001" +
-      "(\0132\036.VeriBlock.RelativeScoreConfig\0227\n\016fl" +
-      "atScoreRound\030\t \001(\0132\037.VeriBlock.FlatScore" +
-      "RoundConfig\"G\n\024SetCalculatorRequest\022/\n\nc" +
-      "alculator\030\001 \001(\0132\033.VeriBlock.CalculatorCo" +
-      "nfig\"n\n\022GetCalculatorReply\022\'\n\006result\030\001 \001" +
-      "(\0132\027.VeriBlock.GeneralReply\022/\n\ncalculato" +
-      "r\030\002 \001(\0132\033.VeriBlock.CalculatorConfig\"2\n\014" +
-      "RewardOutput\022\022\n\npayoutInfo\030\001 \001(\014\022\016\n\006rewa" +
-      "rd\030\002 \001(\t\"\203\001\n\034RewardsCalculateScoreReques" +
-      "t\022/\n\rendorsedBlock\030\001 \001(\0132\030.VeriBlock.Alt" +
-      "ChainBlock\0222\n\020endorsmentBlocks\030\002 \003(\0132\030.V" +
-      "eriBlock.AltChainBlock\"T\n\032RewardsCalcula" +
-      "teScoreReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock" +
-      ".GeneralReply\022\r\n\005score\030\002 \001(\t\"\261\001\n\036Rewards" +
-      "CalculateOutputsRequest\022\026\n\016blockAltHeigh" +
-      "t\030\001 \001(\005\022/\n\rendorsedBlock\030\002 \001(\0132\030.VeriBlo" +
-      "ck.AltChainBlock\0222\n\020endorsmentBlocks\030\003 \003" +
-      "(\0132\030.VeriBlock.AltChainBlock\022\022\n\ndifficul" +
-      "ty\030\004 \001(\t\"\233\001\n\034RewardsCalculateOutputsRepl" +
-      "y\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralRep" +
-      "ly\022\023\n\013totalReward\030\002 \001(\t\022\023\n\013blockReward\030\003" +
-      " \001(\t\022(\n\007outputs\030\004 \003(\0132\027.VeriBlock.Reward" +
-      "Output\"!\n\021BytesArrayRequest\022\014\n\004data\030\001 \001(" +
-      "\014\"H\n\017BytesArrayReply\022\'\n\006result\030\001 \001(\0132\027.V" +
-      "eriBlock.GeneralReply\022\014\n\004data\030\002 \001(\014\" \n\nM" +
-      "erklePath\022\022\n\nmerklePath\030\001 \001(\t\"8\n\021MerkleP" +
-      "athRequest\022\014\n\004data\030\001 \001(\014\022\025\n\007subject\030\002 \001(" +
-      "\014B\004\200\265\030\001\")\n\023VeriBlockMerklePath\022\022\n\nmerkle" +
-      "Path\030\001 \001(\t\"n\n\023AltPublicationReply\022\'\n\006res" +
-      "ult\030\001 \001(\0132\027.VeriBlock.GeneralReply\022.\n\013pu" +
-      "blication\030\002 \001(\0132\031.VeriBlock.AltPublicati" +
-      "on\"p\n\024PublicationDataReply\022\'\n\006result\030\001 \001" +
-      "(\0132\027.VeriBlock.GeneralReply\022/\n\013publicati" +
-      "on\030\002 \001(\0132\032.VeriBlock.PublicationData\"v\n\027" +
-      "BitcoinTransactionReply\022\'\n\006result\030\001 \001(\0132" +
-      "\027.VeriBlock.GeneralReply\0222\n\013transaction\030" +
-      "\002 \001(\0132\035.VeriBlock.BitcoinTransaction\"h\n\023" +
-      "VeriBlockBlockReply\022\'\n\006result\030\001 \001(\0132\027.Ve" +
-      "riBlock.GeneralReply\022(\n\005block\030\002 \001(\0132\031.Ve" +
-      "riBlock.VeriBlockBlock\"z\n\031VeriBlockTrans" +
-      "actionReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock." +
-      "GeneralReply\0224\n\013transaction\030\002 \001(\0132\037.Veri" +
-      "Block.VeriBlockTransaction\"z\n\031VeriBlockP" +
-      "ublicationReply\022\'\n\006result\030\001 \001(\0132\027.VeriBl" +
-      "ock.GeneralReply\0224\n\013publication\030\002 \001(\0132\037." +
-      "VeriBlock.VeriBlockPublication\"\200\001\n\034VeriB" +
-      "lockPoPTransactionReply\022\'\n\006result\030\001 \001(\0132" +
-      "\027.VeriBlock.GeneralReply\0227\n\013transaction\030" +
-      "\002 \001(\0132\".VeriBlock.VeriBlockPoPTransactio" +
-      "n\"Y\n\013OutputReply\022\'\n\006result\030\001 \001(\0132\027.VeriB" +
-      "lock.GeneralReply\022!\n\006output\030\002 \001(\0132\021.Veri" +
-      "Block.Output\"\\\n\014AddressReply\022\'\n\006result\030\001" +
-      " \001(\0132\027.VeriBlock.GeneralReply\022#\n\007address" +
-      "\030\002 \001(\0132\022.VeriBlock.Address\"d\n\021BitcoinBlo" +
-      "ckReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gene" +
-      "ralReply\022&\n\005block\030\002 \001(\0132\027.VeriBlock.Bitc" +
-      "oinBlock\"w\n\030VeriBlockMerklePathReply\022\'\n\006" +
-      "result\030\001 \001(\0132\027.VeriBlock.GeneralReply\0222\n" +
-      "\nmerklePath\030\002 \001(\0132\036.VeriBlock.VeriBlockM" +
-      "erklePath\"e\n\017MerklePathReply\022\'\n\006result\030\001" +
-      " \001(\0132\027.VeriBlock.GeneralReply\022)\n\nmerkleP" +
-      "ath\030\002 \001(\0132\025.VeriBlock.MerklePath\"M\n\rAltC" +
-      "hainBlock\022)\n\nblockIndex\030\001 \001(\0132\025.VeriBloc" +
-      "k.BlockIndex\022\021\n\ttimestamp\030\002 \001(\005\"m\n\022TwoBr" +
-      "anchesRequest\022*\n\010leftFork\030\001 \003(\0132\030.VeriBl" +
-      "ock.AltChainBlock\022+\n\trightFork\030\002 \003(\0132\030.V" +
-      "eriBlock.AltChainBlock\"Q\n\014CompareReply\022\'" +
-      "\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralReply\022" +
-      "\030\n\020comparingsResult\030\002 \001(\005\"S\n\033Forkresolut" +
-      "ionConfigRequest\022\035\n\025keystoneFinalityDela" +
-      "y\030\001 \001(\005\022\025\n\ramnestyPeriod\030\002 \001(\0052\323\n\n\022Integ" +
-      "rationService\022C\n\rResetSecurity\022\027.VeriBlo" +
-      "ck.EmptyRequest\032\027.VeriBlock.GeneralReply" +
-      "\"\000\022K\n\023AddGenesisVeriBlock\022\031.VeriBlock.Ve" +
-      "riBlockBlock\032\027.VeriBlock.GeneralReply\"\000\022" +
-      "G\n\021AddGenesisBitcoin\022\027.VeriBlock.Bitcoin" +
-      "Block\032\027.VeriBlock.GeneralReply\"\000\022G\n\013AddP" +
-      "ayloads\022\035.VeriBlock.AddPayloadsRequest\032\027" +
-      ".VeriBlock.GeneralReply\"\000\022M\n\016RemovePaylo" +
-      "ads\022 .VeriBlock.RemovePayloadsRequest\032\027." +
-      "VeriBlock.GeneralReply\"\000\022Y\n\024AddTemporary" +
-      "Payloads\022&.VeriBlock.AddTemporaryPayload" +
-      "sRequest\032\027.VeriBlock.GeneralReply\"\000\022L\n\026C" +
-      "learTemporaryPayloads\022\027.VeriBlock.EmptyR" +
-      "equest\032\027.VeriBlock.GeneralReply\"\000\022N\n\014Sim" +
-      "plifyVTBs\022\036.VeriBlock.SimplifyVTBsReques" +
-      "t\032\034.VeriBlock.SimplifyVTBsReply\"\000\022K\n\023Che" +
-      "ckATVAgainstView\022\031.VeriBlock.AltPublicat" +
-      "ion\032\027.VeriBlock.GeneralReply\"\000\022P\n\022CheckV" +
-      "TBInternally\022\037.VeriBlock.VeriBlockPublic" +
-      "ation\032\027.VeriBlock.GeneralReply\"\000\022J\n\022Chec" +
-      "kATVInternally\022\031.VeriBlock.AltPublicatio" +
-      "n\032\027.VeriBlock.GeneralReply\"\000\022[\n\025GetMainV" +
-      "BKHeightOfATV\022\031.VeriBlock.AltPublication" +
-      "\032%.VeriBlock.GetMainVBKHeightOfATVReply\"" +
-      "\000\022Z\n\033SetAltChainParametersConfig\022 .VeriB" +
-      "lock.AltChainConfigRequest\032\027.VeriBlock.G" +
-      "eneralReply\"\000\022f\n\025GetLastKnownVBKBlocks\022$" +
-      ".VeriBlock.GetLastKnownBlocksRequest\032%.V" +
-      "eriBlock.GetLastKnownVBKBlocksReply\"\000\022f\n" +
-      "\025GetLastKnownBTCBlocks\022$.VeriBlock.GetLa" +
-      "stKnownBlocksRequest\032%.VeriBlock.GetLast" +
-      "KnownBTCBlocksReply\"\000\022]\n\026SavePoPTransact" +
-      "ionData\022(.VeriBlock.SavePoPTransactionDa" +
-      "taRequest\032\027.VeriBlock.GeneralReply\"\0002\310\003\n" +
-      "\016RewardsService\022B\n\014ResetRewards\022\027.VeriBl" +
-      "ock.EmptyRequest\032\027.VeriBlock.GeneralRepl" +
-      "y\"\000\022I\n\rGetCalculator\022\027.VeriBlock.EmptyRe" +
-      "quest\032\035.VeriBlock.GetCalculatorReply\"\000\022K" +
-      "\n\rSetCalculator\022\037.VeriBlock.SetCalculato" +
-      "rRequest\032\027.VeriBlock.GeneralReply\"\000\022i\n\025R" +
-      "ewardsCalculateScore\022\'.VeriBlock.Rewards" +
-      "CalculateScoreRequest\032%.VeriBlock.Reward" +
-      "sCalculateScoreReply\"\000\022o\n\027RewardsCalcula" +
-      "teOutputs\022).VeriBlock.RewardsCalculateOu" +
-      "tputsRequest\032\'.VeriBlock.RewardsCalculat" +
-      "eOutputsReply\"\0002\263\010\n\022DeserializeService\022U" +
-      "\n\023ParseAltPublication\022\034.VeriBlock.BytesA" +
-      "rrayRequest\032\036.VeriBlock.AltPublicationRe" +
-      "ply\"\000\022W\n\024ParsePublicationData\022\034.VeriBloc" +
-      "k.BytesArrayRequest\032\037.VeriBlock.Publicat" +
-      "ionDataReply\"\000\022]\n\027ParseBitcoinTransactio" +
-      "n\022\034.VeriBlock.BytesArrayRequest\032\".VeriBl" +
-      "ock.BitcoinTransactionReply\"\000\022U\n\023ParseVe" +
-      "riBlockBlock\022\034.VeriBlock.BytesArrayReque" +
-      "st\032\036.VeriBlock.VeriBlockBlockReply\"\000\022a\n\031" +
-      "ParseVeriBlockTransaction\022\034.VeriBlock.By" +
-      "tesArrayRequest\032$.VeriBlock.VeriBlockTra" +
-      "nsactionReply\"\000\022a\n\031ParseVeriBlockPublica" +
-      "tion\022\034.VeriBlock.BytesArrayRequest\032$.Ver" +
-      "iBlock.VeriBlockPublicationReply\"\000\022^\n\023Pa" +
-      "rseVeriBlockPopTx\022\034.VeriBlock.BytesArray" +
-      "Request\032\'.VeriBlock.VeriBlockPoPTransact" +
-      "ionReply\"\000\022E\n\013ParseOutput\022\034.VeriBlock.By" +
-      "tesArrayRequest\032\026.VeriBlock.OutputReply\"" +
-      "\000\022G\n\014ParseAddress\022\034.VeriBlock.BytesArray" +
-      "Request\032\027.VeriBlock.AddressReply\"\000\022Q\n\021Pa" +
-      "rseBitcoinBlock\022\034.VeriBlock.BytesArrayRe" +
-      "quest\032\034.VeriBlock.BitcoinBlockReply\"\000\022_\n" +
-      "\030ParseVeriBlockMerklePath\022\034.VeriBlock.By" +
-      "tesArrayRequest\032#.VeriBlock.VeriBlockMer" +
-      "klePathReply\"\000\022M\n\017ParseMerklePath\022\034.Veri" +
-      "Block.MerklePathRequest\032\032.VeriBlock.Merk" +
-      "lePathReply\"\0002\215\010\n\020SerializeService\022R\n\027Se" +
-      "rializeAltPublication\022\031.VeriBlock.AltPub" +
-      "lication\032\032.VeriBlock.BytesArrayReply\"\000\022T" +
-      "\n\030SerializePublicationData\022\032.VeriBlock.P" +
-      "ublicationData\032\032.VeriBlock.BytesArrayRep" +
-      "ly\"\000\022Z\n\033SerializeBitcoinTransaction\022\035.Ve" +
-      "riBlock.BitcoinTransaction\032\032.VeriBlock.B" +
-      "ytesArrayReply\"\000\022R\n\027SerializeVeriBlockBl" +
-      "ock\022\031.VeriBlock.VeriBlockBlock\032\032.VeriBlo" +
-      "ck.BytesArrayReply\"\000\022^\n\035SerializeVeriBlo" +
-      "ckTransaction\022\037.VeriBlock.VeriBlockTrans" +
-      "action\032\032.VeriBlock.BytesArrayReply\"\000\022^\n\035" +
-      "SerializeVeriBlockPublication\022\037.VeriBloc" +
-      "k.VeriBlockPublication\032\032.VeriBlock.Bytes" +
-      "ArrayReply\"\000\022[\n\027SerializeVeriBlockPopTx\022" +
-      "\".VeriBlock.VeriBlockPoPTransaction\032\032.Ve" +
-      "riBlock.BytesArrayReply\"\000\022B\n\017SerializeOu" +
-      "tput\022\021.VeriBlock.Output\032\032.VeriBlock.Byte" +
-      "sArrayReply\"\000\022D\n\020SerializeAddress\022\022.Veri" +
-      "Block.Address\032\032.VeriBlock.BytesArrayRepl" +
-      "y\"\000\022N\n\025SerializeBitcoinBlock\022\027.VeriBlock" +
-      ".BitcoinBlock\032\032.VeriBlock.BytesArrayRepl" +
-      "y\"\000\022\\\n\034SerializeVeriBlockMerklePath\022\036.Ve" +
-      "riBlock.VeriBlockMerklePath\032\032.VeriBlock." +
-      "BytesArrayReply\"\000\022J\n\023SerializeMerklePath" +
-      "\022\025.VeriBlock.MerklePath\032\032.VeriBlock.Byte" +
-      "sArrayReply\"\0002\271\r\n\021ValidationService\022U\n\024V" +
-      "erifyVeriBlockPoPTx\022\".VeriBlock.VeriBloc" +
-      "kPoPTransaction\032\027.VeriBlock.GeneralReply" +
-      "\"\000\022]\n\034CheckSignatureVeriBlockPoPTx\022\".Ver" +
-      "iBlock.VeriBlockPoPTransaction\032\027.VeriBlo" +
-      "ck.GeneralReply\"\000\022b\n!CheckBitcoinTransac" +
-      "tionForPoPData\022\".VeriBlock.VeriBlockPoPT" +
-      "ransaction\032\027.VeriBlock.GeneralReply\"\000\022e\n" +
-      "$CheckBitcoinMerklePathVeriBlockPoPTx\022\"." +
-      "VeriBlock.VeriBlockPoPTransaction\032\027.Veri" +
-      "Block.GeneralReply\"\000\022a\n CheckBitcoinBloc" +
-      "ksVeriBlockPoPTx\022\".VeriBlock.VeriBlockPo" +
-      "PTransaction\032\027.VeriBlock.GeneralReply\"\000\022" +
-      "X\n\032VerifyVeriBlockPublication\022\037.VeriBloc" +
+      "ply\0222\n\nmerklePath\030\002 \001(\0132\036.VeriBlock.Veri" +
+      "BlockMerklePath\"e\n\017MerklePathReply\022\'\n\006re" +
+      "sult\030\001 \001(\0132\027.VeriBlock.GeneralReply\022)\n\nm" +
+      "erklePath\030\002 \001(\0132\025.VeriBlock.MerklePath\"M" +
+      "\n\rAltChainBlock\022)\n\nblockIndex\030\001 \001(\0132\025.Ve" +
+      "riBlock.BlockIndex\022\021\n\ttimestamp\030\002 \001(\005\"m\n" +
+      "\022TwoBranchesRequest\022*\n\010leftFork\030\001 \003(\0132\030." +
+      "VeriBlock.AltChainBlock\022+\n\trightFork\030\002 \003" +
+      "(\0132\030.VeriBlock.AltChainBlock\"Q\n\014CompareR" +
+      "eply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.General" +
+      "Reply\022\030\n\020comparingsResult\030\002 \001(\005\"S\n\033Forkr" +
+      "esolutionConfigRequest\022\035\n\025keystoneFinali" +
+      "tyDelay\030\001 \001(\005\022\025\n\ramnestyPeriod\030\002 \001(\0052\323\n\n" +
+      "\022IntegrationService\022C\n\rResetSecurity\022\027.V" +
+      "eriBlock.EmptyRequest\032\027.VeriBlock.Genera" +
+      "lReply\"\000\022K\n\023AddGenesisVeriBlock\022\031.VeriBl" +
+      "ock.VeriBlockBlock\032\027.VeriBlock.GeneralRe" +
+      "ply\"\000\022G\n\021AddGenesisBitcoin\022\027.VeriBlock.B" +
+      "itcoinBlock\032\027.VeriBlock.GeneralReply\"\000\022G" +
+      "\n\013AddPayloads\022\035.VeriBlock.AddPayloadsReq" +
+      "uest\032\027.VeriBlock.GeneralReply\"\000\022M\n\016Remov" +
+      "ePayloads\022 .VeriBlock.RemovePayloadsRequ" +
+      "est\032\027.VeriBlock.GeneralReply\"\000\022Y\n\024AddTem" +
+      "poraryPayloads\022&.VeriBlock.AddTemporaryP" +
+      "ayloadsRequest\032\027.VeriBlock.GeneralReply\"" +
+      "\000\022L\n\026ClearTemporaryPayloads\022\027.VeriBlock." +
+      "EmptyRequest\032\027.VeriBlock.GeneralReply\"\000\022" +
+      "N\n\014SimplifyVTBs\022\036.VeriBlock.SimplifyVTBs" +
+      "Request\032\034.VeriBlock.SimplifyVTBsReply\"\000\022" +
+      "K\n\023CheckATVAgainstView\022\031.VeriBlock.AltPu" +
+      "blication\032\027.VeriBlock.GeneralReply\"\000\022P\n\022" +
+      "CheckVTBInternally\022\037.VeriBlock.VeriBlock" +
+      "Publication\032\027.VeriBlock.GeneralReply\"\000\022J" +
+      "\n\022CheckATVInternally\022\031.VeriBlock.AltPubl" +
+      "ication\032\027.VeriBlock.GeneralReply\"\000\022[\n\025Ge" +
+      "tMainVBKHeightOfATV\022\031.VeriBlock.AltPubli" +
+      "cation\032%.VeriBlock.GetMainVBKHeightOfATV" +
+      "Reply\"\000\022Z\n\033SetAltChainParametersConfig\022 " +
+      ".VeriBlock.AltChainConfigRequest\032\027.VeriB" +
+      "lock.GeneralReply\"\000\022f\n\025GetLastKnownVBKBl" +
+      "ocks\022$.VeriBlock.GetLastKnownBlocksReque" +
+      "st\032%.VeriBlock.GetLastKnownVBKBlocksRepl" +
+      "y\"\000\022f\n\025GetLastKnownBTCBlocks\022$.VeriBlock" +
+      ".GetLastKnownBlocksRequest\032%.VeriBlock.G" +
+      "etLastKnownBTCBlocksReply\"\000\022]\n\026SavePoPTr" +
+      "ansactionData\022(.VeriBlock.SavePoPTransac" +
+      "tionDataRequest\032\027.VeriBlock.GeneralReply" +
+      "\"\0002\310\003\n\016RewardsService\022B\n\014ResetRewards\022\027." +
+      "VeriBlock.EmptyRequest\032\027.VeriBlock.Gener" +
+      "alReply\"\000\022I\n\rGetCalculator\022\027.VeriBlock.E" +
+      "mptyRequest\032\035.VeriBlock.GetCalculatorRep" +
+      "ly\"\000\022K\n\rSetCalculator\022\037.VeriBlock.SetCal" +
+      "culatorRequest\032\027.VeriBlock.GeneralReply\"" +
+      "\000\022i\n\025RewardsCalculateScore\022\'.VeriBlock.R" +
+      "ewardsCalculateScoreRequest\032%.VeriBlock." +
+      "RewardsCalculateScoreReply\"\000\022o\n\027RewardsC" +
+      "alculateOutputs\022).VeriBlock.RewardsCalcu" +
+      "lateOutputsRequest\032\'.VeriBlock.RewardsCa" +
+      "lculateOutputsReply\"\0002\263\010\n\022DeserializeSer" +
+      "vice\022U\n\023ParseAltPublication\022\034.VeriBlock." +
+      "BytesArrayRequest\032\036.VeriBlock.AltPublica" +
+      "tionReply\"\000\022W\n\024ParsePublicationData\022\034.Ve" +
+      "riBlock.BytesArrayRequest\032\037.VeriBlock.Pu" +
+      "blicationDataReply\"\000\022]\n\027ParseBitcoinTran" +
+      "saction\022\034.VeriBlock.BytesArrayRequest\032\"." +
+      "VeriBlock.BitcoinTransactionReply\"\000\022U\n\023P" +
+      "arseVeriBlockBlock\022\034.VeriBlock.BytesArra" +
+      "yRequest\032\036.VeriBlock.VeriBlockBlockReply" +
+      "\"\000\022a\n\031ParseVeriBlockTransaction\022\034.VeriBl" +
+      "ock.BytesArrayRequest\032$.VeriBlock.VeriBl" +
+      "ockTransactionReply\"\000\022a\n\031ParseVeriBlockP" +
+      "ublication\022\034.VeriBlock.BytesArrayRequest" +
+      "\032$.VeriBlock.VeriBlockPublicationReply\"\000" +
+      "\022^\n\023ParseVeriBlockPopTx\022\034.VeriBlock.Byte" +
+      "sArrayRequest\032\'.VeriBlock.VeriBlockPoPTr" +
+      "ansactionReply\"\000\022E\n\013ParseOutput\022\034.VeriBl" +
+      "ock.BytesArrayRequest\032\026.VeriBlock.Output" +
+      "Reply\"\000\022G\n\014ParseAddress\022\034.VeriBlock.Byte" +
+      "sArrayRequest\032\027.VeriBlock.AddressReply\"\000" +
+      "\022Q\n\021ParseBitcoinBlock\022\034.VeriBlock.BytesA" +
+      "rrayRequest\032\034.VeriBlock.BitcoinBlockRepl" +
+      "y\"\000\022_\n\030ParseVeriBlockMerklePath\022\034.VeriBl" +
+      "ock.BytesArrayRequest\032#.VeriBlock.VeriBl" +
+      "ockMerklePathReply\"\000\022M\n\017ParseMerklePath\022" +
+      "\034.VeriBlock.MerklePathRequest\032\032.VeriBloc" +
+      "k.MerklePathReply\"\0002\215\010\n\020SerializeService" +
+      "\022R\n\027SerializeAltPublication\022\031.VeriBlock." +
+      "AltPublication\032\032.VeriBlock.BytesArrayRep" +
+      "ly\"\000\022T\n\030SerializePublicationData\022\032.VeriB" +
+      "lock.PublicationData\032\032.VeriBlock.BytesAr" +
+      "rayReply\"\000\022Z\n\033SerializeBitcoinTransactio" +
+      "n\022\035.VeriBlock.BitcoinTransaction\032\032.VeriB" +
+      "lock.BytesArrayReply\"\000\022R\n\027SerializeVeriB" +
+      "lockBlock\022\031.VeriBlock.VeriBlockBlock\032\032.V" +
+      "eriBlock.BytesArrayReply\"\000\022^\n\035SerializeV" +
+      "eriBlockTransaction\022\037.VeriBlock.VeriBloc" +
+      "kTransaction\032\032.VeriBlock.BytesArrayReply" +
+      "\"\000\022^\n\035SerializeVeriBlockPublication\022\037.Ve" +
+      "riBlock.VeriBlockPublication\032\032.VeriBlock" +
+      ".BytesArrayReply\"\000\022[\n\027SerializeVeriBlock" +
+      "PopTx\022\".VeriBlock.VeriBlockPoPTransactio" +
+      "n\032\032.VeriBlock.BytesArrayReply\"\000\022B\n\017Seria" +
+      "lizeOutput\022\021.VeriBlock.Output\032\032.VeriBloc" +
+      "k.BytesArrayReply\"\000\022D\n\020SerializeAddress\022" +
+      "\022.VeriBlock.Address\032\032.VeriBlock.BytesArr" +
+      "ayReply\"\000\022N\n\025SerializeBitcoinBlock\022\027.Ver" +
+      "iBlock.BitcoinBlock\032\032.VeriBlock.BytesArr" +
+      "ayReply\"\000\022\\\n\034SerializeVeriBlockMerklePat" +
+      "h\022\036.VeriBlock.VeriBlockMerklePath\032\032.Veri" +
+      "Block.BytesArrayReply\"\000\022J\n\023SerializeMerk" +
+      "lePath\022\025.VeriBlock.MerklePath\032\032.VeriBloc" +
+      "k.BytesArrayReply\"\0002\271\r\n\021ValidationServic" +
+      "e\022U\n\024VerifyVeriBlockPoPTx\022\".VeriBlock.Ve" +
+      "riBlockPoPTransaction\032\027.VeriBlock.Genera" +
+      "lReply\"\000\022]\n\034CheckSignatureVeriBlockPoPTx" +
+      "\022\".VeriBlock.VeriBlockPoPTransaction\032\027.V" +
+      "eriBlock.GeneralReply\"\000\022b\n!CheckBitcoinT" +
+      "ransactionForPoPData\022\".VeriBlock.VeriBlo" +
+      "ckPoPTransaction\032\027.VeriBlock.GeneralRepl" +
+      "y\"\000\022e\n$CheckBitcoinMerklePathVeriBlockPo" +
+      "PTx\022\".VeriBlock.VeriBlockPoPTransaction\032" +
+      "\027.VeriBlock.GeneralReply\"\000\022a\n CheckBitco" +
+      "inBlocksVeriBlockPoPTx\022\".VeriBlock.VeriB" +
+      "lockPoPTransaction\032\027.VeriBlock.GeneralRe" +
+      "ply\"\000\022X\n\032VerifyVeriBlockPublication\022\037.Ve" +
+      "riBlock.VeriBlockPublication\032\027.VeriBlock" +
+      ".GeneralReply\"\000\022]\n\037CheckBlocksVeriBlockP" +
+      "ublication\022\037.VeriBlock.VeriBlockPublicat" +
+      "ion\032\027.VeriBlock.GeneralReply\"\000\022a\n#CheckM" +
+      "erklePathVeriBlockPublication\022\037.VeriBloc" +
       "k.VeriBlockPublication\032\027.VeriBlock.Gener" +
-      "alReply\"\000\022]\n\037CheckBlocksVeriBlockPublica" +
-      "tion\022\037.VeriBlock.VeriBlockPublication\032\027." +
-      "VeriBlock.GeneralReply\"\000\022a\n#CheckMerkleP" +
-      "athVeriBlockPublication\022\037.VeriBlock.Veri" +
-      "BlockPublication\032\027.VeriBlock.GeneralRepl" +
-      "y\"\000\022X\n\032VerifyVeriBlockTransaction\022\037.Veri" +
-      "Block.VeriBlockTransaction\032\027.VeriBlock.G" +
-      "eneralReply\"\000\022`\n\"CheckSignatureVeriBlock" +
-      "Transaction\022\037.VeriBlock.VeriBlockTransac" +
-      "tion\032\027.VeriBlock.GeneralReply\"\000\022L\n\024Verif" +
-      "yVeriBlockBlock\022\031.VeriBlock.VeriBlockBlo" +
-      "ck\032\027.VeriBlock.GeneralReply\"\000\022V\n\036CheckPr" +
-      "oofOfWorkVeriBlockBlock\022\031.VeriBlock.Veri" +
-      "BlockBlock\032\027.VeriBlock.GeneralReply\"\000\022W\n" +
-      "\037CheckMaximumDriftVeriBlockBlock\022\031.VeriB" +
-      "lock.VeriBlockBlock\032\027.VeriBlock.GeneralR" +
-      "eply\"\000\022H\n\022VerifyBitcoinBlock\022\027.VeriBlock" +
-      ".BitcoinBlock\032\027.VeriBlock.GeneralReply\"\000" +
-      "\022R\n\034CheckProofOfWorkBitcoinBlock\022\027.VeriB" +
-      "lock.BitcoinBlock\032\027.VeriBlock.GeneralRep" +
-      "ly\"\000\022S\n\035CheckMaximumDriftBitcoinBlock\022\027." +
-      "VeriBlock.BitcoinBlock\032\027.VeriBlock.Gener" +
-      "alReply\"\000\022L\n\024VerifyAltPublication\022\031.Veri" +
-      "Block.AltPublication\032\027.VeriBlock.General" +
-      "Reply\"\000\022U\n\035CheckMerklePathAltPublication" +
-      "\022\031.VeriBlock.AltPublication\032\027.VeriBlock." +
-      "GeneralReply\"\000\022Q\n\031CheckBlocksAltPublicat" +
-      "ion\022\031.VeriBlock.AltPublication\032\027.VeriBlo" +
-      "ck.GeneralReply\"\0002\305\001\n\025ForkresolutionServ" +
-      "ice\022N\n\022CompareTwoBranches\022\035.VeriBlock.Tw" +
-      "oBranchesRequest\032\027.VeriBlock.CompareRepl" +
-      "y\"\000\022\\\n\027SetForkresolutionConfig\022&.VeriBlo" +
-      "ck.ForkresolutionConfigRequest\032\027.VeriBlo" +
-      "ck.GeneralReply\"\000:4\n\013hex_encoded\022\035.googl" +
-      "e.protobuf.FieldOptions\030\320\206\003 \001(\010:8\n\017addre" +
-      "ss_encoded\022\035.google.protobuf.FieldOption" +
-      "s\030\321\206\003 \001(\010:6\n\rascii_encoded\022\035.google.prot" +
-      "obuf.FieldOptions\030\322\206\003 \001(\010:5\n\014utf8_encode" +
-      "d\022\035.google.protobuf.FieldOptions\030\323\206\003 \001(\010" +
-      "B,\n\024integration.api.grpcB\021VeriBlockMessa" +
-      "ges\210\001\001b\006proto3"
+      "alReply\"\000\022X\n\032VerifyVeriBlockTransaction\022" +
+      "\037.VeriBlock.VeriBlockTransaction\032\027.VeriB" +
+      "lock.GeneralReply\"\000\022`\n\"CheckSignatureVer" +
+      "iBlockTransaction\022\037.VeriBlock.VeriBlockT" +
+      "ransaction\032\027.VeriBlock.GeneralReply\"\000\022L\n" +
+      "\024VerifyVeriBlockBlock\022\031.VeriBlock.VeriBl" +
+      "ockBlock\032\027.VeriBlock.GeneralReply\"\000\022V\n\036C" +
+      "heckProofOfWorkVeriBlockBlock\022\031.VeriBloc" +
+      "k.VeriBlockBlock\032\027.VeriBlock.GeneralRepl" +
+      "y\"\000\022W\n\037CheckMaximumDriftVeriBlockBlock\022\031" +
+      ".VeriBlock.VeriBlockBlock\032\027.VeriBlock.Ge" +
+      "neralReply\"\000\022H\n\022VerifyBitcoinBlock\022\027.Ver" +
+      "iBlock.BitcoinBlock\032\027.VeriBlock.GeneralR" +
+      "eply\"\000\022R\n\034CheckProofOfWorkBitcoinBlock\022\027" +
+      ".VeriBlock.BitcoinBlock\032\027.VeriBlock.Gene" +
+      "ralReply\"\000\022S\n\035CheckMaximumDriftBitcoinBl" +
+      "ock\022\027.VeriBlock.BitcoinBlock\032\027.VeriBlock" +
+      ".GeneralReply\"\000\022L\n\024VerifyAltPublication\022" +
+      "\031.VeriBlock.AltPublication\032\027.VeriBlock.G" +
+      "eneralReply\"\000\022U\n\035CheckMerklePathAltPubli" +
+      "cation\022\031.VeriBlock.AltPublication\032\027.Veri" +
+      "Block.GeneralReply\"\000\022Q\n\031CheckBlocksAltPu" +
+      "blication\022\031.VeriBlock.AltPublication\032\027.V" +
+      "eriBlock.GeneralReply\"\0002\305\001\n\025Forkresoluti" +
+      "onService\022N\n\022CompareTwoBranches\022\035.VeriBl" +
+      "ock.TwoBranchesRequest\032\027.VeriBlock.Compa" +
+      "reReply\"\000\022\\\n\027SetForkresolutionConfig\022&.V" +
+      "eriBlock.ForkresolutionConfigRequest\032\027.V" +
+      "eriBlock.GeneralReply\"\000:4\n\013hex_encoded\022\035" +
+      ".google.protobuf.FieldOptions\030\320\206\003 \001(\010:8\n" +
+      "\017address_encoded\022\035.google.protobuf.Field" +
+      "Options\030\321\206\003 \001(\010:6\n\rascii_encoded\022\035.googl" +
+      "e.protobuf.FieldOptions\030\322\206\003 \001(\010:5\n\014utf8_" +
+      "encoded\022\035.google.protobuf.FieldOptions\030\323" +
+      "\206\003 \001(\010B,\n\024integration.api.grpcB\021VeriBloc" +
+      "kMessages\210\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56515,7 +56644,7 @@ public final class VeriBlockMessages {
     internal_static_VeriBlock_VeriBlockTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_VeriBlockTransaction_descriptor,
-        new java.lang.String[] { "Id", "Type", "SourceAddress", "SourceAmount", "Outputs", "SignatureIndex", "PublicationData", "Signature", "PublicKey", "NetworkByte", });
+        new java.lang.String[] { "Id", "Type", "SourceAddress", "SourceAmount", "Outputs", "SignatureIndex", "Data", "PublicationData", "Signature", "PublicKey", "NetworkByte", });
     internal_static_VeriBlock_Address_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_VeriBlock_Address_fieldAccessorTable = new
@@ -56671,7 +56800,7 @@ public final class VeriBlockMessages {
     internal_static_VeriBlock_CalculatorConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_CalculatorConfig_descriptor,
-        new java.lang.String[] { "BasicReward", "PayoutRounds", "KeystoneRound", "RoundRatios", "RewardCurve", "MaxRewardThresholdNormal", "MaxRewardThresholdKeystone", "RelativeScoreLookupTable", "FlatScoreRound", });
+        new java.lang.String[] { "BasicReward", "PayoutRounds", "KeystoneRound", "KeystoneInterval", "RoundRatios", "RewardCurve", "MaxRewardThresholdNormal", "MaxRewardThresholdKeystone", "RelativeScoreLookupTable", "FlatScoreRound", });
     internal_static_VeriBlock_SetCalculatorRequest_descriptor =
       getDescriptor().getMessageTypes().get(32);
     internal_static_VeriBlock_SetCalculatorRequest_fieldAccessorTable = new
