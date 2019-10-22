@@ -60,7 +60,6 @@ message VeriBlockTransaction{
     Coin sourceAmount = 4;
     repeated Output outputs = 5;
     int64 signatureIndex = 6;
-    bytes data = 7 [(hex_encoded)=true];
     PublicationData publicationData = 8;
     bytes signature = 9 [(hex_encoded)=true];
     bytes publicKey = 10 [(hex_encoded)=true];
