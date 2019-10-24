@@ -492,6 +492,37 @@ public final class IntegrationServiceGrpc {
     return getGetLastKnownBTCBlocksMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest,
+      integration.api.grpc.VeriBlockMessages.GeneralReply> getSavePoPTransactionDataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SavePoPTransactionData",
+      requestType = integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest.class,
+      responseType = integration.api.grpc.VeriBlockMessages.GeneralReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest,
+      integration.api.grpc.VeriBlockMessages.GeneralReply> getSavePoPTransactionDataMethod() {
+    io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest, integration.api.grpc.VeriBlockMessages.GeneralReply> getSavePoPTransactionDataMethod;
+    if ((getSavePoPTransactionDataMethod = IntegrationServiceGrpc.getSavePoPTransactionDataMethod) == null) {
+      synchronized (IntegrationServiceGrpc.class) {
+        if ((getSavePoPTransactionDataMethod = IntegrationServiceGrpc.getSavePoPTransactionDataMethod) == null) {
+          IntegrationServiceGrpc.getSavePoPTransactionDataMethod = getSavePoPTransactionDataMethod =
+              io.grpc.MethodDescriptor.<integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest, integration.api.grpc.VeriBlockMessages.GeneralReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SavePoPTransactionData"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance()))
+              .setSchemaDescriptor(new IntegrationServiceMethodDescriptorSupplier("SavePoPTransactionData"))
+              .build();
+        }
+      }
+    }
+    return getSavePoPTransactionDataMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -624,6 +655,13 @@ public final class IntegrationServiceGrpc {
       asyncUnimplementedUnaryCall(getGetLastKnownBTCBlocksMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void savePoPTransactionData(integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest request,
+        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getSavePoPTransactionDataMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -731,6 +769,13 @@ public final class IntegrationServiceGrpc {
                 integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest,
                 integration.api.grpc.VeriBlockMessages.GetLastKnownBTCBlocksReply>(
                   this, METHODID_GET_LAST_KNOWN_BTCBLOCKS)))
+          .addMethod(
+            getSavePoPTransactionDataMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest,
+                integration.api.grpc.VeriBlockMessages.GeneralReply>(
+                  this, METHODID_SAVE_PO_PTRANSACTION_DATA)))
           .build();
     }
   }
@@ -872,6 +917,14 @@ public final class IntegrationServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetLastKnownBTCBlocksMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void savePoPTransactionData(integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest request,
+        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSavePoPTransactionDataMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -995,6 +1048,13 @@ public final class IntegrationServiceGrpc {
     public integration.api.grpc.VeriBlockMessages.GetLastKnownBTCBlocksReply getLastKnownBTCBlocks(integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetLastKnownBTCBlocksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public integration.api.grpc.VeriBlockMessages.GeneralReply savePoPTransactionData(integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSavePoPTransactionDataMethod(), getCallOptions(), request);
     }
   }
 
@@ -1135,6 +1195,14 @@ public final class IntegrationServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetLastKnownBTCBlocksMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<integration.api.grpc.VeriBlockMessages.GeneralReply> savePoPTransactionData(
+        integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSavePoPTransactionDataMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_RESET_SECURITY = 0;
@@ -1152,6 +1220,7 @@ public final class IntegrationServiceGrpc {
   private static final int METHODID_SET_ALT_CHAIN_PARAMETERS_CONFIG = 12;
   private static final int METHODID_GET_LAST_KNOWN_VBKBLOCKS = 13;
   private static final int METHODID_GET_LAST_KNOWN_BTCBLOCKS = 14;
+  private static final int METHODID_SAVE_PO_PTRANSACTION_DATA = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1230,6 +1299,10 @@ public final class IntegrationServiceGrpc {
           serviceImpl.getLastKnownBTCBlocks((integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest) request,
               (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GetLastKnownBTCBlocksReply>) responseObserver);
           break;
+        case METHODID_SAVE_PO_PTRANSACTION_DATA:
+          serviceImpl.savePoPTransactionData((integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest) request,
+              (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1306,6 +1379,7 @@ public final class IntegrationServiceGrpc {
               .addMethod(getSetAltChainParametersConfigMethod())
               .addMethod(getGetLastKnownVBKBlocksMethod())
               .addMethod(getGetLastKnownBTCBlocksMethod())
+              .addMethod(getSavePoPTransactionDataMethod())
               .build();
         }
       }
