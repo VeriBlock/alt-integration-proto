@@ -182,6 +182,37 @@ public final class RewardsServiceGrpc {
     return getRewardsCalculateOutputsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest,
+      integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> getRewardsCalculatePopDifficultyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RewardsCalculatePopDifficulty",
+      requestType = integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.class,
+      responseType = integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest,
+      integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> getRewardsCalculatePopDifficultyMethod() {
+    io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest, integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> getRewardsCalculatePopDifficultyMethod;
+    if ((getRewardsCalculatePopDifficultyMethod = RewardsServiceGrpc.getRewardsCalculatePopDifficultyMethod) == null) {
+      synchronized (RewardsServiceGrpc.class) {
+        if ((getRewardsCalculatePopDifficultyMethod = RewardsServiceGrpc.getRewardsCalculatePopDifficultyMethod) == null) {
+          RewardsServiceGrpc.getRewardsCalculatePopDifficultyMethod = getRewardsCalculatePopDifficultyMethod =
+              io.grpc.MethodDescriptor.<integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest, integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RewardsCalculatePopDifficulty"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance()))
+              .setSchemaDescriptor(new RewardsServiceMethodDescriptorSupplier("RewardsCalculatePopDifficulty"))
+              .build();
+        }
+      }
+    }
+    return getRewardsCalculatePopDifficultyMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -244,6 +275,13 @@ public final class RewardsServiceGrpc {
       asyncUnimplementedUnaryCall(getRewardsCalculateOutputsMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void rewardsCalculatePopDifficulty(integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request,
+        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getRewardsCalculatePopDifficultyMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -281,6 +319,13 @@ public final class RewardsServiceGrpc {
                 integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest,
                 integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply>(
                   this, METHODID_REWARDS_CALCULATE_OUTPUTS)))
+          .addMethod(
+            getRewardsCalculatePopDifficultyMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest,
+                integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply>(
+                  this, METHODID_REWARDS_CALCULATE_POP_DIFFICULTY)))
           .build();
     }
   }
@@ -342,6 +387,14 @@ public final class RewardsServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getRewardsCalculateOutputsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void rewardsCalculatePopDifficulty(integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request,
+        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRewardsCalculatePopDifficultyMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -395,6 +448,13 @@ public final class RewardsServiceGrpc {
     public integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply rewardsCalculateOutputs(integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest request) {
       return blockingUnaryCall(
           getChannel(), getRewardsCalculateOutputsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply rewardsCalculatePopDifficulty(integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRewardsCalculatePopDifficultyMethod(), getCallOptions(), request);
     }
   }
 
@@ -455,6 +515,14 @@ public final class RewardsServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getRewardsCalculateOutputsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> rewardsCalculatePopDifficulty(
+        integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRewardsCalculatePopDifficultyMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_RESET_REWARDS = 0;
@@ -462,6 +530,7 @@ public final class RewardsServiceGrpc {
   private static final int METHODID_SET_CALCULATOR = 2;
   private static final int METHODID_REWARDS_CALCULATE_SCORE = 3;
   private static final int METHODID_REWARDS_CALCULATE_OUTPUTS = 4;
+  private static final int METHODID_REWARDS_CALCULATE_POP_DIFFICULTY = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -499,6 +568,10 @@ public final class RewardsServiceGrpc {
         case METHODID_REWARDS_CALCULATE_OUTPUTS:
           serviceImpl.rewardsCalculateOutputs((integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest) request,
               (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply>) responseObserver);
+          break;
+        case METHODID_REWARDS_CALCULATE_POP_DIFFICULTY:
+          serviceImpl.rewardsCalculatePopDifficulty((integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest) request,
+              (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -566,6 +639,7 @@ public final class RewardsServiceGrpc {
               .addMethod(getSetCalculatorMethod())
               .addMethod(getRewardsCalculateScoreMethod())
               .addMethod(getRewardsCalculateOutputsMethod())
+              .addMethod(getRewardsCalculatePopDifficultyMethod())
               .build();
         }
       }
