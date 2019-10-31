@@ -213,6 +213,7 @@ message CalculatorConfig{
     string maxRewardThresholdKeystone = 7;
     RelativeScoreConfig relativeScoreLookupTable = 8;
     FlatScoreRoundConfig flatScoreRound = 9;
+    int32 popDifficultyAveragingIntervalNxtBlocks = 10;
 }
 
 message SetCalculatorRequest{
@@ -253,12 +254,17 @@ message RewardsCalculateOutputsReply{
     repeated RewardOutput outputs = 4;
 }
 
+message RewardsCalculatePopDifficultyRequest{
+    repeated AltChainBlock blocks = 1;
+}
+
 service RewardsService {
     rpc ResetRewards(EmptyRequest) returns (GeneralReply){}
     rpc GetCalculator(EmptyRequest) returns (GetCalculatorReply){}
     rpc SetCalculator(SetCalculatorRequest) returns (GeneralReply){}
     rpc RewardsCalculateScore(RewardsCalculateScoreRequest) returns (RewardsCalculateScoreReply){}
     rpc RewardsCalculateOutputs(RewardsCalculateOutputsRequest) returns (RewardsCalculateOutputsReply){}
+    rpc RewardsCalculatePopDifficulty(RewardsCalculatePopDifficultyRequest) returns (RewardsCalculateScoreReply) {}
 }
 
 message BytesArrayRequest{
