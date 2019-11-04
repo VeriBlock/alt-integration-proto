@@ -214,6 +214,7 @@ message CalculatorConfig{
     RelativeScoreConfig relativeScoreLookupTable = 8;
     FlatScoreRoundConfig flatScoreRound = 9;
     int32 popDifficultyAveragingInterval = 10;
+    int32 popRewardSettlementInterval = 11;
 }
 
 message SetCalculatorRequest{
