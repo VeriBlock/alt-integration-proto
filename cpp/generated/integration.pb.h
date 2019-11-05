@@ -48,7 +48,7 @@ struct TableStruct_integration_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[60]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[61]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -155,9 +155,9 @@ extern OutputDefaultTypeInternal _Output_default_instance_;
 class OutputReply;
 class OutputReplyDefaultTypeInternal;
 extern OutputReplyDefaultTypeInternal _OutputReply_default_instance_;
-class PopEndorsement;
-class PopEndorsementDefaultTypeInternal;
-extern PopEndorsementDefaultTypeInternal _PopEndorsement_default_instance_;
+class PoPTransactionData;
+class PoPTransactionDataDefaultTypeInternal;
+extern PoPTransactionDataDefaultTypeInternal _PoPTransactionData_default_instance_;
 class PublicationData;
 class PublicationDataDefaultTypeInternal;
 extern PublicationDataDefaultTypeInternal _PublicationData_default_instance_;
@@ -173,9 +173,6 @@ extern RemovePayloadsRequestDefaultTypeInternal _RemovePayloadsRequest_default_i
 class RewardCurveConfig;
 class RewardCurveConfigDefaultTypeInternal;
 extern RewardCurveConfigDefaultTypeInternal _RewardCurveConfig_default_instance_;
-class RewardEndorsement;
-class RewardEndorsementDefaultTypeInternal;
-extern RewardEndorsementDefaultTypeInternal _RewardEndorsement_default_instance_;
 class RewardOutput;
 class RewardOutputDefaultTypeInternal;
 extern RewardOutputDefaultTypeInternal _RewardOutput_default_instance_;
@@ -185,6 +182,9 @@ extern RewardsCalculateOutputsReplyDefaultTypeInternal _RewardsCalculateOutputsR
 class RewardsCalculateOutputsRequest;
 class RewardsCalculateOutputsRequestDefaultTypeInternal;
 extern RewardsCalculateOutputsRequestDefaultTypeInternal _RewardsCalculateOutputsRequest_default_instance_;
+class RewardsCalculatePopDifficultyRequest;
+class RewardsCalculatePopDifficultyRequestDefaultTypeInternal;
+extern RewardsCalculatePopDifficultyRequestDefaultTypeInternal _RewardsCalculatePopDifficultyRequest_default_instance_;
 class RewardsCalculateScoreReply;
 class RewardsCalculateScoreReplyDefaultTypeInternal;
 extern RewardsCalculateScoreReplyDefaultTypeInternal _RewardsCalculateScoreReply_default_instance_;
@@ -194,6 +194,9 @@ extern RewardsCalculateScoreRequestDefaultTypeInternal _RewardsCalculateScoreReq
 class RoundRatioConfig;
 class RoundRatioConfigDefaultTypeInternal;
 extern RoundRatioConfigDefaultTypeInternal _RoundRatioConfig_default_instance_;
+class SavePoPTransactionDataRequest;
+class SavePoPTransactionDataRequestDefaultTypeInternal;
+extern SavePoPTransactionDataRequestDefaultTypeInternal _SavePoPTransactionDataRequest_default_instance_;
 class SetCalculatorRequest;
 class SetCalculatorRequestDefaultTypeInternal;
 extern SetCalculatorRequestDefaultTypeInternal _SetCalculatorRequest_default_instance_;
@@ -271,19 +274,20 @@ template<> ::VeriBlock::MerklePathRequest* Arena::CreateMaybeMessage<::VeriBlock
 template<> ::VeriBlock::NetworkByte* Arena::CreateMaybeMessage<::VeriBlock::NetworkByte>(Arena*);
 template<> ::VeriBlock::Output* Arena::CreateMaybeMessage<::VeriBlock::Output>(Arena*);
 template<> ::VeriBlock::OutputReply* Arena::CreateMaybeMessage<::VeriBlock::OutputReply>(Arena*);
-template<> ::VeriBlock::PopEndorsement* Arena::CreateMaybeMessage<::VeriBlock::PopEndorsement>(Arena*);
+template<> ::VeriBlock::PoPTransactionData* Arena::CreateMaybeMessage<::VeriBlock::PoPTransactionData>(Arena*);
 template<> ::VeriBlock::PublicationData* Arena::CreateMaybeMessage<::VeriBlock::PublicationData>(Arena*);
 template<> ::VeriBlock::PublicationDataReply* Arena::CreateMaybeMessage<::VeriBlock::PublicationDataReply>(Arena*);
 template<> ::VeriBlock::RelativeScoreConfig* Arena::CreateMaybeMessage<::VeriBlock::RelativeScoreConfig>(Arena*);
 template<> ::VeriBlock::RemovePayloadsRequest* Arena::CreateMaybeMessage<::VeriBlock::RemovePayloadsRequest>(Arena*);
 template<> ::VeriBlock::RewardCurveConfig* Arena::CreateMaybeMessage<::VeriBlock::RewardCurveConfig>(Arena*);
-template<> ::VeriBlock::RewardEndorsement* Arena::CreateMaybeMessage<::VeriBlock::RewardEndorsement>(Arena*);
 template<> ::VeriBlock::RewardOutput* Arena::CreateMaybeMessage<::VeriBlock::RewardOutput>(Arena*);
 template<> ::VeriBlock::RewardsCalculateOutputsReply* Arena::CreateMaybeMessage<::VeriBlock::RewardsCalculateOutputsReply>(Arena*);
 template<> ::VeriBlock::RewardsCalculateOutputsRequest* Arena::CreateMaybeMessage<::VeriBlock::RewardsCalculateOutputsRequest>(Arena*);
+template<> ::VeriBlock::RewardsCalculatePopDifficultyRequest* Arena::CreateMaybeMessage<::VeriBlock::RewardsCalculatePopDifficultyRequest>(Arena*);
 template<> ::VeriBlock::RewardsCalculateScoreReply* Arena::CreateMaybeMessage<::VeriBlock::RewardsCalculateScoreReply>(Arena*);
 template<> ::VeriBlock::RewardsCalculateScoreRequest* Arena::CreateMaybeMessage<::VeriBlock::RewardsCalculateScoreRequest>(Arena*);
 template<> ::VeriBlock::RoundRatioConfig* Arena::CreateMaybeMessage<::VeriBlock::RoundRatioConfig>(Arena*);
+template<> ::VeriBlock::SavePoPTransactionDataRequest* Arena::CreateMaybeMessage<::VeriBlock::SavePoPTransactionDataRequest>(Arena*);
 template<> ::VeriBlock::SetCalculatorRequest* Arena::CreateMaybeMessage<::VeriBlock::SetCalculatorRequest>(Arena*);
 template<> ::VeriBlock::SimplifyVTBsReply* Arena::CreateMaybeMessage<::VeriBlock::SimplifyVTBsReply>(Arena*);
 template<> ::VeriBlock::SimplifyVTBsRequest* Arena::CreateMaybeMessage<::VeriBlock::SimplifyVTBsRequest>(Arena*);
@@ -1252,7 +1256,6 @@ class VeriBlockTransaction :
   enum : int {
     kOutputsFieldNumber = 5,
     kIdFieldNumber = 1,
-    kDataFieldNumber = 7,
     kSignatureFieldNumber = 9,
     kPublicKeyFieldNumber = 10,
     kSourceAddressFieldNumber = 3,
@@ -1283,17 +1286,6 @@ class VeriBlockTransaction :
   std::string* mutable_id();
   std::string* release_id();
   void set_allocated_id(std::string* id);
-
-  // bytes data = 7 [(.VeriBlock.hex_encoded) = true];
-  void clear_data();
-  const std::string& data() const;
-  void set_data(const std::string& value);
-  void set_data(std::string&& value);
-  void set_data(const char* value);
-  void set_data(const void* value, size_t size);
-  std::string* mutable_data();
-  std::string* release_data();
-  void set_allocated_data(std::string* data);
 
   // bytes signature = 9 [(.VeriBlock.hex_encoded) = true];
   void clear_signature();
@@ -1366,7 +1358,6 @@ class VeriBlockTransaction :
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::Output > outputs_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr signature_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr publickey_;
   ::VeriBlock::Address* sourceaddress_;
@@ -2371,6 +2362,166 @@ class VeriBlockPublication :
 };
 // -------------------------------------------------------------------
 
+class PoPTransactionData :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.PoPTransactionData) */ {
+ public:
+  PoPTransactionData();
+  virtual ~PoPTransactionData();
+
+  PoPTransactionData(const PoPTransactionData& from);
+  PoPTransactionData(PoPTransactionData&& from) noexcept
+    : PoPTransactionData() {
+    *this = ::std::move(from);
+  }
+
+  inline PoPTransactionData& operator=(const PoPTransactionData& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PoPTransactionData& operator=(PoPTransactionData&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const PoPTransactionData& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PoPTransactionData* internal_default_instance() {
+    return reinterpret_cast<const PoPTransactionData*>(
+               &_PoPTransactionData_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  friend void swap(PoPTransactionData& a, PoPTransactionData& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PoPTransactionData* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline PoPTransactionData* New() const final {
+    return CreateMaybeMessage<PoPTransactionData>(nullptr);
+  }
+
+  PoPTransactionData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<PoPTransactionData>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const PoPTransactionData& from);
+  void MergeFrom(const PoPTransactionData& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PoPTransactionData* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.PoPTransactionData";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kVeriblockPublicationsFieldNumber = 3,
+    kHashFieldNumber = 1,
+    kAltPublicationFieldNumber = 2,
+  };
+  // repeated .VeriBlock.VeriBlockPublication veriblockPublications = 3;
+  int veriblockpublications_size() const;
+  void clear_veriblockpublications();
+  ::VeriBlock::VeriBlockPublication* mutable_veriblockpublications(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::VeriBlockPublication >*
+      mutable_veriblockpublications();
+  const ::VeriBlock::VeriBlockPublication& veriblockpublications(int index) const;
+  ::VeriBlock::VeriBlockPublication* add_veriblockpublications();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::VeriBlockPublication >&
+      veriblockpublications() const;
+
+  // string hash = 1;
+  void clear_hash();
+  const std::string& hash() const;
+  void set_hash(const std::string& value);
+  void set_hash(std::string&& value);
+  void set_hash(const char* value);
+  void set_hash(const char* value, size_t size);
+  std::string* mutable_hash();
+  std::string* release_hash();
+  void set_allocated_hash(std::string* hash);
+
+  // .VeriBlock.AltPublication altPublication = 2;
+  bool has_altpublication() const;
+  void clear_altpublication();
+  const ::VeriBlock::AltPublication& altpublication() const;
+  ::VeriBlock::AltPublication* release_altpublication();
+  ::VeriBlock::AltPublication* mutable_altpublication();
+  void set_allocated_altpublication(::VeriBlock::AltPublication* altpublication);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.PoPTransactionData)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::VeriBlockPublication > veriblockpublications_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hash_;
+  ::VeriBlock::AltPublication* altpublication_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
 class EmptyRequest :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.EmptyRequest) */ {
  public:
@@ -2413,7 +2564,7 @@ class EmptyRequest :
                &_EmptyRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    13;
 
   friend void swap(EmptyRequest& a, EmptyRequest& b) {
     a.Swap(&b);
@@ -2535,7 +2686,7 @@ class GeneralReply :
                &_GeneralReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    14;
 
   friend void swap(GeneralReply& a, GeneralReply& b) {
     a.Swap(&b);
@@ -2679,7 +2830,7 @@ class BlockIndex :
                &_BlockIndex_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    15;
 
   friend void swap(BlockIndex& a, BlockIndex& b) {
     a.Swap(&b);
@@ -2823,7 +2974,7 @@ class AddPayloadsRequest :
                &_AddPayloadsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    16;
 
   friend void swap(AddPayloadsRequest& a, AddPayloadsRequest& b) {
     a.Swap(&b);
@@ -2983,7 +3134,7 @@ class AddTemporaryPayloadsRequest :
                &_AddTemporaryPayloadsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    17;
 
   friend void swap(AddTemporaryPayloadsRequest& a, AddTemporaryPayloadsRequest& b) {
     a.Swap(&b);
@@ -3133,7 +3284,7 @@ class SimplifyVTBsRequest :
                &_SimplifyVTBsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    18;
 
   friend void swap(SimplifyVTBsRequest& a, SimplifyVTBsRequest& b) {
     a.Swap(&b);
@@ -3270,7 +3421,7 @@ class SimplifyVTBsReply :
                &_SimplifyVTBsReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    19;
 
   friend void swap(SimplifyVTBsReply& a, SimplifyVTBsReply& b) {
     a.Swap(&b);
@@ -3417,7 +3568,7 @@ class GetMainVBKHeightOfATVReply :
                &_GetMainVBKHeightOfATVReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    20;
 
   friend void swap(GetMainVBKHeightOfATVReply& a, GetMainVBKHeightOfATVReply& b) {
     a.Swap(&b);
@@ -3558,7 +3709,7 @@ class RemovePayloadsRequest :
                &_RemovePayloadsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    21;
 
   friend void swap(RemovePayloadsRequest& a, RemovePayloadsRequest& b) {
     a.Swap(&b);
@@ -3692,7 +3843,7 @@ class AltChainConfigRequest :
                &_AltChainConfigRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    22;
 
   friend void swap(AltChainConfigRequest& a, AltChainConfigRequest& b) {
     a.Swap(&b);
@@ -3823,7 +3974,7 @@ class GetLastKnownBlocksRequest :
                &_GetLastKnownBlocksRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    23;
 
   friend void swap(GetLastKnownBlocksRequest& a, GetLastKnownBlocksRequest& b) {
     a.Swap(&b);
@@ -3954,7 +4105,7 @@ class GetLastKnownVBKBlocksReply :
                &_GetLastKnownVBKBlocksReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    24;
 
   friend void swap(GetLastKnownVBKBlocksReply& a, GetLastKnownVBKBlocksReply& b) {
     a.Swap(&b);
@@ -4107,7 +4258,7 @@ class GetLastKnownBTCBlocksReply :
                &_GetLastKnownBTCBlocksReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    25;
 
   friend void swap(GetLastKnownBTCBlocksReply& a, GetLastKnownBTCBlocksReply& b) {
     a.Swap(&b);
@@ -4218,6 +4369,160 @@ class GetLastKnownBTCBlocksReply :
 };
 // -------------------------------------------------------------------
 
+class SavePoPTransactionDataRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.SavePoPTransactionDataRequest) */ {
+ public:
+  SavePoPTransactionDataRequest();
+  virtual ~SavePoPTransactionDataRequest();
+
+  SavePoPTransactionDataRequest(const SavePoPTransactionDataRequest& from);
+  SavePoPTransactionDataRequest(SavePoPTransactionDataRequest&& from) noexcept
+    : SavePoPTransactionDataRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline SavePoPTransactionDataRequest& operator=(const SavePoPTransactionDataRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SavePoPTransactionDataRequest& operator=(SavePoPTransactionDataRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const SavePoPTransactionDataRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SavePoPTransactionDataRequest* internal_default_instance() {
+    return reinterpret_cast<const SavePoPTransactionDataRequest*>(
+               &_SavePoPTransactionDataRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    26;
+
+  friend void swap(SavePoPTransactionDataRequest& a, SavePoPTransactionDataRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SavePoPTransactionDataRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SavePoPTransactionDataRequest* New() const final {
+    return CreateMaybeMessage<SavePoPTransactionDataRequest>(nullptr);
+  }
+
+  SavePoPTransactionDataRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<SavePoPTransactionDataRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const SavePoPTransactionDataRequest& from);
+  void MergeFrom(const SavePoPTransactionDataRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SavePoPTransactionDataRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.SavePoPTransactionDataRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kContainingBlockFieldNumber = 1,
+    kEndorsedBlockFieldNumber = 2,
+    kPopTxFieldNumber = 3,
+  };
+  // .VeriBlock.AltChainBlock containingBlock = 1;
+  bool has_containingblock() const;
+  void clear_containingblock();
+  const ::VeriBlock::AltChainBlock& containingblock() const;
+  ::VeriBlock::AltChainBlock* release_containingblock();
+  ::VeriBlock::AltChainBlock* mutable_containingblock();
+  void set_allocated_containingblock(::VeriBlock::AltChainBlock* containingblock);
+
+  // .VeriBlock.AltChainBlock endorsedBlock = 2;
+  bool has_endorsedblock() const;
+  void clear_endorsedblock();
+  const ::VeriBlock::AltChainBlock& endorsedblock() const;
+  ::VeriBlock::AltChainBlock* release_endorsedblock();
+  ::VeriBlock::AltChainBlock* mutable_endorsedblock();
+  void set_allocated_endorsedblock(::VeriBlock::AltChainBlock* endorsedblock);
+
+  // .VeriBlock.PoPTransactionData popTx = 3;
+  bool has_poptx() const;
+  void clear_poptx();
+  const ::VeriBlock::PoPTransactionData& poptx() const;
+  ::VeriBlock::PoPTransactionData* release_poptx();
+  ::VeriBlock::PoPTransactionData* mutable_poptx();
+  void set_allocated_poptx(::VeriBlock::PoPTransactionData* poptx);
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.SavePoPTransactionDataRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::VeriBlock::AltChainBlock* containingblock_;
+  ::VeriBlock::AltChainBlock* endorsedblock_;
+  ::VeriBlock::PoPTransactionData* poptx_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
 class RoundRatioConfig :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.RoundRatioConfig) */ {
  public:
@@ -4260,7 +4565,7 @@ class RoundRatioConfig :
                &_RoundRatioConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    27;
 
   friend void swap(RoundRatioConfig& a, RoundRatioConfig& b) {
     a.Swap(&b);
@@ -4403,7 +4708,7 @@ class RewardCurveConfig :
                &_RewardCurveConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    28;
 
   friend void swap(RewardCurveConfig& a, RewardCurveConfig& b) {
     a.Swap(&b);
@@ -4592,7 +4897,7 @@ class RelativeScoreConfig :
                &_RelativeScoreConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    29;
 
   friend void swap(RelativeScoreConfig& a, RelativeScoreConfig& b) {
     a.Swap(&b);
@@ -4735,7 +5040,7 @@ class FlatScoreRoundConfig :
                &_FlatScoreRoundConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    30;
 
   friend void swap(FlatScoreRoundConfig& a, FlatScoreRoundConfig& b) {
     a.Swap(&b);
@@ -4873,7 +5178,7 @@ class CalculatorConfig :
                &_CalculatorConfig_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    31;
 
   friend void swap(CalculatorConfig& a, CalculatorConfig& b) {
     a.Swap(&b);
@@ -4945,15 +5250,16 @@ class CalculatorConfig :
 
   enum : int {
     kBasicRewardFieldNumber = 1,
-    kMaxRewardThresholdNormalFieldNumber = 7,
-    kMaxRewardThresholdKeystoneFieldNumber = 8,
-    kRoundRatiosFieldNumber = 5,
-    kRewardCurveFieldNumber = 6,
-    kRelativeScoreLookupTableFieldNumber = 9,
-    kFlatScoreRoundFieldNumber = 10,
+    kMaxRewardThresholdNormalFieldNumber = 6,
+    kMaxRewardThresholdKeystoneFieldNumber = 7,
+    kRoundRatiosFieldNumber = 4,
+    kRewardCurveFieldNumber = 5,
+    kRelativeScoreLookupTableFieldNumber = 8,
+    kFlatScoreRoundFieldNumber = 9,
     kPayoutRoundsFieldNumber = 2,
     kKeystoneRoundFieldNumber = 3,
-    kKeystoneIntervalFieldNumber = 4,
+    kPopDifficultyAveragingIntervalFieldNumber = 10,
+    kPopRewardSettlementIntervalFieldNumber = 11,
   };
   // string basicReward = 1;
   void clear_basicreward();
@@ -4966,7 +5272,7 @@ class CalculatorConfig :
   std::string* release_basicreward();
   void set_allocated_basicreward(std::string* basicreward);
 
-  // string maxRewardThresholdNormal = 7;
+  // string maxRewardThresholdNormal = 6;
   void clear_maxrewardthresholdnormal();
   const std::string& maxrewardthresholdnormal() const;
   void set_maxrewardthresholdnormal(const std::string& value);
@@ -4977,7 +5283,7 @@ class CalculatorConfig :
   std::string* release_maxrewardthresholdnormal();
   void set_allocated_maxrewardthresholdnormal(std::string* maxrewardthresholdnormal);
 
-  // string maxRewardThresholdKeystone = 8;
+  // string maxRewardThresholdKeystone = 7;
   void clear_maxrewardthresholdkeystone();
   const std::string& maxrewardthresholdkeystone() const;
   void set_maxrewardthresholdkeystone(const std::string& value);
@@ -4988,7 +5294,7 @@ class CalculatorConfig :
   std::string* release_maxrewardthresholdkeystone();
   void set_allocated_maxrewardthresholdkeystone(std::string* maxrewardthresholdkeystone);
 
-  // .VeriBlock.RoundRatioConfig roundRatios = 5;
+  // .VeriBlock.RoundRatioConfig roundRatios = 4;
   bool has_roundratios() const;
   void clear_roundratios();
   const ::VeriBlock::RoundRatioConfig& roundratios() const;
@@ -4996,7 +5302,7 @@ class CalculatorConfig :
   ::VeriBlock::RoundRatioConfig* mutable_roundratios();
   void set_allocated_roundratios(::VeriBlock::RoundRatioConfig* roundratios);
 
-  // .VeriBlock.RewardCurveConfig rewardCurve = 6;
+  // .VeriBlock.RewardCurveConfig rewardCurve = 5;
   bool has_rewardcurve() const;
   void clear_rewardcurve();
   const ::VeriBlock::RewardCurveConfig& rewardcurve() const;
@@ -5004,7 +5310,7 @@ class CalculatorConfig :
   ::VeriBlock::RewardCurveConfig* mutable_rewardcurve();
   void set_allocated_rewardcurve(::VeriBlock::RewardCurveConfig* rewardcurve);
 
-  // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;
+  // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;
   bool has_relativescorelookuptable() const;
   void clear_relativescorelookuptable();
   const ::VeriBlock::RelativeScoreConfig& relativescorelookuptable() const;
@@ -5012,7 +5318,7 @@ class CalculatorConfig :
   ::VeriBlock::RelativeScoreConfig* mutable_relativescorelookuptable();
   void set_allocated_relativescorelookuptable(::VeriBlock::RelativeScoreConfig* relativescorelookuptable);
 
-  // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;
+  // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;
   bool has_flatscoreround() const;
   void clear_flatscoreround();
   const ::VeriBlock::FlatScoreRoundConfig& flatscoreround() const;
@@ -5030,10 +5336,15 @@ class CalculatorConfig :
   ::PROTOBUF_NAMESPACE_ID::int32 keystoneround() const;
   void set_keystoneround(::PROTOBUF_NAMESPACE_ID::int32 value);
 
-  // int32 keystoneInterval = 4;
-  void clear_keystoneinterval();
-  ::PROTOBUF_NAMESPACE_ID::int32 keystoneinterval() const;
-  void set_keystoneinterval(::PROTOBUF_NAMESPACE_ID::int32 value);
+  // int32 popDifficultyAveragingInterval = 10;
+  void clear_popdifficultyaveraginginterval();
+  ::PROTOBUF_NAMESPACE_ID::int32 popdifficultyaveraginginterval() const;
+  void set_popdifficultyaveraginginterval(::PROTOBUF_NAMESPACE_ID::int32 value);
+
+  // int32 popRewardSettlementInterval = 11;
+  void clear_poprewardsettlementinterval();
+  ::PROTOBUF_NAMESPACE_ID::int32 poprewardsettlementinterval() const;
+  void set_poprewardsettlementinterval(::PROTOBUF_NAMESPACE_ID::int32 value);
 
   // @@protoc_insertion_point(class_scope:VeriBlock.CalculatorConfig)
  private:
@@ -5049,7 +5360,8 @@ class CalculatorConfig :
   ::VeriBlock::FlatScoreRoundConfig* flatscoreround_;
   ::PROTOBUF_NAMESPACE_ID::int32 payoutrounds_;
   ::PROTOBUF_NAMESPACE_ID::int32 keystoneround_;
-  ::PROTOBUF_NAMESPACE_ID::int32 keystoneinterval_;
+  ::PROTOBUF_NAMESPACE_ID::int32 popdifficultyaveraginginterval_;
+  ::PROTOBUF_NAMESPACE_ID::int32 poprewardsettlementinterval_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_integration_2eproto;
 };
@@ -5097,7 +5409,7 @@ class SetCalculatorRequest :
                &_SetCalculatorRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    32;
 
   friend void swap(SetCalculatorRequest& a, SetCalculatorRequest& b) {
     a.Swap(&b);
@@ -5231,7 +5543,7 @@ class GetCalculatorReply :
                &_GetCalculatorReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    33;
 
   friend void swap(GetCalculatorReply& a, GetCalculatorReply& b) {
     a.Swap(&b);
@@ -5375,7 +5687,7 @@ class RewardOutput :
                &_RewardOutput_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    34;
 
   friend void swap(RewardOutput& a, RewardOutput& b) {
     a.Swap(&b);
@@ -5446,19 +5758,19 @@ class RewardOutput :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAddressFieldNumber = 1,
+    kPayoutInfoFieldNumber = 1,
     kRewardFieldNumber = 2,
   };
-  // string address = 1;
-  void clear_address();
-  const std::string& address() const;
-  void set_address(const std::string& value);
-  void set_address(std::string&& value);
-  void set_address(const char* value);
-  void set_address(const char* value, size_t size);
-  std::string* mutable_address();
-  std::string* release_address();
-  void set_allocated_address(std::string* address);
+  // bytes payoutInfo = 1;
+  void clear_payoutinfo();
+  const std::string& payoutinfo() const;
+  void set_payoutinfo(const std::string& value);
+  void set_payoutinfo(std::string&& value);
+  void set_payoutinfo(const char* value);
+  void set_payoutinfo(const void* value, size_t size);
+  std::string* mutable_payoutinfo();
+  std::string* release_payoutinfo();
+  void set_allocated_payoutinfo(std::string* payoutinfo);
 
   // string reward = 2;
   void clear_reward();
@@ -5476,302 +5788,8 @@ class RewardOutput :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr address_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr payoutinfo_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reward_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_integration_2eproto;
-};
-// -------------------------------------------------------------------
-
-class PopEndorsement :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.PopEndorsement) */ {
- public:
-  PopEndorsement();
-  virtual ~PopEndorsement();
-
-  PopEndorsement(const PopEndorsement& from);
-  PopEndorsement(PopEndorsement&& from) noexcept
-    : PopEndorsement() {
-    *this = ::std::move(from);
-  }
-
-  inline PopEndorsement& operator=(const PopEndorsement& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline PopEndorsement& operator=(PopEndorsement&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const PopEndorsement& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const PopEndorsement* internal_default_instance() {
-    return reinterpret_cast<const PopEndorsement*>(
-               &_PopEndorsement_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    33;
-
-  friend void swap(PopEndorsement& a, PopEndorsement& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(PopEndorsement* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline PopEndorsement* New() const final {
-    return CreateMaybeMessage<PopEndorsement>(nullptr);
-  }
-
-  PopEndorsement* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<PopEndorsement>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const PopEndorsement& from);
-  void MergeFrom(const PopEndorsement& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(PopEndorsement* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "VeriBlock.PopEndorsement";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
-    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kAddressFieldNumber = 1,
-    kTxidFieldNumber = 2,
-  };
-  // string address = 1;
-  void clear_address();
-  const std::string& address() const;
-  void set_address(const std::string& value);
-  void set_address(std::string&& value);
-  void set_address(const char* value);
-  void set_address(const char* value, size_t size);
-  std::string* mutable_address();
-  std::string* release_address();
-  void set_allocated_address(std::string* address);
-
-  // string txid = 2;
-  void clear_txid();
-  const std::string& txid() const;
-  void set_txid(const std::string& value);
-  void set_txid(std::string&& value);
-  void set_txid(const char* value);
-  void set_txid(const char* value, size_t size);
-  std::string* mutable_txid();
-  std::string* release_txid();
-  void set_allocated_txid(std::string* txid);
-
-  // @@protoc_insertion_point(class_scope:VeriBlock.PopEndorsement)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr address_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr txid_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_integration_2eproto;
-};
-// -------------------------------------------------------------------
-
-class RewardEndorsement :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.RewardEndorsement) */ {
- public:
-  RewardEndorsement();
-  virtual ~RewardEndorsement();
-
-  RewardEndorsement(const RewardEndorsement& from);
-  RewardEndorsement(RewardEndorsement&& from) noexcept
-    : RewardEndorsement() {
-    *this = ::std::move(from);
-  }
-
-  inline RewardEndorsement& operator=(const RewardEndorsement& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline RewardEndorsement& operator=(RewardEndorsement&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const RewardEndorsement& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const RewardEndorsement* internal_default_instance() {
-    return reinterpret_cast<const RewardEndorsement*>(
-               &_RewardEndorsement_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    34;
-
-  friend void swap(RewardEndorsement& a, RewardEndorsement& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(RewardEndorsement* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline RewardEndorsement* New() const final {
-    return CreateMaybeMessage<RewardEndorsement>(nullptr);
-  }
-
-  RewardEndorsement* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<RewardEndorsement>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const RewardEndorsement& from);
-  void MergeFrom(const RewardEndorsement& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(RewardEndorsement* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "VeriBlock.RewardEndorsement";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
-    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kEndorsementsInBlockFieldNumber = 2,
-    kBlockVbkHeightFieldNumber = 1,
-  };
-  // repeated .VeriBlock.PopEndorsement endorsementsInBlock = 2;
-  int endorsementsinblock_size() const;
-  void clear_endorsementsinblock();
-  ::VeriBlock::PopEndorsement* mutable_endorsementsinblock(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::PopEndorsement >*
-      mutable_endorsementsinblock();
-  const ::VeriBlock::PopEndorsement& endorsementsinblock(int index) const;
-  ::VeriBlock::PopEndorsement* add_endorsementsinblock();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::PopEndorsement >&
-      endorsementsinblock() const;
-
-  // int32 blockVbkHeight = 1;
-  void clear_blockvbkheight();
-  ::PROTOBUF_NAMESPACE_ID::int32 blockvbkheight() const;
-  void set_blockvbkheight(::PROTOBUF_NAMESPACE_ID::int32 value);
-
-  // @@protoc_insertion_point(class_scope:VeriBlock.RewardEndorsement)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::PopEndorsement > endorsementsinblock_;
-  ::PROTOBUF_NAMESPACE_ID::int32 blockvbkheight_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_integration_2eproto;
 };
@@ -5890,25 +5908,35 @@ class RewardsCalculateScoreRequest :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEndorsementsForBlockFieldNumber = 1,
+    kEndorsmentBlocksFieldNumber = 2,
+    kEndorsedBlockFieldNumber = 1,
   };
-  // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 1;
-  int endorsementsforblock_size() const;
-  void clear_endorsementsforblock();
-  ::VeriBlock::RewardEndorsement* mutable_endorsementsforblock(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardEndorsement >*
-      mutable_endorsementsforblock();
-  const ::VeriBlock::RewardEndorsement& endorsementsforblock(int index) const;
-  ::VeriBlock::RewardEndorsement* add_endorsementsforblock();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardEndorsement >&
-      endorsementsforblock() const;
+  // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 2;
+  int endorsmentblocks_size() const;
+  void clear_endorsmentblocks();
+  ::VeriBlock::AltChainBlock* mutable_endorsmentblocks(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >*
+      mutable_endorsmentblocks();
+  const ::VeriBlock::AltChainBlock& endorsmentblocks(int index) const;
+  ::VeriBlock::AltChainBlock* add_endorsmentblocks();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >&
+      endorsmentblocks() const;
+
+  // .VeriBlock.AltChainBlock endorsedBlock = 1;
+  bool has_endorsedblock() const;
+  void clear_endorsedblock();
+  const ::VeriBlock::AltChainBlock& endorsedblock() const;
+  ::VeriBlock::AltChainBlock* release_endorsedblock();
+  ::VeriBlock::AltChainBlock* mutable_endorsedblock();
+  void set_allocated_endorsedblock(::VeriBlock::AltChainBlock* endorsedblock);
 
   // @@protoc_insertion_point(class_scope:VeriBlock.RewardsCalculateScoreRequest)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardEndorsement > endorsementsforblock_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock > endorsmentblocks_;
+  ::VeriBlock::AltChainBlock* endorsedblock_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_integration_2eproto;
 };
@@ -6174,22 +6202,23 @@ class RewardsCalculateOutputsRequest :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEndorsementsForBlockFieldNumber = 2,
-    kDifficultyFieldNumber = 3,
+    kEndorsmentBlocksFieldNumber = 3,
+    kDifficultyFieldNumber = 4,
+    kEndorsedBlockFieldNumber = 2,
     kBlockAltHeightFieldNumber = 1,
   };
-  // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 2;
-  int endorsementsforblock_size() const;
-  void clear_endorsementsforblock();
-  ::VeriBlock::RewardEndorsement* mutable_endorsementsforblock(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardEndorsement >*
-      mutable_endorsementsforblock();
-  const ::VeriBlock::RewardEndorsement& endorsementsforblock(int index) const;
-  ::VeriBlock::RewardEndorsement* add_endorsementsforblock();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardEndorsement >&
-      endorsementsforblock() const;
+  // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 3;
+  int endorsmentblocks_size() const;
+  void clear_endorsmentblocks();
+  ::VeriBlock::AltChainBlock* mutable_endorsmentblocks(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >*
+      mutable_endorsmentblocks();
+  const ::VeriBlock::AltChainBlock& endorsmentblocks(int index) const;
+  ::VeriBlock::AltChainBlock* add_endorsmentblocks();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >&
+      endorsmentblocks() const;
 
-  // string difficulty = 3;
+  // string difficulty = 4;
   void clear_difficulty();
   const std::string& difficulty() const;
   void set_difficulty(const std::string& value);
@@ -6199,6 +6228,14 @@ class RewardsCalculateOutputsRequest :
   std::string* mutable_difficulty();
   std::string* release_difficulty();
   void set_allocated_difficulty(std::string* difficulty);
+
+  // .VeriBlock.AltChainBlock endorsedBlock = 2;
+  bool has_endorsedblock() const;
+  void clear_endorsedblock();
+  const ::VeriBlock::AltChainBlock& endorsedblock() const;
+  ::VeriBlock::AltChainBlock* release_endorsedblock();
+  ::VeriBlock::AltChainBlock* mutable_endorsedblock();
+  void set_allocated_endorsedblock(::VeriBlock::AltChainBlock* endorsedblock);
 
   // int32 blockAltHeight = 1;
   void clear_blockaltheight();
@@ -6210,8 +6247,9 @@ class RewardsCalculateOutputsRequest :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardEndorsement > endorsementsforblock_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock > endorsmentblocks_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr difficulty_;
+  ::VeriBlock::AltChainBlock* endorsedblock_;
   ::PROTOBUF_NAMESPACE_ID::int32 blockaltheight_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_integration_2eproto;
@@ -6391,6 +6429,143 @@ class RewardsCalculateOutputsReply :
 };
 // -------------------------------------------------------------------
 
+class RewardsCalculatePopDifficultyRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.RewardsCalculatePopDifficultyRequest) */ {
+ public:
+  RewardsCalculatePopDifficultyRequest();
+  virtual ~RewardsCalculatePopDifficultyRequest();
+
+  RewardsCalculatePopDifficultyRequest(const RewardsCalculatePopDifficultyRequest& from);
+  RewardsCalculatePopDifficultyRequest(RewardsCalculatePopDifficultyRequest&& from) noexcept
+    : RewardsCalculatePopDifficultyRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline RewardsCalculatePopDifficultyRequest& operator=(const RewardsCalculatePopDifficultyRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RewardsCalculatePopDifficultyRequest& operator=(RewardsCalculatePopDifficultyRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const RewardsCalculatePopDifficultyRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RewardsCalculatePopDifficultyRequest* internal_default_instance() {
+    return reinterpret_cast<const RewardsCalculatePopDifficultyRequest*>(
+               &_RewardsCalculatePopDifficultyRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    39;
+
+  friend void swap(RewardsCalculatePopDifficultyRequest& a, RewardsCalculatePopDifficultyRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RewardsCalculatePopDifficultyRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RewardsCalculatePopDifficultyRequest* New() const final {
+    return CreateMaybeMessage<RewardsCalculatePopDifficultyRequest>(nullptr);
+  }
+
+  RewardsCalculatePopDifficultyRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<RewardsCalculatePopDifficultyRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const RewardsCalculatePopDifficultyRequest& from);
+  void MergeFrom(const RewardsCalculatePopDifficultyRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RewardsCalculatePopDifficultyRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "VeriBlock.RewardsCalculatePopDifficultyRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_integration_2eproto);
+    return ::descriptor_table_integration_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBlocksFieldNumber = 1,
+  };
+  // repeated .VeriBlock.AltChainBlock blocks = 1;
+  int blocks_size() const;
+  void clear_blocks();
+  ::VeriBlock::AltChainBlock* mutable_blocks(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >*
+      mutable_blocks();
+  const ::VeriBlock::AltChainBlock& blocks(int index) const;
+  ::VeriBlock::AltChainBlock* add_blocks();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >&
+      blocks() const;
+
+  // @@protoc_insertion_point(class_scope:VeriBlock.RewardsCalculatePopDifficultyRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock > blocks_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_integration_2eproto;
+};
+// -------------------------------------------------------------------
+
 class BytesArrayRequest :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VeriBlock.BytesArrayRequest) */ {
  public:
@@ -6433,7 +6608,7 @@ class BytesArrayRequest :
                &_BytesArrayRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    40;
 
   friend void swap(BytesArrayRequest& a, BytesArrayRequest& b) {
     a.Swap(&b);
@@ -6570,7 +6745,7 @@ class BytesArrayReply :
                &_BytesArrayReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    40;
+    41;
 
   friend void swap(BytesArrayReply& a, BytesArrayReply& b) {
     a.Swap(&b);
@@ -6717,7 +6892,7 @@ class MerklePath :
                &_MerklePath_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    42;
 
   friend void swap(MerklePath& a, MerklePath& b) {
     a.Swap(&b);
@@ -6854,7 +7029,7 @@ class MerklePathRequest :
                &_MerklePathRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    43;
 
   friend void swap(MerklePathRequest& a, MerklePathRequest& b) {
     a.Swap(&b);
@@ -7004,7 +7179,7 @@ class VeriBlockMerklePath :
                &_VeriBlockMerklePath_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    44;
 
   friend void swap(VeriBlockMerklePath& a, VeriBlockMerklePath& b) {
     a.Swap(&b);
@@ -7141,7 +7316,7 @@ class AltPublicationReply :
                &_AltPublicationReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    45;
 
   friend void swap(AltPublicationReply& a, AltPublicationReply& b) {
     a.Swap(&b);
@@ -7285,7 +7460,7 @@ class PublicationDataReply :
                &_PublicationDataReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    46;
 
   friend void swap(PublicationDataReply& a, PublicationDataReply& b) {
     a.Swap(&b);
@@ -7429,7 +7604,7 @@ class BitcoinTransactionReply :
                &_BitcoinTransactionReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    47;
 
   friend void swap(BitcoinTransactionReply& a, BitcoinTransactionReply& b) {
     a.Swap(&b);
@@ -7573,7 +7748,7 @@ class VeriBlockBlockReply :
                &_VeriBlockBlockReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    48;
 
   friend void swap(VeriBlockBlockReply& a, VeriBlockBlockReply& b) {
     a.Swap(&b);
@@ -7717,7 +7892,7 @@ class VeriBlockTransactionReply :
                &_VeriBlockTransactionReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    49;
 
   friend void swap(VeriBlockTransactionReply& a, VeriBlockTransactionReply& b) {
     a.Swap(&b);
@@ -7861,7 +8036,7 @@ class VeriBlockPublicationReply :
                &_VeriBlockPublicationReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    50;
 
   friend void swap(VeriBlockPublicationReply& a, VeriBlockPublicationReply& b) {
     a.Swap(&b);
@@ -8005,7 +8180,7 @@ class VeriBlockPoPTransactionReply :
                &_VeriBlockPoPTransactionReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    51;
 
   friend void swap(VeriBlockPoPTransactionReply& a, VeriBlockPoPTransactionReply& b) {
     a.Swap(&b);
@@ -8149,7 +8324,7 @@ class OutputReply :
                &_OutputReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    52;
 
   friend void swap(OutputReply& a, OutputReply& b) {
     a.Swap(&b);
@@ -8293,7 +8468,7 @@ class AddressReply :
                &_AddressReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    53;
 
   friend void swap(AddressReply& a, AddressReply& b) {
     a.Swap(&b);
@@ -8437,7 +8612,7 @@ class BitcoinBlockReply :
                &_BitcoinBlockReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    54;
 
   friend void swap(BitcoinBlockReply& a, BitcoinBlockReply& b) {
     a.Swap(&b);
@@ -8581,7 +8756,7 @@ class VeriBlockMerklePathReply :
                &_VeriBlockMerklePathReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    55;
 
   friend void swap(VeriBlockMerklePathReply& a, VeriBlockMerklePathReply& b) {
     a.Swap(&b);
@@ -8725,7 +8900,7 @@ class MerklePathReply :
                &_MerklePathReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    56;
 
   friend void swap(MerklePathReply& a, MerklePathReply& b) {
     a.Swap(&b);
@@ -8869,7 +9044,7 @@ class AltChainBlock :
                &_AltChainBlock_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    57;
 
   friend void swap(AltChainBlock& a, AltChainBlock& b) {
     a.Swap(&b);
@@ -9010,7 +9185,7 @@ class TwoBranchesRequest :
                &_TwoBranchesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    58;
 
   friend void swap(TwoBranchesRequest& a, TwoBranchesRequest& b) {
     a.Swap(&b);
@@ -9160,7 +9335,7 @@ class CompareReply :
                &_CompareReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    59;
 
   friend void swap(CompareReply& a, CompareReply& b) {
     a.Swap(&b);
@@ -9301,7 +9476,7 @@ class ForkresolutionConfigRequest :
                &_ForkresolutionConfigRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    60;
 
   friend void swap(ForkresolutionConfigRequest& a, ForkresolutionConfigRequest& b) {
     a.Swap(&b);
@@ -10329,57 +10504,6 @@ inline void VeriBlockTransaction::set_signatureindex(::PROTOBUF_NAMESPACE_ID::in
   
   signatureindex_ = value;
   // @@protoc_insertion_point(field_set:VeriBlock.VeriBlockTransaction.signatureIndex)
-}
-
-// bytes data = 7 [(.VeriBlock.hex_encoded) = true];
-inline void VeriBlockTransaction::clear_data() {
-  data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline const std::string& VeriBlockTransaction::data() const {
-  // @@protoc_insertion_point(field_get:VeriBlock.VeriBlockTransaction.data)
-  return data_.GetNoArena();
-}
-inline void VeriBlockTransaction::set_data(const std::string& value) {
-  
-  data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:VeriBlock.VeriBlockTransaction.data)
-}
-inline void VeriBlockTransaction::set_data(std::string&& value) {
-  
-  data_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:VeriBlock.VeriBlockTransaction.data)
-}
-inline void VeriBlockTransaction::set_data(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:VeriBlock.VeriBlockTransaction.data)
-}
-inline void VeriBlockTransaction::set_data(const void* value, size_t size) {
-  
-  data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:VeriBlock.VeriBlockTransaction.data)
-}
-inline std::string* VeriBlockTransaction::mutable_data() {
-  
-  // @@protoc_insertion_point(field_mutable:VeriBlock.VeriBlockTransaction.data)
-  return data_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* VeriBlockTransaction::release_data() {
-  // @@protoc_insertion_point(field_release:VeriBlock.VeriBlockTransaction.data)
-  
-  return data_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void VeriBlockTransaction::set_allocated_data(std::string* data) {
-  if (data != nullptr) {
-    
-  } else {
-    
-  }
-  data_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), data);
-  // @@protoc_insertion_point(field_set_allocated:VeriBlock.VeriBlockTransaction.data)
 }
 
 // .VeriBlock.PublicationData publicationData = 8;
@@ -11634,6 +11758,142 @@ VeriBlockPublication::context() const {
 
 // -------------------------------------------------------------------
 
+// PoPTransactionData
+
+// string hash = 1;
+inline void PoPTransactionData::clear_hash() {
+  hash_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& PoPTransactionData::hash() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.PoPTransactionData.hash)
+  return hash_.GetNoArena();
+}
+inline void PoPTransactionData::set_hash(const std::string& value) {
+  
+  hash_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:VeriBlock.PoPTransactionData.hash)
+}
+inline void PoPTransactionData::set_hash(std::string&& value) {
+  
+  hash_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:VeriBlock.PoPTransactionData.hash)
+}
+inline void PoPTransactionData::set_hash(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  hash_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:VeriBlock.PoPTransactionData.hash)
+}
+inline void PoPTransactionData::set_hash(const char* value, size_t size) {
+  
+  hash_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:VeriBlock.PoPTransactionData.hash)
+}
+inline std::string* PoPTransactionData::mutable_hash() {
+  
+  // @@protoc_insertion_point(field_mutable:VeriBlock.PoPTransactionData.hash)
+  return hash_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* PoPTransactionData::release_hash() {
+  // @@protoc_insertion_point(field_release:VeriBlock.PoPTransactionData.hash)
+  
+  return hash_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void PoPTransactionData::set_allocated_hash(std::string* hash) {
+  if (hash != nullptr) {
+    
+  } else {
+    
+  }
+  hash_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), hash);
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.PoPTransactionData.hash)
+}
+
+// .VeriBlock.AltPublication altPublication = 2;
+inline bool PoPTransactionData::has_altpublication() const {
+  return this != internal_default_instance() && altpublication_ != nullptr;
+}
+inline void PoPTransactionData::clear_altpublication() {
+  if (GetArenaNoVirtual() == nullptr && altpublication_ != nullptr) {
+    delete altpublication_;
+  }
+  altpublication_ = nullptr;
+}
+inline const ::VeriBlock::AltPublication& PoPTransactionData::altpublication() const {
+  const ::VeriBlock::AltPublication* p = altpublication_;
+  // @@protoc_insertion_point(field_get:VeriBlock.PoPTransactionData.altPublication)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::AltPublication*>(
+      &::VeriBlock::_AltPublication_default_instance_);
+}
+inline ::VeriBlock::AltPublication* PoPTransactionData::release_altpublication() {
+  // @@protoc_insertion_point(field_release:VeriBlock.PoPTransactionData.altPublication)
+  
+  ::VeriBlock::AltPublication* temp = altpublication_;
+  altpublication_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::AltPublication* PoPTransactionData::mutable_altpublication() {
+  
+  if (altpublication_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::AltPublication>(GetArenaNoVirtual());
+    altpublication_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.PoPTransactionData.altPublication)
+  return altpublication_;
+}
+inline void PoPTransactionData::set_allocated_altpublication(::VeriBlock::AltPublication* altpublication) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete altpublication_;
+  }
+  if (altpublication) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      altpublication = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, altpublication, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  altpublication_ = altpublication;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.PoPTransactionData.altPublication)
+}
+
+// repeated .VeriBlock.VeriBlockPublication veriblockPublications = 3;
+inline int PoPTransactionData::veriblockpublications_size() const {
+  return veriblockpublications_.size();
+}
+inline void PoPTransactionData::clear_veriblockpublications() {
+  veriblockpublications_.Clear();
+}
+inline ::VeriBlock::VeriBlockPublication* PoPTransactionData::mutable_veriblockpublications(int index) {
+  // @@protoc_insertion_point(field_mutable:VeriBlock.PoPTransactionData.veriblockPublications)
+  return veriblockpublications_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::VeriBlockPublication >*
+PoPTransactionData::mutable_veriblockpublications() {
+  // @@protoc_insertion_point(field_mutable_list:VeriBlock.PoPTransactionData.veriblockPublications)
+  return &veriblockpublications_;
+}
+inline const ::VeriBlock::VeriBlockPublication& PoPTransactionData::veriblockpublications(int index) const {
+  // @@protoc_insertion_point(field_get:VeriBlock.PoPTransactionData.veriblockPublications)
+  return veriblockpublications_.Get(index);
+}
+inline ::VeriBlock::VeriBlockPublication* PoPTransactionData::add_veriblockpublications() {
+  // @@protoc_insertion_point(field_add:VeriBlock.PoPTransactionData.veriblockPublications)
+  return veriblockpublications_.Add();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::VeriBlockPublication >&
+PoPTransactionData::veriblockpublications() const {
+  // @@protoc_insertion_point(field_list:VeriBlock.PoPTransactionData.veriblockPublications)
+  return veriblockpublications_;
+}
+
+// -------------------------------------------------------------------
+
 // EmptyRequest
 
 // -------------------------------------------------------------------
@@ -12474,6 +12734,163 @@ GetLastKnownBTCBlocksReply::mutable_blocks() {
 
 // -------------------------------------------------------------------
 
+// SavePoPTransactionDataRequest
+
+// .VeriBlock.AltChainBlock containingBlock = 1;
+inline bool SavePoPTransactionDataRequest::has_containingblock() const {
+  return this != internal_default_instance() && containingblock_ != nullptr;
+}
+inline void SavePoPTransactionDataRequest::clear_containingblock() {
+  if (GetArenaNoVirtual() == nullptr && containingblock_ != nullptr) {
+    delete containingblock_;
+  }
+  containingblock_ = nullptr;
+}
+inline const ::VeriBlock::AltChainBlock& SavePoPTransactionDataRequest::containingblock() const {
+  const ::VeriBlock::AltChainBlock* p = containingblock_;
+  // @@protoc_insertion_point(field_get:VeriBlock.SavePoPTransactionDataRequest.containingBlock)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::AltChainBlock*>(
+      &::VeriBlock::_AltChainBlock_default_instance_);
+}
+inline ::VeriBlock::AltChainBlock* SavePoPTransactionDataRequest::release_containingblock() {
+  // @@protoc_insertion_point(field_release:VeriBlock.SavePoPTransactionDataRequest.containingBlock)
+  
+  ::VeriBlock::AltChainBlock* temp = containingblock_;
+  containingblock_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::AltChainBlock* SavePoPTransactionDataRequest::mutable_containingblock() {
+  
+  if (containingblock_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::AltChainBlock>(GetArenaNoVirtual());
+    containingblock_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.SavePoPTransactionDataRequest.containingBlock)
+  return containingblock_;
+}
+inline void SavePoPTransactionDataRequest::set_allocated_containingblock(::VeriBlock::AltChainBlock* containingblock) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete containingblock_;
+  }
+  if (containingblock) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      containingblock = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, containingblock, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  containingblock_ = containingblock;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.SavePoPTransactionDataRequest.containingBlock)
+}
+
+// .VeriBlock.AltChainBlock endorsedBlock = 2;
+inline bool SavePoPTransactionDataRequest::has_endorsedblock() const {
+  return this != internal_default_instance() && endorsedblock_ != nullptr;
+}
+inline void SavePoPTransactionDataRequest::clear_endorsedblock() {
+  if (GetArenaNoVirtual() == nullptr && endorsedblock_ != nullptr) {
+    delete endorsedblock_;
+  }
+  endorsedblock_ = nullptr;
+}
+inline const ::VeriBlock::AltChainBlock& SavePoPTransactionDataRequest::endorsedblock() const {
+  const ::VeriBlock::AltChainBlock* p = endorsedblock_;
+  // @@protoc_insertion_point(field_get:VeriBlock.SavePoPTransactionDataRequest.endorsedBlock)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::AltChainBlock*>(
+      &::VeriBlock::_AltChainBlock_default_instance_);
+}
+inline ::VeriBlock::AltChainBlock* SavePoPTransactionDataRequest::release_endorsedblock() {
+  // @@protoc_insertion_point(field_release:VeriBlock.SavePoPTransactionDataRequest.endorsedBlock)
+  
+  ::VeriBlock::AltChainBlock* temp = endorsedblock_;
+  endorsedblock_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::AltChainBlock* SavePoPTransactionDataRequest::mutable_endorsedblock() {
+  
+  if (endorsedblock_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::AltChainBlock>(GetArenaNoVirtual());
+    endorsedblock_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.SavePoPTransactionDataRequest.endorsedBlock)
+  return endorsedblock_;
+}
+inline void SavePoPTransactionDataRequest::set_allocated_endorsedblock(::VeriBlock::AltChainBlock* endorsedblock) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete endorsedblock_;
+  }
+  if (endorsedblock) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      endorsedblock = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, endorsedblock, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  endorsedblock_ = endorsedblock;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.SavePoPTransactionDataRequest.endorsedBlock)
+}
+
+// .VeriBlock.PoPTransactionData popTx = 3;
+inline bool SavePoPTransactionDataRequest::has_poptx() const {
+  return this != internal_default_instance() && poptx_ != nullptr;
+}
+inline void SavePoPTransactionDataRequest::clear_poptx() {
+  if (GetArenaNoVirtual() == nullptr && poptx_ != nullptr) {
+    delete poptx_;
+  }
+  poptx_ = nullptr;
+}
+inline const ::VeriBlock::PoPTransactionData& SavePoPTransactionDataRequest::poptx() const {
+  const ::VeriBlock::PoPTransactionData* p = poptx_;
+  // @@protoc_insertion_point(field_get:VeriBlock.SavePoPTransactionDataRequest.popTx)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::PoPTransactionData*>(
+      &::VeriBlock::_PoPTransactionData_default_instance_);
+}
+inline ::VeriBlock::PoPTransactionData* SavePoPTransactionDataRequest::release_poptx() {
+  // @@protoc_insertion_point(field_release:VeriBlock.SavePoPTransactionDataRequest.popTx)
+  
+  ::VeriBlock::PoPTransactionData* temp = poptx_;
+  poptx_ = nullptr;
+  return temp;
+}
+inline ::VeriBlock::PoPTransactionData* SavePoPTransactionDataRequest::mutable_poptx() {
+  
+  if (poptx_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::PoPTransactionData>(GetArenaNoVirtual());
+    poptx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.SavePoPTransactionDataRequest.popTx)
+  return poptx_;
+}
+inline void SavePoPTransactionDataRequest::set_allocated_poptx(::VeriBlock::PoPTransactionData* poptx) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete poptx_;
+  }
+  if (poptx) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      poptx = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, poptx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  poptx_ = poptx;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.SavePoPTransactionDataRequest.popTx)
+}
+
+// -------------------------------------------------------------------
+
 // RoundRatioConfig
 
 // repeated string roundRatio = 1;
@@ -12984,21 +13401,7 @@ inline void CalculatorConfig::set_keystoneround(::PROTOBUF_NAMESPACE_ID::int32 v
   // @@protoc_insertion_point(field_set:VeriBlock.CalculatorConfig.keystoneRound)
 }
 
-// int32 keystoneInterval = 4;
-inline void CalculatorConfig::clear_keystoneinterval() {
-  keystoneinterval_ = 0;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 CalculatorConfig::keystoneinterval() const {
-  // @@protoc_insertion_point(field_get:VeriBlock.CalculatorConfig.keystoneInterval)
-  return keystoneinterval_;
-}
-inline void CalculatorConfig::set_keystoneinterval(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  keystoneinterval_ = value;
-  // @@protoc_insertion_point(field_set:VeriBlock.CalculatorConfig.keystoneInterval)
-}
-
-// .VeriBlock.RoundRatioConfig roundRatios = 5;
+// .VeriBlock.RoundRatioConfig roundRatios = 4;
 inline bool CalculatorConfig::has_roundratios() const {
   return this != internal_default_instance() && roundratios_ != nullptr;
 }
@@ -13049,7 +13452,7 @@ inline void CalculatorConfig::set_allocated_roundratios(::VeriBlock::RoundRatioC
   // @@protoc_insertion_point(field_set_allocated:VeriBlock.CalculatorConfig.roundRatios)
 }
 
-// .VeriBlock.RewardCurveConfig rewardCurve = 6;
+// .VeriBlock.RewardCurveConfig rewardCurve = 5;
 inline bool CalculatorConfig::has_rewardcurve() const {
   return this != internal_default_instance() && rewardcurve_ != nullptr;
 }
@@ -13100,7 +13503,7 @@ inline void CalculatorConfig::set_allocated_rewardcurve(::VeriBlock::RewardCurve
   // @@protoc_insertion_point(field_set_allocated:VeriBlock.CalculatorConfig.rewardCurve)
 }
 
-// string maxRewardThresholdNormal = 7;
+// string maxRewardThresholdNormal = 6;
 inline void CalculatorConfig::clear_maxrewardthresholdnormal() {
   maxrewardthresholdnormal_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -13151,7 +13554,7 @@ inline void CalculatorConfig::set_allocated_maxrewardthresholdnormal(std::string
   // @@protoc_insertion_point(field_set_allocated:VeriBlock.CalculatorConfig.maxRewardThresholdNormal)
 }
 
-// string maxRewardThresholdKeystone = 8;
+// string maxRewardThresholdKeystone = 7;
 inline void CalculatorConfig::clear_maxrewardthresholdkeystone() {
   maxrewardthresholdkeystone_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -13202,7 +13605,7 @@ inline void CalculatorConfig::set_allocated_maxrewardthresholdkeystone(std::stri
   // @@protoc_insertion_point(field_set_allocated:VeriBlock.CalculatorConfig.maxRewardThresholdKeystone)
 }
 
-// .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;
+// .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;
 inline bool CalculatorConfig::has_relativescorelookuptable() const {
   return this != internal_default_instance() && relativescorelookuptable_ != nullptr;
 }
@@ -13253,7 +13656,7 @@ inline void CalculatorConfig::set_allocated_relativescorelookuptable(::VeriBlock
   // @@protoc_insertion_point(field_set_allocated:VeriBlock.CalculatorConfig.relativeScoreLookupTable)
 }
 
-// .VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;
+// .VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;
 inline bool CalculatorConfig::has_flatscoreround() const {
   return this != internal_default_instance() && flatscoreround_ != nullptr;
 }
@@ -13302,6 +13705,34 @@ inline void CalculatorConfig::set_allocated_flatscoreround(::VeriBlock::FlatScor
   }
   flatscoreround_ = flatscoreround;
   // @@protoc_insertion_point(field_set_allocated:VeriBlock.CalculatorConfig.flatScoreRound)
+}
+
+// int32 popDifficultyAveragingInterval = 10;
+inline void CalculatorConfig::clear_popdifficultyaveraginginterval() {
+  popdifficultyaveraginginterval_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 CalculatorConfig::popdifficultyaveraginginterval() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.CalculatorConfig.popDifficultyAveragingInterval)
+  return popdifficultyaveraginginterval_;
+}
+inline void CalculatorConfig::set_popdifficultyaveraginginterval(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  popdifficultyaveraginginterval_ = value;
+  // @@protoc_insertion_point(field_set:VeriBlock.CalculatorConfig.popDifficultyAveragingInterval)
+}
+
+// int32 popRewardSettlementInterval = 11;
+inline void CalculatorConfig::clear_poprewardsettlementinterval() {
+  poprewardsettlementinterval_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 CalculatorConfig::poprewardsettlementinterval() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.CalculatorConfig.popRewardSettlementInterval)
+  return poprewardsettlementinterval_;
+}
+inline void CalculatorConfig::set_poprewardsettlementinterval(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  poprewardsettlementinterval_ = value;
+  // @@protoc_insertion_point(field_set:VeriBlock.CalculatorConfig.popRewardSettlementInterval)
 }
 
 // -------------------------------------------------------------------
@@ -13469,55 +13900,55 @@ inline void GetCalculatorReply::set_allocated_calculator(::VeriBlock::Calculator
 
 // RewardOutput
 
-// string address = 1;
-inline void RewardOutput::clear_address() {
-  address_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// bytes payoutInfo = 1;
+inline void RewardOutput::clear_payoutinfo() {
+  payoutinfo_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& RewardOutput::address() const {
-  // @@protoc_insertion_point(field_get:VeriBlock.RewardOutput.address)
-  return address_.GetNoArena();
+inline const std::string& RewardOutput::payoutinfo() const {
+  // @@protoc_insertion_point(field_get:VeriBlock.RewardOutput.payoutInfo)
+  return payoutinfo_.GetNoArena();
 }
-inline void RewardOutput::set_address(const std::string& value) {
+inline void RewardOutput::set_payoutinfo(const std::string& value) {
   
-  address_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:VeriBlock.RewardOutput.address)
+  payoutinfo_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:VeriBlock.RewardOutput.payoutInfo)
 }
-inline void RewardOutput::set_address(std::string&& value) {
+inline void RewardOutput::set_payoutinfo(std::string&& value) {
   
-  address_.SetNoArena(
+  payoutinfo_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:VeriBlock.RewardOutput.address)
+  // @@protoc_insertion_point(field_set_rvalue:VeriBlock.RewardOutput.payoutInfo)
 }
-inline void RewardOutput::set_address(const char* value) {
+inline void RewardOutput::set_payoutinfo(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  address_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:VeriBlock.RewardOutput.address)
+  payoutinfo_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:VeriBlock.RewardOutput.payoutInfo)
 }
-inline void RewardOutput::set_address(const char* value, size_t size) {
+inline void RewardOutput::set_payoutinfo(const void* value, size_t size) {
   
-  address_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  payoutinfo_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:VeriBlock.RewardOutput.address)
+  // @@protoc_insertion_point(field_set_pointer:VeriBlock.RewardOutput.payoutInfo)
 }
-inline std::string* RewardOutput::mutable_address() {
+inline std::string* RewardOutput::mutable_payoutinfo() {
   
-  // @@protoc_insertion_point(field_mutable:VeriBlock.RewardOutput.address)
-  return address_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:VeriBlock.RewardOutput.payoutInfo)
+  return payoutinfo_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* RewardOutput::release_address() {
-  // @@protoc_insertion_point(field_release:VeriBlock.RewardOutput.address)
+inline std::string* RewardOutput::release_payoutinfo() {
+  // @@protoc_insertion_point(field_release:VeriBlock.RewardOutput.payoutInfo)
   
-  return address_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return payoutinfo_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void RewardOutput::set_allocated_address(std::string* address) {
-  if (address != nullptr) {
+inline void RewardOutput::set_allocated_payoutinfo(std::string* payoutinfo) {
+  if (payoutinfo != nullptr) {
     
   } else {
     
   }
-  address_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), address);
-  // @@protoc_insertion_point(field_set_allocated:VeriBlock.RewardOutput.address)
+  payoutinfo_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), payoutinfo);
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.RewardOutput.payoutInfo)
 }
 
 // string reward = 2;
@@ -13573,190 +14004,87 @@ inline void RewardOutput::set_allocated_reward(std::string* reward) {
 
 // -------------------------------------------------------------------
 
-// PopEndorsement
-
-// string address = 1;
-inline void PopEndorsement::clear_address() {
-  address_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline const std::string& PopEndorsement::address() const {
-  // @@protoc_insertion_point(field_get:VeriBlock.PopEndorsement.address)
-  return address_.GetNoArena();
-}
-inline void PopEndorsement::set_address(const std::string& value) {
-  
-  address_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:VeriBlock.PopEndorsement.address)
-}
-inline void PopEndorsement::set_address(std::string&& value) {
-  
-  address_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:VeriBlock.PopEndorsement.address)
-}
-inline void PopEndorsement::set_address(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  address_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:VeriBlock.PopEndorsement.address)
-}
-inline void PopEndorsement::set_address(const char* value, size_t size) {
-  
-  address_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:VeriBlock.PopEndorsement.address)
-}
-inline std::string* PopEndorsement::mutable_address() {
-  
-  // @@protoc_insertion_point(field_mutable:VeriBlock.PopEndorsement.address)
-  return address_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* PopEndorsement::release_address() {
-  // @@protoc_insertion_point(field_release:VeriBlock.PopEndorsement.address)
-  
-  return address_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void PopEndorsement::set_allocated_address(std::string* address) {
-  if (address != nullptr) {
-    
-  } else {
-    
-  }
-  address_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), address);
-  // @@protoc_insertion_point(field_set_allocated:VeriBlock.PopEndorsement.address)
-}
-
-// string txid = 2;
-inline void PopEndorsement::clear_txid() {
-  txid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline const std::string& PopEndorsement::txid() const {
-  // @@protoc_insertion_point(field_get:VeriBlock.PopEndorsement.txid)
-  return txid_.GetNoArena();
-}
-inline void PopEndorsement::set_txid(const std::string& value) {
-  
-  txid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:VeriBlock.PopEndorsement.txid)
-}
-inline void PopEndorsement::set_txid(std::string&& value) {
-  
-  txid_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:VeriBlock.PopEndorsement.txid)
-}
-inline void PopEndorsement::set_txid(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  txid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:VeriBlock.PopEndorsement.txid)
-}
-inline void PopEndorsement::set_txid(const char* value, size_t size) {
-  
-  txid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:VeriBlock.PopEndorsement.txid)
-}
-inline std::string* PopEndorsement::mutable_txid() {
-  
-  // @@protoc_insertion_point(field_mutable:VeriBlock.PopEndorsement.txid)
-  return txid_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* PopEndorsement::release_txid() {
-  // @@protoc_insertion_point(field_release:VeriBlock.PopEndorsement.txid)
-  
-  return txid_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void PopEndorsement::set_allocated_txid(std::string* txid) {
-  if (txid != nullptr) {
-    
-  } else {
-    
-  }
-  txid_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), txid);
-  // @@protoc_insertion_point(field_set_allocated:VeriBlock.PopEndorsement.txid)
-}
-
-// -------------------------------------------------------------------
-
-// RewardEndorsement
-
-// int32 blockVbkHeight = 1;
-inline void RewardEndorsement::clear_blockvbkheight() {
-  blockvbkheight_ = 0;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 RewardEndorsement::blockvbkheight() const {
-  // @@protoc_insertion_point(field_get:VeriBlock.RewardEndorsement.blockVbkHeight)
-  return blockvbkheight_;
-}
-inline void RewardEndorsement::set_blockvbkheight(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  blockvbkheight_ = value;
-  // @@protoc_insertion_point(field_set:VeriBlock.RewardEndorsement.blockVbkHeight)
-}
-
-// repeated .VeriBlock.PopEndorsement endorsementsInBlock = 2;
-inline int RewardEndorsement::endorsementsinblock_size() const {
-  return endorsementsinblock_.size();
-}
-inline void RewardEndorsement::clear_endorsementsinblock() {
-  endorsementsinblock_.Clear();
-}
-inline ::VeriBlock::PopEndorsement* RewardEndorsement::mutable_endorsementsinblock(int index) {
-  // @@protoc_insertion_point(field_mutable:VeriBlock.RewardEndorsement.endorsementsInBlock)
-  return endorsementsinblock_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::PopEndorsement >*
-RewardEndorsement::mutable_endorsementsinblock() {
-  // @@protoc_insertion_point(field_mutable_list:VeriBlock.RewardEndorsement.endorsementsInBlock)
-  return &endorsementsinblock_;
-}
-inline const ::VeriBlock::PopEndorsement& RewardEndorsement::endorsementsinblock(int index) const {
-  // @@protoc_insertion_point(field_get:VeriBlock.RewardEndorsement.endorsementsInBlock)
-  return endorsementsinblock_.Get(index);
-}
-inline ::VeriBlock::PopEndorsement* RewardEndorsement::add_endorsementsinblock() {
-  // @@protoc_insertion_point(field_add:VeriBlock.RewardEndorsement.endorsementsInBlock)
-  return endorsementsinblock_.Add();
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::PopEndorsement >&
-RewardEndorsement::endorsementsinblock() const {
-  // @@protoc_insertion_point(field_list:VeriBlock.RewardEndorsement.endorsementsInBlock)
-  return endorsementsinblock_;
-}
-
-// -------------------------------------------------------------------
-
 // RewardsCalculateScoreRequest
 
-// repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 1;
-inline int RewardsCalculateScoreRequest::endorsementsforblock_size() const {
-  return endorsementsforblock_.size();
+// .VeriBlock.AltChainBlock endorsedBlock = 1;
+inline bool RewardsCalculateScoreRequest::has_endorsedblock() const {
+  return this != internal_default_instance() && endorsedblock_ != nullptr;
 }
-inline void RewardsCalculateScoreRequest::clear_endorsementsforblock() {
-  endorsementsforblock_.Clear();
+inline void RewardsCalculateScoreRequest::clear_endorsedblock() {
+  if (GetArenaNoVirtual() == nullptr && endorsedblock_ != nullptr) {
+    delete endorsedblock_;
+  }
+  endorsedblock_ = nullptr;
 }
-inline ::VeriBlock::RewardEndorsement* RewardsCalculateScoreRequest::mutable_endorsementsforblock(int index) {
-  // @@protoc_insertion_point(field_mutable:VeriBlock.RewardsCalculateScoreRequest.endorsementsForBlock)
-  return endorsementsforblock_.Mutable(index);
+inline const ::VeriBlock::AltChainBlock& RewardsCalculateScoreRequest::endorsedblock() const {
+  const ::VeriBlock::AltChainBlock* p = endorsedblock_;
+  // @@protoc_insertion_point(field_get:VeriBlock.RewardsCalculateScoreRequest.endorsedBlock)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::AltChainBlock*>(
+      &::VeriBlock::_AltChainBlock_default_instance_);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardEndorsement >*
-RewardsCalculateScoreRequest::mutable_endorsementsforblock() {
-  // @@protoc_insertion_point(field_mutable_list:VeriBlock.RewardsCalculateScoreRequest.endorsementsForBlock)
-  return &endorsementsforblock_;
+inline ::VeriBlock::AltChainBlock* RewardsCalculateScoreRequest::release_endorsedblock() {
+  // @@protoc_insertion_point(field_release:VeriBlock.RewardsCalculateScoreRequest.endorsedBlock)
+  
+  ::VeriBlock::AltChainBlock* temp = endorsedblock_;
+  endorsedblock_ = nullptr;
+  return temp;
 }
-inline const ::VeriBlock::RewardEndorsement& RewardsCalculateScoreRequest::endorsementsforblock(int index) const {
-  // @@protoc_insertion_point(field_get:VeriBlock.RewardsCalculateScoreRequest.endorsementsForBlock)
-  return endorsementsforblock_.Get(index);
+inline ::VeriBlock::AltChainBlock* RewardsCalculateScoreRequest::mutable_endorsedblock() {
+  
+  if (endorsedblock_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::AltChainBlock>(GetArenaNoVirtual());
+    endorsedblock_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.RewardsCalculateScoreRequest.endorsedBlock)
+  return endorsedblock_;
 }
-inline ::VeriBlock::RewardEndorsement* RewardsCalculateScoreRequest::add_endorsementsforblock() {
-  // @@protoc_insertion_point(field_add:VeriBlock.RewardsCalculateScoreRequest.endorsementsForBlock)
-  return endorsementsforblock_.Add();
+inline void RewardsCalculateScoreRequest::set_allocated_endorsedblock(::VeriBlock::AltChainBlock* endorsedblock) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete endorsedblock_;
+  }
+  if (endorsedblock) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      endorsedblock = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, endorsedblock, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  endorsedblock_ = endorsedblock;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.RewardsCalculateScoreRequest.endorsedBlock)
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardEndorsement >&
-RewardsCalculateScoreRequest::endorsementsforblock() const {
-  // @@protoc_insertion_point(field_list:VeriBlock.RewardsCalculateScoreRequest.endorsementsForBlock)
-  return endorsementsforblock_;
+
+// repeated .VeriBlock.AltChainBlock endorsmentBlocks = 2;
+inline int RewardsCalculateScoreRequest::endorsmentblocks_size() const {
+  return endorsmentblocks_.size();
+}
+inline void RewardsCalculateScoreRequest::clear_endorsmentblocks() {
+  endorsmentblocks_.Clear();
+}
+inline ::VeriBlock::AltChainBlock* RewardsCalculateScoreRequest::mutable_endorsmentblocks(int index) {
+  // @@protoc_insertion_point(field_mutable:VeriBlock.RewardsCalculateScoreRequest.endorsmentBlocks)
+  return endorsmentblocks_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >*
+RewardsCalculateScoreRequest::mutable_endorsmentblocks() {
+  // @@protoc_insertion_point(field_mutable_list:VeriBlock.RewardsCalculateScoreRequest.endorsmentBlocks)
+  return &endorsmentblocks_;
+}
+inline const ::VeriBlock::AltChainBlock& RewardsCalculateScoreRequest::endorsmentblocks(int index) const {
+  // @@protoc_insertion_point(field_get:VeriBlock.RewardsCalculateScoreRequest.endorsmentBlocks)
+  return endorsmentblocks_.Get(index);
+}
+inline ::VeriBlock::AltChainBlock* RewardsCalculateScoreRequest::add_endorsmentblocks() {
+  // @@protoc_insertion_point(field_add:VeriBlock.RewardsCalculateScoreRequest.endorsmentBlocks)
+  return endorsmentblocks_.Add();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >&
+RewardsCalculateScoreRequest::endorsmentblocks() const {
+  // @@protoc_insertion_point(field_list:VeriBlock.RewardsCalculateScoreRequest.endorsmentBlocks)
+  return endorsmentblocks_;
 }
 
 // -------------------------------------------------------------------
@@ -13883,37 +14211,88 @@ inline void RewardsCalculateOutputsRequest::set_blockaltheight(::PROTOBUF_NAMESP
   // @@protoc_insertion_point(field_set:VeriBlock.RewardsCalculateOutputsRequest.blockAltHeight)
 }
 
-// repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 2;
-inline int RewardsCalculateOutputsRequest::endorsementsforblock_size() const {
-  return endorsementsforblock_.size();
+// .VeriBlock.AltChainBlock endorsedBlock = 2;
+inline bool RewardsCalculateOutputsRequest::has_endorsedblock() const {
+  return this != internal_default_instance() && endorsedblock_ != nullptr;
 }
-inline void RewardsCalculateOutputsRequest::clear_endorsementsforblock() {
-  endorsementsforblock_.Clear();
+inline void RewardsCalculateOutputsRequest::clear_endorsedblock() {
+  if (GetArenaNoVirtual() == nullptr && endorsedblock_ != nullptr) {
+    delete endorsedblock_;
+  }
+  endorsedblock_ = nullptr;
 }
-inline ::VeriBlock::RewardEndorsement* RewardsCalculateOutputsRequest::mutable_endorsementsforblock(int index) {
-  // @@protoc_insertion_point(field_mutable:VeriBlock.RewardsCalculateOutputsRequest.endorsementsForBlock)
-  return endorsementsforblock_.Mutable(index);
+inline const ::VeriBlock::AltChainBlock& RewardsCalculateOutputsRequest::endorsedblock() const {
+  const ::VeriBlock::AltChainBlock* p = endorsedblock_;
+  // @@protoc_insertion_point(field_get:VeriBlock.RewardsCalculateOutputsRequest.endorsedBlock)
+  return p != nullptr ? *p : *reinterpret_cast<const ::VeriBlock::AltChainBlock*>(
+      &::VeriBlock::_AltChainBlock_default_instance_);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardEndorsement >*
-RewardsCalculateOutputsRequest::mutable_endorsementsforblock() {
-  // @@protoc_insertion_point(field_mutable_list:VeriBlock.RewardsCalculateOutputsRequest.endorsementsForBlock)
-  return &endorsementsforblock_;
+inline ::VeriBlock::AltChainBlock* RewardsCalculateOutputsRequest::release_endorsedblock() {
+  // @@protoc_insertion_point(field_release:VeriBlock.RewardsCalculateOutputsRequest.endorsedBlock)
+  
+  ::VeriBlock::AltChainBlock* temp = endorsedblock_;
+  endorsedblock_ = nullptr;
+  return temp;
 }
-inline const ::VeriBlock::RewardEndorsement& RewardsCalculateOutputsRequest::endorsementsforblock(int index) const {
-  // @@protoc_insertion_point(field_get:VeriBlock.RewardsCalculateOutputsRequest.endorsementsForBlock)
-  return endorsementsforblock_.Get(index);
+inline ::VeriBlock::AltChainBlock* RewardsCalculateOutputsRequest::mutable_endorsedblock() {
+  
+  if (endorsedblock_ == nullptr) {
+    auto* p = CreateMaybeMessage<::VeriBlock::AltChainBlock>(GetArenaNoVirtual());
+    endorsedblock_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:VeriBlock.RewardsCalculateOutputsRequest.endorsedBlock)
+  return endorsedblock_;
 }
-inline ::VeriBlock::RewardEndorsement* RewardsCalculateOutputsRequest::add_endorsementsforblock() {
-  // @@protoc_insertion_point(field_add:VeriBlock.RewardsCalculateOutputsRequest.endorsementsForBlock)
-  return endorsementsforblock_.Add();
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardEndorsement >&
-RewardsCalculateOutputsRequest::endorsementsforblock() const {
-  // @@protoc_insertion_point(field_list:VeriBlock.RewardsCalculateOutputsRequest.endorsementsForBlock)
-  return endorsementsforblock_;
+inline void RewardsCalculateOutputsRequest::set_allocated_endorsedblock(::VeriBlock::AltChainBlock* endorsedblock) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete endorsedblock_;
+  }
+  if (endorsedblock) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      endorsedblock = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, endorsedblock, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  endorsedblock_ = endorsedblock;
+  // @@protoc_insertion_point(field_set_allocated:VeriBlock.RewardsCalculateOutputsRequest.endorsedBlock)
 }
 
-// string difficulty = 3;
+// repeated .VeriBlock.AltChainBlock endorsmentBlocks = 3;
+inline int RewardsCalculateOutputsRequest::endorsmentblocks_size() const {
+  return endorsmentblocks_.size();
+}
+inline void RewardsCalculateOutputsRequest::clear_endorsmentblocks() {
+  endorsmentblocks_.Clear();
+}
+inline ::VeriBlock::AltChainBlock* RewardsCalculateOutputsRequest::mutable_endorsmentblocks(int index) {
+  // @@protoc_insertion_point(field_mutable:VeriBlock.RewardsCalculateOutputsRequest.endorsmentBlocks)
+  return endorsmentblocks_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >*
+RewardsCalculateOutputsRequest::mutable_endorsmentblocks() {
+  // @@protoc_insertion_point(field_mutable_list:VeriBlock.RewardsCalculateOutputsRequest.endorsmentBlocks)
+  return &endorsmentblocks_;
+}
+inline const ::VeriBlock::AltChainBlock& RewardsCalculateOutputsRequest::endorsmentblocks(int index) const {
+  // @@protoc_insertion_point(field_get:VeriBlock.RewardsCalculateOutputsRequest.endorsmentBlocks)
+  return endorsmentblocks_.Get(index);
+}
+inline ::VeriBlock::AltChainBlock* RewardsCalculateOutputsRequest::add_endorsmentblocks() {
+  // @@protoc_insertion_point(field_add:VeriBlock.RewardsCalculateOutputsRequest.endorsmentBlocks)
+  return endorsmentblocks_.Add();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >&
+RewardsCalculateOutputsRequest::endorsmentblocks() const {
+  // @@protoc_insertion_point(field_list:VeriBlock.RewardsCalculateOutputsRequest.endorsmentBlocks)
+  return endorsmentblocks_;
+}
+
+// string difficulty = 4;
 inline void RewardsCalculateOutputsRequest::clear_difficulty() {
   difficulty_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -14149,6 +14528,40 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::RewardOutpu
 RewardsCalculateOutputsReply::outputs() const {
   // @@protoc_insertion_point(field_list:VeriBlock.RewardsCalculateOutputsReply.outputs)
   return outputs_;
+}
+
+// -------------------------------------------------------------------
+
+// RewardsCalculatePopDifficultyRequest
+
+// repeated .VeriBlock.AltChainBlock blocks = 1;
+inline int RewardsCalculatePopDifficultyRequest::blocks_size() const {
+  return blocks_.size();
+}
+inline void RewardsCalculatePopDifficultyRequest::clear_blocks() {
+  blocks_.Clear();
+}
+inline ::VeriBlock::AltChainBlock* RewardsCalculatePopDifficultyRequest::mutable_blocks(int index) {
+  // @@protoc_insertion_point(field_mutable:VeriBlock.RewardsCalculatePopDifficultyRequest.blocks)
+  return blocks_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >*
+RewardsCalculatePopDifficultyRequest::mutable_blocks() {
+  // @@protoc_insertion_point(field_mutable_list:VeriBlock.RewardsCalculatePopDifficultyRequest.blocks)
+  return &blocks_;
+}
+inline const ::VeriBlock::AltChainBlock& RewardsCalculatePopDifficultyRequest::blocks(int index) const {
+  // @@protoc_insertion_point(field_get:VeriBlock.RewardsCalculatePopDifficultyRequest.blocks)
+  return blocks_.Get(index);
+}
+inline ::VeriBlock::AltChainBlock* RewardsCalculatePopDifficultyRequest::add_blocks() {
+  // @@protoc_insertion_point(field_add:VeriBlock.RewardsCalculatePopDifficultyRequest.blocks)
+  return blocks_.Add();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::VeriBlock::AltChainBlock >&
+RewardsCalculatePopDifficultyRequest::blocks() const {
+  // @@protoc_insertion_point(field_list:VeriBlock.RewardsCalculatePopDifficultyRequest.blocks)
+  return blocks_;
 }
 
 // -------------------------------------------------------------------
@@ -16037,6 +16450,8 @@ inline void ForkresolutionConfigRequest::set_amnestyperiod(::PROTOBUF_NAMESPACE_
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

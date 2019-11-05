@@ -26764,6 +26764,16 @@ public final class VeriBlockMessages {
      * <code>.VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;</code>
      */
     integration.api.grpc.VeriBlockMessages.FlatScoreRoundConfigOrBuilder getFlatScoreRoundOrBuilder();
+
+    /**
+     * <code>int32 popDifficultyAveragingInterval = 10;</code>
+     */
+    int getPopDifficultyAveragingInterval();
+
+    /**
+     * <code>int32 popRewardSettlementInterval = 11;</code>
+     */
+    int getPopRewardSettlementInterval();
   }
   /**
    * Protobuf type {@code VeriBlock.CalculatorConfig}
@@ -26891,6 +26901,16 @@ public final class VeriBlockMessages {
                 flatScoreRound_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 80: {
+
+              popDifficultyAveragingInterval_ = input.readInt32();
+              break;
+            }
+            case 88: {
+
+              popRewardSettlementInterval_ = input.readInt32();
               break;
             }
             default: {
@@ -27129,6 +27149,24 @@ public final class VeriBlockMessages {
       return getFlatScoreRound();
     }
 
+    public static final int POPDIFFICULTYAVERAGINGINTERVAL_FIELD_NUMBER = 10;
+    private int popDifficultyAveragingInterval_;
+    /**
+     * <code>int32 popDifficultyAveragingInterval = 10;</code>
+     */
+    public int getPopDifficultyAveragingInterval() {
+      return popDifficultyAveragingInterval_;
+    }
+
+    public static final int POPREWARDSETTLEMENTINTERVAL_FIELD_NUMBER = 11;
+    private int popRewardSettlementInterval_;
+    /**
+     * <code>int32 popRewardSettlementInterval = 11;</code>
+     */
+    public int getPopRewardSettlementInterval() {
+      return popRewardSettlementInterval_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -27169,6 +27207,12 @@ public final class VeriBlockMessages {
       }
       if (flatScoreRound_ != null) {
         output.writeMessage(9, getFlatScoreRound());
+      }
+      if (popDifficultyAveragingInterval_ != 0) {
+        output.writeInt32(10, popDifficultyAveragingInterval_);
+      }
+      if (popRewardSettlementInterval_ != 0) {
+        output.writeInt32(11, popRewardSettlementInterval_);
       }
       unknownFields.writeTo(output);
     }
@@ -27211,6 +27255,14 @@ public final class VeriBlockMessages {
       if (flatScoreRound_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getFlatScoreRound());
+      }
+      if (popDifficultyAveragingInterval_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, popDifficultyAveragingInterval_);
+      }
+      if (popRewardSettlementInterval_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(11, popRewardSettlementInterval_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -27257,6 +27309,10 @@ public final class VeriBlockMessages {
         if (!getFlatScoreRound()
             .equals(other.getFlatScoreRound())) return false;
       }
+      if (getPopDifficultyAveragingInterval()
+          != other.getPopDifficultyAveragingInterval()) return false;
+      if (getPopRewardSettlementInterval()
+          != other.getPopRewardSettlementInterval()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -27294,6 +27350,10 @@ public final class VeriBlockMessages {
         hash = (37 * hash) + FLATSCOREROUND_FIELD_NUMBER;
         hash = (53 * hash) + getFlatScoreRound().hashCode();
       }
+      hash = (37 * hash) + POPDIFFICULTYAVERAGINGINTERVAL_FIELD_NUMBER;
+      hash = (53 * hash) + getPopDifficultyAveragingInterval();
+      hash = (37 * hash) + POPREWARDSETTLEMENTINTERVAL_FIELD_NUMBER;
+      hash = (53 * hash) + getPopRewardSettlementInterval();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -27461,6 +27521,10 @@ public final class VeriBlockMessages {
           flatScoreRound_ = null;
           flatScoreRoundBuilder_ = null;
         }
+        popDifficultyAveragingInterval_ = 0;
+
+        popRewardSettlementInterval_ = 0;
+
         return this;
       }
 
@@ -27512,6 +27576,8 @@ public final class VeriBlockMessages {
         } else {
           result.flatScoreRound_ = flatScoreRoundBuilder_.build();
         }
+        result.popDifficultyAveragingInterval_ = popDifficultyAveragingInterval_;
+        result.popRewardSettlementInterval_ = popRewardSettlementInterval_;
         onBuilt();
         return result;
       }
@@ -27589,6 +27655,12 @@ public final class VeriBlockMessages {
         }
         if (other.hasFlatScoreRound()) {
           mergeFlatScoreRound(other.getFlatScoreRound());
+        }
+        if (other.getPopDifficultyAveragingInterval() != 0) {
+          setPopDifficultyAveragingInterval(other.getPopDifficultyAveragingInterval());
+        }
+        if (other.getPopRewardSettlementInterval() != 0) {
+          setPopRewardSettlementInterval(other.getPopRewardSettlementInterval());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -28344,6 +28416,58 @@ public final class VeriBlockMessages {
           flatScoreRound_ = null;
         }
         return flatScoreRoundBuilder_;
+      }
+
+      private int popDifficultyAveragingInterval_ ;
+      /**
+       * <code>int32 popDifficultyAveragingInterval = 10;</code>
+       */
+      public int getPopDifficultyAveragingInterval() {
+        return popDifficultyAveragingInterval_;
+      }
+      /**
+       * <code>int32 popDifficultyAveragingInterval = 10;</code>
+       */
+      public Builder setPopDifficultyAveragingInterval(int value) {
+        
+        popDifficultyAveragingInterval_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 popDifficultyAveragingInterval = 10;</code>
+       */
+      public Builder clearPopDifficultyAveragingInterval() {
+        
+        popDifficultyAveragingInterval_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int popRewardSettlementInterval_ ;
+      /**
+       * <code>int32 popRewardSettlementInterval = 11;</code>
+       */
+      public int getPopRewardSettlementInterval() {
+        return popRewardSettlementInterval_;
+      }
+      /**
+       * <code>int32 popRewardSettlementInterval = 11;</code>
+       */
+      public Builder setPopRewardSettlementInterval(int value) {
+        
+        popRewardSettlementInterval_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 popRewardSettlementInterval = 11;</code>
+       */
+      public Builder clearPopRewardSettlementInterval() {
+        
+        popRewardSettlementInterval_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -34600,6 +34724,794 @@ public final class VeriBlockMessages {
 
     @java.lang.Override
     public integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RewardsCalculatePopDifficultyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:VeriBlock.RewardsCalculatePopDifficultyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+     */
+    java.util.List<integration.api.grpc.VeriBlockMessages.AltChainBlock> 
+        getBlocksList();
+    /**
+     * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+     */
+    integration.api.grpc.VeriBlockMessages.AltChainBlock getBlocks(int index);
+    /**
+     * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+     */
+    int getBlocksCount();
+    /**
+     * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+     */
+    java.util.List<? extends integration.api.grpc.VeriBlockMessages.AltChainBlockOrBuilder> 
+        getBlocksOrBuilderList();
+    /**
+     * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+     */
+    integration.api.grpc.VeriBlockMessages.AltChainBlockOrBuilder getBlocksOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code VeriBlock.RewardsCalculatePopDifficultyRequest}
+   */
+  public  static final class RewardsCalculatePopDifficultyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:VeriBlock.RewardsCalculatePopDifficultyRequest)
+      RewardsCalculatePopDifficultyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RewardsCalculatePopDifficultyRequest.newBuilder() to construct.
+    private RewardsCalculatePopDifficultyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RewardsCalculatePopDifficultyRequest() {
+      blocks_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RewardsCalculatePopDifficultyRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RewardsCalculatePopDifficultyRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                blocks_ = new java.util.ArrayList<integration.api.grpc.VeriBlockMessages.AltChainBlock>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              blocks_.add(
+                  input.readMessage(integration.api.grpc.VeriBlockMessages.AltChainBlock.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          blocks_ = java.util.Collections.unmodifiableList(blocks_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return integration.api.grpc.VeriBlockMessages.internal_static_VeriBlock_RewardsCalculatePopDifficultyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return integration.api.grpc.VeriBlockMessages.internal_static_VeriBlock_RewardsCalculatePopDifficultyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.class, integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.Builder.class);
+    }
+
+    public static final int BLOCKS_FIELD_NUMBER = 1;
+    private java.util.List<integration.api.grpc.VeriBlockMessages.AltChainBlock> blocks_;
+    /**
+     * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+     */
+    public java.util.List<integration.api.grpc.VeriBlockMessages.AltChainBlock> getBlocksList() {
+      return blocks_;
+    }
+    /**
+     * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+     */
+    public java.util.List<? extends integration.api.grpc.VeriBlockMessages.AltChainBlockOrBuilder> 
+        getBlocksOrBuilderList() {
+      return blocks_;
+    }
+    /**
+     * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+     */
+    public int getBlocksCount() {
+      return blocks_.size();
+    }
+    /**
+     * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+     */
+    public integration.api.grpc.VeriBlockMessages.AltChainBlock getBlocks(int index) {
+      return blocks_.get(index);
+    }
+    /**
+     * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+     */
+    public integration.api.grpc.VeriBlockMessages.AltChainBlockOrBuilder getBlocksOrBuilder(
+        int index) {
+      return blocks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < blocks_.size(); i++) {
+        output.writeMessage(1, blocks_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < blocks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, blocks_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest)) {
+        return super.equals(obj);
+      }
+      integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest other = (integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest) obj;
+
+      if (!getBlocksList()
+          .equals(other.getBlocksList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBlocksCount() > 0) {
+        hash = (37 * hash) + BLOCKS_FIELD_NUMBER;
+        hash = (53 * hash) + getBlocksList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code VeriBlock.RewardsCalculatePopDifficultyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:VeriBlock.RewardsCalculatePopDifficultyRequest)
+        integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return integration.api.grpc.VeriBlockMessages.internal_static_VeriBlock_RewardsCalculatePopDifficultyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return integration.api.grpc.VeriBlockMessages.internal_static_VeriBlock_RewardsCalculatePopDifficultyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.class, integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.Builder.class);
+      }
+
+      // Construct using integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBlocksFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (blocksBuilder_ == null) {
+          blocks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          blocksBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return integration.api.grpc.VeriBlockMessages.internal_static_VeriBlock_RewardsCalculatePopDifficultyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest getDefaultInstanceForType() {
+        return integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest build() {
+        integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest buildPartial() {
+        integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest result = new integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest(this);
+        int from_bitField0_ = bitField0_;
+        if (blocksBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            blocks_ = java.util.Collections.unmodifiableList(blocks_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.blocks_ = blocks_;
+        } else {
+          result.blocks_ = blocksBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest) {
+          return mergeFrom((integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest other) {
+        if (other == integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.getDefaultInstance()) return this;
+        if (blocksBuilder_ == null) {
+          if (!other.blocks_.isEmpty()) {
+            if (blocks_.isEmpty()) {
+              blocks_ = other.blocks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBlocksIsMutable();
+              blocks_.addAll(other.blocks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.blocks_.isEmpty()) {
+            if (blocksBuilder_.isEmpty()) {
+              blocksBuilder_.dispose();
+              blocksBuilder_ = null;
+              blocks_ = other.blocks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              blocksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBlocksFieldBuilder() : null;
+            } else {
+              blocksBuilder_.addAllMessages(other.blocks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<integration.api.grpc.VeriBlockMessages.AltChainBlock> blocks_ =
+        java.util.Collections.emptyList();
+      private void ensureBlocksIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          blocks_ = new java.util.ArrayList<integration.api.grpc.VeriBlockMessages.AltChainBlock>(blocks_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          integration.api.grpc.VeriBlockMessages.AltChainBlock, integration.api.grpc.VeriBlockMessages.AltChainBlock.Builder, integration.api.grpc.VeriBlockMessages.AltChainBlockOrBuilder> blocksBuilder_;
+
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public java.util.List<integration.api.grpc.VeriBlockMessages.AltChainBlock> getBlocksList() {
+        if (blocksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(blocks_);
+        } else {
+          return blocksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public int getBlocksCount() {
+        if (blocksBuilder_ == null) {
+          return blocks_.size();
+        } else {
+          return blocksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public integration.api.grpc.VeriBlockMessages.AltChainBlock getBlocks(int index) {
+        if (blocksBuilder_ == null) {
+          return blocks_.get(index);
+        } else {
+          return blocksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public Builder setBlocks(
+          int index, integration.api.grpc.VeriBlockMessages.AltChainBlock value) {
+        if (blocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlocksIsMutable();
+          blocks_.set(index, value);
+          onChanged();
+        } else {
+          blocksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public Builder setBlocks(
+          int index, integration.api.grpc.VeriBlockMessages.AltChainBlock.Builder builderForValue) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          blocksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public Builder addBlocks(integration.api.grpc.VeriBlockMessages.AltChainBlock value) {
+        if (blocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlocksIsMutable();
+          blocks_.add(value);
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public Builder addBlocks(
+          int index, integration.api.grpc.VeriBlockMessages.AltChainBlock value) {
+        if (blocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlocksIsMutable();
+          blocks_.add(index, value);
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public Builder addBlocks(
+          integration.api.grpc.VeriBlockMessages.AltChainBlock.Builder builderForValue) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public Builder addBlocks(
+          int index, integration.api.grpc.VeriBlockMessages.AltChainBlock.Builder builderForValue) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public Builder addAllBlocks(
+          java.lang.Iterable<? extends integration.api.grpc.VeriBlockMessages.AltChainBlock> values) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, blocks_);
+          onChanged();
+        } else {
+          blocksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public Builder clearBlocks() {
+        if (blocksBuilder_ == null) {
+          blocks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          blocksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public Builder removeBlocks(int index) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.remove(index);
+          onChanged();
+        } else {
+          blocksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public integration.api.grpc.VeriBlockMessages.AltChainBlock.Builder getBlocksBuilder(
+          int index) {
+        return getBlocksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public integration.api.grpc.VeriBlockMessages.AltChainBlockOrBuilder getBlocksOrBuilder(
+          int index) {
+        if (blocksBuilder_ == null) {
+          return blocks_.get(index);  } else {
+          return blocksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public java.util.List<? extends integration.api.grpc.VeriBlockMessages.AltChainBlockOrBuilder> 
+           getBlocksOrBuilderList() {
+        if (blocksBuilder_ != null) {
+          return blocksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(blocks_);
+        }
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public integration.api.grpc.VeriBlockMessages.AltChainBlock.Builder addBlocksBuilder() {
+        return getBlocksFieldBuilder().addBuilder(
+            integration.api.grpc.VeriBlockMessages.AltChainBlock.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public integration.api.grpc.VeriBlockMessages.AltChainBlock.Builder addBlocksBuilder(
+          int index) {
+        return getBlocksFieldBuilder().addBuilder(
+            index, integration.api.grpc.VeriBlockMessages.AltChainBlock.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .VeriBlock.AltChainBlock blocks = 1;</code>
+       */
+      public java.util.List<integration.api.grpc.VeriBlockMessages.AltChainBlock.Builder> 
+           getBlocksBuilderList() {
+        return getBlocksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          integration.api.grpc.VeriBlockMessages.AltChainBlock, integration.api.grpc.VeriBlockMessages.AltChainBlock.Builder, integration.api.grpc.VeriBlockMessages.AltChainBlockOrBuilder> 
+          getBlocksFieldBuilder() {
+        if (blocksBuilder_ == null) {
+          blocksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              integration.api.grpc.VeriBlockMessages.AltChainBlock, integration.api.grpc.VeriBlockMessages.AltChainBlock.Builder, integration.api.grpc.VeriBlockMessages.AltChainBlockOrBuilder>(
+                  blocks_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          blocks_ = null;
+        }
+        return blocksBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:VeriBlock.RewardsCalculatePopDifficultyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:VeriBlock.RewardsCalculatePopDifficultyRequest)
+    private static final integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest();
+    }
+
+    public static integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RewardsCalculatePopDifficultyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RewardsCalculatePopDifficultyRequest>() {
+      @java.lang.Override
+      public RewardsCalculatePopDifficultyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RewardsCalculatePopDifficultyRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RewardsCalculatePopDifficultyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RewardsCalculatePopDifficultyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -51489,6 +52401,14 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest request,
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply> done);
 
+      /**
+       * <code>rpc RewardsCalculatePopDifficulty(.VeriBlock.RewardsCalculatePopDifficultyRequest) returns (.VeriBlock.RewardsCalculateScoreReply);</code>
+       */
+      public abstract void rewardsCalculatePopDifficulty(
+          com.google.protobuf.RpcController controller,
+          integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request,
+          com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> done);
+
     }
 
     public static com.google.protobuf.Service newReflectiveService(
@@ -51534,6 +52454,14 @@ public final class VeriBlockMessages {
           impl.rewardsCalculateOutputs(controller, request, done);
         }
 
+        @java.lang.Override
+        public  void rewardsCalculatePopDifficulty(
+            com.google.protobuf.RpcController controller,
+            integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request,
+            com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> done) {
+          impl.rewardsCalculatePopDifficulty(controller, request, done);
+        }
+
       };
     }
 
@@ -51566,6 +52494,8 @@ public final class VeriBlockMessages {
               return impl.rewardsCalculateScore(controller, (integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest)request);
             case 4:
               return impl.rewardsCalculateOutputs(controller, (integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest)request);
+            case 5:
+              return impl.rewardsCalculatePopDifficulty(controller, (integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest)request);
             default:
               throw new java.lang.AssertionError("Can't get here.");
           }
@@ -51590,6 +52520,8 @@ public final class VeriBlockMessages {
               return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest.getDefaultInstance();
             case 4:
               return integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest.getDefaultInstance();
+            case 5:
+              return integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.getDefaultInstance();
             default:
               throw new java.lang.AssertionError("Can't get here.");
           }
@@ -51614,6 +52546,8 @@ public final class VeriBlockMessages {
               return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance();
             case 4:
               return integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply.getDefaultInstance();
+            case 5:
+              return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance();
             default:
               throw new java.lang.AssertionError("Can't get here.");
           }
@@ -51662,6 +52596,14 @@ public final class VeriBlockMessages {
         integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest request,
         com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply> done);
 
+    /**
+     * <code>rpc RewardsCalculatePopDifficulty(.VeriBlock.RewardsCalculatePopDifficultyRequest) returns (.VeriBlock.RewardsCalculateScoreReply);</code>
+     */
+    public abstract void rewardsCalculatePopDifficulty(
+        com.google.protobuf.RpcController controller,
+        integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request,
+        com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> done);
+
     public static final
         com.google.protobuf.Descriptors.ServiceDescriptor
         getDescriptor() {
@@ -51709,6 +52651,11 @@ public final class VeriBlockMessages {
             com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply>specializeCallback(
               done));
           return;
+        case 5:
+          this.rewardsCalculatePopDifficulty(controller, (integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest)request,
+            com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply>specializeCallback(
+              done));
+          return;
         default:
           throw new java.lang.AssertionError("Can't get here.");
       }
@@ -51733,6 +52680,8 @@ public final class VeriBlockMessages {
           return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest.getDefaultInstance();
         case 4:
           return integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest.getDefaultInstance();
+        case 5:
+          return integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.getDefaultInstance();
         default:
           throw new java.lang.AssertionError("Can't get here.");
       }
@@ -51757,6 +52706,8 @@ public final class VeriBlockMessages {
           return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance();
         case 4:
           return integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply.getDefaultInstance();
+        case 5:
+          return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance();
         default:
           throw new java.lang.AssertionError("Can't get here.");
       }
@@ -51852,6 +52803,21 @@ public final class VeriBlockMessages {
             integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply.class,
             integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply.getDefaultInstance()));
       }
+
+      public  void rewardsCalculatePopDifficulty(
+          com.google.protobuf.RpcController controller,
+          integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request,
+          com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> done) {
+        channel.callMethod(
+          getDescriptor().getMethods().get(5),
+          controller,
+          request,
+          integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.class,
+            integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance()));
+      }
     }
 
     public static BlockingInterface newBlockingStub(
@@ -51883,6 +52849,11 @@ public final class VeriBlockMessages {
       public integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply rewardsCalculateOutputs(
           com.google.protobuf.RpcController controller,
           integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest request)
+          throws com.google.protobuf.ServiceException;
+
+      public integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply rewardsCalculatePopDifficulty(
+          com.google.protobuf.RpcController controller,
+          integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request)
           throws com.google.protobuf.ServiceException;
     }
 
@@ -51950,6 +52921,18 @@ public final class VeriBlockMessages {
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply.getDefaultInstance());
+      }
+
+
+      public integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply rewardsCalculatePopDifficulty(
+          com.google.protobuf.RpcController controller,
+          integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request)
+          throws com.google.protobuf.ServiceException {
+        return (integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(5),
+          controller,
+          request,
+          integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance());
       }
 
     }
@@ -56036,6 +57019,11 @@ public final class VeriBlockMessages {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_VeriBlock_RewardsCalculateOutputsReply_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VeriBlock_RewardsCalculatePopDifficultyRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_VeriBlock_RewardsCalculatePopDifficultyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_VeriBlock_BytesArrayRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -56241,7 +57229,7 @@ public final class VeriBlockMessages {
       "rmal\030\004 \001(\t\022-\n%aboveIntendedPayoutMultipl" +
       "ierKeystone\030\005 \001(\t\"$\n\023RelativeScoreConfig" +
       "\022\r\n\005score\030\001 \003(\t\"5\n\024FlatScoreRoundConfig\022" +
-      "\r\n\005round\030\001 \001(\005\022\016\n\006active\030\002 \001(\010\"\372\002\n\020Calcu" +
+      "\r\n\005round\030\001 \001(\005\022\016\n\006active\030\002 \001(\010\"\307\003\n\020Calcu" +
       "latorConfig\022\023\n\013basicReward\030\001 \001(\t\022\024\n\014payo" +
       "utRounds\030\002 \001(\005\022\025\n\rkeystoneRound\030\003 \001(\005\0220\n" +
       "\013roundRatios\030\004 \001(\0132\033.VeriBlock.RoundRati" +
@@ -56251,229 +57239,236 @@ public final class VeriBlockMessages {
       "ne\030\007 \001(\t\022@\n\030relativeScoreLookupTable\030\010 \001" +
       "(\0132\036.VeriBlock.RelativeScoreConfig\0227\n\016fl" +
       "atScoreRound\030\t \001(\0132\037.VeriBlock.FlatScore" +
-      "RoundConfig\"G\n\024SetCalculatorRequest\022/\n\nc" +
-      "alculator\030\001 \001(\0132\033.VeriBlock.CalculatorCo" +
-      "nfig\"n\n\022GetCalculatorReply\022\'\n\006result\030\001 \001" +
-      "(\0132\027.VeriBlock.GeneralReply\022/\n\ncalculato" +
-      "r\030\002 \001(\0132\033.VeriBlock.CalculatorConfig\"2\n\014" +
-      "RewardOutput\022\022\n\npayoutInfo\030\001 \001(\014\022\016\n\006rewa" +
-      "rd\030\002 \001(\t\"\203\001\n\034RewardsCalculateScoreReques" +
-      "t\022/\n\rendorsedBlock\030\001 \001(\0132\030.VeriBlock.Alt" +
-      "ChainBlock\0222\n\020endorsmentBlocks\030\002 \003(\0132\030.V" +
-      "eriBlock.AltChainBlock\"T\n\032RewardsCalcula" +
-      "teScoreReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock" +
-      ".GeneralReply\022\r\n\005score\030\002 \001(\t\"\261\001\n\036Rewards" +
-      "CalculateOutputsRequest\022\026\n\016blockAltHeigh" +
-      "t\030\001 \001(\005\022/\n\rendorsedBlock\030\002 \001(\0132\030.VeriBlo" +
-      "ck.AltChainBlock\0222\n\020endorsmentBlocks\030\003 \003" +
-      "(\0132\030.VeriBlock.AltChainBlock\022\022\n\ndifficul" +
-      "ty\030\004 \001(\t\"\233\001\n\034RewardsCalculateOutputsRepl" +
-      "y\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralRep" +
-      "ly\022\023\n\013totalReward\030\002 \001(\t\022\023\n\013blockReward\030\003" +
-      " \001(\t\022(\n\007outputs\030\004 \003(\0132\027.VeriBlock.Reward" +
-      "Output\"!\n\021BytesArrayRequest\022\014\n\004data\030\001 \001(" +
-      "\014\"H\n\017BytesArrayReply\022\'\n\006result\030\001 \001(\0132\027.V" +
-      "eriBlock.GeneralReply\022\014\n\004data\030\002 \001(\014\" \n\nM" +
-      "erklePath\022\022\n\nmerklePath\030\001 \001(\t\"8\n\021MerkleP" +
-      "athRequest\022\014\n\004data\030\001 \001(\014\022\025\n\007subject\030\002 \001(" +
-      "\014B\004\200\265\030\001\")\n\023VeriBlockMerklePath\022\022\n\nmerkle" +
-      "Path\030\001 \001(\t\"n\n\023AltPublicationReply\022\'\n\006res" +
-      "ult\030\001 \001(\0132\027.VeriBlock.GeneralReply\022.\n\013pu" +
-      "blication\030\002 \001(\0132\031.VeriBlock.AltPublicati" +
-      "on\"p\n\024PublicationDataReply\022\'\n\006result\030\001 \001" +
-      "(\0132\027.VeriBlock.GeneralReply\022/\n\013publicati" +
-      "on\030\002 \001(\0132\032.VeriBlock.PublicationData\"v\n\027" +
-      "BitcoinTransactionReply\022\'\n\006result\030\001 \001(\0132" +
-      "\027.VeriBlock.GeneralReply\0222\n\013transaction\030" +
-      "\002 \001(\0132\035.VeriBlock.BitcoinTransaction\"h\n\023" +
-      "VeriBlockBlockReply\022\'\n\006result\030\001 \001(\0132\027.Ve" +
-      "riBlock.GeneralReply\022(\n\005block\030\002 \001(\0132\031.Ve" +
-      "riBlock.VeriBlockBlock\"z\n\031VeriBlockTrans" +
-      "actionReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock." +
-      "GeneralReply\0224\n\013transaction\030\002 \001(\0132\037.Veri" +
-      "Block.VeriBlockTransaction\"z\n\031VeriBlockP" +
-      "ublicationReply\022\'\n\006result\030\001 \001(\0132\027.VeriBl" +
-      "ock.GeneralReply\0224\n\013publication\030\002 \001(\0132\037." +
-      "VeriBlock.VeriBlockPublication\"\200\001\n\034VeriB" +
-      "lockPoPTransactionReply\022\'\n\006result\030\001 \001(\0132" +
-      "\027.VeriBlock.GeneralReply\0227\n\013transaction\030" +
-      "\002 \001(\0132\".VeriBlock.VeriBlockPoPTransactio" +
-      "n\"Y\n\013OutputReply\022\'\n\006result\030\001 \001(\0132\027.VeriB" +
-      "lock.GeneralReply\022!\n\006output\030\002 \001(\0132\021.Veri" +
-      "Block.Output\"\\\n\014AddressReply\022\'\n\006result\030\001" +
-      " \001(\0132\027.VeriBlock.GeneralReply\022#\n\007address" +
-      "\030\002 \001(\0132\022.VeriBlock.Address\"d\n\021BitcoinBlo" +
-      "ckReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gene" +
-      "ralReply\022&\n\005block\030\002 \001(\0132\027.VeriBlock.Bitc" +
-      "oinBlock\"w\n\030VeriBlockMerklePathReply\022\'\n\006" +
-      "result\030\001 \001(\0132\027.VeriBlock.GeneralReply\0222\n" +
-      "\nmerklePath\030\002 \001(\0132\036.VeriBlock.VeriBlockM" +
-      "erklePath\"e\n\017MerklePathReply\022\'\n\006result\030\001" +
-      " \001(\0132\027.VeriBlock.GeneralReply\022)\n\nmerkleP" +
-      "ath\030\002 \001(\0132\025.VeriBlock.MerklePath\"M\n\rAltC" +
-      "hainBlock\022)\n\nblockIndex\030\001 \001(\0132\025.VeriBloc" +
-      "k.BlockIndex\022\021\n\ttimestamp\030\002 \001(\005\"m\n\022TwoBr" +
-      "anchesRequest\022*\n\010leftFork\030\001 \003(\0132\030.VeriBl" +
-      "ock.AltChainBlock\022+\n\trightFork\030\002 \003(\0132\030.V" +
-      "eriBlock.AltChainBlock\"Q\n\014CompareReply\022\'" +
+      "RoundConfig\022&\n\036popDifficultyAveragingInt" +
+      "erval\030\n \001(\005\022#\n\033popRewardSettlementInterv" +
+      "al\030\013 \001(\005\"G\n\024SetCalculatorRequest\022/\n\ncalc" +
+      "ulator\030\001 \001(\0132\033.VeriBlock.CalculatorConfi" +
+      "g\"n\n\022GetCalculatorReply\022\'\n\006result\030\001 \001(\0132" +
+      "\027.VeriBlock.GeneralReply\022/\n\ncalculator\030\002" +
+      " \001(\0132\033.VeriBlock.CalculatorConfig\"2\n\014Rew" +
+      "ardOutput\022\022\n\npayoutInfo\030\001 \001(\014\022\016\n\006reward\030" +
+      "\002 \001(\t\"\203\001\n\034RewardsCalculateScoreRequest\022/" +
+      "\n\rendorsedBlock\030\001 \001(\0132\030.VeriBlock.AltCha" +
+      "inBlock\0222\n\020endorsmentBlocks\030\002 \003(\0132\030.Veri" +
+      "Block.AltChainBlock\"T\n\032RewardsCalculateS" +
+      "coreReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Ge" +
+      "neralReply\022\r\n\005score\030\002 \001(\t\"\261\001\n\036RewardsCal" +
+      "culateOutputsRequest\022\026\n\016blockAltHeight\030\001" +
+      " \001(\005\022/\n\rendorsedBlock\030\002 \001(\0132\030.VeriBlock." +
+      "AltChainBlock\0222\n\020endorsmentBlocks\030\003 \003(\0132" +
+      "\030.VeriBlock.AltChainBlock\022\022\n\ndifficulty\030" +
+      "\004 \001(\t\"\233\001\n\034RewardsCalculateOutputsReply\022\'" +
       "\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralReply\022" +
-      "\030\n\020comparingsResult\030\002 \001(\005\"S\n\033Forkresolut" +
-      "ionConfigRequest\022\035\n\025keystoneFinalityDela" +
-      "y\030\001 \001(\005\022\025\n\ramnestyPeriod\030\002 \001(\0052\323\n\n\022Integ" +
-      "rationService\022C\n\rResetSecurity\022\027.VeriBlo" +
+      "\023\n\013totalReward\030\002 \001(\t\022\023\n\013blockReward\030\003 \001(" +
+      "\t\022(\n\007outputs\030\004 \003(\0132\027.VeriBlock.RewardOut" +
+      "put\"P\n$RewardsCalculatePopDifficultyRequ" +
+      "est\022(\n\006blocks\030\001 \003(\0132\030.VeriBlock.AltChain" +
+      "Block\"!\n\021BytesArrayRequest\022\014\n\004data\030\001 \001(\014" +
+      "\"H\n\017BytesArrayReply\022\'\n\006result\030\001 \001(\0132\027.Ve" +
+      "riBlock.GeneralReply\022\014\n\004data\030\002 \001(\014\" \n\nMe" +
+      "rklePath\022\022\n\nmerklePath\030\001 \001(\t\"8\n\021MerklePa" +
+      "thRequest\022\014\n\004data\030\001 \001(\014\022\025\n\007subject\030\002 \001(\014" +
+      "B\004\200\265\030\001\")\n\023VeriBlockMerklePath\022\022\n\nmerkleP" +
+      "ath\030\001 \001(\t\"n\n\023AltPublicationReply\022\'\n\006resu" +
+      "lt\030\001 \001(\0132\027.VeriBlock.GeneralReply\022.\n\013pub" +
+      "lication\030\002 \001(\0132\031.VeriBlock.AltPublicatio" +
+      "n\"p\n\024PublicationDataReply\022\'\n\006result\030\001 \001(" +
+      "\0132\027.VeriBlock.GeneralReply\022/\n\013publicatio" +
+      "n\030\002 \001(\0132\032.VeriBlock.PublicationData\"v\n\027B" +
+      "itcoinTransactionReply\022\'\n\006result\030\001 \001(\0132\027" +
+      ".VeriBlock.GeneralReply\0222\n\013transaction\030\002" +
+      " \001(\0132\035.VeriBlock.BitcoinTransaction\"h\n\023V" +
+      "eriBlockBlockReply\022\'\n\006result\030\001 \001(\0132\027.Ver" +
+      "iBlock.GeneralReply\022(\n\005block\030\002 \001(\0132\031.Ver" +
+      "iBlock.VeriBlockBlock\"z\n\031VeriBlockTransa" +
+      "ctionReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.G" +
+      "eneralReply\0224\n\013transaction\030\002 \001(\0132\037.VeriB" +
+      "lock.VeriBlockTransaction\"z\n\031VeriBlockPu" +
+      "blicationReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlo" +
+      "ck.GeneralReply\0224\n\013publication\030\002 \001(\0132\037.V" +
+      "eriBlock.VeriBlockPublication\"\200\001\n\034VeriBl" +
+      "ockPoPTransactionReply\022\'\n\006result\030\001 \001(\0132\027" +
+      ".VeriBlock.GeneralReply\0227\n\013transaction\030\002" +
+      " \001(\0132\".VeriBlock.VeriBlockPoPTransaction" +
+      "\"Y\n\013OutputReply\022\'\n\006result\030\001 \001(\0132\027.VeriBl" +
+      "ock.GeneralReply\022!\n\006output\030\002 \001(\0132\021.VeriB" +
+      "lock.Output\"\\\n\014AddressReply\022\'\n\006result\030\001 " +
+      "\001(\0132\027.VeriBlock.GeneralReply\022#\n\007address\030" +
+      "\002 \001(\0132\022.VeriBlock.Address\"d\n\021BitcoinBloc" +
+      "kReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gener" +
+      "alReply\022&\n\005block\030\002 \001(\0132\027.VeriBlock.Bitco" +
+      "inBlock\"w\n\030VeriBlockMerklePathReply\022\'\n\006r" +
+      "esult\030\001 \001(\0132\027.VeriBlock.GeneralReply\0222\n\n" +
+      "merklePath\030\002 \001(\0132\036.VeriBlock.VeriBlockMe" +
+      "rklePath\"e\n\017MerklePathReply\022\'\n\006result\030\001 " +
+      "\001(\0132\027.VeriBlock.GeneralReply\022)\n\nmerklePa" +
+      "th\030\002 \001(\0132\025.VeriBlock.MerklePath\"M\n\rAltCh" +
+      "ainBlock\022)\n\nblockIndex\030\001 \001(\0132\025.VeriBlock" +
+      ".BlockIndex\022\021\n\ttimestamp\030\002 \001(\005\"m\n\022TwoBra" +
+      "nchesRequest\022*\n\010leftFork\030\001 \003(\0132\030.VeriBlo" +
+      "ck.AltChainBlock\022+\n\trightFork\030\002 \003(\0132\030.Ve" +
+      "riBlock.AltChainBlock\"Q\n\014CompareReply\022\'\n" +
+      "\006result\030\001 \001(\0132\027.VeriBlock.GeneralReply\022\030" +
+      "\n\020comparingsResult\030\002 \001(\005\"S\n\033Forkresoluti" +
+      "onConfigRequest\022\035\n\025keystoneFinalityDelay" +
+      "\030\001 \001(\005\022\025\n\ramnestyPeriod\030\002 \001(\0052\323\n\n\022Integr" +
+      "ationService\022C\n\rResetSecurity\022\027.VeriBloc" +
+      "k.EmptyRequest\032\027.VeriBlock.GeneralReply\"" +
+      "\000\022K\n\023AddGenesisVeriBlock\022\031.VeriBlock.Ver" +
+      "iBlockBlock\032\027.VeriBlock.GeneralReply\"\000\022G" +
+      "\n\021AddGenesisBitcoin\022\027.VeriBlock.BitcoinB" +
+      "lock\032\027.VeriBlock.GeneralReply\"\000\022G\n\013AddPa" +
+      "yloads\022\035.VeriBlock.AddPayloadsRequest\032\027." +
+      "VeriBlock.GeneralReply\"\000\022M\n\016RemovePayloa" +
+      "ds\022 .VeriBlock.RemovePayloadsRequest\032\027.V" +
+      "eriBlock.GeneralReply\"\000\022Y\n\024AddTemporaryP" +
+      "ayloads\022&.VeriBlock.AddTemporaryPayloads" +
+      "Request\032\027.VeriBlock.GeneralReply\"\000\022L\n\026Cl" +
+      "earTemporaryPayloads\022\027.VeriBlock.EmptyRe" +
+      "quest\032\027.VeriBlock.GeneralReply\"\000\022N\n\014Simp" +
+      "lifyVTBs\022\036.VeriBlock.SimplifyVTBsRequest" +
+      "\032\034.VeriBlock.SimplifyVTBsReply\"\000\022K\n\023Chec" +
+      "kATVAgainstView\022\031.VeriBlock.AltPublicati" +
+      "on\032\027.VeriBlock.GeneralReply\"\000\022P\n\022CheckVT" +
+      "BInternally\022\037.VeriBlock.VeriBlockPublica" +
+      "tion\032\027.VeriBlock.GeneralReply\"\000\022J\n\022Check" +
+      "ATVInternally\022\031.VeriBlock.AltPublication" +
+      "\032\027.VeriBlock.GeneralReply\"\000\022[\n\025GetMainVB" +
+      "KHeightOfATV\022\031.VeriBlock.AltPublication\032" +
+      "%.VeriBlock.GetMainVBKHeightOfATVReply\"\000" +
+      "\022Z\n\033SetAltChainParametersConfig\022 .VeriBl" +
+      "ock.AltChainConfigRequest\032\027.VeriBlock.Ge" +
+      "neralReply\"\000\022f\n\025GetLastKnownVBKBlocks\022$." +
+      "VeriBlock.GetLastKnownBlocksRequest\032%.Ve" +
+      "riBlock.GetLastKnownVBKBlocksReply\"\000\022f\n\025" +
+      "GetLastKnownBTCBlocks\022$.VeriBlock.GetLas" +
+      "tKnownBlocksRequest\032%.VeriBlock.GetLastK" +
+      "nownBTCBlocksReply\"\000\022]\n\026SavePoPTransacti" +
+      "onData\022(.VeriBlock.SavePoPTransactionDat" +
+      "aRequest\032\027.VeriBlock.GeneralReply\"\0002\303\004\n\016" +
+      "RewardsService\022B\n\014ResetRewards\022\027.VeriBlo" +
       "ck.EmptyRequest\032\027.VeriBlock.GeneralReply" +
-      "\"\000\022K\n\023AddGenesisVeriBlock\022\031.VeriBlock.Ve" +
-      "riBlockBlock\032\027.VeriBlock.GeneralReply\"\000\022" +
-      "G\n\021AddGenesisBitcoin\022\027.VeriBlock.Bitcoin" +
-      "Block\032\027.VeriBlock.GeneralReply\"\000\022G\n\013AddP" +
-      "ayloads\022\035.VeriBlock.AddPayloadsRequest\032\027" +
-      ".VeriBlock.GeneralReply\"\000\022M\n\016RemovePaylo" +
-      "ads\022 .VeriBlock.RemovePayloadsRequest\032\027." +
-      "VeriBlock.GeneralReply\"\000\022Y\n\024AddTemporary" +
-      "Payloads\022&.VeriBlock.AddTemporaryPayload" +
-      "sRequest\032\027.VeriBlock.GeneralReply\"\000\022L\n\026C" +
-      "learTemporaryPayloads\022\027.VeriBlock.EmptyR" +
-      "equest\032\027.VeriBlock.GeneralReply\"\000\022N\n\014Sim" +
-      "plifyVTBs\022\036.VeriBlock.SimplifyVTBsReques" +
-      "t\032\034.VeriBlock.SimplifyVTBsReply\"\000\022K\n\023Che" +
-      "ckATVAgainstView\022\031.VeriBlock.AltPublicat" +
-      "ion\032\027.VeriBlock.GeneralReply\"\000\022P\n\022CheckV" +
-      "TBInternally\022\037.VeriBlock.VeriBlockPublic" +
-      "ation\032\027.VeriBlock.GeneralReply\"\000\022J\n\022Chec" +
-      "kATVInternally\022\031.VeriBlock.AltPublicatio" +
-      "n\032\027.VeriBlock.GeneralReply\"\000\022[\n\025GetMainV" +
-      "BKHeightOfATV\022\031.VeriBlock.AltPublication" +
-      "\032%.VeriBlock.GetMainVBKHeightOfATVReply\"" +
-      "\000\022Z\n\033SetAltChainParametersConfig\022 .VeriB" +
-      "lock.AltChainConfigRequest\032\027.VeriBlock.G" +
-      "eneralReply\"\000\022f\n\025GetLastKnownVBKBlocks\022$" +
-      ".VeriBlock.GetLastKnownBlocksRequest\032%.V" +
-      "eriBlock.GetLastKnownVBKBlocksReply\"\000\022f\n" +
-      "\025GetLastKnownBTCBlocks\022$.VeriBlock.GetLa" +
-      "stKnownBlocksRequest\032%.VeriBlock.GetLast" +
-      "KnownBTCBlocksReply\"\000\022]\n\026SavePoPTransact" +
-      "ionData\022(.VeriBlock.SavePoPTransactionDa" +
-      "taRequest\032\027.VeriBlock.GeneralReply\"\0002\310\003\n" +
-      "\016RewardsService\022B\n\014ResetRewards\022\027.VeriBl" +
-      "ock.EmptyRequest\032\027.VeriBlock.GeneralRepl" +
-      "y\"\000\022I\n\rGetCalculator\022\027.VeriBlock.EmptyRe" +
-      "quest\032\035.VeriBlock.GetCalculatorReply\"\000\022K" +
-      "\n\rSetCalculator\022\037.VeriBlock.SetCalculato" +
-      "rRequest\032\027.VeriBlock.GeneralReply\"\000\022i\n\025R" +
-      "ewardsCalculateScore\022\'.VeriBlock.Rewards" +
-      "CalculateScoreRequest\032%.VeriBlock.Reward" +
-      "sCalculateScoreReply\"\000\022o\n\027RewardsCalcula" +
-      "teOutputs\022).VeriBlock.RewardsCalculateOu" +
-      "tputsRequest\032\'.VeriBlock.RewardsCalculat" +
-      "eOutputsReply\"\0002\263\010\n\022DeserializeService\022U" +
-      "\n\023ParseAltPublication\022\034.VeriBlock.BytesA" +
-      "rrayRequest\032\036.VeriBlock.AltPublicationRe" +
-      "ply\"\000\022W\n\024ParsePublicationData\022\034.VeriBloc" +
-      "k.BytesArrayRequest\032\037.VeriBlock.Publicat" +
-      "ionDataReply\"\000\022]\n\027ParseBitcoinTransactio" +
-      "n\022\034.VeriBlock.BytesArrayRequest\032\".VeriBl" +
-      "ock.BitcoinTransactionReply\"\000\022U\n\023ParseVe" +
-      "riBlockBlock\022\034.VeriBlock.BytesArrayReque" +
-      "st\032\036.VeriBlock.VeriBlockBlockReply\"\000\022a\n\031" +
-      "ParseVeriBlockTransaction\022\034.VeriBlock.By" +
-      "tesArrayRequest\032$.VeriBlock.VeriBlockTra" +
-      "nsactionReply\"\000\022a\n\031ParseVeriBlockPublica" +
-      "tion\022\034.VeriBlock.BytesArrayRequest\032$.Ver" +
-      "iBlock.VeriBlockPublicationReply\"\000\022^\n\023Pa" +
-      "rseVeriBlockPopTx\022\034.VeriBlock.BytesArray" +
-      "Request\032\'.VeriBlock.VeriBlockPoPTransact" +
-      "ionReply\"\000\022E\n\013ParseOutput\022\034.VeriBlock.By" +
-      "tesArrayRequest\032\026.VeriBlock.OutputReply\"" +
-      "\000\022G\n\014ParseAddress\022\034.VeriBlock.BytesArray" +
-      "Request\032\027.VeriBlock.AddressReply\"\000\022Q\n\021Pa" +
-      "rseBitcoinBlock\022\034.VeriBlock.BytesArrayRe" +
-      "quest\032\034.VeriBlock.BitcoinBlockReply\"\000\022_\n" +
-      "\030ParseVeriBlockMerklePath\022\034.VeriBlock.By" +
-      "tesArrayRequest\032#.VeriBlock.VeriBlockMer" +
-      "klePathReply\"\000\022M\n\017ParseMerklePath\022\034.Veri" +
-      "Block.MerklePathRequest\032\032.VeriBlock.Merk" +
-      "lePathReply\"\0002\215\010\n\020SerializeService\022R\n\027Se" +
-      "rializeAltPublication\022\031.VeriBlock.AltPub" +
-      "lication\032\032.VeriBlock.BytesArrayReply\"\000\022T" +
-      "\n\030SerializePublicationData\022\032.VeriBlock.P" +
-      "ublicationData\032\032.VeriBlock.BytesArrayRep" +
-      "ly\"\000\022Z\n\033SerializeBitcoinTransaction\022\035.Ve" +
-      "riBlock.BitcoinTransaction\032\032.VeriBlock.B" +
-      "ytesArrayReply\"\000\022R\n\027SerializeVeriBlockBl" +
-      "ock\022\031.VeriBlock.VeriBlockBlock\032\032.VeriBlo" +
-      "ck.BytesArrayReply\"\000\022^\n\035SerializeVeriBlo" +
-      "ckTransaction\022\037.VeriBlock.VeriBlockTrans" +
-      "action\032\032.VeriBlock.BytesArrayReply\"\000\022^\n\035" +
-      "SerializeVeriBlockPublication\022\037.VeriBloc" +
-      "k.VeriBlockPublication\032\032.VeriBlock.Bytes" +
-      "ArrayReply\"\000\022[\n\027SerializeVeriBlockPopTx\022" +
-      "\".VeriBlock.VeriBlockPoPTransaction\032\032.Ve" +
-      "riBlock.BytesArrayReply\"\000\022B\n\017SerializeOu" +
-      "tput\022\021.VeriBlock.Output\032\032.VeriBlock.Byte" +
-      "sArrayReply\"\000\022D\n\020SerializeAddress\022\022.Veri" +
-      "Block.Address\032\032.VeriBlock.BytesArrayRepl" +
-      "y\"\000\022N\n\025SerializeBitcoinBlock\022\027.VeriBlock" +
-      ".BitcoinBlock\032\032.VeriBlock.BytesArrayRepl" +
-      "y\"\000\022\\\n\034SerializeVeriBlockMerklePath\022\036.Ve" +
-      "riBlock.VeriBlockMerklePath\032\032.VeriBlock." +
-      "BytesArrayReply\"\000\022J\n\023SerializeMerklePath" +
-      "\022\025.VeriBlock.MerklePath\032\032.VeriBlock.Byte" +
-      "sArrayReply\"\0002\271\r\n\021ValidationService\022U\n\024V" +
-      "erifyVeriBlockPoPTx\022\".VeriBlock.VeriBloc" +
-      "kPoPTransaction\032\027.VeriBlock.GeneralReply" +
-      "\"\000\022]\n\034CheckSignatureVeriBlockPoPTx\022\".Ver" +
-      "iBlock.VeriBlockPoPTransaction\032\027.VeriBlo" +
-      "ck.GeneralReply\"\000\022b\n!CheckBitcoinTransac" +
-      "tionForPoPData\022\".VeriBlock.VeriBlockPoPT" +
-      "ransaction\032\027.VeriBlock.GeneralReply\"\000\022e\n" +
-      "$CheckBitcoinMerklePathVeriBlockPoPTx\022\"." +
-      "VeriBlock.VeriBlockPoPTransaction\032\027.Veri" +
-      "Block.GeneralReply\"\000\022a\n CheckBitcoinBloc" +
-      "ksVeriBlockPoPTx\022\".VeriBlock.VeriBlockPo" +
+      "\"\000\022I\n\rGetCalculator\022\027.VeriBlock.EmptyReq" +
+      "uest\032\035.VeriBlock.GetCalculatorReply\"\000\022K\n" +
+      "\rSetCalculator\022\037.VeriBlock.SetCalculator" +
+      "Request\032\027.VeriBlock.GeneralReply\"\000\022i\n\025Re" +
+      "wardsCalculateScore\022\'.VeriBlock.RewardsC" +
+      "alculateScoreRequest\032%.VeriBlock.Rewards" +
+      "CalculateScoreReply\"\000\022o\n\027RewardsCalculat" +
+      "eOutputs\022).VeriBlock.RewardsCalculateOut" +
+      "putsRequest\032\'.VeriBlock.RewardsCalculate" +
+      "OutputsReply\"\000\022y\n\035RewardsCalculatePopDif" +
+      "ficulty\022/.VeriBlock.RewardsCalculatePopD" +
+      "ifficultyRequest\032%.VeriBlock.RewardsCalc" +
+      "ulateScoreReply\"\0002\263\010\n\022DeserializeService" +
+      "\022U\n\023ParseAltPublication\022\034.VeriBlock.Byte" +
+      "sArrayRequest\032\036.VeriBlock.AltPublication" +
+      "Reply\"\000\022W\n\024ParsePublicationData\022\034.VeriBl" +
+      "ock.BytesArrayRequest\032\037.VeriBlock.Public" +
+      "ationDataReply\"\000\022]\n\027ParseBitcoinTransact" +
+      "ion\022\034.VeriBlock.BytesArrayRequest\032\".Veri" +
+      "Block.BitcoinTransactionReply\"\000\022U\n\023Parse" +
+      "VeriBlockBlock\022\034.VeriBlock.BytesArrayReq" +
+      "uest\032\036.VeriBlock.VeriBlockBlockReply\"\000\022a" +
+      "\n\031ParseVeriBlockTransaction\022\034.VeriBlock." +
+      "BytesArrayRequest\032$.VeriBlock.VeriBlockT" +
+      "ransactionReply\"\000\022a\n\031ParseVeriBlockPubli" +
+      "cation\022\034.VeriBlock.BytesArrayRequest\032$.V" +
+      "eriBlock.VeriBlockPublicationReply\"\000\022^\n\023" +
+      "ParseVeriBlockPopTx\022\034.VeriBlock.BytesArr" +
+      "ayRequest\032\'.VeriBlock.VeriBlockPoPTransa" +
+      "ctionReply\"\000\022E\n\013ParseOutput\022\034.VeriBlock." +
+      "BytesArrayRequest\032\026.VeriBlock.OutputRepl" +
+      "y\"\000\022G\n\014ParseAddress\022\034.VeriBlock.BytesArr" +
+      "ayRequest\032\027.VeriBlock.AddressReply\"\000\022Q\n\021" +
+      "ParseBitcoinBlock\022\034.VeriBlock.BytesArray" +
+      "Request\032\034.VeriBlock.BitcoinBlockReply\"\000\022" +
+      "_\n\030ParseVeriBlockMerklePath\022\034.VeriBlock." +
+      "BytesArrayRequest\032#.VeriBlock.VeriBlockM" +
+      "erklePathReply\"\000\022M\n\017ParseMerklePath\022\034.Ve" +
+      "riBlock.MerklePathRequest\032\032.VeriBlock.Me" +
+      "rklePathReply\"\0002\215\010\n\020SerializeService\022R\n\027" +
+      "SerializeAltPublication\022\031.VeriBlock.AltP" +
+      "ublication\032\032.VeriBlock.BytesArrayReply\"\000" +
+      "\022T\n\030SerializePublicationData\022\032.VeriBlock" +
+      ".PublicationData\032\032.VeriBlock.BytesArrayR" +
+      "eply\"\000\022Z\n\033SerializeBitcoinTransaction\022\035." +
+      "VeriBlock.BitcoinTransaction\032\032.VeriBlock" +
+      ".BytesArrayReply\"\000\022R\n\027SerializeVeriBlock" +
+      "Block\022\031.VeriBlock.VeriBlockBlock\032\032.VeriB" +
+      "lock.BytesArrayReply\"\000\022^\n\035SerializeVeriB" +
+      "lockTransaction\022\037.VeriBlock.VeriBlockTra" +
+      "nsaction\032\032.VeriBlock.BytesArrayReply\"\000\022^" +
+      "\n\035SerializeVeriBlockPublication\022\037.VeriBl" +
+      "ock.VeriBlockPublication\032\032.VeriBlock.Byt" +
+      "esArrayReply\"\000\022[\n\027SerializeVeriBlockPopT" +
+      "x\022\".VeriBlock.VeriBlockPoPTransaction\032\032." +
+      "VeriBlock.BytesArrayReply\"\000\022B\n\017Serialize" +
+      "Output\022\021.VeriBlock.Output\032\032.VeriBlock.By" +
+      "tesArrayReply\"\000\022D\n\020SerializeAddress\022\022.Ve" +
+      "riBlock.Address\032\032.VeriBlock.BytesArrayRe" +
+      "ply\"\000\022N\n\025SerializeBitcoinBlock\022\027.VeriBlo" +
+      "ck.BitcoinBlock\032\032.VeriBlock.BytesArrayRe" +
+      "ply\"\000\022\\\n\034SerializeVeriBlockMerklePath\022\036." +
+      "VeriBlock.VeriBlockMerklePath\032\032.VeriBloc" +
+      "k.BytesArrayReply\"\000\022J\n\023SerializeMerklePa" +
+      "th\022\025.VeriBlock.MerklePath\032\032.VeriBlock.By" +
+      "tesArrayReply\"\0002\271\r\n\021ValidationService\022U\n" +
+      "\024VerifyVeriBlockPoPTx\022\".VeriBlock.VeriBl" +
+      "ockPoPTransaction\032\027.VeriBlock.GeneralRep" +
+      "ly\"\000\022]\n\034CheckSignatureVeriBlockPoPTx\022\".V" +
+      "eriBlock.VeriBlockPoPTransaction\032\027.VeriB" +
+      "lock.GeneralReply\"\000\022b\n!CheckBitcoinTrans" +
+      "actionForPoPData\022\".VeriBlock.VeriBlockPo" +
       "PTransaction\032\027.VeriBlock.GeneralReply\"\000\022" +
-      "X\n\032VerifyVeriBlockPublication\022\037.VeriBloc" +
-      "k.VeriBlockPublication\032\027.VeriBlock.Gener" +
-      "alReply\"\000\022]\n\037CheckBlocksVeriBlockPublica" +
-      "tion\022\037.VeriBlock.VeriBlockPublication\032\027." +
-      "VeriBlock.GeneralReply\"\000\022a\n#CheckMerkleP" +
-      "athVeriBlockPublication\022\037.VeriBlock.Veri" +
-      "BlockPublication\032\027.VeriBlock.GeneralRepl" +
-      "y\"\000\022X\n\032VerifyVeriBlockTransaction\022\037.Veri" +
-      "Block.VeriBlockTransaction\032\027.VeriBlock.G" +
-      "eneralReply\"\000\022`\n\"CheckSignatureVeriBlock" +
-      "Transaction\022\037.VeriBlock.VeriBlockTransac" +
-      "tion\032\027.VeriBlock.GeneralReply\"\000\022L\n\024Verif" +
-      "yVeriBlockBlock\022\031.VeriBlock.VeriBlockBlo" +
-      "ck\032\027.VeriBlock.GeneralReply\"\000\022V\n\036CheckPr" +
-      "oofOfWorkVeriBlockBlock\022\031.VeriBlock.Veri" +
-      "BlockBlock\032\027.VeriBlock.GeneralReply\"\000\022W\n" +
-      "\037CheckMaximumDriftVeriBlockBlock\022\031.VeriB" +
-      "lock.VeriBlockBlock\032\027.VeriBlock.GeneralR" +
-      "eply\"\000\022H\n\022VerifyBitcoinBlock\022\027.VeriBlock" +
-      ".BitcoinBlock\032\027.VeriBlock.GeneralReply\"\000" +
-      "\022R\n\034CheckProofOfWorkBitcoinBlock\022\027.VeriB" +
-      "lock.BitcoinBlock\032\027.VeriBlock.GeneralRep" +
-      "ly\"\000\022S\n\035CheckMaximumDriftBitcoinBlock\022\027." +
-      "VeriBlock.BitcoinBlock\032\027.VeriBlock.Gener" +
-      "alReply\"\000\022L\n\024VerifyAltPublication\022\031.Veri" +
-      "Block.AltPublication\032\027.VeriBlock.General" +
-      "Reply\"\000\022U\n\035CheckMerklePathAltPublication" +
-      "\022\031.VeriBlock.AltPublication\032\027.VeriBlock." +
-      "GeneralReply\"\000\022Q\n\031CheckBlocksAltPublicat" +
-      "ion\022\031.VeriBlock.AltPublication\032\027.VeriBlo" +
-      "ck.GeneralReply\"\0002\305\001\n\025ForkresolutionServ" +
-      "ice\022N\n\022CompareTwoBranches\022\035.VeriBlock.Tw" +
-      "oBranchesRequest\032\027.VeriBlock.CompareRepl" +
-      "y\"\000\022\\\n\027SetForkresolutionConfig\022&.VeriBlo" +
-      "ck.ForkresolutionConfigRequest\032\027.VeriBlo" +
-      "ck.GeneralReply\"\000:4\n\013hex_encoded\022\035.googl" +
-      "e.protobuf.FieldOptions\030\320\206\003 \001(\010:8\n\017addre" +
-      "ss_encoded\022\035.google.protobuf.FieldOption" +
-      "s\030\321\206\003 \001(\010:6\n\rascii_encoded\022\035.google.prot" +
-      "obuf.FieldOptions\030\322\206\003 \001(\010:5\n\014utf8_encode" +
-      "d\022\035.google.protobuf.FieldOptions\030\323\206\003 \001(\010" +
-      "B,\n\024integration.api.grpcB\021VeriBlockMessa" +
-      "ges\210\001\001b\006proto3"
+      "e\n$CheckBitcoinMerklePathVeriBlockPoPTx\022" +
+      "\".VeriBlock.VeriBlockPoPTransaction\032\027.Ve" +
+      "riBlock.GeneralReply\"\000\022a\n CheckBitcoinBl" +
+      "ocksVeriBlockPoPTx\022\".VeriBlock.VeriBlock" +
+      "PoPTransaction\032\027.VeriBlock.GeneralReply\"" +
+      "\000\022X\n\032VerifyVeriBlockPublication\022\037.VeriBl" +
+      "ock.VeriBlockPublication\032\027.VeriBlock.Gen" +
+      "eralReply\"\000\022]\n\037CheckBlocksVeriBlockPubli" +
+      "cation\022\037.VeriBlock.VeriBlockPublication\032" +
+      "\027.VeriBlock.GeneralReply\"\000\022a\n#CheckMerkl" +
+      "ePathVeriBlockPublication\022\037.VeriBlock.Ve" +
+      "riBlockPublication\032\027.VeriBlock.GeneralRe" +
+      "ply\"\000\022X\n\032VerifyVeriBlockTransaction\022\037.Ve" +
+      "riBlock.VeriBlockTransaction\032\027.VeriBlock" +
+      ".GeneralReply\"\000\022`\n\"CheckSignatureVeriBlo" +
+      "ckTransaction\022\037.VeriBlock.VeriBlockTrans" +
+      "action\032\027.VeriBlock.GeneralReply\"\000\022L\n\024Ver" +
+      "ifyVeriBlockBlock\022\031.VeriBlock.VeriBlockB" +
+      "lock\032\027.VeriBlock.GeneralReply\"\000\022V\n\036Check" +
+      "ProofOfWorkVeriBlockBlock\022\031.VeriBlock.Ve" +
+      "riBlockBlock\032\027.VeriBlock.GeneralReply\"\000\022" +
+      "W\n\037CheckMaximumDriftVeriBlockBlock\022\031.Ver" +
+      "iBlock.VeriBlockBlock\032\027.VeriBlock.Genera" +
+      "lReply\"\000\022H\n\022VerifyBitcoinBlock\022\027.VeriBlo" +
+      "ck.BitcoinBlock\032\027.VeriBlock.GeneralReply" +
+      "\"\000\022R\n\034CheckProofOfWorkBitcoinBlock\022\027.Ver" +
+      "iBlock.BitcoinBlock\032\027.VeriBlock.GeneralR" +
+      "eply\"\000\022S\n\035CheckMaximumDriftBitcoinBlock\022" +
+      "\027.VeriBlock.BitcoinBlock\032\027.VeriBlock.Gen" +
+      "eralReply\"\000\022L\n\024VerifyAltPublication\022\031.Ve" +
+      "riBlock.AltPublication\032\027.VeriBlock.Gener" +
+      "alReply\"\000\022U\n\035CheckMerklePathAltPublicati" +
+      "on\022\031.VeriBlock.AltPublication\032\027.VeriBloc" +
+      "k.GeneralReply\"\000\022Q\n\031CheckBlocksAltPublic" +
+      "ation\022\031.VeriBlock.AltPublication\032\027.VeriB" +
+      "lock.GeneralReply\"\0002\305\001\n\025ForkresolutionSe" +
+      "rvice\022N\n\022CompareTwoBranches\022\035.VeriBlock." +
+      "TwoBranchesRequest\032\027.VeriBlock.CompareRe" +
+      "ply\"\000\022\\\n\027SetForkresolutionConfig\022&.VeriB" +
+      "lock.ForkresolutionConfigRequest\032\027.VeriB" +
+      "lock.GeneralReply\"\000:4\n\013hex_encoded\022\035.goo" +
+      "gle.protobuf.FieldOptions\030\320\206\003 \001(\010:8\n\017add" +
+      "ress_encoded\022\035.google.protobuf.FieldOpti" +
+      "ons\030\321\206\003 \001(\010:6\n\rascii_encoded\022\035.google.pr" +
+      "otobuf.FieldOptions\030\322\206\003 \001(\010:5\n\014utf8_enco" +
+      "ded\022\035.google.protobuf.FieldOptions\030\323\206\003 \001" +
+      "(\010B,\n\024integration.api.grpcB\021VeriBlockMes" +
+      "sages\210\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56671,7 +57666,7 @@ public final class VeriBlockMessages {
     internal_static_VeriBlock_CalculatorConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_CalculatorConfig_descriptor,
-        new java.lang.String[] { "BasicReward", "PayoutRounds", "KeystoneRound", "RoundRatios", "RewardCurve", "MaxRewardThresholdNormal", "MaxRewardThresholdKeystone", "RelativeScoreLookupTable", "FlatScoreRound", });
+        new java.lang.String[] { "BasicReward", "PayoutRounds", "KeystoneRound", "RoundRatios", "RewardCurve", "MaxRewardThresholdNormal", "MaxRewardThresholdKeystone", "RelativeScoreLookupTable", "FlatScoreRound", "PopDifficultyAveragingInterval", "PopRewardSettlementInterval", });
     internal_static_VeriBlock_SetCalculatorRequest_descriptor =
       getDescriptor().getMessageTypes().get(32);
     internal_static_VeriBlock_SetCalculatorRequest_fieldAccessorTable = new
@@ -56714,128 +57709,134 @@ public final class VeriBlockMessages {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_RewardsCalculateOutputsReply_descriptor,
         new java.lang.String[] { "Result", "TotalReward", "BlockReward", "Outputs", });
-    internal_static_VeriBlock_BytesArrayRequest_descriptor =
+    internal_static_VeriBlock_RewardsCalculatePopDifficultyRequest_descriptor =
       getDescriptor().getMessageTypes().get(39);
+    internal_static_VeriBlock_RewardsCalculatePopDifficultyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_VeriBlock_RewardsCalculatePopDifficultyRequest_descriptor,
+        new java.lang.String[] { "Blocks", });
+    internal_static_VeriBlock_BytesArrayRequest_descriptor =
+      getDescriptor().getMessageTypes().get(40);
     internal_static_VeriBlock_BytesArrayRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_BytesArrayRequest_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_VeriBlock_BytesArrayReply_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_VeriBlock_BytesArrayReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_BytesArrayReply_descriptor,
         new java.lang.String[] { "Result", "Data", });
     internal_static_VeriBlock_MerklePath_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_VeriBlock_MerklePath_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_MerklePath_descriptor,
         new java.lang.String[] { "MerklePath", });
     internal_static_VeriBlock_MerklePathRequest_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_VeriBlock_MerklePathRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_MerklePathRequest_descriptor,
         new java.lang.String[] { "Data", "Subject", });
     internal_static_VeriBlock_VeriBlockMerklePath_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_VeriBlock_VeriBlockMerklePath_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_VeriBlockMerklePath_descriptor,
         new java.lang.String[] { "MerklePath", });
     internal_static_VeriBlock_AltPublicationReply_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_VeriBlock_AltPublicationReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_AltPublicationReply_descriptor,
         new java.lang.String[] { "Result", "Publication", });
     internal_static_VeriBlock_PublicationDataReply_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_VeriBlock_PublicationDataReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_PublicationDataReply_descriptor,
         new java.lang.String[] { "Result", "Publication", });
     internal_static_VeriBlock_BitcoinTransactionReply_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_VeriBlock_BitcoinTransactionReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_BitcoinTransactionReply_descriptor,
         new java.lang.String[] { "Result", "Transaction", });
     internal_static_VeriBlock_VeriBlockBlockReply_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_VeriBlock_VeriBlockBlockReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_VeriBlockBlockReply_descriptor,
         new java.lang.String[] { "Result", "Block", });
     internal_static_VeriBlock_VeriBlockTransactionReply_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_VeriBlock_VeriBlockTransactionReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_VeriBlockTransactionReply_descriptor,
         new java.lang.String[] { "Result", "Transaction", });
     internal_static_VeriBlock_VeriBlockPublicationReply_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_VeriBlock_VeriBlockPublicationReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_VeriBlockPublicationReply_descriptor,
         new java.lang.String[] { "Result", "Publication", });
     internal_static_VeriBlock_VeriBlockPoPTransactionReply_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_VeriBlock_VeriBlockPoPTransactionReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_VeriBlockPoPTransactionReply_descriptor,
         new java.lang.String[] { "Result", "Transaction", });
     internal_static_VeriBlock_OutputReply_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_VeriBlock_OutputReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_OutputReply_descriptor,
         new java.lang.String[] { "Result", "Output", });
     internal_static_VeriBlock_AddressReply_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_VeriBlock_AddressReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_AddressReply_descriptor,
         new java.lang.String[] { "Result", "Address", });
     internal_static_VeriBlock_BitcoinBlockReply_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_VeriBlock_BitcoinBlockReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_BitcoinBlockReply_descriptor,
         new java.lang.String[] { "Result", "Block", });
     internal_static_VeriBlock_VeriBlockMerklePathReply_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_VeriBlock_VeriBlockMerklePathReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_VeriBlockMerklePathReply_descriptor,
         new java.lang.String[] { "Result", "MerklePath", });
     internal_static_VeriBlock_MerklePathReply_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_VeriBlock_MerklePathReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_MerklePathReply_descriptor,
         new java.lang.String[] { "Result", "MerklePath", });
     internal_static_VeriBlock_AltChainBlock_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_VeriBlock_AltChainBlock_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_AltChainBlock_descriptor,
         new java.lang.String[] { "BlockIndex", "Timestamp", });
     internal_static_VeriBlock_TwoBranchesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_VeriBlock_TwoBranchesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_TwoBranchesRequest_descriptor,
         new java.lang.String[] { "LeftFork", "RightFork", });
     internal_static_VeriBlock_CompareReply_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_VeriBlock_CompareReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_CompareReply_descriptor,
         new java.lang.String[] { "Result", "ComparingsResult", });
     internal_static_VeriBlock_ForkresolutionConfigRequest_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_VeriBlock_ForkresolutionConfigRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VeriBlock_ForkresolutionConfigRequest_descriptor,
