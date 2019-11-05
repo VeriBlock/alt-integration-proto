@@ -28,11 +28,10 @@ extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::int
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MerklePath_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NetworkByte_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Output_integration_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PopEndorsement_integration_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PoPTransactionData_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PublicationData_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RelativeScoreConfig_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RewardCurveConfig_integration_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RewardEndorsement_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RewardOutput_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoundRatioConfig_integration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_integration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VeriBlockBlock_integration_2eproto;
@@ -89,6 +88,10 @@ class VeriBlockPublicationDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VeriBlockPublication> _instance;
 } _VeriBlockPublication_default_instance_;
+class PoPTransactionDataDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PoPTransactionData> _instance;
+} _PoPTransactionData_default_instance_;
 class EmptyRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<EmptyRequest> _instance;
@@ -141,6 +144,10 @@ class GetLastKnownBTCBlocksReplyDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetLastKnownBTCBlocksReply> _instance;
 } _GetLastKnownBTCBlocksReply_default_instance_;
+class SavePoPTransactionDataRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SavePoPTransactionDataRequest> _instance;
+} _SavePoPTransactionDataRequest_default_instance_;
 class RoundRatioConfigDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoundRatioConfig> _instance;
@@ -173,14 +180,6 @@ class RewardOutputDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RewardOutput> _instance;
 } _RewardOutput_default_instance_;
-class PopEndorsementDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PopEndorsement> _instance;
-} _PopEndorsement_default_instance_;
-class RewardEndorsementDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RewardEndorsement> _instance;
-} _RewardEndorsement_default_instance_;
 class RewardsCalculateScoreRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RewardsCalculateScoreRequest> _instance;
@@ -197,6 +196,10 @@ class RewardsCalculateOutputsReplyDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RewardsCalculateOutputsReply> _instance;
 } _RewardsCalculateOutputsReply_default_instance_;
+class RewardsCalculatePopDifficultyRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RewardsCalculatePopDifficultyRequest> _instance;
+} _RewardsCalculatePopDifficultyRequest_default_instance_;
 class BytesArrayRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BytesArrayRequest> _instance;
@@ -777,19 +780,21 @@ static void InitDefaultsscc_info_OutputReply_integration_2eproto() {
       &scc_info_GeneralReply_integration_2eproto.base,
       &scc_info_Output_integration_2eproto.base,}};
 
-static void InitDefaultsscc_info_PopEndorsement_integration_2eproto() {
+static void InitDefaultsscc_info_PoPTransactionData_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::VeriBlock::_PopEndorsement_default_instance_;
-    new (ptr) ::VeriBlock::PopEndorsement();
+    void* ptr = &::VeriBlock::_PoPTransactionData_default_instance_;
+    new (ptr) ::VeriBlock::PoPTransactionData();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::VeriBlock::PopEndorsement::InitAsDefaultInstance();
+  ::VeriBlock::PoPTransactionData::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PopEndorsement_integration_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_PopEndorsement_integration_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PoPTransactionData_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_PoPTransactionData_integration_2eproto}, {
+      &scc_info_AltPublication_integration_2eproto.base,
+      &scc_info_VeriBlockPublication_integration_2eproto.base,}};
 
 static void InitDefaultsscc_info_PublicationData_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -864,21 +869,6 @@ static void InitDefaultsscc_info_RewardCurveConfig_integration_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RewardCurveConfig_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_RewardCurveConfig_integration_2eproto}, {}};
 
-static void InitDefaultsscc_info_RewardEndorsement_integration_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::VeriBlock::_RewardEndorsement_default_instance_;
-    new (ptr) ::VeriBlock::RewardEndorsement();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::VeriBlock::RewardEndorsement::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RewardEndorsement_integration_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_RewardEndorsement_integration_2eproto}, {
-      &scc_info_PopEndorsement_integration_2eproto.base,}};
-
 static void InitDefaultsscc_info_RewardOutput_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -922,7 +912,22 @@ static void InitDefaultsscc_info_RewardsCalculateOutputsRequest_integration_2epr
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RewardsCalculateOutputsRequest_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_RewardsCalculateOutputsRequest_integration_2eproto}, {
-      &scc_info_RewardEndorsement_integration_2eproto.base,}};
+      &scc_info_AltChainBlock_integration_2eproto.base,}};
+
+static void InitDefaultsscc_info_RewardsCalculatePopDifficultyRequest_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_RewardsCalculatePopDifficultyRequest_default_instance_;
+    new (ptr) ::VeriBlock::RewardsCalculatePopDifficultyRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::RewardsCalculatePopDifficultyRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RewardsCalculatePopDifficultyRequest_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_RewardsCalculatePopDifficultyRequest_integration_2eproto}, {
+      &scc_info_AltChainBlock_integration_2eproto.base,}};
 
 static void InitDefaultsscc_info_RewardsCalculateScoreReply_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -952,7 +957,7 @@ static void InitDefaultsscc_info_RewardsCalculateScoreRequest_integration_2eprot
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RewardsCalculateScoreRequest_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_RewardsCalculateScoreRequest_integration_2eproto}, {
-      &scc_info_RewardEndorsement_integration_2eproto.base,}};
+      &scc_info_AltChainBlock_integration_2eproto.base,}};
 
 static void InitDefaultsscc_info_RoundRatioConfig_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -967,6 +972,22 @@ static void InitDefaultsscc_info_RoundRatioConfig_integration_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoundRatioConfig_integration_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_RoundRatioConfig_integration_2eproto}, {}};
+
+static void InitDefaultsscc_info_SavePoPTransactionDataRequest_integration_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::VeriBlock::_SavePoPTransactionDataRequest_default_instance_;
+    new (ptr) ::VeriBlock::SavePoPTransactionDataRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::VeriBlock::SavePoPTransactionDataRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_SavePoPTransactionDataRequest_integration_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_SavePoPTransactionDataRequest_integration_2eproto}, {
+      &scc_info_AltChainBlock_integration_2eproto.base,
+      &scc_info_PoPTransactionData_integration_2eproto.base,}};
 
 static void InitDefaultsscc_info_SetCalculatorRequest_integration_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -1191,7 +1212,7 @@ static void InitDefaultsscc_info_VeriBlockTransactionReply_integration_2eproto()
       &scc_info_GeneralReply_integration_2eproto.base,
       &scc_info_VeriBlockTransaction_integration_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_integration_2eproto[60];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_integration_2eproto[61];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_integration_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_integration_2eproto = nullptr;
 
@@ -1254,7 +1275,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockTransaction, sourceamount_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockTransaction, outputs_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockTransaction, signatureindex_),
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockTransaction, data_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockTransaction, publicationdata_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockTransaction, signature_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockTransaction, publickey_),
@@ -1311,6 +1331,14 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockPublication, merklepath_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockPublication, containingblock_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::VeriBlockPublication, context_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::PoPTransactionData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::PoPTransactionData, hash_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::PoPTransactionData, altpublication_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::PoPTransactionData, veriblockpublications_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::EmptyRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1398,6 +1426,14 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   PROTOBUF_FIELD_OFFSET(::VeriBlock::GetLastKnownBTCBlocksReply, result_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::GetLastKnownBTCBlocksReply, blocks_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::SavePoPTransactionDataRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::SavePoPTransactionDataRequest, containingblock_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::SavePoPTransactionDataRequest, endorsedblock_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::SavePoPTransactionDataRequest, poptx_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RoundRatioConfig, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -1434,13 +1470,14 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, basicreward_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, payoutrounds_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, keystoneround_),
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, keystoneinterval_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, roundratios_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, rewardcurve_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, maxrewardthresholdnormal_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, maxrewardthresholdkeystone_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, relativescorelookuptable_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, flatscoreround_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, popdifficultyaveraginginterval_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::CalculatorConfig, poprewardsettlementinterval_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::SetCalculatorRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1459,28 +1496,15 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardOutput, address_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardOutput, payoutinfo_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardOutput, reward_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::PopEndorsement, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::PopEndorsement, address_),
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::PopEndorsement, txid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardEndorsement, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardEndorsement, blockvbkheight_),
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardEndorsement, endorsementsinblock_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateScoreRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateScoreRequest, endorsementsforblock_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateScoreRequest, endorsedblock_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateScoreRequest, endorsmentblocks_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateScoreReply, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1494,7 +1518,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateOutputsRequest, blockaltheight_),
-  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateOutputsRequest, endorsementsforblock_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateOutputsRequest, endorsedblock_),
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateOutputsRequest, endorsmentblocks_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateOutputsRequest, difficulty_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateOutputsReply, _internal_metadata_),
@@ -1505,6 +1530,12 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_integration_2eproto::offsets[]
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateOutputsReply, totalreward_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateOutputsReply, blockreward_),
   PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculateOutputsReply, outputs_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculatePopDifficultyRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::VeriBlock::RewardsCalculatePopDifficultyRequest, blocks_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::VeriBlock::BytesArrayRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1657,60 +1688,61 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 26, -1, sizeof(::VeriBlock::VeriBlockBlock)},
   { 40, -1, sizeof(::VeriBlock::NetworkByte)},
   { 47, -1, sizeof(::VeriBlock::VeriBlockTransaction)},
-  { 63, -1, sizeof(::VeriBlock::Address)},
-  { 69, -1, sizeof(::VeriBlock::Coin)},
-  { 75, -1, sizeof(::VeriBlock::Output)},
-  { 82, -1, sizeof(::VeriBlock::AltPublication)},
-  { 91, -1, sizeof(::VeriBlock::VeriBlockPoPTransaction)},
-  { 106, -1, sizeof(::VeriBlock::VeriBlockPublication)},
-  { 115, -1, sizeof(::VeriBlock::EmptyRequest)},
-  { 120, -1, sizeof(::VeriBlock::GeneralReply)},
-  { 127, -1, sizeof(::VeriBlock::BlockIndex)},
-  { 134, -1, sizeof(::VeriBlock::AddPayloadsRequest)},
-  { 142, -1, sizeof(::VeriBlock::AddTemporaryPayloadsRequest)},
-  { 149, -1, sizeof(::VeriBlock::SimplifyVTBsRequest)},
-  { 155, -1, sizeof(::VeriBlock::SimplifyVTBsReply)},
-  { 162, -1, sizeof(::VeriBlock::GetMainVBKHeightOfATVReply)},
-  { 169, -1, sizeof(::VeriBlock::RemovePayloadsRequest)},
-  { 175, -1, sizeof(::VeriBlock::AltChainConfigRequest)},
-  { 181, -1, sizeof(::VeriBlock::GetLastKnownBlocksRequest)},
-  { 187, -1, sizeof(::VeriBlock::GetLastKnownVBKBlocksReply)},
-  { 194, -1, sizeof(::VeriBlock::GetLastKnownBTCBlocksReply)},
-  { 201, -1, sizeof(::VeriBlock::RoundRatioConfig)},
-  { 207, -1, sizeof(::VeriBlock::RewardCurveConfig)},
-  { 217, -1, sizeof(::VeriBlock::RelativeScoreConfig)},
-  { 223, -1, sizeof(::VeriBlock::FlatScoreRoundConfig)},
-  { 230, -1, sizeof(::VeriBlock::CalculatorConfig)},
-  { 245, -1, sizeof(::VeriBlock::SetCalculatorRequest)},
-  { 251, -1, sizeof(::VeriBlock::GetCalculatorReply)},
-  { 258, -1, sizeof(::VeriBlock::RewardOutput)},
-  { 265, -1, sizeof(::VeriBlock::PopEndorsement)},
-  { 272, -1, sizeof(::VeriBlock::RewardEndorsement)},
-  { 279, -1, sizeof(::VeriBlock::RewardsCalculateScoreRequest)},
-  { 285, -1, sizeof(::VeriBlock::RewardsCalculateScoreReply)},
-  { 292, -1, sizeof(::VeriBlock::RewardsCalculateOutputsRequest)},
-  { 300, -1, sizeof(::VeriBlock::RewardsCalculateOutputsReply)},
-  { 309, -1, sizeof(::VeriBlock::BytesArrayRequest)},
-  { 315, -1, sizeof(::VeriBlock::BytesArrayReply)},
-  { 322, -1, sizeof(::VeriBlock::MerklePath)},
-  { 328, -1, sizeof(::VeriBlock::MerklePathRequest)},
-  { 335, -1, sizeof(::VeriBlock::VeriBlockMerklePath)},
-  { 341, -1, sizeof(::VeriBlock::AltPublicationReply)},
-  { 348, -1, sizeof(::VeriBlock::PublicationDataReply)},
-  { 355, -1, sizeof(::VeriBlock::BitcoinTransactionReply)},
-  { 362, -1, sizeof(::VeriBlock::VeriBlockBlockReply)},
-  { 369, -1, sizeof(::VeriBlock::VeriBlockTransactionReply)},
-  { 376, -1, sizeof(::VeriBlock::VeriBlockPublicationReply)},
-  { 383, -1, sizeof(::VeriBlock::VeriBlockPoPTransactionReply)},
-  { 390, -1, sizeof(::VeriBlock::OutputReply)},
-  { 397, -1, sizeof(::VeriBlock::AddressReply)},
-  { 404, -1, sizeof(::VeriBlock::BitcoinBlockReply)},
-  { 411, -1, sizeof(::VeriBlock::VeriBlockMerklePathReply)},
-  { 418, -1, sizeof(::VeriBlock::MerklePathReply)},
-  { 425, -1, sizeof(::VeriBlock::AltChainBlock)},
-  { 432, -1, sizeof(::VeriBlock::TwoBranchesRequest)},
-  { 439, -1, sizeof(::VeriBlock::CompareReply)},
-  { 446, -1, sizeof(::VeriBlock::ForkresolutionConfigRequest)},
+  { 62, -1, sizeof(::VeriBlock::Address)},
+  { 68, -1, sizeof(::VeriBlock::Coin)},
+  { 74, -1, sizeof(::VeriBlock::Output)},
+  { 81, -1, sizeof(::VeriBlock::AltPublication)},
+  { 90, -1, sizeof(::VeriBlock::VeriBlockPoPTransaction)},
+  { 105, -1, sizeof(::VeriBlock::VeriBlockPublication)},
+  { 114, -1, sizeof(::VeriBlock::PoPTransactionData)},
+  { 122, -1, sizeof(::VeriBlock::EmptyRequest)},
+  { 127, -1, sizeof(::VeriBlock::GeneralReply)},
+  { 134, -1, sizeof(::VeriBlock::BlockIndex)},
+  { 141, -1, sizeof(::VeriBlock::AddPayloadsRequest)},
+  { 149, -1, sizeof(::VeriBlock::AddTemporaryPayloadsRequest)},
+  { 156, -1, sizeof(::VeriBlock::SimplifyVTBsRequest)},
+  { 162, -1, sizeof(::VeriBlock::SimplifyVTBsReply)},
+  { 169, -1, sizeof(::VeriBlock::GetMainVBKHeightOfATVReply)},
+  { 176, -1, sizeof(::VeriBlock::RemovePayloadsRequest)},
+  { 182, -1, sizeof(::VeriBlock::AltChainConfigRequest)},
+  { 188, -1, sizeof(::VeriBlock::GetLastKnownBlocksRequest)},
+  { 194, -1, sizeof(::VeriBlock::GetLastKnownVBKBlocksReply)},
+  { 201, -1, sizeof(::VeriBlock::GetLastKnownBTCBlocksReply)},
+  { 208, -1, sizeof(::VeriBlock::SavePoPTransactionDataRequest)},
+  { 216, -1, sizeof(::VeriBlock::RoundRatioConfig)},
+  { 222, -1, sizeof(::VeriBlock::RewardCurveConfig)},
+  { 232, -1, sizeof(::VeriBlock::RelativeScoreConfig)},
+  { 238, -1, sizeof(::VeriBlock::FlatScoreRoundConfig)},
+  { 245, -1, sizeof(::VeriBlock::CalculatorConfig)},
+  { 261, -1, sizeof(::VeriBlock::SetCalculatorRequest)},
+  { 267, -1, sizeof(::VeriBlock::GetCalculatorReply)},
+  { 274, -1, sizeof(::VeriBlock::RewardOutput)},
+  { 281, -1, sizeof(::VeriBlock::RewardsCalculateScoreRequest)},
+  { 288, -1, sizeof(::VeriBlock::RewardsCalculateScoreReply)},
+  { 295, -1, sizeof(::VeriBlock::RewardsCalculateOutputsRequest)},
+  { 304, -1, sizeof(::VeriBlock::RewardsCalculateOutputsReply)},
+  { 313, -1, sizeof(::VeriBlock::RewardsCalculatePopDifficultyRequest)},
+  { 319, -1, sizeof(::VeriBlock::BytesArrayRequest)},
+  { 325, -1, sizeof(::VeriBlock::BytesArrayReply)},
+  { 332, -1, sizeof(::VeriBlock::MerklePath)},
+  { 338, -1, sizeof(::VeriBlock::MerklePathRequest)},
+  { 345, -1, sizeof(::VeriBlock::VeriBlockMerklePath)},
+  { 351, -1, sizeof(::VeriBlock::AltPublicationReply)},
+  { 358, -1, sizeof(::VeriBlock::PublicationDataReply)},
+  { 365, -1, sizeof(::VeriBlock::BitcoinTransactionReply)},
+  { 372, -1, sizeof(::VeriBlock::VeriBlockBlockReply)},
+  { 379, -1, sizeof(::VeriBlock::VeriBlockTransactionReply)},
+  { 386, -1, sizeof(::VeriBlock::VeriBlockPublicationReply)},
+  { 393, -1, sizeof(::VeriBlock::VeriBlockPoPTransactionReply)},
+  { 400, -1, sizeof(::VeriBlock::OutputReply)},
+  { 407, -1, sizeof(::VeriBlock::AddressReply)},
+  { 414, -1, sizeof(::VeriBlock::BitcoinBlockReply)},
+  { 421, -1, sizeof(::VeriBlock::VeriBlockMerklePathReply)},
+  { 428, -1, sizeof(::VeriBlock::MerklePathReply)},
+  { 435, -1, sizeof(::VeriBlock::AltChainBlock)},
+  { 442, -1, sizeof(::VeriBlock::TwoBranchesRequest)},
+  { 449, -1, sizeof(::VeriBlock::CompareReply)},
+  { 456, -1, sizeof(::VeriBlock::ForkresolutionConfigRequest)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -1726,6 +1758,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_AltPublication_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_VeriBlockPoPTransaction_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_VeriBlockPublication_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_PoPTransactionData_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_EmptyRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_GeneralReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_BlockIndex_default_instance_),
@@ -1739,6 +1772,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_GetLastKnownBlocksRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_GetLastKnownVBKBlocksReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_GetLastKnownBTCBlocksReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_SavePoPTransactionDataRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RoundRatioConfig_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RewardCurveConfig_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RelativeScoreConfig_default_instance_),
@@ -1747,12 +1781,11 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_SetCalculatorRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_GetCalculatorReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RewardOutput_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_PopEndorsement_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RewardEndorsement_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RewardsCalculateScoreRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RewardsCalculateScoreReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RewardsCalculateOutputsRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RewardsCalculateOutputsReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_RewardsCalculatePopDifficultyRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_BytesArrayRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_BytesArrayReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::VeriBlock::_MerklePath_default_instance_),
@@ -1793,312 +1826,327 @@ const char descriptor_table_protodef_integration_2eproto[] PROTOBUF_SECTION_VARI
   "\030\006 \001(\014B\004\200\265\030\001\022\021\n\ttimestamp\030\007 \001(\005\022\022\n\ndiffi"
   "culty\030\010 \001(\005\022\r\n\005nonce\030\t \001(\005\"6\n\013NetworkByt"
   "e\022\022\n\nbyteExists\030\001 \001(\010\022\023\n\013networkByte\030\002 \001"
-  "(\005\"\354\002\n\024VeriBlockTransaction\022\020\n\002id\030\001 \001(\014B"
+  "(\005\"\330\002\n\024VeriBlockTransaction\022\020\n\002id\030\001 \001(\014B"
   "\004\200\265\030\001\022\014\n\004type\030\002 \001(\005\022)\n\rsourceAddress\030\003 \001"
   "(\0132\022.VeriBlock.Address\022%\n\014sourceAmount\030\004"
   " \001(\0132\017.VeriBlock.Coin\022\"\n\007outputs\030\005 \003(\0132\021"
   ".VeriBlock.Output\022\026\n\016signatureIndex\030\006 \001("
-  "\003\022\022\n\004data\030\007 \001(\014B\004\200\265\030\001\0223\n\017publicationData"
-  "\030\010 \001(\0132\032.VeriBlock.PublicationData\022\027\n\tsi"
-  "gnature\030\t \001(\014B\004\200\265\030\001\022\027\n\tpublicKey\030\n \001(\014B\004"
-  "\200\265\030\001\022+\n\013networkByte\030\013 \001(\0132\026.VeriBlock.Ne"
-  "tworkByte\"\032\n\007Address\022\017\n\007address\030\001 \001(\t\"\033\n"
-  "\004Coin\022\023\n\013atomicUnits\030\001 \001(\003\"N\n\006Output\022#\n\007"
-  "address\030\001 \001(\0132\022.VeriBlock.Address\022\037\n\006amo"
-  "unt\030\002 \001(\0132\017.VeriBlock.Coin\"\272\001\n\016AltPublic"
-  "ation\0224\n\013transaction\030\001 \001(\0132\037.VeriBlock.V"
-  "eriBlockTransaction\022\022\n\nmerklePath\030\002 \001(\t\022"
-  "2\n\017containingBlock\030\003 \001(\0132\031.VeriBlock.Ver"
-  "iBlockBlock\022*\n\007context\030\004 \003(\0132\031.VeriBlock"
-  ".VeriBlockBlock\"\226\003\n\027VeriBlockPoPTransact"
-  "ion\022\020\n\002id\030\001 \001(\014B\004\200\265\030\001\022#\n\007address\030\002 \001(\0132\022"
-  ".VeriBlock.Address\0221\n\016publishedBlock\030\003 \001"
-  "(\0132\031.VeriBlock.VeriBlockBlock\0229\n\022bitcoin"
-  "Transaction\030\004 \001(\0132\035.VeriBlock.BitcoinTra"
-  "nsaction\022\022\n\nmerklePath\030\005 \001(\t\022-\n\014blockOfP"
-  "roof\030\006 \001(\0132\027.VeriBlock.BitcoinBlock\0224\n\023b"
-  "lockOfProofContext\030\007 \003(\0132\027.VeriBlock.Bit"
-  "coinBlock\022\027\n\tsignature\030\010 \001(\014B\004\200\265\030\001\022\027\n\tpu"
-  "blicKey\030\t \001(\014B\004\200\265\030\001\022+\n\013networkByte\030\n \001(\013"
-  "2\026.VeriBlock.NetworkByte\"\303\001\n\024VeriBlockPu"
-  "blication\0227\n\013transaction\030\001 \001(\0132\".VeriBlo"
-  "ck.VeriBlockPoPTransaction\022\022\n\nmerklePath"
-  "\030\002 \001(\t\0222\n\017containingBlock\030\003 \001(\0132\031.VeriBl"
-  "ock.VeriBlockBlock\022*\n\007context\030\004 \003(\0132\031.Ve"
-  "riBlock.VeriBlockBlock\"\016\n\014EmptyRequest\"5"
-  "\n\014GeneralReply\022\016\n\006result\030\001 \001(\010\022\025\n\rresult"
-  "Message\030\002 \001(\t\"*\n\nBlockIndex\022\016\n\006height\030\001 "
-  "\001(\003\022\014\n\004hash\030\002 \001(\t\"\263\001\n\022AddPayloadsRequest"
-  "\022)\n\nblockIndex\030\001 \001(\0132\025.VeriBlock.BlockIn"
-  "dex\022>\n\025veriblockPublications\030\002 \003(\0132\037.Ver"
+  "\003\0223\n\017publicationData\030\010 \001(\0132\032.VeriBlock.P"
+  "ublicationData\022\027\n\tsignature\030\t \001(\014B\004\200\265\030\001\022"
+  "\027\n\tpublicKey\030\n \001(\014B\004\200\265\030\001\022+\n\013networkByte\030"
+  "\013 \001(\0132\026.VeriBlock.NetworkByte\"\032\n\007Address"
+  "\022\017\n\007address\030\001 \001(\t\"\033\n\004Coin\022\023\n\013atomicUnits"
+  "\030\001 \001(\003\"N\n\006Output\022#\n\007address\030\001 \001(\0132\022.Veri"
+  "Block.Address\022\037\n\006amount\030\002 \001(\0132\017.VeriBloc"
+  "k.Coin\"\272\001\n\016AltPublication\0224\n\013transaction"
+  "\030\001 \001(\0132\037.VeriBlock.VeriBlockTransaction\022"
+  "\022\n\nmerklePath\030\002 \001(\t\0222\n\017containingBlock\030\003"
+  " \001(\0132\031.VeriBlock.VeriBlockBlock\022*\n\007conte"
+  "xt\030\004 \003(\0132\031.VeriBlock.VeriBlockBlock\"\226\003\n\027"
+  "VeriBlockPoPTransaction\022\020\n\002id\030\001 \001(\014B\004\200\265\030"
+  "\001\022#\n\007address\030\002 \001(\0132\022.VeriBlock.Address\0221"
+  "\n\016publishedBlock\030\003 \001(\0132\031.VeriBlock.VeriB"
+  "lockBlock\0229\n\022bitcoinTransaction\030\004 \001(\0132\035."
+  "VeriBlock.BitcoinTransaction\022\022\n\nmerklePa"
+  "th\030\005 \001(\t\022-\n\014blockOfProof\030\006 \001(\0132\027.VeriBlo"
+  "ck.BitcoinBlock\0224\n\023blockOfProofContext\030\007"
+  " \003(\0132\027.VeriBlock.BitcoinBlock\022\027\n\tsignatu"
+  "re\030\010 \001(\014B\004\200\265\030\001\022\027\n\tpublicKey\030\t \001(\014B\004\200\265\030\001\022"
+  "+\n\013networkByte\030\n \001(\0132\026.VeriBlock.Network"
+  "Byte\"\303\001\n\024VeriBlockPublication\0227\n\013transac"
+  "tion\030\001 \001(\0132\".VeriBlock.VeriBlockPoPTrans"
+  "action\022\022\n\nmerklePath\030\002 \001(\t\0222\n\017containing"
+  "Block\030\003 \001(\0132\031.VeriBlock.VeriBlockBlock\022*"
+  "\n\007context\030\004 \003(\0132\031.VeriBlock.VeriBlockBlo"
+  "ck\"\225\001\n\022PoPTransactionData\022\014\n\004hash\030\001 \001(\t\022"
+  "1\n\016altPublication\030\002 \001(\0132\031.VeriBlock.AltP"
+  "ublication\022>\n\025veriblockPublications\030\003 \003("
+  "\0132\037.VeriBlock.VeriBlockPublication\"\016\n\014Em"
+  "ptyRequest\"5\n\014GeneralReply\022\016\n\006result\030\001 \001"
+  "(\010\022\025\n\rresultMessage\030\002 \001(\t\"*\n\nBlockIndex\022"
+  "\016\n\006height\030\001 \001(\003\022\014\n\004hash\030\002 \001(\t\"\263\001\n\022AddPay"
+  "loadsRequest\022)\n\nblockIndex\030\001 \001(\0132\025.VeriB"
+  "lock.BlockIndex\022>\n\025veriblockPublications"
+  "\030\002 \003(\0132\037.VeriBlock.VeriBlockPublication\022"
+  "2\n\017altPublications\030\003 \003(\0132\031.VeriBlock.Alt"
+  "Publication\"\221\001\n\033AddTemporaryPayloadsRequ"
+  "est\022>\n\025veriblockPublications\030\001 \003(\0132\037.Ver"
   "iBlock.VeriBlockPublication\0222\n\017altPublic"
-  "ations\030\003 \003(\0132\031.VeriBlock.AltPublication\""
-  "\221\001\n\033AddTemporaryPayloadsRequest\022>\n\025verib"
-  "lockPublications\030\001 \003(\0132\037.VeriBlock.VeriB"
-  "lockPublication\0222\n\017altPublications\030\002 \003(\013"
-  "2\031.VeriBlock.AltPublication\"U\n\023SimplifyV"
-  "TBsRequest\022>\n\025veriblockPublications\030\001 \003("
-  "\0132\037.VeriBlock.VeriBlockPublication\"|\n\021Si"
-  "mplifyVTBsReply\022\'\n\006result\030\001 \001(\0132\027.VeriBl"
-  "ock.GeneralReply\022>\n\025veriblockPublication"
-  "s\030\002 \003(\0132\037.VeriBlock.VeriBlockPublication"
-  "\"U\n\032GetMainVBKHeightOfATVReply\022\'\n\006result"
-  "\030\001 \001(\0132\027.VeriBlock.GeneralReply\022\016\n\006heigh"
-  "t\030\002 \001(\005\"B\n\025RemovePayloadsRequest\022)\n\nbloc"
-  "kIndex\030\001 \001(\0132\025.VeriBlock.BlockIndex\"1\n\025A"
-  "ltChainConfigRequest\022\030\n\020keystoneInterval"
-  "\030\001 \001(\005\"2\n\031GetLastKnownBlocksRequest\022\025\n\rm"
-  "axBlockCount\030\001 \001(\005\"[\n\032GetLastKnownVBKBlo"
-  "cksReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gen"
-  "eralReply\022\024\n\006blocks\030\002 \003(\014B\004\200\265\030\001\"[\n\032GetLa"
-  "stKnownBTCBlocksReply\022\'\n\006result\030\001 \001(\0132\027."
-  "VeriBlock.GeneralReply\022\024\n\006blocks\030\002 \003(\014B\004"
-  "\200\265\030\001\"&\n\020RoundRatioConfig\022\022\n\nroundRatio\030\001"
-  " \003(\t\"\332\001\n\021RewardCurveConfig\022\035\n\025startOfDec"
-  "reasingLine\030\001 \001(\t\022#\n\033widthOfDecreasingLi"
-  "neNormal\030\002 \001(\t\022%\n\035widthOfDecreasingLineK"
-  "eystone\030\003 \001(\t\022+\n#aboveIntendedPayoutMult"
-  "iplierNormal\030\004 \001(\t\022-\n%aboveIntendedPayou"
-  "tMultiplierKeystone\030\005 \001(\t\"$\n\023RelativeSco"
-  "reConfig\022\r\n\005score\030\001 \003(\t\"5\n\024FlatScoreRoun"
-  "dConfig\022\r\n\005round\030\001 \001(\005\022\016\n\006active\030\002 \001(\010\"\224"
-  "\003\n\020CalculatorConfig\022\023\n\013basicReward\030\001 \001(\t"
-  "\022\024\n\014payoutRounds\030\002 \001(\005\022\025\n\rkeystoneRound\030"
-  "\003 \001(\005\022\030\n\020keystoneInterval\030\004 \001(\005\0220\n\013round"
-  "Ratios\030\005 \001(\0132\033.VeriBlock.RoundRatioConfi"
-  "g\0221\n\013rewardCurve\030\006 \001(\0132\034.VeriBlock.Rewar"
-  "dCurveConfig\022 \n\030maxRewardThresholdNormal"
-  "\030\007 \001(\t\022\"\n\032maxRewardThresholdKeystone\030\010 \001"
-  "(\t\022@\n\030relativeScoreLookupTable\030\t \001(\0132\036.V"
-  "eriBlock.RelativeScoreConfig\0227\n\016flatScor"
-  "eRound\030\n \001(\0132\037.VeriBlock.FlatScoreRoundC"
-  "onfig\"G\n\024SetCalculatorRequest\022/\n\ncalcula"
-  "tor\030\001 \001(\0132\033.VeriBlock.CalculatorConfig\"n"
-  "\n\022GetCalculatorReply\022\'\n\006result\030\001 \001(\0132\027.V"
-  "eriBlock.GeneralReply\022/\n\ncalculator\030\002 \001("
-  "\0132\033.VeriBlock.CalculatorConfig\"/\n\014Reward"
-  "Output\022\017\n\007address\030\001 \001(\t\022\016\n\006reward\030\002 \001(\t\""
-  "/\n\016PopEndorsement\022\017\n\007address\030\001 \001(\t\022\014\n\004tx"
-  "id\030\002 \001(\t\"c\n\021RewardEndorsement\022\026\n\016blockVb"
-  "kHeight\030\001 \001(\005\0226\n\023endorsementsInBlock\030\002 \003"
-  "(\0132\031.VeriBlock.PopEndorsement\"Z\n\034Rewards"
-  "CalculateScoreRequest\022:\n\024endorsementsFor"
-  "Block\030\001 \003(\0132\034.VeriBlock.RewardEndorsemen"
-  "t\"T\n\032RewardsCalculateScoreReply\022\'\n\006resul"
-  "t\030\001 \001(\0132\027.VeriBlock.GeneralReply\022\r\n\005scor"
-  "e\030\002 \001(\t\"\210\001\n\036RewardsCalculateOutputsReque"
-  "st\022\026\n\016blockAltHeight\030\001 \001(\005\022:\n\024endorsemen"
-  "tsForBlock\030\002 \003(\0132\034.VeriBlock.RewardEndor"
-  "sement\022\022\n\ndifficulty\030\003 \001(\t\"\233\001\n\034RewardsCa"
-  "lculateOutputsReply\022\'\n\006result\030\001 \001(\0132\027.Ve"
-  "riBlock.GeneralReply\022\023\n\013totalReward\030\002 \001("
-  "\t\022\023\n\013blockReward\030\003 \001(\t\022(\n\007outputs\030\004 \003(\0132"
-  "\027.VeriBlock.RewardOutput\"!\n\021BytesArrayRe"
-  "quest\022\014\n\004data\030\001 \001(\014\"H\n\017BytesArrayReply\022\'"
+  "ations\030\002 \003(\0132\031.VeriBlock.AltPublication\""
+  "U\n\023SimplifyVTBsRequest\022>\n\025veriblockPubli"
+  "cations\030\001 \003(\0132\037.VeriBlock.VeriBlockPubli"
+  "cation\"|\n\021SimplifyVTBsReply\022\'\n\006result\030\001 "
+  "\001(\0132\027.VeriBlock.GeneralReply\022>\n\025veribloc"
+  "kPublications\030\002 \003(\0132\037.VeriBlock.VeriBloc"
+  "kPublication\"U\n\032GetMainVBKHeightOfATVRep"
+  "ly\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralRe"
+  "ply\022\016\n\006height\030\002 \001(\005\"B\n\025RemovePayloadsReq"
+  "uest\022)\n\nblockIndex\030\001 \001(\0132\025.VeriBlock.Blo"
+  "ckIndex\"1\n\025AltChainConfigRequest\022\030\n\020keys"
+  "toneInterval\030\001 \001(\005\"2\n\031GetLastKnownBlocks"
+  "Request\022\025\n\rmaxBlockCount\030\001 \001(\005\"[\n\032GetLas"
+  "tKnownVBKBlocksReply\022\'\n\006result\030\001 \001(\0132\027.V"
+  "eriBlock.GeneralReply\022\024\n\006blocks\030\002 \003(\014B\004\200"
+  "\265\030\001\"[\n\032GetLastKnownBTCBlocksReply\022\'\n\006res"
+  "ult\030\001 \001(\0132\027.VeriBlock.GeneralReply\022\024\n\006bl"
+  "ocks\030\002 \003(\014B\004\200\265\030\001\"\261\001\n\035SavePoPTransactionD"
+  "ataRequest\0221\n\017containingBlock\030\001 \001(\0132\030.Ve"
+  "riBlock.AltChainBlock\022/\n\rendorsedBlock\030\002"
+  " \001(\0132\030.VeriBlock.AltChainBlock\022,\n\005popTx\030"
+  "\003 \001(\0132\035.VeriBlock.PoPTransactionData\"&\n\020"
+  "RoundRatioConfig\022\022\n\nroundRatio\030\001 \003(\t\"\332\001\n"
+  "\021RewardCurveConfig\022\035\n\025startOfDecreasingL"
+  "ine\030\001 \001(\t\022#\n\033widthOfDecreasingLineNormal"
+  "\030\002 \001(\t\022%\n\035widthOfDecreasingLineKeystone\030"
+  "\003 \001(\t\022+\n#aboveIntendedPayoutMultiplierNo"
+  "rmal\030\004 \001(\t\022-\n%aboveIntendedPayoutMultipl"
+  "ierKeystone\030\005 \001(\t\"$\n\023RelativeScoreConfig"
+  "\022\r\n\005score\030\001 \003(\t\"5\n\024FlatScoreRoundConfig\022"
+  "\r\n\005round\030\001 \001(\005\022\016\n\006active\030\002 \001(\010\"\307\003\n\020Calcu"
+  "latorConfig\022\023\n\013basicReward\030\001 \001(\t\022\024\n\014payo"
+  "utRounds\030\002 \001(\005\022\025\n\rkeystoneRound\030\003 \001(\005\0220\n"
+  "\013roundRatios\030\004 \001(\0132\033.VeriBlock.RoundRati"
+  "oConfig\0221\n\013rewardCurve\030\005 \001(\0132\034.VeriBlock"
+  ".RewardCurveConfig\022 \n\030maxRewardThreshold"
+  "Normal\030\006 \001(\t\022\"\n\032maxRewardThresholdKeysto"
+  "ne\030\007 \001(\t\022@\n\030relativeScoreLookupTable\030\010 \001"
+  "(\0132\036.VeriBlock.RelativeScoreConfig\0227\n\016fl"
+  "atScoreRound\030\t \001(\0132\037.VeriBlock.FlatScore"
+  "RoundConfig\022&\n\036popDifficultyAveragingInt"
+  "erval\030\n \001(\005\022#\n\033popRewardSettlementInterv"
+  "al\030\013 \001(\005\"G\n\024SetCalculatorRequest\022/\n\ncalc"
+  "ulator\030\001 \001(\0132\033.VeriBlock.CalculatorConfi"
+  "g\"n\n\022GetCalculatorReply\022\'\n\006result\030\001 \001(\0132"
+  "\027.VeriBlock.GeneralReply\022/\n\ncalculator\030\002"
+  " \001(\0132\033.VeriBlock.CalculatorConfig\"2\n\014Rew"
+  "ardOutput\022\022\n\npayoutInfo\030\001 \001(\014\022\016\n\006reward\030"
+  "\002 \001(\t\"\203\001\n\034RewardsCalculateScoreRequest\022/"
+  "\n\rendorsedBlock\030\001 \001(\0132\030.VeriBlock.AltCha"
+  "inBlock\0222\n\020endorsmentBlocks\030\002 \003(\0132\030.Veri"
+  "Block.AltChainBlock\"T\n\032RewardsCalculateS"
+  "coreReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Ge"
+  "neralReply\022\r\n\005score\030\002 \001(\t\"\261\001\n\036RewardsCal"
+  "culateOutputsRequest\022\026\n\016blockAltHeight\030\001"
+  " \001(\005\022/\n\rendorsedBlock\030\002 \001(\0132\030.VeriBlock."
+  "AltChainBlock\0222\n\020endorsmentBlocks\030\003 \003(\0132"
+  "\030.VeriBlock.AltChainBlock\022\022\n\ndifficulty\030"
+  "\004 \001(\t\"\233\001\n\034RewardsCalculateOutputsReply\022\'"
   "\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralReply\022"
-  "\014\n\004data\030\002 \001(\014\" \n\nMerklePath\022\022\n\nmerklePat"
-  "h\030\001 \001(\t\"8\n\021MerklePathRequest\022\014\n\004data\030\001 \001"
-  "(\014\022\025\n\007subject\030\002 \001(\014B\004\200\265\030\001\")\n\023VeriBlockMe"
-  "rklePath\022\022\n\nmerklePath\030\001 \001(\t\"n\n\023AltPubli"
-  "cationReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock."
-  "GeneralReply\022.\n\013publication\030\002 \001(\0132\031.Veri"
-  "Block.AltPublication\"p\n\024PublicationDataR"
-  "eply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.General"
-  "Reply\022/\n\013publication\030\002 \001(\0132\032.VeriBlock.P"
-  "ublicationData\"v\n\027BitcoinTransactionRepl"
-  "y\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralRep"
-  "ly\0222\n\013transaction\030\002 \001(\0132\035.VeriBlock.Bitc"
-  "oinTransaction\"h\n\023VeriBlockBlockReply\022\'\n"
-  "\006result\030\001 \001(\0132\027.VeriBlock.GeneralReply\022("
-  "\n\005block\030\002 \001(\0132\031.VeriBlock.VeriBlockBlock"
-  "\"z\n\031VeriBlockTransactionReply\022\'\n\006result\030"
-  "\001 \001(\0132\027.VeriBlock.GeneralReply\0224\n\013transa"
-  "ction\030\002 \001(\0132\037.VeriBlock.VeriBlockTransac"
-  "tion\"z\n\031VeriBlockPublicationReply\022\'\n\006res"
-  "ult\030\001 \001(\0132\027.VeriBlock.GeneralReply\0224\n\013pu"
-  "blication\030\002 \001(\0132\037.VeriBlock.VeriBlockPub"
-  "lication\"\200\001\n\034VeriBlockPoPTransactionRepl"
-  "y\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.GeneralRep"
-  "ly\0227\n\013transaction\030\002 \001(\0132\".VeriBlock.Veri"
-  "BlockPoPTransaction\"Y\n\013OutputReply\022\'\n\006re"
-  "sult\030\001 \001(\0132\027.VeriBlock.GeneralReply\022!\n\006o"
-  "utput\030\002 \001(\0132\021.VeriBlock.Output\"\\\n\014Addres"
-  "sReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gener"
-  "alReply\022#\n\007address\030\002 \001(\0132\022.VeriBlock.Add"
-  "ress\"d\n\021BitcoinBlockReply\022\'\n\006result\030\001 \001("
-  "\0132\027.VeriBlock.GeneralReply\022&\n\005block\030\002 \001("
-  "\0132\027.VeriBlock.BitcoinBlock\"w\n\030VeriBlockM"
-  "erklePathReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlo"
-  "ck.GeneralReply\0222\n\nmerklePath\030\002 \001(\0132\036.Ve"
-  "riBlock.VeriBlockMerklePath\"e\n\017MerklePat"
-  "hReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gener"
-  "alReply\022)\n\nmerklePath\030\002 \001(\0132\025.VeriBlock."
-  "MerklePath\"M\n\rAltChainBlock\022)\n\nblockInde"
-  "x\030\001 \001(\0132\025.VeriBlock.BlockIndex\022\021\n\ttimest"
-  "amp\030\002 \001(\005\"m\n\022TwoBranchesRequest\022*\n\010leftF"
-  "ork\030\001 \003(\0132\030.VeriBlock.AltChainBlock\022+\n\tr"
-  "ightFork\030\002 \003(\0132\030.VeriBlock.AltChainBlock"
-  "\"Q\n\014CompareReply\022\'\n\006result\030\001 \001(\0132\027.VeriB"
-  "lock.GeneralReply\022\030\n\020comparingsResult\030\002 "
-  "\001(\005\"S\n\033ForkresolutionConfigRequest\022\035\n\025ke"
-  "ystoneFinalityDelay\030\001 \001(\005\022\025\n\ramnestyPeri"
-  "od\030\002 \001(\0052\364\t\n\022IntegrationService\022C\n\rReset"
-  "Security\022\027.VeriBlock.EmptyRequest\032\027.Veri"
-  "Block.GeneralReply\"\000\022K\n\023AddGenesisVeriBl"
-  "ock\022\031.VeriBlock.VeriBlockBlock\032\027.VeriBlo"
-  "ck.GeneralReply\"\000\022G\n\021AddGenesisBitcoin\022\027"
-  ".VeriBlock.BitcoinBlock\032\027.VeriBlock.Gene"
-  "ralReply\"\000\022G\n\013AddPayloads\022\035.VeriBlock.Ad"
-  "dPayloadsRequest\032\027.VeriBlock.GeneralRepl"
-  "y\"\000\022M\n\016RemovePayloads\022 .VeriBlock.Remove"
-  "PayloadsRequest\032\027.VeriBlock.GeneralReply"
-  "\"\000\022Y\n\024AddTemporaryPayloads\022&.VeriBlock.A"
-  "ddTemporaryPayloadsRequest\032\027.VeriBlock.G"
-  "eneralReply\"\000\022L\n\026ClearTemporaryPayloads\022"
-  "\027.VeriBlock.EmptyRequest\032\027.VeriBlock.Gen"
-  "eralReply\"\000\022N\n\014SimplifyVTBs\022\036.VeriBlock."
-  "SimplifyVTBsRequest\032\034.VeriBlock.Simplify"
-  "VTBsReply\"\000\022K\n\023CheckATVAgainstView\022\031.Ver"
-  "iBlock.AltPublication\032\027.VeriBlock.Genera"
-  "lReply\"\000\022P\n\022CheckVTBInternally\022\037.VeriBlo"
-  "ck.VeriBlockPublication\032\027.VeriBlock.Gene"
-  "ralReply\"\000\022J\n\022CheckATVInternally\022\031.VeriB"
-  "lock.AltPublication\032\027.VeriBlock.GeneralR"
-  "eply\"\000\022[\n\025GetMainVBKHeightOfATV\022\031.VeriBl"
-  "ock.AltPublication\032%.VeriBlock.GetMainVB"
-  "KHeightOfATVReply\"\000\022Z\n\033SetAltChainParame"
-  "tersConfig\022 .VeriBlock.AltChainConfigReq"
-  "uest\032\027.VeriBlock.GeneralReply\"\000\022f\n\025GetLa"
-  "stKnownVBKBlocks\022$.VeriBlock.GetLastKnow"
-  "nBlocksRequest\032%.VeriBlock.GetLastKnownV"
-  "BKBlocksReply\"\000\022f\n\025GetLastKnownBTCBlocks"
-  "\022$.VeriBlock.GetLastKnownBlocksRequest\032%"
-  ".VeriBlock.GetLastKnownBTCBlocksReply\"\0002"
-  "\310\003\n\016RewardsService\022B\n\014ResetRewards\022\027.Ver"
-  "iBlock.EmptyRequest\032\027.VeriBlock.GeneralR"
-  "eply\"\000\022I\n\rGetCalculator\022\027.VeriBlock.Empt"
-  "yRequest\032\035.VeriBlock.GetCalculatorReply\""
-  "\000\022K\n\rSetCalculator\022\037.VeriBlock.SetCalcul"
-  "atorRequest\032\027.VeriBlock.GeneralReply\"\000\022i"
-  "\n\025RewardsCalculateScore\022\'.VeriBlock.Rewa"
-  "rdsCalculateScoreRequest\032%.VeriBlock.Rew"
-  "ardsCalculateScoreReply\"\000\022o\n\027RewardsCalc"
-  "ulateOutputs\022).VeriBlock.RewardsCalculat"
-  "eOutputsRequest\032\'.VeriBlock.RewardsCalcu"
-  "lateOutputsReply\"\0002\263\010\n\022DeserializeServic"
-  "e\022U\n\023ParseAltPublication\022\034.VeriBlock.Byt"
-  "esArrayRequest\032\036.VeriBlock.AltPublicatio"
-  "nReply\"\000\022W\n\024ParsePublicationData\022\034.VeriB"
-  "lock.BytesArrayRequest\032\037.VeriBlock.Publi"
-  "cationDataReply\"\000\022]\n\027ParseBitcoinTransac"
-  "tion\022\034.VeriBlock.BytesArrayRequest\032\".Ver"
-  "iBlock.BitcoinTransactionReply\"\000\022U\n\023Pars"
-  "eVeriBlockBlock\022\034.VeriBlock.BytesArrayRe"
-  "quest\032\036.VeriBlock.VeriBlockBlockReply\"\000\022"
-  "a\n\031ParseVeriBlockTransaction\022\034.VeriBlock"
-  ".BytesArrayRequest\032$.VeriBlock.VeriBlock"
-  "TransactionReply\"\000\022a\n\031ParseVeriBlockPubl"
-  "ication\022\034.VeriBlock.BytesArrayRequest\032$."
-  "VeriBlock.VeriBlockPublicationReply\"\000\022^\n"
-  "\023ParseVeriBlockPopTx\022\034.VeriBlock.BytesAr"
-  "rayRequest\032\'.VeriBlock.VeriBlockPoPTrans"
-  "actionReply\"\000\022E\n\013ParseOutput\022\034.VeriBlock"
-  ".BytesArrayRequest\032\026.VeriBlock.OutputRep"
-  "ly\"\000\022G\n\014ParseAddress\022\034.VeriBlock.BytesAr"
-  "rayRequest\032\027.VeriBlock.AddressReply\"\000\022Q\n"
-  "\021ParseBitcoinBlock\022\034.VeriBlock.BytesArra"
-  "yRequest\032\034.VeriBlock.BitcoinBlockReply\"\000"
-  "\022_\n\030ParseVeriBlockMerklePath\022\034.VeriBlock"
-  ".BytesArrayRequest\032#.VeriBlock.VeriBlock"
-  "MerklePathReply\"\000\022M\n\017ParseMerklePath\022\034.V"
-  "eriBlock.MerklePathRequest\032\032.VeriBlock.M"
-  "erklePathReply\"\0002\215\010\n\020SerializeService\022R\n"
-  "\027SerializeAltPublication\022\031.VeriBlock.Alt"
-  "Publication\032\032.VeriBlock.BytesArrayReply\""
-  "\000\022T\n\030SerializePublicationData\022\032.VeriBloc"
-  "k.PublicationData\032\032.VeriBlock.BytesArray"
-  "Reply\"\000\022Z\n\033SerializeBitcoinTransaction\022\035"
-  ".VeriBlock.BitcoinTransaction\032\032.VeriBloc"
-  "k.BytesArrayReply\"\000\022R\n\027SerializeVeriBloc"
-  "kBlock\022\031.VeriBlock.VeriBlockBlock\032\032.Veri"
-  "Block.BytesArrayReply\"\000\022^\n\035SerializeVeri"
-  "BlockTransaction\022\037.VeriBlock.VeriBlockTr"
-  "ansaction\032\032.VeriBlock.BytesArrayReply\"\000\022"
-  "^\n\035SerializeVeriBlockPublication\022\037.VeriB"
-  "lock.VeriBlockPublication\032\032.VeriBlock.By"
-  "tesArrayReply\"\000\022[\n\027SerializeVeriBlockPop"
-  "Tx\022\".VeriBlock.VeriBlockPoPTransaction\032\032"
-  ".VeriBlock.BytesArrayReply\"\000\022B\n\017Serializ"
-  "eOutput\022\021.VeriBlock.Output\032\032.VeriBlock.B"
-  "ytesArrayReply\"\000\022D\n\020SerializeAddress\022\022.V"
-  "eriBlock.Address\032\032.VeriBlock.BytesArrayR"
-  "eply\"\000\022N\n\025SerializeBitcoinBlock\022\027.VeriBl"
-  "ock.BitcoinBlock\032\032.VeriBlock.BytesArrayR"
-  "eply\"\000\022\\\n\034SerializeVeriBlockMerklePath\022\036"
-  ".VeriBlock.VeriBlockMerklePath\032\032.VeriBlo"
-  "ck.BytesArrayReply\"\000\022J\n\023SerializeMerkleP"
-  "ath\022\025.VeriBlock.MerklePath\032\032.VeriBlock.B"
-  "ytesArrayReply\"\0002\271\r\n\021ValidationService\022U"
-  "\n\024VerifyVeriBlockPoPTx\022\".VeriBlock.VeriB"
-  "lockPoPTransaction\032\027.VeriBlock.GeneralRe"
-  "ply\"\000\022]\n\034CheckSignatureVeriBlockPoPTx\022\"."
-  "VeriBlock.VeriBlockPoPTransaction\032\027.Veri"
-  "Block.GeneralReply\"\000\022b\n!CheckBitcoinTran"
-  "sactionForPoPData\022\".VeriBlock.VeriBlockP"
-  "oPTransaction\032\027.VeriBlock.GeneralReply\"\000"
-  "\022e\n$CheckBitcoinMerklePathVeriBlockPoPTx"
-  "\022\".VeriBlock.VeriBlockPoPTransaction\032\027.V"
-  "eriBlock.GeneralReply\"\000\022a\n CheckBitcoinB"
-  "locksVeriBlockPoPTx\022\".VeriBlock.VeriBloc"
-  "kPoPTransaction\032\027.VeriBlock.GeneralReply"
-  "\"\000\022X\n\032VerifyVeriBlockPublication\022\037.VeriB"
-  "lock.VeriBlockPublication\032\027.VeriBlock.Ge"
-  "neralReply\"\000\022]\n\037CheckBlocksVeriBlockPubl"
-  "ication\022\037.VeriBlock.VeriBlockPublication"
-  "\032\027.VeriBlock.GeneralReply\"\000\022a\n#CheckMerk"
-  "lePathVeriBlockPublication\022\037.VeriBlock.V"
-  "eriBlockPublication\032\027.VeriBlock.GeneralR"
-  "eply\"\000\022X\n\032VerifyVeriBlockTransaction\022\037.V"
-  "eriBlock.VeriBlockTransaction\032\027.VeriBloc"
-  "k.GeneralReply\"\000\022`\n\"CheckSignatureVeriBl"
-  "ockTransaction\022\037.VeriBlock.VeriBlockTran"
-  "saction\032\027.VeriBlock.GeneralReply\"\000\022L\n\024Ve"
-  "rifyVeriBlockBlock\022\031.VeriBlock.VeriBlock"
-  "Block\032\027.VeriBlock.GeneralReply\"\000\022V\n\036Chec"
-  "kProofOfWorkVeriBlockBlock\022\031.VeriBlock.V"
-  "eriBlockBlock\032\027.VeriBlock.GeneralReply\"\000"
-  "\022W\n\037CheckMaximumDriftVeriBlockBlock\022\031.Ve"
-  "riBlock.VeriBlockBlock\032\027.VeriBlock.Gener"
-  "alReply\"\000\022H\n\022VerifyBitcoinBlock\022\027.VeriBl"
-  "ock.BitcoinBlock\032\027.VeriBlock.GeneralRepl"
-  "y\"\000\022R\n\034CheckProofOfWorkBitcoinBlock\022\027.Ve"
-  "riBlock.BitcoinBlock\032\027.VeriBlock.General"
-  "Reply\"\000\022S\n\035CheckMaximumDriftBitcoinBlock"
-  "\022\027.VeriBlock.BitcoinBlock\032\027.VeriBlock.Ge"
-  "neralReply\"\000\022L\n\024VerifyAltPublication\022\031.V"
-  "eriBlock.AltPublication\032\027.VeriBlock.Gene"
-  "ralReply\"\000\022U\n\035CheckMerklePathAltPublicat"
-  "ion\022\031.VeriBlock.AltPublication\032\027.VeriBlo"
-  "ck.GeneralReply\"\000\022Q\n\031CheckBlocksAltPubli"
-  "cation\022\031.VeriBlock.AltPublication\032\027.Veri"
-  "Block.GeneralReply\"\0002\305\001\n\025ForkresolutionS"
-  "ervice\022N\n\022CompareTwoBranches\022\035.VeriBlock"
-  ".TwoBranchesRequest\032\027.VeriBlock.CompareR"
-  "eply\"\000\022\\\n\027SetForkresolutionConfig\022&.Veri"
-  "Block.ForkresolutionConfigRequest\032\027.Veri"
-  "Block.GeneralReply\"\000:4\n\013hex_encoded\022\035.go"
-  "ogle.protobuf.FieldOptions\030\320\206\003 \001(\010:8\n\017ad"
-  "dress_encoded\022\035.google.protobuf.FieldOpt"
-  "ions\030\321\206\003 \001(\010:6\n\rascii_encoded\022\035.google.p"
-  "rotobuf.FieldOptions\030\322\206\003 \001(\010:5\n\014utf8_enc"
-  "oded\022\035.google.protobuf.FieldOptions\030\323\206\003 "
-  "\001(\010B,\n\024integration.api.grpcB\021VeriBlockMe"
-  "ssages\210\001\001b\006proto3"
+  "\023\n\013totalReward\030\002 \001(\t\022\023\n\013blockReward\030\003 \001("
+  "\t\022(\n\007outputs\030\004 \003(\0132\027.VeriBlock.RewardOut"
+  "put\"P\n$RewardsCalculatePopDifficultyRequ"
+  "est\022(\n\006blocks\030\001 \003(\0132\030.VeriBlock.AltChain"
+  "Block\"!\n\021BytesArrayRequest\022\014\n\004data\030\001 \001(\014"
+  "\"H\n\017BytesArrayReply\022\'\n\006result\030\001 \001(\0132\027.Ve"
+  "riBlock.GeneralReply\022\014\n\004data\030\002 \001(\014\" \n\nMe"
+  "rklePath\022\022\n\nmerklePath\030\001 \001(\t\"8\n\021MerklePa"
+  "thRequest\022\014\n\004data\030\001 \001(\014\022\025\n\007subject\030\002 \001(\014"
+  "B\004\200\265\030\001\")\n\023VeriBlockMerklePath\022\022\n\nmerkleP"
+  "ath\030\001 \001(\t\"n\n\023AltPublicationReply\022\'\n\006resu"
+  "lt\030\001 \001(\0132\027.VeriBlock.GeneralReply\022.\n\013pub"
+  "lication\030\002 \001(\0132\031.VeriBlock.AltPublicatio"
+  "n\"p\n\024PublicationDataReply\022\'\n\006result\030\001 \001("
+  "\0132\027.VeriBlock.GeneralReply\022/\n\013publicatio"
+  "n\030\002 \001(\0132\032.VeriBlock.PublicationData\"v\n\027B"
+  "itcoinTransactionReply\022\'\n\006result\030\001 \001(\0132\027"
+  ".VeriBlock.GeneralReply\0222\n\013transaction\030\002"
+  " \001(\0132\035.VeriBlock.BitcoinTransaction\"h\n\023V"
+  "eriBlockBlockReply\022\'\n\006result\030\001 \001(\0132\027.Ver"
+  "iBlock.GeneralReply\022(\n\005block\030\002 \001(\0132\031.Ver"
+  "iBlock.VeriBlockBlock\"z\n\031VeriBlockTransa"
+  "ctionReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.G"
+  "eneralReply\0224\n\013transaction\030\002 \001(\0132\037.VeriB"
+  "lock.VeriBlockTransaction\"z\n\031VeriBlockPu"
+  "blicationReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlo"
+  "ck.GeneralReply\0224\n\013publication\030\002 \001(\0132\037.V"
+  "eriBlock.VeriBlockPublication\"\200\001\n\034VeriBl"
+  "ockPoPTransactionReply\022\'\n\006result\030\001 \001(\0132\027"
+  ".VeriBlock.GeneralReply\0227\n\013transaction\030\002"
+  " \001(\0132\".VeriBlock.VeriBlockPoPTransaction"
+  "\"Y\n\013OutputReply\022\'\n\006result\030\001 \001(\0132\027.VeriBl"
+  "ock.GeneralReply\022!\n\006output\030\002 \001(\0132\021.VeriB"
+  "lock.Output\"\\\n\014AddressReply\022\'\n\006result\030\001 "
+  "\001(\0132\027.VeriBlock.GeneralReply\022#\n\007address\030"
+  "\002 \001(\0132\022.VeriBlock.Address\"d\n\021BitcoinBloc"
+  "kReply\022\'\n\006result\030\001 \001(\0132\027.VeriBlock.Gener"
+  "alReply\022&\n\005block\030\002 \001(\0132\027.VeriBlock.Bitco"
+  "inBlock\"w\n\030VeriBlockMerklePathReply\022\'\n\006r"
+  "esult\030\001 \001(\0132\027.VeriBlock.GeneralReply\0222\n\n"
+  "merklePath\030\002 \001(\0132\036.VeriBlock.VeriBlockMe"
+  "rklePath\"e\n\017MerklePathReply\022\'\n\006result\030\001 "
+  "\001(\0132\027.VeriBlock.GeneralReply\022)\n\nmerklePa"
+  "th\030\002 \001(\0132\025.VeriBlock.MerklePath\"M\n\rAltCh"
+  "ainBlock\022)\n\nblockIndex\030\001 \001(\0132\025.VeriBlock"
+  ".BlockIndex\022\021\n\ttimestamp\030\002 \001(\005\"m\n\022TwoBra"
+  "nchesRequest\022*\n\010leftFork\030\001 \003(\0132\030.VeriBlo"
+  "ck.AltChainBlock\022+\n\trightFork\030\002 \003(\0132\030.Ve"
+  "riBlock.AltChainBlock\"Q\n\014CompareReply\022\'\n"
+  "\006result\030\001 \001(\0132\027.VeriBlock.GeneralReply\022\030"
+  "\n\020comparingsResult\030\002 \001(\005\"S\n\033Forkresoluti"
+  "onConfigRequest\022\035\n\025keystoneFinalityDelay"
+  "\030\001 \001(\005\022\025\n\ramnestyPeriod\030\002 \001(\0052\323\n\n\022Integr"
+  "ationService\022C\n\rResetSecurity\022\027.VeriBloc"
+  "k.EmptyRequest\032\027.VeriBlock.GeneralReply\""
+  "\000\022K\n\023AddGenesisVeriBlock\022\031.VeriBlock.Ver"
+  "iBlockBlock\032\027.VeriBlock.GeneralReply\"\000\022G"
+  "\n\021AddGenesisBitcoin\022\027.VeriBlock.BitcoinB"
+  "lock\032\027.VeriBlock.GeneralReply\"\000\022G\n\013AddPa"
+  "yloads\022\035.VeriBlock.AddPayloadsRequest\032\027."
+  "VeriBlock.GeneralReply\"\000\022M\n\016RemovePayloa"
+  "ds\022 .VeriBlock.RemovePayloadsRequest\032\027.V"
+  "eriBlock.GeneralReply\"\000\022Y\n\024AddTemporaryP"
+  "ayloads\022&.VeriBlock.AddTemporaryPayloads"
+  "Request\032\027.VeriBlock.GeneralReply\"\000\022L\n\026Cl"
+  "earTemporaryPayloads\022\027.VeriBlock.EmptyRe"
+  "quest\032\027.VeriBlock.GeneralReply\"\000\022N\n\014Simp"
+  "lifyVTBs\022\036.VeriBlock.SimplifyVTBsRequest"
+  "\032\034.VeriBlock.SimplifyVTBsReply\"\000\022K\n\023Chec"
+  "kATVAgainstView\022\031.VeriBlock.AltPublicati"
+  "on\032\027.VeriBlock.GeneralReply\"\000\022P\n\022CheckVT"
+  "BInternally\022\037.VeriBlock.VeriBlockPublica"
+  "tion\032\027.VeriBlock.GeneralReply\"\000\022J\n\022Check"
+  "ATVInternally\022\031.VeriBlock.AltPublication"
+  "\032\027.VeriBlock.GeneralReply\"\000\022[\n\025GetMainVB"
+  "KHeightOfATV\022\031.VeriBlock.AltPublication\032"
+  "%.VeriBlock.GetMainVBKHeightOfATVReply\"\000"
+  "\022Z\n\033SetAltChainParametersConfig\022 .VeriBl"
+  "ock.AltChainConfigRequest\032\027.VeriBlock.Ge"
+  "neralReply\"\000\022f\n\025GetLastKnownVBKBlocks\022$."
+  "VeriBlock.GetLastKnownBlocksRequest\032%.Ve"
+  "riBlock.GetLastKnownVBKBlocksReply\"\000\022f\n\025"
+  "GetLastKnownBTCBlocks\022$.VeriBlock.GetLas"
+  "tKnownBlocksRequest\032%.VeriBlock.GetLastK"
+  "nownBTCBlocksReply\"\000\022]\n\026SavePoPTransacti"
+  "onData\022(.VeriBlock.SavePoPTransactionDat"
+  "aRequest\032\027.VeriBlock.GeneralReply\"\0002\303\004\n\016"
+  "RewardsService\022B\n\014ResetRewards\022\027.VeriBlo"
+  "ck.EmptyRequest\032\027.VeriBlock.GeneralReply"
+  "\"\000\022I\n\rGetCalculator\022\027.VeriBlock.EmptyReq"
+  "uest\032\035.VeriBlock.GetCalculatorReply\"\000\022K\n"
+  "\rSetCalculator\022\037.VeriBlock.SetCalculator"
+  "Request\032\027.VeriBlock.GeneralReply\"\000\022i\n\025Re"
+  "wardsCalculateScore\022\'.VeriBlock.RewardsC"
+  "alculateScoreRequest\032%.VeriBlock.Rewards"
+  "CalculateScoreReply\"\000\022o\n\027RewardsCalculat"
+  "eOutputs\022).VeriBlock.RewardsCalculateOut"
+  "putsRequest\032\'.VeriBlock.RewardsCalculate"
+  "OutputsReply\"\000\022y\n\035RewardsCalculatePopDif"
+  "ficulty\022/.VeriBlock.RewardsCalculatePopD"
+  "ifficultyRequest\032%.VeriBlock.RewardsCalc"
+  "ulateScoreReply\"\0002\263\010\n\022DeserializeService"
+  "\022U\n\023ParseAltPublication\022\034.VeriBlock.Byte"
+  "sArrayRequest\032\036.VeriBlock.AltPublication"
+  "Reply\"\000\022W\n\024ParsePublicationData\022\034.VeriBl"
+  "ock.BytesArrayRequest\032\037.VeriBlock.Public"
+  "ationDataReply\"\000\022]\n\027ParseBitcoinTransact"
+  "ion\022\034.VeriBlock.BytesArrayRequest\032\".Veri"
+  "Block.BitcoinTransactionReply\"\000\022U\n\023Parse"
+  "VeriBlockBlock\022\034.VeriBlock.BytesArrayReq"
+  "uest\032\036.VeriBlock.VeriBlockBlockReply\"\000\022a"
+  "\n\031ParseVeriBlockTransaction\022\034.VeriBlock."
+  "BytesArrayRequest\032$.VeriBlock.VeriBlockT"
+  "ransactionReply\"\000\022a\n\031ParseVeriBlockPubli"
+  "cation\022\034.VeriBlock.BytesArrayRequest\032$.V"
+  "eriBlock.VeriBlockPublicationReply\"\000\022^\n\023"
+  "ParseVeriBlockPopTx\022\034.VeriBlock.BytesArr"
+  "ayRequest\032\'.VeriBlock.VeriBlockPoPTransa"
+  "ctionReply\"\000\022E\n\013ParseOutput\022\034.VeriBlock."
+  "BytesArrayRequest\032\026.VeriBlock.OutputRepl"
+  "y\"\000\022G\n\014ParseAddress\022\034.VeriBlock.BytesArr"
+  "ayRequest\032\027.VeriBlock.AddressReply\"\000\022Q\n\021"
+  "ParseBitcoinBlock\022\034.VeriBlock.BytesArray"
+  "Request\032\034.VeriBlock.BitcoinBlockReply\"\000\022"
+  "_\n\030ParseVeriBlockMerklePath\022\034.VeriBlock."
+  "BytesArrayRequest\032#.VeriBlock.VeriBlockM"
+  "erklePathReply\"\000\022M\n\017ParseMerklePath\022\034.Ve"
+  "riBlock.MerklePathRequest\032\032.VeriBlock.Me"
+  "rklePathReply\"\0002\215\010\n\020SerializeService\022R\n\027"
+  "SerializeAltPublication\022\031.VeriBlock.AltP"
+  "ublication\032\032.VeriBlock.BytesArrayReply\"\000"
+  "\022T\n\030SerializePublicationData\022\032.VeriBlock"
+  ".PublicationData\032\032.VeriBlock.BytesArrayR"
+  "eply\"\000\022Z\n\033SerializeBitcoinTransaction\022\035."
+  "VeriBlock.BitcoinTransaction\032\032.VeriBlock"
+  ".BytesArrayReply\"\000\022R\n\027SerializeVeriBlock"
+  "Block\022\031.VeriBlock.VeriBlockBlock\032\032.VeriB"
+  "lock.BytesArrayReply\"\000\022^\n\035SerializeVeriB"
+  "lockTransaction\022\037.VeriBlock.VeriBlockTra"
+  "nsaction\032\032.VeriBlock.BytesArrayReply\"\000\022^"
+  "\n\035SerializeVeriBlockPublication\022\037.VeriBl"
+  "ock.VeriBlockPublication\032\032.VeriBlock.Byt"
+  "esArrayReply\"\000\022[\n\027SerializeVeriBlockPopT"
+  "x\022\".VeriBlock.VeriBlockPoPTransaction\032\032."
+  "VeriBlock.BytesArrayReply\"\000\022B\n\017Serialize"
+  "Output\022\021.VeriBlock.Output\032\032.VeriBlock.By"
+  "tesArrayReply\"\000\022D\n\020SerializeAddress\022\022.Ve"
+  "riBlock.Address\032\032.VeriBlock.BytesArrayRe"
+  "ply\"\000\022N\n\025SerializeBitcoinBlock\022\027.VeriBlo"
+  "ck.BitcoinBlock\032\032.VeriBlock.BytesArrayRe"
+  "ply\"\000\022\\\n\034SerializeVeriBlockMerklePath\022\036."
+  "VeriBlock.VeriBlockMerklePath\032\032.VeriBloc"
+  "k.BytesArrayReply\"\000\022J\n\023SerializeMerklePa"
+  "th\022\025.VeriBlock.MerklePath\032\032.VeriBlock.By"
+  "tesArrayReply\"\0002\271\r\n\021ValidationService\022U\n"
+  "\024VerifyVeriBlockPoPTx\022\".VeriBlock.VeriBl"
+  "ockPoPTransaction\032\027.VeriBlock.GeneralRep"
+  "ly\"\000\022]\n\034CheckSignatureVeriBlockPoPTx\022\".V"
+  "eriBlock.VeriBlockPoPTransaction\032\027.VeriB"
+  "lock.GeneralReply\"\000\022b\n!CheckBitcoinTrans"
+  "actionForPoPData\022\".VeriBlock.VeriBlockPo"
+  "PTransaction\032\027.VeriBlock.GeneralReply\"\000\022"
+  "e\n$CheckBitcoinMerklePathVeriBlockPoPTx\022"
+  "\".VeriBlock.VeriBlockPoPTransaction\032\027.Ve"
+  "riBlock.GeneralReply\"\000\022a\n CheckBitcoinBl"
+  "ocksVeriBlockPoPTx\022\".VeriBlock.VeriBlock"
+  "PoPTransaction\032\027.VeriBlock.GeneralReply\""
+  "\000\022X\n\032VerifyVeriBlockPublication\022\037.VeriBl"
+  "ock.VeriBlockPublication\032\027.VeriBlock.Gen"
+  "eralReply\"\000\022]\n\037CheckBlocksVeriBlockPubli"
+  "cation\022\037.VeriBlock.VeriBlockPublication\032"
+  "\027.VeriBlock.GeneralReply\"\000\022a\n#CheckMerkl"
+  "ePathVeriBlockPublication\022\037.VeriBlock.Ve"
+  "riBlockPublication\032\027.VeriBlock.GeneralRe"
+  "ply\"\000\022X\n\032VerifyVeriBlockTransaction\022\037.Ve"
+  "riBlock.VeriBlockTransaction\032\027.VeriBlock"
+  ".GeneralReply\"\000\022`\n\"CheckSignatureVeriBlo"
+  "ckTransaction\022\037.VeriBlock.VeriBlockTrans"
+  "action\032\027.VeriBlock.GeneralReply\"\000\022L\n\024Ver"
+  "ifyVeriBlockBlock\022\031.VeriBlock.VeriBlockB"
+  "lock\032\027.VeriBlock.GeneralReply\"\000\022V\n\036Check"
+  "ProofOfWorkVeriBlockBlock\022\031.VeriBlock.Ve"
+  "riBlockBlock\032\027.VeriBlock.GeneralReply\"\000\022"
+  "W\n\037CheckMaximumDriftVeriBlockBlock\022\031.Ver"
+  "iBlock.VeriBlockBlock\032\027.VeriBlock.Genera"
+  "lReply\"\000\022H\n\022VerifyBitcoinBlock\022\027.VeriBlo"
+  "ck.BitcoinBlock\032\027.VeriBlock.GeneralReply"
+  "\"\000\022R\n\034CheckProofOfWorkBitcoinBlock\022\027.Ver"
+  "iBlock.BitcoinBlock\032\027.VeriBlock.GeneralR"
+  "eply\"\000\022S\n\035CheckMaximumDriftBitcoinBlock\022"
+  "\027.VeriBlock.BitcoinBlock\032\027.VeriBlock.Gen"
+  "eralReply\"\000\022L\n\024VerifyAltPublication\022\031.Ve"
+  "riBlock.AltPublication\032\027.VeriBlock.Gener"
+  "alReply\"\000\022U\n\035CheckMerklePathAltPublicati"
+  "on\022\031.VeriBlock.AltPublication\032\027.VeriBloc"
+  "k.GeneralReply\"\000\022Q\n\031CheckBlocksAltPublic"
+  "ation\022\031.VeriBlock.AltPublication\032\027.VeriB"
+  "lock.GeneralReply\"\0002\305\001\n\025ForkresolutionSe"
+  "rvice\022N\n\022CompareTwoBranches\022\035.VeriBlock."
+  "TwoBranchesRequest\032\027.VeriBlock.CompareRe"
+  "ply\"\000\022\\\n\027SetForkresolutionConfig\022&.VeriB"
+  "lock.ForkresolutionConfigRequest\032\027.VeriB"
+  "lock.GeneralReply\"\000:4\n\013hex_encoded\022\035.goo"
+  "gle.protobuf.FieldOptions\030\320\206\003 \001(\010:8\n\017add"
+  "ress_encoded\022\035.google.protobuf.FieldOpti"
+  "ons\030\321\206\003 \001(\010:6\n\rascii_encoded\022\035.google.pr"
+  "otobuf.FieldOptions\030\322\206\003 \001(\010:5\n\014utf8_enco"
+  "ded\022\035.google.protobuf.FieldOptions\030\323\206\003 \001"
+  "(\010B,\n\024integration.api.grpcB\021VeriBlockMes"
+  "sages\210\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_integration_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2fdescriptor_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_integration_2eproto_sccs[60] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_integration_2eproto_sccs[61] = {
   &scc_info_AddPayloadsRequest_integration_2eproto.base,
   &scc_info_AddTemporaryPayloadsRequest_integration_2eproto.base,
   &scc_info_Address_integration_2eproto.base,
@@ -2132,19 +2180,20 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_int
   &scc_info_NetworkByte_integration_2eproto.base,
   &scc_info_Output_integration_2eproto.base,
   &scc_info_OutputReply_integration_2eproto.base,
-  &scc_info_PopEndorsement_integration_2eproto.base,
+  &scc_info_PoPTransactionData_integration_2eproto.base,
   &scc_info_PublicationData_integration_2eproto.base,
   &scc_info_PublicationDataReply_integration_2eproto.base,
   &scc_info_RelativeScoreConfig_integration_2eproto.base,
   &scc_info_RemovePayloadsRequest_integration_2eproto.base,
   &scc_info_RewardCurveConfig_integration_2eproto.base,
-  &scc_info_RewardEndorsement_integration_2eproto.base,
   &scc_info_RewardOutput_integration_2eproto.base,
   &scc_info_RewardsCalculateOutputsReply_integration_2eproto.base,
   &scc_info_RewardsCalculateOutputsRequest_integration_2eproto.base,
+  &scc_info_RewardsCalculatePopDifficultyRequest_integration_2eproto.base,
   &scc_info_RewardsCalculateScoreReply_integration_2eproto.base,
   &scc_info_RewardsCalculateScoreRequest_integration_2eproto.base,
   &scc_info_RoundRatioConfig_integration_2eproto.base,
+  &scc_info_SavePoPTransactionDataRequest_integration_2eproto.base,
   &scc_info_SetCalculatorRequest_integration_2eproto.base,
   &scc_info_SimplifyVTBsReply_integration_2eproto.base,
   &scc_info_SimplifyVTBsRequest_integration_2eproto.base,
@@ -2163,10 +2212,10 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_int
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_integration_2eproto_once;
 static bool descriptor_table_integration_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_integration_2eproto = {
-  &descriptor_table_integration_2eproto_initialized, descriptor_table_protodef_integration_2eproto, "integration.proto", 12657,
-  &descriptor_table_integration_2eproto_once, descriptor_table_integration_2eproto_sccs, descriptor_table_integration_2eproto_deps, 60, 1,
+  &descriptor_table_integration_2eproto_initialized, descriptor_table_protodef_integration_2eproto, "integration.proto", 13256,
+  &descriptor_table_integration_2eproto_once, descriptor_table_integration_2eproto_sccs, descriptor_table_integration_2eproto_deps, 61, 1,
   schemas, file_default_instances, TableStruct_integration_2eproto::offsets,
-  file_level_metadata_integration_2eproto, 60, file_level_enum_descriptors_integration_2eproto, file_level_service_descriptors_integration_2eproto,
+  file_level_metadata_integration_2eproto, 61, file_level_enum_descriptors_integration_2eproto, file_level_service_descriptors_integration_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -4282,10 +4331,6 @@ VeriBlockTransaction::VeriBlockTransaction(const VeriBlockTransaction& from)
   if (!from.id().empty()) {
     id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.id_);
   }
-  data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.data().empty()) {
-    data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
-  }
   signature_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from.signature().empty()) {
     signature_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.signature_);
@@ -4323,7 +4368,6 @@ VeriBlockTransaction::VeriBlockTransaction(const VeriBlockTransaction& from)
 void VeriBlockTransaction::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VeriBlockTransaction_integration_2eproto.base);
   id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   signature_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   publickey_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&sourceaddress_, 0, static_cast<size_t>(
@@ -4338,7 +4382,6 @@ VeriBlockTransaction::~VeriBlockTransaction() {
 
 void VeriBlockTransaction::SharedDtor() {
   id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   signature_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   publickey_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete sourceaddress_;
@@ -4364,7 +4407,6 @@ void VeriBlockTransaction::Clear() {
 
   outputs_.Clear();
   id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   signature_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   publickey_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == nullptr && sourceaddress_ != nullptr) {
@@ -4441,13 +4483,6 @@ const char* VeriBlockTransaction::_InternalParse(const char* ptr, ::PROTOBUF_NAM
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
           signatureindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // bytes data = 7 [(.VeriBlock.hex_encoded) = true];
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(mutable_data(), ptr, ctx);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4579,17 +4614,6 @@ bool VeriBlockTransaction::MergePartialFromCodedStream(
         break;
       }
 
-      // bytes data = 7 [(.VeriBlock.hex_encoded) = true];
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       // .VeriBlock.PublicationData publicationData = 8;
       case 8: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
@@ -4698,12 +4722,6 @@ void VeriBlockTransaction::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(6, this->signatureindex(), output);
   }
 
-  // bytes data = 7 [(.VeriBlock.hex_encoded) = true];
-  if (this->data().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesMaybeAliased(
-      7, this->data(), output);
-  }
-
   // .VeriBlock.PublicationData publicationData = 8;
   if (this->has_publicationdata()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -4780,13 +4798,6 @@ void VeriBlockTransaction::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(6, this->signatureindex(), target);
   }
 
-  // bytes data = 7 [(.VeriBlock.hex_encoded) = true];
-  if (this->data().size() > 0) {
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesToArray(
-        7, this->data(), target);
-  }
-
   // .VeriBlock.PublicationData publicationData = 8;
   if (this->has_publicationdata()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4852,13 +4863,6 @@ size_t VeriBlockTransaction::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->id());
-  }
-
-  // bytes data = 7 [(.VeriBlock.hex_encoded) = true];
-  if (this->data().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->data());
   }
 
   // bytes signature = 9 [(.VeriBlock.hex_encoded) = true];
@@ -4949,10 +4953,6 @@ void VeriBlockTransaction::MergeFrom(const VeriBlockTransaction& from) {
 
     id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.id_);
   }
-  if (from.data().size() > 0) {
-
-    data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
-  }
   if (from.signature().size() > 0) {
 
     signature_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.signature_);
@@ -5004,8 +5004,6 @@ void VeriBlockTransaction::InternalSwap(VeriBlockTransaction* other) {
   _internal_metadata_.Swap(&other->_internal_metadata_);
   CastToBase(&outputs_)->InternalSwap(CastToBase(&other->outputs_));
   id_.Swap(&other->id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  data_.Swap(&other->data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   signature_.Swap(&other->signature_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
@@ -7530,6 +7528,390 @@ void VeriBlockPublication::InternalSwap(VeriBlockPublication* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata VeriBlockPublication::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void PoPTransactionData::InitAsDefaultInstance() {
+  ::VeriBlock::_PoPTransactionData_default_instance_._instance.get_mutable()->altpublication_ = const_cast< ::VeriBlock::AltPublication*>(
+      ::VeriBlock::AltPublication::internal_default_instance());
+}
+class PoPTransactionData::_Internal {
+ public:
+  static const ::VeriBlock::AltPublication& altpublication(const PoPTransactionData* msg);
+};
+
+const ::VeriBlock::AltPublication&
+PoPTransactionData::_Internal::altpublication(const PoPTransactionData* msg) {
+  return *msg->altpublication_;
+}
+PoPTransactionData::PoPTransactionData()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.PoPTransactionData)
+}
+PoPTransactionData::PoPTransactionData(const PoPTransactionData& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      veriblockpublications_(from.veriblockpublications_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  hash_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.hash().empty()) {
+    hash_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.hash_);
+  }
+  if (from.has_altpublication()) {
+    altpublication_ = new ::VeriBlock::AltPublication(*from.altpublication_);
+  } else {
+    altpublication_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.PoPTransactionData)
+}
+
+void PoPTransactionData::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PoPTransactionData_integration_2eproto.base);
+  hash_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  altpublication_ = nullptr;
+}
+
+PoPTransactionData::~PoPTransactionData() {
+  // @@protoc_insertion_point(destructor:VeriBlock.PoPTransactionData)
+  SharedDtor();
+}
+
+void PoPTransactionData::SharedDtor() {
+  hash_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete altpublication_;
+}
+
+void PoPTransactionData::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const PoPTransactionData& PoPTransactionData::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PoPTransactionData_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void PoPTransactionData::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.PoPTransactionData)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  veriblockpublications_.Clear();
+  hash_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == nullptr && altpublication_ != nullptr) {
+    delete altpublication_;
+  }
+  altpublication_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* PoPTransactionData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string hash = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_hash(), ptr, ctx, "VeriBlock.PoPTransactionData.hash");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.AltPublication altPublication = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_altpublication(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated .VeriBlock.VeriBlockPublication veriblockPublications = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(add_veriblockpublications(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 26);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool PoPTransactionData::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.PoPTransactionData)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string hash = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_hash()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->hash().data(), static_cast<int>(this->hash().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "VeriBlock.PoPTransactionData.hash"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.AltPublication altPublication = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_altpublication()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated .VeriBlock.VeriBlockPublication veriblockPublications = 3;
+      case 3: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+                input, add_veriblockpublications()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.PoPTransactionData)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.PoPTransactionData)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void PoPTransactionData::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.PoPTransactionData)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string hash = 1;
+  if (this->hash().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->hash().data(), static_cast<int>(this->hash().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "VeriBlock.PoPTransactionData.hash");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->hash(), output);
+  }
+
+  // .VeriBlock.AltPublication altPublication = 2;
+  if (this->has_altpublication()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::altpublication(this), output);
+  }
+
+  // repeated .VeriBlock.VeriBlockPublication veriblockPublications = 3;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->veriblockpublications_size()); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3,
+      this->veriblockpublications(static_cast<int>(i)),
+      output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.PoPTransactionData)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* PoPTransactionData::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.PoPTransactionData)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string hash = 1;
+  if (this->hash().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->hash().data(), static_cast<int>(this->hash().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "VeriBlock.PoPTransactionData.hash");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        1, this->hash(), target);
+  }
+
+  // .VeriBlock.AltPublication altPublication = 2;
+  if (this->has_altpublication()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::altpublication(this), target);
+  }
+
+  // repeated .VeriBlock.VeriBlockPublication veriblockPublications = 3;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->veriblockpublications_size()); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, this->veriblockpublications(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.PoPTransactionData)
+  return target;
+}
+
+size_t PoPTransactionData::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.PoPTransactionData)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .VeriBlock.VeriBlockPublication veriblockPublications = 3;
+  {
+    unsigned int count = static_cast<unsigned int>(this->veriblockpublications_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          this->veriblockpublications(static_cast<int>(i)));
+    }
+  }
+
+  // string hash = 1;
+  if (this->hash().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->hash());
+  }
+
+  // .VeriBlock.AltPublication altPublication = 2;
+  if (this->has_altpublication()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *altpublication_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void PoPTransactionData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.PoPTransactionData)
+  GOOGLE_DCHECK_NE(&from, this);
+  const PoPTransactionData* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PoPTransactionData>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.PoPTransactionData)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.PoPTransactionData)
+    MergeFrom(*source);
+  }
+}
+
+void PoPTransactionData::MergeFrom(const PoPTransactionData& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.PoPTransactionData)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  veriblockpublications_.MergeFrom(from.veriblockpublications_);
+  if (from.hash().size() > 0) {
+
+    hash_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.hash_);
+  }
+  if (from.has_altpublication()) {
+    mutable_altpublication()->::VeriBlock::AltPublication::MergeFrom(from.altpublication());
+  }
+}
+
+void PoPTransactionData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.PoPTransactionData)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void PoPTransactionData::CopyFrom(const PoPTransactionData& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.PoPTransactionData)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PoPTransactionData::IsInitialized() const {
+  return true;
+}
+
+void PoPTransactionData::InternalSwap(PoPTransactionData* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&veriblockpublications_)->InternalSwap(CastToBase(&other->veriblockpublications_));
+  hash_.Swap(&other->hash_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(altpublication_, other->altpublication_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PoPTransactionData::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -11334,6 +11716,392 @@ void GetLastKnownBTCBlocksReply::InternalSwap(GetLastKnownBTCBlocksReply* other)
 
 // ===================================================================
 
+void SavePoPTransactionDataRequest::InitAsDefaultInstance() {
+  ::VeriBlock::_SavePoPTransactionDataRequest_default_instance_._instance.get_mutable()->containingblock_ = const_cast< ::VeriBlock::AltChainBlock*>(
+      ::VeriBlock::AltChainBlock::internal_default_instance());
+  ::VeriBlock::_SavePoPTransactionDataRequest_default_instance_._instance.get_mutable()->endorsedblock_ = const_cast< ::VeriBlock::AltChainBlock*>(
+      ::VeriBlock::AltChainBlock::internal_default_instance());
+  ::VeriBlock::_SavePoPTransactionDataRequest_default_instance_._instance.get_mutable()->poptx_ = const_cast< ::VeriBlock::PoPTransactionData*>(
+      ::VeriBlock::PoPTransactionData::internal_default_instance());
+}
+class SavePoPTransactionDataRequest::_Internal {
+ public:
+  static const ::VeriBlock::AltChainBlock& containingblock(const SavePoPTransactionDataRequest* msg);
+  static const ::VeriBlock::AltChainBlock& endorsedblock(const SavePoPTransactionDataRequest* msg);
+  static const ::VeriBlock::PoPTransactionData& poptx(const SavePoPTransactionDataRequest* msg);
+};
+
+const ::VeriBlock::AltChainBlock&
+SavePoPTransactionDataRequest::_Internal::containingblock(const SavePoPTransactionDataRequest* msg) {
+  return *msg->containingblock_;
+}
+const ::VeriBlock::AltChainBlock&
+SavePoPTransactionDataRequest::_Internal::endorsedblock(const SavePoPTransactionDataRequest* msg) {
+  return *msg->endorsedblock_;
+}
+const ::VeriBlock::PoPTransactionData&
+SavePoPTransactionDataRequest::_Internal::poptx(const SavePoPTransactionDataRequest* msg) {
+  return *msg->poptx_;
+}
+SavePoPTransactionDataRequest::SavePoPTransactionDataRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.SavePoPTransactionDataRequest)
+}
+SavePoPTransactionDataRequest::SavePoPTransactionDataRequest(const SavePoPTransactionDataRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_containingblock()) {
+    containingblock_ = new ::VeriBlock::AltChainBlock(*from.containingblock_);
+  } else {
+    containingblock_ = nullptr;
+  }
+  if (from.has_endorsedblock()) {
+    endorsedblock_ = new ::VeriBlock::AltChainBlock(*from.endorsedblock_);
+  } else {
+    endorsedblock_ = nullptr;
+  }
+  if (from.has_poptx()) {
+    poptx_ = new ::VeriBlock::PoPTransactionData(*from.poptx_);
+  } else {
+    poptx_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.SavePoPTransactionDataRequest)
+}
+
+void SavePoPTransactionDataRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_SavePoPTransactionDataRequest_integration_2eproto.base);
+  ::memset(&containingblock_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&poptx_) -
+      reinterpret_cast<char*>(&containingblock_)) + sizeof(poptx_));
+}
+
+SavePoPTransactionDataRequest::~SavePoPTransactionDataRequest() {
+  // @@protoc_insertion_point(destructor:VeriBlock.SavePoPTransactionDataRequest)
+  SharedDtor();
+}
+
+void SavePoPTransactionDataRequest::SharedDtor() {
+  if (this != internal_default_instance()) delete containingblock_;
+  if (this != internal_default_instance()) delete endorsedblock_;
+  if (this != internal_default_instance()) delete poptx_;
+}
+
+void SavePoPTransactionDataRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const SavePoPTransactionDataRequest& SavePoPTransactionDataRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SavePoPTransactionDataRequest_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void SavePoPTransactionDataRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.SavePoPTransactionDataRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && containingblock_ != nullptr) {
+    delete containingblock_;
+  }
+  containingblock_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && endorsedblock_ != nullptr) {
+    delete endorsedblock_;
+  }
+  endorsedblock_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && poptx_ != nullptr) {
+    delete poptx_;
+  }
+  poptx_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* SavePoPTransactionDataRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .VeriBlock.AltChainBlock containingBlock = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_containingblock(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.AltChainBlock endorsedBlock = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_endorsedblock(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .VeriBlock.PoPTransactionData popTx = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(mutable_poptx(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool SavePoPTransactionDataRequest::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.SavePoPTransactionDataRequest)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .VeriBlock.AltChainBlock containingBlock = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_containingblock()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.AltChainBlock endorsedBlock = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_endorsedblock()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .VeriBlock.PoPTransactionData popTx = 3;
+      case 3: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_poptx()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.SavePoPTransactionDataRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.SavePoPTransactionDataRequest)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void SavePoPTransactionDataRequest::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.SavePoPTransactionDataRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.AltChainBlock containingBlock = 1;
+  if (this->has_containingblock()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::containingblock(this), output);
+  }
+
+  // .VeriBlock.AltChainBlock endorsedBlock = 2;
+  if (this->has_endorsedblock()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::endorsedblock(this), output);
+  }
+
+  // .VeriBlock.PoPTransactionData popTx = 3;
+  if (this->has_poptx()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, _Internal::poptx(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.SavePoPTransactionDataRequest)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* SavePoPTransactionDataRequest::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.SavePoPTransactionDataRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .VeriBlock.AltChainBlock containingBlock = 1;
+  if (this->has_containingblock()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::containingblock(this), target);
+  }
+
+  // .VeriBlock.AltChainBlock endorsedBlock = 2;
+  if (this->has_endorsedblock()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::endorsedblock(this), target);
+  }
+
+  // .VeriBlock.PoPTransactionData popTx = 3;
+  if (this->has_poptx()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, _Internal::poptx(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.SavePoPTransactionDataRequest)
+  return target;
+}
+
+size_t SavePoPTransactionDataRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.SavePoPTransactionDataRequest)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .VeriBlock.AltChainBlock containingBlock = 1;
+  if (this->has_containingblock()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *containingblock_);
+  }
+
+  // .VeriBlock.AltChainBlock endorsedBlock = 2;
+  if (this->has_endorsedblock()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *endorsedblock_);
+  }
+
+  // .VeriBlock.PoPTransactionData popTx = 3;
+  if (this->has_poptx()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *poptx_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void SavePoPTransactionDataRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.SavePoPTransactionDataRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const SavePoPTransactionDataRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SavePoPTransactionDataRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.SavePoPTransactionDataRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.SavePoPTransactionDataRequest)
+    MergeFrom(*source);
+  }
+}
+
+void SavePoPTransactionDataRequest::MergeFrom(const SavePoPTransactionDataRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.SavePoPTransactionDataRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_containingblock()) {
+    mutable_containingblock()->::VeriBlock::AltChainBlock::MergeFrom(from.containingblock());
+  }
+  if (from.has_endorsedblock()) {
+    mutable_endorsedblock()->::VeriBlock::AltChainBlock::MergeFrom(from.endorsedblock());
+  }
+  if (from.has_poptx()) {
+    mutable_poptx()->::VeriBlock::PoPTransactionData::MergeFrom(from.poptx());
+  }
+}
+
+void SavePoPTransactionDataRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.SavePoPTransactionDataRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void SavePoPTransactionDataRequest::CopyFrom(const SavePoPTransactionDataRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.SavePoPTransactionDataRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SavePoPTransactionDataRequest::IsInitialized() const {
+  return true;
+}
+
+void SavePoPTransactionDataRequest::InternalSwap(SavePoPTransactionDataRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(containingblock_, other->containingblock_);
+  swap(endorsedblock_, other->endorsedblock_);
+  swap(poptx_, other->poptx_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SavePoPTransactionDataRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 void RoundRatioConfig::InitAsDefaultInstance() {
 }
 class RoundRatioConfig::_Internal {
@@ -12757,8 +13525,8 @@ CalculatorConfig::CalculatorConfig(const CalculatorConfig& from)
     flatscoreround_ = nullptr;
   }
   ::memcpy(&payoutrounds_, &from.payoutrounds_,
-    static_cast<size_t>(reinterpret_cast<char*>(&keystoneinterval_) -
-    reinterpret_cast<char*>(&payoutrounds_)) + sizeof(keystoneinterval_));
+    static_cast<size_t>(reinterpret_cast<char*>(&poprewardsettlementinterval_) -
+    reinterpret_cast<char*>(&payoutrounds_)) + sizeof(poprewardsettlementinterval_));
   // @@protoc_insertion_point(copy_constructor:VeriBlock.CalculatorConfig)
 }
 
@@ -12768,8 +13536,8 @@ void CalculatorConfig::SharedCtor() {
   maxrewardthresholdnormal_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   maxrewardthresholdkeystone_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&roundratios_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&keystoneinterval_) -
-      reinterpret_cast<char*>(&roundratios_)) + sizeof(keystoneinterval_));
+      reinterpret_cast<char*>(&poprewardsettlementinterval_) -
+      reinterpret_cast<char*>(&roundratios_)) + sizeof(poprewardsettlementinterval_));
 }
 
 CalculatorConfig::~CalculatorConfig() {
@@ -12822,8 +13590,8 @@ void CalculatorConfig::Clear() {
   }
   flatscoreround_ = nullptr;
   ::memset(&payoutrounds_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&keystoneinterval_) -
-      reinterpret_cast<char*>(&payoutrounds_)) + sizeof(keystoneinterval_));
+      reinterpret_cast<char*>(&poprewardsettlementinterval_) -
+      reinterpret_cast<char*>(&payoutrounds_)) + sizeof(poprewardsettlementinterval_));
   _internal_metadata_.Clear();
 }
 
@@ -12856,52 +13624,59 @@ const char* CalculatorConfig::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 keystoneInterval = 4;
+      // .VeriBlock.RoundRatioConfig roundRatios = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          keystoneinterval_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .VeriBlock.RoundRatioConfig roundRatios = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ctx->ParseMessage(mutable_roundratios(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .VeriBlock.RewardCurveConfig rewardCurve = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+      // .VeriBlock.RewardCurveConfig rewardCurve = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr = ctx->ParseMessage(mutable_rewardcurve(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string maxRewardThresholdNormal = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+      // string maxRewardThresholdNormal = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_maxrewardthresholdnormal(), ptr, ctx, "VeriBlock.CalculatorConfig.maxRewardThresholdNormal");
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string maxRewardThresholdKeystone = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+      // string maxRewardThresholdKeystone = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_maxrewardthresholdkeystone(), ptr, ctx, "VeriBlock.CalculatorConfig.maxRewardThresholdKeystone");
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+      // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           ptr = ctx->ParseMessage(mutable_relativescorelookuptable(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+      // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
           ptr = ctx->ParseMessage(mutable_flatscoreround(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 popDifficultyAveragingInterval = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 80)) {
+          popdifficultyaveraginginterval_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 popRewardSettlementInterval = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 88)) {
+          poprewardsettlementinterval_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -12976,22 +13751,9 @@ bool CalculatorConfig::MergePartialFromCodedStream(
         break;
       }
 
-      // int32 keystoneInterval = 4;
+      // .VeriBlock.RoundRatioConfig roundRatios = 4;
       case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &keystoneinterval_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .VeriBlock.RoundRatioConfig roundRatios = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_roundratios()));
         } else {
@@ -13000,9 +13762,9 @@ bool CalculatorConfig::MergePartialFromCodedStream(
         break;
       }
 
-      // .VeriBlock.RewardCurveConfig rewardCurve = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
+      // .VeriBlock.RewardCurveConfig rewardCurve = 5;
+      case 5: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_rewardcurve()));
         } else {
@@ -13011,9 +13773,9 @@ bool CalculatorConfig::MergePartialFromCodedStream(
         break;
       }
 
-      // string maxRewardThresholdNormal = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
+      // string maxRewardThresholdNormal = 6;
+      case 6: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
                 input, this->mutable_maxrewardthresholdnormal()));
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
@@ -13026,9 +13788,9 @@ bool CalculatorConfig::MergePartialFromCodedStream(
         break;
       }
 
-      // string maxRewardThresholdKeystone = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
+      // string maxRewardThresholdKeystone = 7;
+      case 7: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
                 input, this->mutable_maxrewardthresholdkeystone()));
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
@@ -13041,9 +13803,9 @@ bool CalculatorConfig::MergePartialFromCodedStream(
         break;
       }
 
-      // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
+      // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;
+      case 8: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_relativescorelookuptable()));
         } else {
@@ -13052,11 +13814,37 @@ bool CalculatorConfig::MergePartialFromCodedStream(
         break;
       }
 
-      // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (82 & 0xFF)) {
+      // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;
+      case 9: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_flatscoreround()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 popDifficultyAveragingInterval = 10;
+      case 10: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (80 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
+                 input, &popdifficultyaveraginginterval_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 popRewardSettlementInterval = 11;
+      case 11: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (88 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
+                 input, &poprewardsettlementinterval_)));
         } else {
           goto handle_unusual;
         }
@@ -13110,53 +13898,58 @@ void CalculatorConfig::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(3, this->keystoneround(), output);
   }
 
-  // int32 keystoneInterval = 4;
-  if (this->keystoneinterval() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(4, this->keystoneinterval(), output);
-  }
-
-  // .VeriBlock.RoundRatioConfig roundRatios = 5;
+  // .VeriBlock.RoundRatioConfig roundRatios = 4;
   if (this->has_roundratios()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, _Internal::roundratios(this), output);
+      4, _Internal::roundratios(this), output);
   }
 
-  // .VeriBlock.RewardCurveConfig rewardCurve = 6;
+  // .VeriBlock.RewardCurveConfig rewardCurve = 5;
   if (this->has_rewardcurve()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, _Internal::rewardcurve(this), output);
+      5, _Internal::rewardcurve(this), output);
   }
 
-  // string maxRewardThresholdNormal = 7;
+  // string maxRewardThresholdNormal = 6;
   if (this->maxrewardthresholdnormal().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->maxrewardthresholdnormal().data(), static_cast<int>(this->maxrewardthresholdnormal().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "VeriBlock.CalculatorConfig.maxRewardThresholdNormal");
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->maxrewardthresholdnormal(), output);
+      6, this->maxrewardthresholdnormal(), output);
   }
 
-  // string maxRewardThresholdKeystone = 8;
+  // string maxRewardThresholdKeystone = 7;
   if (this->maxrewardthresholdkeystone().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->maxrewardthresholdkeystone().data(), static_cast<int>(this->maxrewardthresholdkeystone().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "VeriBlock.CalculatorConfig.maxRewardThresholdKeystone");
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      8, this->maxrewardthresholdkeystone(), output);
+      7, this->maxrewardthresholdkeystone(), output);
   }
 
-  // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;
+  // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;
   if (this->has_relativescorelookuptable()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, _Internal::relativescorelookuptable(this), output);
+      8, _Internal::relativescorelookuptable(this), output);
   }
 
-  // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;
+  // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;
   if (this->has_flatscoreround()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, _Internal::flatscoreround(this), output);
+      9, _Internal::flatscoreround(this), output);
+  }
+
+  // int32 popDifficultyAveragingInterval = 10;
+  if (this->popdifficultyaveraginginterval() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(10, this->popdifficultyaveraginginterval(), output);
+  }
+
+  // int32 popRewardSettlementInterval = 11;
+  if (this->poprewardsettlementinterval() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(11, this->poprewardsettlementinterval(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -13193,26 +13986,21 @@ void CalculatorConfig::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->keystoneround(), target);
   }
 
-  // int32 keystoneInterval = 4;
-  if (this->keystoneinterval() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->keystoneinterval(), target);
-  }
-
-  // .VeriBlock.RoundRatioConfig roundRatios = 5;
+  // .VeriBlock.RoundRatioConfig roundRatios = 4;
   if (this->has_roundratios()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        5, _Internal::roundratios(this), target);
+        4, _Internal::roundratios(this), target);
   }
 
-  // .VeriBlock.RewardCurveConfig rewardCurve = 6;
+  // .VeriBlock.RewardCurveConfig rewardCurve = 5;
   if (this->has_rewardcurve()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        6, _Internal::rewardcurve(this), target);
+        5, _Internal::rewardcurve(this), target);
   }
 
-  // string maxRewardThresholdNormal = 7;
+  // string maxRewardThresholdNormal = 6;
   if (this->maxrewardthresholdnormal().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->maxrewardthresholdnormal().data(), static_cast<int>(this->maxrewardthresholdnormal().length()),
@@ -13220,10 +14008,10 @@ void CalculatorConfig::SerializeWithCachedSizes(
       "VeriBlock.CalculatorConfig.maxRewardThresholdNormal");
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        7, this->maxrewardthresholdnormal(), target);
+        6, this->maxrewardthresholdnormal(), target);
   }
 
-  // string maxRewardThresholdKeystone = 8;
+  // string maxRewardThresholdKeystone = 7;
   if (this->maxrewardthresholdkeystone().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->maxrewardthresholdkeystone().data(), static_cast<int>(this->maxrewardthresholdkeystone().length()),
@@ -13231,21 +14019,31 @@ void CalculatorConfig::SerializeWithCachedSizes(
       "VeriBlock.CalculatorConfig.maxRewardThresholdKeystone");
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        8, this->maxrewardthresholdkeystone(), target);
+        7, this->maxrewardthresholdkeystone(), target);
   }
 
-  // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;
+  // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;
   if (this->has_relativescorelookuptable()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        9, _Internal::relativescorelookuptable(this), target);
+        8, _Internal::relativescorelookuptable(this), target);
   }
 
-  // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;
+  // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;
   if (this->has_flatscoreround()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        10, _Internal::flatscoreround(this), target);
+        9, _Internal::flatscoreround(this), target);
+  }
+
+  // int32 popDifficultyAveragingInterval = 10;
+  if (this->popdifficultyaveraginginterval() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(10, this->popdifficultyaveraginginterval(), target);
+  }
+
+  // int32 popRewardSettlementInterval = 11;
+  if (this->poprewardsettlementinterval() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(11, this->poprewardsettlementinterval(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -13276,42 +14074,42 @@ size_t CalculatorConfig::ByteSizeLong() const {
         this->basicreward());
   }
 
-  // string maxRewardThresholdNormal = 7;
+  // string maxRewardThresholdNormal = 6;
   if (this->maxrewardthresholdnormal().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->maxrewardthresholdnormal());
   }
 
-  // string maxRewardThresholdKeystone = 8;
+  // string maxRewardThresholdKeystone = 7;
   if (this->maxrewardthresholdkeystone().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->maxrewardthresholdkeystone());
   }
 
-  // .VeriBlock.RoundRatioConfig roundRatios = 5;
+  // .VeriBlock.RoundRatioConfig roundRatios = 4;
   if (this->has_roundratios()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *roundratios_);
   }
 
-  // .VeriBlock.RewardCurveConfig rewardCurve = 6;
+  // .VeriBlock.RewardCurveConfig rewardCurve = 5;
   if (this->has_rewardcurve()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *rewardcurve_);
   }
 
-  // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 9;
+  // .VeriBlock.RelativeScoreConfig relativeScoreLookupTable = 8;
   if (this->has_relativescorelookuptable()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *relativescorelookuptable_);
   }
 
-  // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 10;
+  // .VeriBlock.FlatScoreRoundConfig flatScoreRound = 9;
   if (this->has_flatscoreround()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -13332,11 +14130,18 @@ size_t CalculatorConfig::ByteSizeLong() const {
         this->keystoneround());
   }
 
-  // int32 keystoneInterval = 4;
-  if (this->keystoneinterval() != 0) {
+  // int32 popDifficultyAveragingInterval = 10;
+  if (this->popdifficultyaveraginginterval() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->keystoneinterval());
+        this->popdifficultyaveraginginterval());
+  }
+
+  // int32 popRewardSettlementInterval = 11;
+  if (this->poprewardsettlementinterval() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->poprewardsettlementinterval());
   }
 
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
@@ -13396,8 +14201,11 @@ void CalculatorConfig::MergeFrom(const CalculatorConfig& from) {
   if (from.keystoneround() != 0) {
     set_keystoneround(from.keystoneround());
   }
-  if (from.keystoneinterval() != 0) {
-    set_keystoneinterval(from.keystoneinterval());
+  if (from.popdifficultyaveraginginterval() != 0) {
+    set_popdifficultyaveraginginterval(from.popdifficultyaveraginginterval());
+  }
+  if (from.poprewardsettlementinterval() != 0) {
+    set_poprewardsettlementinterval(from.poprewardsettlementinterval());
   }
 }
 
@@ -13434,7 +14242,8 @@ void CalculatorConfig::InternalSwap(CalculatorConfig* other) {
   swap(flatscoreround_, other->flatscoreround_);
   swap(payoutrounds_, other->payoutrounds_);
   swap(keystoneround_, other->keystoneround_);
-  swap(keystoneinterval_, other->keystoneinterval_);
+  swap(popdifficultyaveraginginterval_, other->popdifficultyaveraginginterval_);
+  swap(poprewardsettlementinterval_, other->poprewardsettlementinterval_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CalculatorConfig::GetMetadata() const {
@@ -14052,9 +14861,9 @@ RewardOutput::RewardOutput(const RewardOutput& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.address().empty()) {
-    address_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.address_);
+  payoutinfo_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.payoutinfo().empty()) {
+    payoutinfo_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.payoutinfo_);
   }
   reward_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from.reward().empty()) {
@@ -14065,7 +14874,7 @@ RewardOutput::RewardOutput(const RewardOutput& from)
 
 void RewardOutput::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RewardOutput_integration_2eproto.base);
-  address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  payoutinfo_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   reward_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -14075,7 +14884,7 @@ RewardOutput::~RewardOutput() {
 }
 
 void RewardOutput::SharedDtor() {
-  address_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  payoutinfo_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   reward_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -14094,7 +14903,7 @@ void RewardOutput::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  address_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  payoutinfo_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   reward_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
@@ -14107,10 +14916,10 @@ const char* RewardOutput::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string address = 1;
+      // bytes payoutInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_address(), ptr, ctx, "VeriBlock.RewardOutput.address");
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(mutable_payoutinfo(), ptr, ctx);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -14151,15 +14960,11 @@ bool RewardOutput::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string address = 1;
+      // bytes payoutInfo = 1;
       case 1: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_address()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->address().data(), static_cast<int>(this->address().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "VeriBlock.RewardOutput.address"));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_payoutinfo()));
         } else {
           goto handle_unusual;
         }
@@ -14208,14 +15013,10 @@ void RewardOutput::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string address = 1;
-  if (this->address().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->address().data(), static_cast<int>(this->address().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "VeriBlock.RewardOutput.address");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->address(), output);
+  // bytes payoutInfo = 1;
+  if (this->payoutinfo().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesMaybeAliased(
+      1, this->payoutinfo(), output);
   }
 
   // string reward = 2;
@@ -14241,15 +15042,11 @@ void RewardOutput::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string address = 1;
-  if (this->address().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->address().data(), static_cast<int>(this->address().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "VeriBlock.RewardOutput.address");
+  // bytes payoutInfo = 1;
+  if (this->payoutinfo().size() > 0) {
     target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->address(), target);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesToArray(
+        1, this->payoutinfo(), target);
   }
 
   // string reward = 2;
@@ -14284,11 +15081,11 @@ size_t RewardOutput::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string address = 1;
-  if (this->address().size() > 0) {
+  // bytes payoutInfo = 1;
+  if (this->payoutinfo().size() > 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->address());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->payoutinfo());
   }
 
   // string reward = 2;
@@ -14325,9 +15122,9 @@ void RewardOutput::MergeFrom(const RewardOutput& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.address().size() > 0) {
+  if (from.payoutinfo().size() > 0) {
 
-    address_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.address_);
+    payoutinfo_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.payoutinfo_);
   }
   if (from.reward().size() > 0) {
 
@@ -14356,7 +15153,7 @@ bool RewardOutput::IsInitialized() const {
 void RewardOutput::InternalSwap(RewardOutput* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  address_.Swap(&other->address_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  payoutinfo_.Swap(&other->payoutinfo_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   reward_.Swap(&other->reward_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
@@ -14369,649 +15166,19 @@ void RewardOutput::InternalSwap(RewardOutput* other) {
 
 // ===================================================================
 
-void PopEndorsement::InitAsDefaultInstance() {
-}
-class PopEndorsement::_Internal {
- public:
-};
-
-PopEndorsement::PopEndorsement()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:VeriBlock.PopEndorsement)
-}
-PopEndorsement::PopEndorsement(const PopEndorsement& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.address().empty()) {
-    address_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.address_);
-  }
-  txid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.txid().empty()) {
-    txid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.txid_);
-  }
-  // @@protoc_insertion_point(copy_constructor:VeriBlock.PopEndorsement)
-}
-
-void PopEndorsement::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PopEndorsement_integration_2eproto.base);
-  address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  txid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-PopEndorsement::~PopEndorsement() {
-  // @@protoc_insertion_point(destructor:VeriBlock.PopEndorsement)
-  SharedDtor();
-}
-
-void PopEndorsement::SharedDtor() {
-  address_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  txid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-void PopEndorsement::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const PopEndorsement& PopEndorsement::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PopEndorsement_integration_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void PopEndorsement::Clear() {
-// @@protoc_insertion_point(message_clear_start:VeriBlock.PopEndorsement)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  address_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  txid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* PopEndorsement::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // string address = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_address(), ptr, ctx, "VeriBlock.PopEndorsement.address");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string txid = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_txid(), ptr, ctx, "VeriBlock.PopEndorsement.txid");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool PopEndorsement::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:VeriBlock.PopEndorsement)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string address = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_address()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->address().data(), static_cast<int>(this->address().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "VeriBlock.PopEndorsement.address"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string txid = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_txid()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->txid().data(), static_cast<int>(this->txid().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "VeriBlock.PopEndorsement.txid"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:VeriBlock.PopEndorsement)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:VeriBlock.PopEndorsement)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void PopEndorsement::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:VeriBlock.PopEndorsement)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string address = 1;
-  if (this->address().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->address().data(), static_cast<int>(this->address().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "VeriBlock.PopEndorsement.address");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->address(), output);
-  }
-
-  // string txid = 2;
-  if (this->txid().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->txid().data(), static_cast<int>(this->txid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "VeriBlock.PopEndorsement.txid");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->txid(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:VeriBlock.PopEndorsement)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* PopEndorsement::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.PopEndorsement)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string address = 1;
-  if (this->address().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->address().data(), static_cast<int>(this->address().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "VeriBlock.PopEndorsement.address");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->address(), target);
-  }
-
-  // string txid = 2;
-  if (this->txid().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->txid().data(), static_cast<int>(this->txid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "VeriBlock.PopEndorsement.txid");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        2, this->txid(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.PopEndorsement)
-  return target;
-}
-
-size_t PopEndorsement::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:VeriBlock.PopEndorsement)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string address = 1;
-  if (this->address().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->address());
-  }
-
-  // string txid = 2;
-  if (this->txid().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->txid());
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void PopEndorsement::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.PopEndorsement)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PopEndorsement* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PopEndorsement>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.PopEndorsement)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.PopEndorsement)
-    MergeFrom(*source);
-  }
-}
-
-void PopEndorsement::MergeFrom(const PopEndorsement& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.PopEndorsement)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.address().size() > 0) {
-
-    address_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.address_);
-  }
-  if (from.txid().size() > 0) {
-
-    txid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.txid_);
-  }
-}
-
-void PopEndorsement::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.PopEndorsement)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void PopEndorsement::CopyFrom(const PopEndorsement& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.PopEndorsement)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool PopEndorsement::IsInitialized() const {
-  return true;
-}
-
-void PopEndorsement::InternalSwap(PopEndorsement* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  address_.Swap(&other->address_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  txid_.Swap(&other->txid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata PopEndorsement::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-void RewardEndorsement::InitAsDefaultInstance() {
-}
-class RewardEndorsement::_Internal {
- public:
-};
-
-RewardEndorsement::RewardEndorsement()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:VeriBlock.RewardEndorsement)
-}
-RewardEndorsement::RewardEndorsement(const RewardEndorsement& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr),
-      endorsementsinblock_(from.endorsementsinblock_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  blockvbkheight_ = from.blockvbkheight_;
-  // @@protoc_insertion_point(copy_constructor:VeriBlock.RewardEndorsement)
-}
-
-void RewardEndorsement::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RewardEndorsement_integration_2eproto.base);
-  blockvbkheight_ = 0;
-}
-
-RewardEndorsement::~RewardEndorsement() {
-  // @@protoc_insertion_point(destructor:VeriBlock.RewardEndorsement)
-  SharedDtor();
-}
-
-void RewardEndorsement::SharedDtor() {
-}
-
-void RewardEndorsement::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const RewardEndorsement& RewardEndorsement::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RewardEndorsement_integration_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void RewardEndorsement::Clear() {
-// @@protoc_insertion_point(message_clear_start:VeriBlock.RewardEndorsement)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  endorsementsinblock_.Clear();
-  blockvbkheight_ = 0;
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* RewardEndorsement::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // int32 blockVbkHeight = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          blockvbkheight_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // repeated .VeriBlock.PopEndorsement endorsementsInBlock = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(add_endorsementsinblock(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool RewardEndorsement::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:VeriBlock.RewardEndorsement)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 blockVbkHeight = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &blockvbkheight_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .VeriBlock.PopEndorsement endorsementsInBlock = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_endorsementsinblock()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:VeriBlock.RewardEndorsement)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:VeriBlock.RewardEndorsement)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void RewardEndorsement::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:VeriBlock.RewardEndorsement)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 blockVbkHeight = 1;
-  if (this->blockvbkheight() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->blockvbkheight(), output);
-  }
-
-  // repeated .VeriBlock.PopEndorsement endorsementsInBlock = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->endorsementsinblock_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->endorsementsinblock(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:VeriBlock.RewardEndorsement)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* RewardEndorsement::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.RewardEndorsement)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 blockVbkHeight = 1;
-  if (this->blockvbkheight() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->blockvbkheight(), target);
-  }
-
-  // repeated .VeriBlock.PopEndorsement endorsementsInBlock = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->endorsementsinblock_size()); i < n; i++) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->endorsementsinblock(static_cast<int>(i)), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.RewardEndorsement)
-  return target;
-}
-
-size_t RewardEndorsement::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:VeriBlock.RewardEndorsement)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // repeated .VeriBlock.PopEndorsement endorsementsInBlock = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->endorsementsinblock_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->endorsementsinblock(static_cast<int>(i)));
-    }
-  }
-
-  // int32 blockVbkHeight = 1;
-  if (this->blockvbkheight() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->blockvbkheight());
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void RewardEndorsement::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.RewardEndorsement)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RewardEndorsement* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RewardEndorsement>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.RewardEndorsement)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.RewardEndorsement)
-    MergeFrom(*source);
-  }
-}
-
-void RewardEndorsement::MergeFrom(const RewardEndorsement& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.RewardEndorsement)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  endorsementsinblock_.MergeFrom(from.endorsementsinblock_);
-  if (from.blockvbkheight() != 0) {
-    set_blockvbkheight(from.blockvbkheight());
-  }
-}
-
-void RewardEndorsement::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.RewardEndorsement)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void RewardEndorsement::CopyFrom(const RewardEndorsement& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.RewardEndorsement)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool RewardEndorsement::IsInitialized() const {
-  return true;
-}
-
-void RewardEndorsement::InternalSwap(RewardEndorsement* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&endorsementsinblock_)->InternalSwap(CastToBase(&other->endorsementsinblock_));
-  swap(blockvbkheight_, other->blockvbkheight_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata RewardEndorsement::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
 void RewardsCalculateScoreRequest::InitAsDefaultInstance() {
+  ::VeriBlock::_RewardsCalculateScoreRequest_default_instance_._instance.get_mutable()->endorsedblock_ = const_cast< ::VeriBlock::AltChainBlock*>(
+      ::VeriBlock::AltChainBlock::internal_default_instance());
 }
 class RewardsCalculateScoreRequest::_Internal {
  public:
+  static const ::VeriBlock::AltChainBlock& endorsedblock(const RewardsCalculateScoreRequest* msg);
 };
 
+const ::VeriBlock::AltChainBlock&
+RewardsCalculateScoreRequest::_Internal::endorsedblock(const RewardsCalculateScoreRequest* msg) {
+  return *msg->endorsedblock_;
+}
 RewardsCalculateScoreRequest::RewardsCalculateScoreRequest()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -15020,13 +15187,19 @@ RewardsCalculateScoreRequest::RewardsCalculateScoreRequest()
 RewardsCalculateScoreRequest::RewardsCalculateScoreRequest(const RewardsCalculateScoreRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr),
-      endorsementsforblock_(from.endorsementsforblock_) {
+      endorsmentblocks_(from.endorsmentblocks_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_endorsedblock()) {
+    endorsedblock_ = new ::VeriBlock::AltChainBlock(*from.endorsedblock_);
+  } else {
+    endorsedblock_ = nullptr;
+  }
   // @@protoc_insertion_point(copy_constructor:VeriBlock.RewardsCalculateScoreRequest)
 }
 
 void RewardsCalculateScoreRequest::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RewardsCalculateScoreRequest_integration_2eproto.base);
+  endorsedblock_ = nullptr;
 }
 
 RewardsCalculateScoreRequest::~RewardsCalculateScoreRequest() {
@@ -15035,6 +15208,7 @@ RewardsCalculateScoreRequest::~RewardsCalculateScoreRequest() {
 }
 
 void RewardsCalculateScoreRequest::SharedDtor() {
+  if (this != internal_default_instance()) delete endorsedblock_;
 }
 
 void RewardsCalculateScoreRequest::SetCachedSize(int size) const {
@@ -15052,7 +15226,11 @@ void RewardsCalculateScoreRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  endorsementsforblock_.Clear();
+  endorsmentblocks_.Clear();
+  if (GetArenaNoVirtual() == nullptr && endorsedblock_ != nullptr) {
+    delete endorsedblock_;
+  }
+  endorsedblock_ = nullptr;
   _internal_metadata_.Clear();
 }
 
@@ -15064,16 +15242,23 @@ const char* RewardsCalculateScoreRequest::_InternalParse(const char* ptr, ::PROT
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 1;
+      // .VeriBlock.AltChainBlock endorsedBlock = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_endorsedblock(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_endorsementsforblock(), ptr);
+            ptr = ctx->ParseMessage(add_endorsmentblocks(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 10);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
         } else goto handle_unusual;
         continue;
       default: {
@@ -15106,11 +15291,22 @@ bool RewardsCalculateScoreRequest::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 1;
+      // .VeriBlock.AltChainBlock endorsedBlock = 1;
       case 1: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_endorsementsforblock()));
+               input, mutable_endorsedblock()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+                input, add_endorsmentblocks()));
         } else {
           goto handle_unusual;
         }
@@ -15144,12 +15340,18 @@ void RewardsCalculateScoreRequest::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->endorsementsforblock_size()); i < n; i++) {
+  // .VeriBlock.AltChainBlock endorsedBlock = 1;
+  if (this->has_endorsedblock()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1,
-      this->endorsementsforblock(static_cast<int>(i)),
+      1, _Internal::endorsedblock(this), output);
+  }
+
+  // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 2;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->endorsmentblocks_size()); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2,
+      this->endorsmentblocks(static_cast<int>(i)),
       output);
   }
 
@@ -15166,12 +15368,19 @@ void RewardsCalculateScoreRequest::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->endorsementsforblock_size()); i < n; i++) {
+  // .VeriBlock.AltChainBlock endorsedBlock = 1;
+  if (this->has_endorsedblock()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->endorsementsforblock(static_cast<int>(i)), target);
+        1, _Internal::endorsedblock(this), target);
+  }
+
+  // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 2;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->endorsmentblocks_size()); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, this->endorsmentblocks(static_cast<int>(i)), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -15195,15 +15404,22 @@ size_t RewardsCalculateScoreRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 1;
+  // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 2;
   {
-    unsigned int count = static_cast<unsigned int>(this->endorsementsforblock_size());
+    unsigned int count = static_cast<unsigned int>(this->endorsmentblocks_size());
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->endorsementsforblock(static_cast<int>(i)));
+          this->endorsmentblocks(static_cast<int>(i)));
     }
+  }
+
+  // .VeriBlock.AltChainBlock endorsedBlock = 1;
+  if (this->has_endorsedblock()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *endorsedblock_);
   }
 
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
@@ -15233,7 +15449,10 @@ void RewardsCalculateScoreRequest::MergeFrom(const RewardsCalculateScoreRequest&
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  endorsementsforblock_.MergeFrom(from.endorsementsforblock_);
+  endorsmentblocks_.MergeFrom(from.endorsmentblocks_);
+  if (from.has_endorsedblock()) {
+    mutable_endorsedblock()->::VeriBlock::AltChainBlock::MergeFrom(from.endorsedblock());
+  }
 }
 
 void RewardsCalculateScoreRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -15257,7 +15476,8 @@ bool RewardsCalculateScoreRequest::IsInitialized() const {
 void RewardsCalculateScoreRequest::InternalSwap(RewardsCalculateScoreRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&endorsementsforblock_)->InternalSwap(CastToBase(&other->endorsementsforblock_));
+  CastToBase(&endorsmentblocks_)->InternalSwap(CastToBase(&other->endorsmentblocks_));
+  swap(endorsedblock_, other->endorsedblock_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RewardsCalculateScoreRequest::GetMetadata() const {
@@ -15597,11 +15817,18 @@ void RewardsCalculateScoreReply::InternalSwap(RewardsCalculateScoreReply* other)
 // ===================================================================
 
 void RewardsCalculateOutputsRequest::InitAsDefaultInstance() {
+  ::VeriBlock::_RewardsCalculateOutputsRequest_default_instance_._instance.get_mutable()->endorsedblock_ = const_cast< ::VeriBlock::AltChainBlock*>(
+      ::VeriBlock::AltChainBlock::internal_default_instance());
 }
 class RewardsCalculateOutputsRequest::_Internal {
  public:
+  static const ::VeriBlock::AltChainBlock& endorsedblock(const RewardsCalculateOutputsRequest* msg);
 };
 
+const ::VeriBlock::AltChainBlock&
+RewardsCalculateOutputsRequest::_Internal::endorsedblock(const RewardsCalculateOutputsRequest* msg) {
+  return *msg->endorsedblock_;
+}
 RewardsCalculateOutputsRequest::RewardsCalculateOutputsRequest()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -15610,11 +15837,16 @@ RewardsCalculateOutputsRequest::RewardsCalculateOutputsRequest()
 RewardsCalculateOutputsRequest::RewardsCalculateOutputsRequest(const RewardsCalculateOutputsRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr),
-      endorsementsforblock_(from.endorsementsforblock_) {
+      endorsmentblocks_(from.endorsmentblocks_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   difficulty_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from.difficulty().empty()) {
     difficulty_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.difficulty_);
+  }
+  if (from.has_endorsedblock()) {
+    endorsedblock_ = new ::VeriBlock::AltChainBlock(*from.endorsedblock_);
+  } else {
+    endorsedblock_ = nullptr;
   }
   blockaltheight_ = from.blockaltheight_;
   // @@protoc_insertion_point(copy_constructor:VeriBlock.RewardsCalculateOutputsRequest)
@@ -15623,7 +15855,9 @@ RewardsCalculateOutputsRequest::RewardsCalculateOutputsRequest(const RewardsCalc
 void RewardsCalculateOutputsRequest::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RewardsCalculateOutputsRequest_integration_2eproto.base);
   difficulty_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  blockaltheight_ = 0;
+  ::memset(&endorsedblock_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&blockaltheight_) -
+      reinterpret_cast<char*>(&endorsedblock_)) + sizeof(blockaltheight_));
 }
 
 RewardsCalculateOutputsRequest::~RewardsCalculateOutputsRequest() {
@@ -15633,6 +15867,7 @@ RewardsCalculateOutputsRequest::~RewardsCalculateOutputsRequest() {
 
 void RewardsCalculateOutputsRequest::SharedDtor() {
   difficulty_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete endorsedblock_;
 }
 
 void RewardsCalculateOutputsRequest::SetCachedSize(int size) const {
@@ -15650,8 +15885,12 @@ void RewardsCalculateOutputsRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  endorsementsforblock_.Clear();
+  endorsmentblocks_.Clear();
   difficulty_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == nullptr && endorsedblock_ != nullptr) {
+    delete endorsedblock_;
+  }
+  endorsedblock_ = nullptr;
   blockaltheight_ = 0;
   _internal_metadata_.Clear();
 }
@@ -15671,21 +15910,28 @@ const char* RewardsCalculateOutputsRequest::_InternalParse(const char* ptr, ::PR
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 2;
+      // .VeriBlock.AltChainBlock endorsedBlock = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_endorsedblock(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_endorsementsforblock(), ptr);
+            ptr = ctx->ParseMessage(add_endorsmentblocks(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 26);
         } else goto handle_unusual;
         continue;
-      // string difficulty = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+      // string difficulty = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_difficulty(), ptr, ctx, "VeriBlock.RewardsCalculateOutputsRequest.difficulty");
           CHK_(ptr);
         } else goto handle_unusual;
@@ -15733,20 +15979,31 @@ bool RewardsCalculateOutputsRequest::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 2;
+      // .VeriBlock.AltChainBlock endorsedBlock = 2;
       case 2: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_endorsementsforblock()));
+               input, mutable_endorsedblock()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string difficulty = 3;
+      // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 3;
       case 3: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+                input, add_endorsmentblocks()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string difficulty = 4;
+      case 4: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
                 input, this->mutable_difficulty()));
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
@@ -15791,23 +16048,29 @@ void RewardsCalculateOutputsRequest::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->blockaltheight(), output);
   }
 
-  // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->endorsementsforblock_size()); i < n; i++) {
+  // .VeriBlock.AltChainBlock endorsedBlock = 2;
+  if (this->has_endorsedblock()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->endorsementsforblock(static_cast<int>(i)),
+      2, _Internal::endorsedblock(this), output);
+  }
+
+  // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 3;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->endorsmentblocks_size()); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3,
+      this->endorsmentblocks(static_cast<int>(i)),
       output);
   }
 
-  // string difficulty = 3;
+  // string difficulty = 4;
   if (this->difficulty().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->difficulty().data(), static_cast<int>(this->difficulty().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "VeriBlock.RewardsCalculateOutputsRequest.difficulty");
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->difficulty(), output);
+      4, this->difficulty(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -15828,15 +16091,22 @@ void RewardsCalculateOutputsRequest::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->blockaltheight(), target);
   }
 
-  // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->endorsementsforblock_size()); i < n; i++) {
+  // .VeriBlock.AltChainBlock endorsedBlock = 2;
+  if (this->has_endorsedblock()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->endorsementsforblock(static_cast<int>(i)), target);
+        2, _Internal::endorsedblock(this), target);
   }
 
-  // string difficulty = 3;
+  // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 3;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->endorsmentblocks_size()); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, this->endorsmentblocks(static_cast<int>(i)), target);
+  }
+
+  // string difficulty = 4;
   if (this->difficulty().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->difficulty().data(), static_cast<int>(this->difficulty().length()),
@@ -15844,7 +16114,7 @@ void RewardsCalculateOutputsRequest::SerializeWithCachedSizes(
       "VeriBlock.RewardsCalculateOutputsRequest.difficulty");
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->difficulty(), target);
+        4, this->difficulty(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -15868,22 +16138,29 @@ size_t RewardsCalculateOutputsRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .VeriBlock.RewardEndorsement endorsementsForBlock = 2;
+  // repeated .VeriBlock.AltChainBlock endorsmentBlocks = 3;
   {
-    unsigned int count = static_cast<unsigned int>(this->endorsementsforblock_size());
+    unsigned int count = static_cast<unsigned int>(this->endorsmentblocks_size());
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->endorsementsforblock(static_cast<int>(i)));
+          this->endorsmentblocks(static_cast<int>(i)));
     }
   }
 
-  // string difficulty = 3;
+  // string difficulty = 4;
   if (this->difficulty().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->difficulty());
+  }
+
+  // .VeriBlock.AltChainBlock endorsedBlock = 2;
+  if (this->has_endorsedblock()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *endorsedblock_);
   }
 
   // int32 blockAltHeight = 1;
@@ -15920,10 +16197,13 @@ void RewardsCalculateOutputsRequest::MergeFrom(const RewardsCalculateOutputsRequ
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  endorsementsforblock_.MergeFrom(from.endorsementsforblock_);
+  endorsmentblocks_.MergeFrom(from.endorsmentblocks_);
   if (from.difficulty().size() > 0) {
 
     difficulty_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.difficulty_);
+  }
+  if (from.has_endorsedblock()) {
+    mutable_endorsedblock()->::VeriBlock::AltChainBlock::MergeFrom(from.endorsedblock());
   }
   if (from.blockaltheight() != 0) {
     set_blockaltheight(from.blockaltheight());
@@ -15951,9 +16231,10 @@ bool RewardsCalculateOutputsRequest::IsInitialized() const {
 void RewardsCalculateOutputsRequest::InternalSwap(RewardsCalculateOutputsRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&endorsementsforblock_)->InternalSwap(CastToBase(&other->endorsementsforblock_));
+  CastToBase(&endorsmentblocks_)->InternalSwap(CastToBase(&other->endorsmentblocks_));
   difficulty_.Swap(&other->difficulty_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  swap(endorsedblock_, other->endorsedblock_);
   swap(blockaltheight_, other->blockaltheight_);
 }
 
@@ -16405,6 +16686,267 @@ void RewardsCalculateOutputsReply::InternalSwap(RewardsCalculateOutputsReply* ot
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RewardsCalculateOutputsReply::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void RewardsCalculatePopDifficultyRequest::InitAsDefaultInstance() {
+}
+class RewardsCalculatePopDifficultyRequest::_Internal {
+ public:
+};
+
+RewardsCalculatePopDifficultyRequest::RewardsCalculatePopDifficultyRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:VeriBlock.RewardsCalculatePopDifficultyRequest)
+}
+RewardsCalculatePopDifficultyRequest::RewardsCalculatePopDifficultyRequest(const RewardsCalculatePopDifficultyRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      blocks_(from.blocks_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:VeriBlock.RewardsCalculatePopDifficultyRequest)
+}
+
+void RewardsCalculatePopDifficultyRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RewardsCalculatePopDifficultyRequest_integration_2eproto.base);
+}
+
+RewardsCalculatePopDifficultyRequest::~RewardsCalculatePopDifficultyRequest() {
+  // @@protoc_insertion_point(destructor:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  SharedDtor();
+}
+
+void RewardsCalculatePopDifficultyRequest::SharedDtor() {
+}
+
+void RewardsCalculatePopDifficultyRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const RewardsCalculatePopDifficultyRequest& RewardsCalculatePopDifficultyRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RewardsCalculatePopDifficultyRequest_integration_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void RewardsCalculatePopDifficultyRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  blocks_.Clear();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* RewardsCalculatePopDifficultyRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // repeated .VeriBlock.AltChainBlock blocks = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(add_blocks(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 10);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool RewardsCalculatePopDifficultyRequest::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .VeriBlock.AltChainBlock blocks = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+                input, add_blocks()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void RewardsCalculatePopDifficultyRequest::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .VeriBlock.AltChainBlock blocks = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->blocks_size()); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1,
+      this->blocks(static_cast<int>(i)),
+      output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:VeriBlock.RewardsCalculatePopDifficultyRequest)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* RewardsCalculatePopDifficultyRequest::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .VeriBlock.AltChainBlock blocks = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->blocks_size()); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->blocks(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  return target;
+}
+
+size_t RewardsCalculatePopDifficultyRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .VeriBlock.AltChainBlock blocks = 1;
+  {
+    unsigned int count = static_cast<unsigned int>(this->blocks_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          this->blocks(static_cast<int>(i)));
+    }
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void RewardsCalculatePopDifficultyRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RewardsCalculatePopDifficultyRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RewardsCalculatePopDifficultyRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VeriBlock.RewardsCalculatePopDifficultyRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VeriBlock.RewardsCalculatePopDifficultyRequest)
+    MergeFrom(*source);
+  }
+}
+
+void RewardsCalculatePopDifficultyRequest::MergeFrom(const RewardsCalculatePopDifficultyRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  blocks_.MergeFrom(from.blocks_);
+}
+
+void RewardsCalculatePopDifficultyRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void RewardsCalculatePopDifficultyRequest::CopyFrom(const RewardsCalculatePopDifficultyRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VeriBlock.RewardsCalculatePopDifficultyRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool RewardsCalculatePopDifficultyRequest::IsInitialized() const {
+  return true;
+}
+
+void RewardsCalculatePopDifficultyRequest::InternalSwap(RewardsCalculatePopDifficultyRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&blocks_)->InternalSwap(CastToBase(&other->blocks_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata RewardsCalculatePopDifficultyRequest::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -23038,6 +23580,9 @@ template<> PROTOBUF_NOINLINE ::VeriBlock::VeriBlockPoPTransaction* Arena::Create
 template<> PROTOBUF_NOINLINE ::VeriBlock::VeriBlockPublication* Arena::CreateMaybeMessage< ::VeriBlock::VeriBlockPublication >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::VeriBlockPublication >(arena);
 }
+template<> PROTOBUF_NOINLINE ::VeriBlock::PoPTransactionData* Arena::CreateMaybeMessage< ::VeriBlock::PoPTransactionData >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::PoPTransactionData >(arena);
+}
 template<> PROTOBUF_NOINLINE ::VeriBlock::EmptyRequest* Arena::CreateMaybeMessage< ::VeriBlock::EmptyRequest >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::EmptyRequest >(arena);
 }
@@ -23077,6 +23622,9 @@ template<> PROTOBUF_NOINLINE ::VeriBlock::GetLastKnownVBKBlocksReply* Arena::Cre
 template<> PROTOBUF_NOINLINE ::VeriBlock::GetLastKnownBTCBlocksReply* Arena::CreateMaybeMessage< ::VeriBlock::GetLastKnownBTCBlocksReply >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::GetLastKnownBTCBlocksReply >(arena);
 }
+template<> PROTOBUF_NOINLINE ::VeriBlock::SavePoPTransactionDataRequest* Arena::CreateMaybeMessage< ::VeriBlock::SavePoPTransactionDataRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::SavePoPTransactionDataRequest >(arena);
+}
 template<> PROTOBUF_NOINLINE ::VeriBlock::RoundRatioConfig* Arena::CreateMaybeMessage< ::VeriBlock::RoundRatioConfig >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::RoundRatioConfig >(arena);
 }
@@ -23101,12 +23649,6 @@ template<> PROTOBUF_NOINLINE ::VeriBlock::GetCalculatorReply* Arena::CreateMaybe
 template<> PROTOBUF_NOINLINE ::VeriBlock::RewardOutput* Arena::CreateMaybeMessage< ::VeriBlock::RewardOutput >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::RewardOutput >(arena);
 }
-template<> PROTOBUF_NOINLINE ::VeriBlock::PopEndorsement* Arena::CreateMaybeMessage< ::VeriBlock::PopEndorsement >(Arena* arena) {
-  return Arena::CreateInternal< ::VeriBlock::PopEndorsement >(arena);
-}
-template<> PROTOBUF_NOINLINE ::VeriBlock::RewardEndorsement* Arena::CreateMaybeMessage< ::VeriBlock::RewardEndorsement >(Arena* arena) {
-  return Arena::CreateInternal< ::VeriBlock::RewardEndorsement >(arena);
-}
 template<> PROTOBUF_NOINLINE ::VeriBlock::RewardsCalculateScoreRequest* Arena::CreateMaybeMessage< ::VeriBlock::RewardsCalculateScoreRequest >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::RewardsCalculateScoreRequest >(arena);
 }
@@ -23118,6 +23660,9 @@ template<> PROTOBUF_NOINLINE ::VeriBlock::RewardsCalculateOutputsRequest* Arena:
 }
 template<> PROTOBUF_NOINLINE ::VeriBlock::RewardsCalculateOutputsReply* Arena::CreateMaybeMessage< ::VeriBlock::RewardsCalculateOutputsReply >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::RewardsCalculateOutputsReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::VeriBlock::RewardsCalculatePopDifficultyRequest* Arena::CreateMaybeMessage< ::VeriBlock::RewardsCalculatePopDifficultyRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::VeriBlock::RewardsCalculatePopDifficultyRequest >(arena);
 }
 template<> PROTOBUF_NOINLINE ::VeriBlock::BytesArrayRequest* Arena::CreateMaybeMessage< ::VeriBlock::BytesArrayRequest >(Arena* arena) {
   return Arena::CreateInternal< ::VeriBlock::BytesArrayRequest >(arena);
