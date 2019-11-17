@@ -523,6 +523,37 @@ public final class IntegrationServiceGrpc {
     return getSavePoPTransactionDataMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.SetConfigRequest,
+      integration.api.grpc.VeriBlockMessages.GeneralReply> getSetConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetConfig",
+      requestType = integration.api.grpc.VeriBlockMessages.SetConfigRequest.class,
+      responseType = integration.api.grpc.VeriBlockMessages.GeneralReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.SetConfigRequest,
+      integration.api.grpc.VeriBlockMessages.GeneralReply> getSetConfigMethod() {
+    io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.SetConfigRequest, integration.api.grpc.VeriBlockMessages.GeneralReply> getSetConfigMethod;
+    if ((getSetConfigMethod = IntegrationServiceGrpc.getSetConfigMethod) == null) {
+      synchronized (IntegrationServiceGrpc.class) {
+        if ((getSetConfigMethod = IntegrationServiceGrpc.getSetConfigMethod) == null) {
+          IntegrationServiceGrpc.getSetConfigMethod = getSetConfigMethod =
+              io.grpc.MethodDescriptor.<integration.api.grpc.VeriBlockMessages.SetConfigRequest, integration.api.grpc.VeriBlockMessages.GeneralReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  integration.api.grpc.VeriBlockMessages.SetConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance()))
+              .setSchemaDescriptor(new IntegrationServiceMethodDescriptorSupplier("SetConfig"))
+              .build();
+        }
+      }
+    }
+    return getSetConfigMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -662,6 +693,13 @@ public final class IntegrationServiceGrpc {
       asyncUnimplementedUnaryCall(getSavePoPTransactionDataMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void setConfig(integration.api.grpc.VeriBlockMessages.SetConfigRequest request,
+        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getSetConfigMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -776,6 +814,13 @@ public final class IntegrationServiceGrpc {
                 integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest,
                 integration.api.grpc.VeriBlockMessages.GeneralReply>(
                   this, METHODID_SAVE_PO_PTRANSACTION_DATA)))
+          .addMethod(
+            getSetConfigMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                integration.api.grpc.VeriBlockMessages.SetConfigRequest,
+                integration.api.grpc.VeriBlockMessages.GeneralReply>(
+                  this, METHODID_SET_CONFIG)))
           .build();
     }
   }
@@ -925,6 +970,14 @@ public final class IntegrationServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getSavePoPTransactionDataMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void setConfig(integration.api.grpc.VeriBlockMessages.SetConfigRequest request,
+        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSetConfigMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1055,6 +1108,13 @@ public final class IntegrationServiceGrpc {
     public integration.api.grpc.VeriBlockMessages.GeneralReply savePoPTransactionData(integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest request) {
       return blockingUnaryCall(
           getChannel(), getSavePoPTransactionDataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public integration.api.grpc.VeriBlockMessages.GeneralReply setConfig(integration.api.grpc.VeriBlockMessages.SetConfigRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSetConfigMethod(), getCallOptions(), request);
     }
   }
 
@@ -1203,6 +1263,14 @@ public final class IntegrationServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getSavePoPTransactionDataMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<integration.api.grpc.VeriBlockMessages.GeneralReply> setConfig(
+        integration.api.grpc.VeriBlockMessages.SetConfigRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSetConfigMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_RESET_SECURITY = 0;
@@ -1221,6 +1289,7 @@ public final class IntegrationServiceGrpc {
   private static final int METHODID_GET_LAST_KNOWN_VBKBLOCKS = 13;
   private static final int METHODID_GET_LAST_KNOWN_BTCBLOCKS = 14;
   private static final int METHODID_SAVE_PO_PTRANSACTION_DATA = 15;
+  private static final int METHODID_SET_CONFIG = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1303,6 +1372,10 @@ public final class IntegrationServiceGrpc {
           serviceImpl.savePoPTransactionData((integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest) request,
               (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply>) responseObserver);
           break;
+        case METHODID_SET_CONFIG:
+          serviceImpl.setConfig((integration.api.grpc.VeriBlockMessages.SetConfigRequest) request,
+              (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1380,6 +1453,7 @@ public final class IntegrationServiceGrpc {
               .addMethod(getGetLastKnownVBKBlocksMethod())
               .addMethod(getGetLastKnownBTCBlocksMethod())
               .addMethod(getSavePoPTransactionDataMethod())
+              .addMethod(getSetConfigMethod())
               .build();
         }
       }
