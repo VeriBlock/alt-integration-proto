@@ -58,37 +58,6 @@ public final class ForkresolutionServiceGrpc {
     return getCompareTwoBranchesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest,
-      integration.api.grpc.VeriBlockMessages.GeneralReply> getSetForkresolutionConfigMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SetForkresolutionConfig",
-      requestType = integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest.class,
-      responseType = integration.api.grpc.VeriBlockMessages.GeneralReply.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest,
-      integration.api.grpc.VeriBlockMessages.GeneralReply> getSetForkresolutionConfigMethod() {
-    io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest, integration.api.grpc.VeriBlockMessages.GeneralReply> getSetForkresolutionConfigMethod;
-    if ((getSetForkresolutionConfigMethod = ForkresolutionServiceGrpc.getSetForkresolutionConfigMethod) == null) {
-      synchronized (ForkresolutionServiceGrpc.class) {
-        if ((getSetForkresolutionConfigMethod = ForkresolutionServiceGrpc.getSetForkresolutionConfigMethod) == null) {
-          ForkresolutionServiceGrpc.getSetForkresolutionConfigMethod = getSetForkresolutionConfigMethod =
-              io.grpc.MethodDescriptor.<integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest, integration.api.grpc.VeriBlockMessages.GeneralReply>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetForkresolutionConfig"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance()))
-              .setSchemaDescriptor(new ForkresolutionServiceMethodDescriptorSupplier("SetForkresolutionConfig"))
-              .build();
-        }
-      }
-    }
-    return getSetForkresolutionConfigMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -123,13 +92,6 @@ public final class ForkresolutionServiceGrpc {
       asyncUnimplementedUnaryCall(getCompareTwoBranchesMethod(), responseObserver);
     }
 
-    /**
-     */
-    public void setForkresolutionConfig(integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest request,
-        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetForkresolutionConfigMethod(), responseObserver);
-    }
-
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -139,13 +101,6 @@ public final class ForkresolutionServiceGrpc {
                 integration.api.grpc.VeriBlockMessages.TwoBranchesRequest,
                 integration.api.grpc.VeriBlockMessages.CompareReply>(
                   this, METHODID_COMPARE_TWO_BRANCHES)))
-          .addMethod(
-            getSetForkresolutionConfigMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest,
-                integration.api.grpc.VeriBlockMessages.GeneralReply>(
-                  this, METHODID_SET_FORKRESOLUTION_CONFIG)))
           .build();
     }
   }
@@ -175,14 +130,6 @@ public final class ForkresolutionServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getCompareTwoBranchesMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void setForkresolutionConfig(integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest request,
-        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getSetForkresolutionConfigMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -208,13 +155,6 @@ public final class ForkresolutionServiceGrpc {
     public integration.api.grpc.VeriBlockMessages.CompareReply compareTwoBranches(integration.api.grpc.VeriBlockMessages.TwoBranchesRequest request) {
       return blockingUnaryCall(
           getChannel(), getCompareTwoBranchesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public integration.api.grpc.VeriBlockMessages.GeneralReply setForkresolutionConfig(integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getSetForkresolutionConfigMethod(), getCallOptions(), request);
     }
   }
 
@@ -243,18 +183,9 @@ public final class ForkresolutionServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getCompareTwoBranchesMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<integration.api.grpc.VeriBlockMessages.GeneralReply> setForkresolutionConfig(
-        integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getSetForkresolutionConfigMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_COMPARE_TWO_BRANCHES = 0;
-  private static final int METHODID_SET_FORKRESOLUTION_CONFIG = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -276,10 +207,6 @@ public final class ForkresolutionServiceGrpc {
         case METHODID_COMPARE_TWO_BRANCHES:
           serviceImpl.compareTwoBranches((integration.api.grpc.VeriBlockMessages.TwoBranchesRequest) request,
               (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.CompareReply>) responseObserver);
-          break;
-        case METHODID_SET_FORKRESOLUTION_CONFIG:
-          serviceImpl.setForkresolutionConfig((integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest) request,
-              (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -343,7 +270,6 @@ public final class ForkresolutionServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ForkresolutionServiceFileDescriptorSupplier())
               .addMethod(getCompareTwoBranchesMethod())
-              .addMethod(getSetForkresolutionConfigMethod())
               .build();
         }
       }

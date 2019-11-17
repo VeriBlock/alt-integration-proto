@@ -53763,14 +53763,6 @@ public final class VeriBlockMessages {
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GetMainVBKHeightOfATVReply> done);
 
       /**
-       * <code>rpc SetAltChainParametersConfig(.VeriBlock.AltChainConfigRequest) returns (.VeriBlock.GeneralReply);</code>
-       */
-      public abstract void setAltChainParametersConfig(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.AltChainConfigRequest request,
-          com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done);
-
-      /**
        * <code>rpc GetLastKnownVBKBlocks(.VeriBlock.GetLastKnownBlocksRequest) returns (.VeriBlock.GetLastKnownVBKBlocksReply);</code>
        */
       public abstract void getLastKnownVBKBlocks(
@@ -53904,14 +53896,6 @@ public final class VeriBlockMessages {
         }
 
         @java.lang.Override
-        public  void setAltChainParametersConfig(
-            com.google.protobuf.RpcController controller,
-            integration.api.grpc.VeriBlockMessages.AltChainConfigRequest request,
-            com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done) {
-          impl.setAltChainParametersConfig(controller, request, done);
-        }
-
-        @java.lang.Override
         public  void getLastKnownVBKBlocks(
             com.google.protobuf.RpcController controller,
             integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest request,
@@ -53990,14 +53974,12 @@ public final class VeriBlockMessages {
             case 11:
               return impl.getMainVBKHeightOfATV(controller, (integration.api.grpc.VeriBlockMessages.AltPublication)request);
             case 12:
-              return impl.setAltChainParametersConfig(controller, (integration.api.grpc.VeriBlockMessages.AltChainConfigRequest)request);
-            case 13:
               return impl.getLastKnownVBKBlocks(controller, (integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest)request);
-            case 14:
+            case 13:
               return impl.getLastKnownBTCBlocks(controller, (integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest)request);
-            case 15:
+            case 14:
               return impl.savePoPTransactionData(controller, (integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest)request);
-            case 16:
+            case 15:
               return impl.setConfig(controller, (integration.api.grpc.VeriBlockMessages.SetConfigRequest)request);
             default:
               throw new java.lang.AssertionError("Can't get here.");
@@ -54038,14 +54020,12 @@ public final class VeriBlockMessages {
             case 11:
               return integration.api.grpc.VeriBlockMessages.AltPublication.getDefaultInstance();
             case 12:
-              return integration.api.grpc.VeriBlockMessages.AltChainConfigRequest.getDefaultInstance();
+              return integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest.getDefaultInstance();
             case 13:
               return integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest.getDefaultInstance();
             case 14:
-              return integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest.getDefaultInstance();
-            case 15:
               return integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest.getDefaultInstance();
-            case 16:
+            case 15:
               return integration.api.grpc.VeriBlockMessages.SetConfigRequest.getDefaultInstance();
             default:
               throw new java.lang.AssertionError("Can't get here.");
@@ -54086,14 +54066,12 @@ public final class VeriBlockMessages {
             case 11:
               return integration.api.grpc.VeriBlockMessages.GetMainVBKHeightOfATVReply.getDefaultInstance();
             case 12:
-              return integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance();
-            case 13:
               return integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply.getDefaultInstance();
-            case 14:
+            case 13:
               return integration.api.grpc.VeriBlockMessages.GetLastKnownBTCBlocksReply.getDefaultInstance();
-            case 15:
+            case 14:
               return integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance();
-            case 16:
+            case 15:
               return integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance();
             default:
               throw new java.lang.AssertionError("Can't get here.");
@@ -54198,14 +54176,6 @@ public final class VeriBlockMessages {
         com.google.protobuf.RpcController controller,
         integration.api.grpc.VeriBlockMessages.AltPublication request,
         com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GetMainVBKHeightOfATVReply> done);
-
-    /**
-     * <code>rpc SetAltChainParametersConfig(.VeriBlock.AltChainConfigRequest) returns (.VeriBlock.GeneralReply);</code>
-     */
-    public abstract void setAltChainParametersConfig(
-        com.google.protobuf.RpcController controller,
-        integration.api.grpc.VeriBlockMessages.AltChainConfigRequest request,
-        com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done);
 
     /**
      * <code>rpc GetLastKnownVBKBlocks(.VeriBlock.GetLastKnownBlocksRequest) returns (.VeriBlock.GetLastKnownVBKBlocksReply);</code>
@@ -54322,26 +54292,21 @@ public final class VeriBlockMessages {
               done));
           return;
         case 12:
-          this.setAltChainParametersConfig(controller, (integration.api.grpc.VeriBlockMessages.AltChainConfigRequest)request,
-            com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.GeneralReply>specializeCallback(
-              done));
-          return;
-        case 13:
           this.getLastKnownVBKBlocks(controller, (integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest)request,
             com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply>specializeCallback(
               done));
           return;
-        case 14:
+        case 13:
           this.getLastKnownBTCBlocks(controller, (integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest)request,
             com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.GetLastKnownBTCBlocksReply>specializeCallback(
               done));
           return;
-        case 15:
+        case 14:
           this.savePoPTransactionData(controller, (integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest)request,
             com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.GeneralReply>specializeCallback(
               done));
           return;
-        case 16:
+        case 15:
           this.setConfig(controller, (integration.api.grpc.VeriBlockMessages.SetConfigRequest)request,
             com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.GeneralReply>specializeCallback(
               done));
@@ -54385,14 +54350,12 @@ public final class VeriBlockMessages {
         case 11:
           return integration.api.grpc.VeriBlockMessages.AltPublication.getDefaultInstance();
         case 12:
-          return integration.api.grpc.VeriBlockMessages.AltChainConfigRequest.getDefaultInstance();
+          return integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest.getDefaultInstance();
         case 13:
           return integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest.getDefaultInstance();
         case 14:
-          return integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest.getDefaultInstance();
-        case 15:
           return integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest.getDefaultInstance();
-        case 16:
+        case 15:
           return integration.api.grpc.VeriBlockMessages.SetConfigRequest.getDefaultInstance();
         default:
           throw new java.lang.AssertionError("Can't get here.");
@@ -54433,14 +54396,12 @@ public final class VeriBlockMessages {
         case 11:
           return integration.api.grpc.VeriBlockMessages.GetMainVBKHeightOfATVReply.getDefaultInstance();
         case 12:
-          return integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance();
-        case 13:
           return integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply.getDefaultInstance();
-        case 14:
+        case 13:
           return integration.api.grpc.VeriBlockMessages.GetLastKnownBTCBlocksReply.getDefaultInstance();
-        case 15:
+        case 14:
           return integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance();
-        case 16:
+        case 15:
           return integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance();
         default:
           throw new java.lang.AssertionError("Can't get here.");
@@ -54643,27 +54604,12 @@ public final class VeriBlockMessages {
             integration.api.grpc.VeriBlockMessages.GetMainVBKHeightOfATVReply.getDefaultInstance()));
       }
 
-      public  void setAltChainParametersConfig(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.AltChainConfigRequest request,
-          com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done) {
-        channel.callMethod(
-          getDescriptor().getMethods().get(12),
-          controller,
-          request,
-          integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance(),
-          com.google.protobuf.RpcUtil.generalizeCallback(
-            done,
-            integration.api.grpc.VeriBlockMessages.GeneralReply.class,
-            integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance()));
-      }
-
       public  void getLastKnownVBKBlocks(
           com.google.protobuf.RpcController controller,
           integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest request,
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply> done) {
         channel.callMethod(
-          getDescriptor().getMethods().get(13),
+          getDescriptor().getMethods().get(12),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply.getDefaultInstance(),
@@ -54678,7 +54624,7 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest request,
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GetLastKnownBTCBlocksReply> done) {
         channel.callMethod(
-          getDescriptor().getMethods().get(14),
+          getDescriptor().getMethods().get(13),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.GetLastKnownBTCBlocksReply.getDefaultInstance(),
@@ -54693,7 +54639,7 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest request,
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done) {
         channel.callMethod(
-          getDescriptor().getMethods().get(15),
+          getDescriptor().getMethods().get(14),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance(),
@@ -54708,7 +54654,7 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.SetConfigRequest request,
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done) {
         channel.callMethod(
-          getDescriptor().getMethods().get(16),
+          getDescriptor().getMethods().get(15),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance(),
@@ -54783,11 +54729,6 @@ public final class VeriBlockMessages {
       public integration.api.grpc.VeriBlockMessages.GetMainVBKHeightOfATVReply getMainVBKHeightOfATV(
           com.google.protobuf.RpcController controller,
           integration.api.grpc.VeriBlockMessages.AltPublication request)
-          throws com.google.protobuf.ServiceException;
-
-      public integration.api.grpc.VeriBlockMessages.GeneralReply setAltChainParametersConfig(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.AltChainConfigRequest request)
           throws com.google.protobuf.ServiceException;
 
       public integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply getLastKnownVBKBlocks(
@@ -54962,24 +54903,12 @@ public final class VeriBlockMessages {
       }
 
 
-      public integration.api.grpc.VeriBlockMessages.GeneralReply setAltChainParametersConfig(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.AltChainConfigRequest request)
-          throws com.google.protobuf.ServiceException {
-        return (integration.api.grpc.VeriBlockMessages.GeneralReply) channel.callBlockingMethod(
-          getDescriptor().getMethods().get(12),
-          controller,
-          request,
-          integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance());
-      }
-
-
       public integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply getLastKnownVBKBlocks(
           com.google.protobuf.RpcController controller,
           integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest request)
           throws com.google.protobuf.ServiceException {
         return (integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply) channel.callBlockingMethod(
-          getDescriptor().getMethods().get(13),
+          getDescriptor().getMethods().get(12),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply.getDefaultInstance());
@@ -54991,7 +54920,7 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest request)
           throws com.google.protobuf.ServiceException {
         return (integration.api.grpc.VeriBlockMessages.GetLastKnownBTCBlocksReply) channel.callBlockingMethod(
-          getDescriptor().getMethods().get(14),
+          getDescriptor().getMethods().get(13),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.GetLastKnownBTCBlocksReply.getDefaultInstance());
@@ -55003,7 +54932,7 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.SavePoPTransactionDataRequest request)
           throws com.google.protobuf.ServiceException {
         return (integration.api.grpc.VeriBlockMessages.GeneralReply) channel.callBlockingMethod(
-          getDescriptor().getMethods().get(15),
+          getDescriptor().getMethods().get(14),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance());
@@ -55015,7 +54944,7 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.SetConfigRequest request)
           throws com.google.protobuf.ServiceException {
         return (integration.api.grpc.VeriBlockMessages.GeneralReply) channel.callBlockingMethod(
-          getDescriptor().getMethods().get(16),
+          getDescriptor().getMethods().get(15),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance());
@@ -55049,14 +54978,6 @@ public final class VeriBlockMessages {
           com.google.protobuf.RpcController controller,
           integration.api.grpc.VeriBlockMessages.EmptyRequest request,
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GetCalculatorReply> done);
-
-      /**
-       * <code>rpc SetCalculator(.VeriBlock.SetCalculatorRequest) returns (.VeriBlock.GeneralReply);</code>
-       */
-      public abstract void setCalculator(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.SetCalculatorRequest request,
-          com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done);
 
       /**
        * <code>rpc RewardsCalculateScore(.VeriBlock.RewardsCalculateScoreRequest) returns (.VeriBlock.RewardsCalculateScoreReply);</code>
@@ -55101,14 +55022,6 @@ public final class VeriBlockMessages {
             integration.api.grpc.VeriBlockMessages.EmptyRequest request,
             com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GetCalculatorReply> done) {
           impl.getCalculator(controller, request, done);
-        }
-
-        @java.lang.Override
-        public  void setCalculator(
-            com.google.protobuf.RpcController controller,
-            integration.api.grpc.VeriBlockMessages.SetCalculatorRequest request,
-            com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done) {
-          impl.setCalculator(controller, request, done);
         }
 
         @java.lang.Override
@@ -55162,12 +55075,10 @@ public final class VeriBlockMessages {
             case 1:
               return impl.getCalculator(controller, (integration.api.grpc.VeriBlockMessages.EmptyRequest)request);
             case 2:
-              return impl.setCalculator(controller, (integration.api.grpc.VeriBlockMessages.SetCalculatorRequest)request);
-            case 3:
               return impl.rewardsCalculateScore(controller, (integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest)request);
-            case 4:
+            case 3:
               return impl.rewardsCalculateOutputs(controller, (integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest)request);
-            case 5:
+            case 4:
               return impl.rewardsCalculatePopDifficulty(controller, (integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest)request);
             default:
               throw new java.lang.AssertionError("Can't get here.");
@@ -55188,12 +55099,10 @@ public final class VeriBlockMessages {
             case 1:
               return integration.api.grpc.VeriBlockMessages.EmptyRequest.getDefaultInstance();
             case 2:
-              return integration.api.grpc.VeriBlockMessages.SetCalculatorRequest.getDefaultInstance();
-            case 3:
               return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest.getDefaultInstance();
-            case 4:
+            case 3:
               return integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest.getDefaultInstance();
-            case 5:
+            case 4:
               return integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.getDefaultInstance();
             default:
               throw new java.lang.AssertionError("Can't get here.");
@@ -55214,12 +55123,10 @@ public final class VeriBlockMessages {
             case 1:
               return integration.api.grpc.VeriBlockMessages.GetCalculatorReply.getDefaultInstance();
             case 2:
-              return integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance();
-            case 3:
               return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance();
-            case 4:
+            case 3:
               return integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply.getDefaultInstance();
-            case 5:
+            case 4:
               return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance();
             default:
               throw new java.lang.AssertionError("Can't get here.");
@@ -55244,14 +55151,6 @@ public final class VeriBlockMessages {
         com.google.protobuf.RpcController controller,
         integration.api.grpc.VeriBlockMessages.EmptyRequest request,
         com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GetCalculatorReply> done);
-
-    /**
-     * <code>rpc SetCalculator(.VeriBlock.SetCalculatorRequest) returns (.VeriBlock.GeneralReply);</code>
-     */
-    public abstract void setCalculator(
-        com.google.protobuf.RpcController controller,
-        integration.api.grpc.VeriBlockMessages.SetCalculatorRequest request,
-        com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done);
 
     /**
      * <code>rpc RewardsCalculateScore(.VeriBlock.RewardsCalculateScoreRequest) returns (.VeriBlock.RewardsCalculateScoreReply);</code>
@@ -55310,21 +55209,16 @@ public final class VeriBlockMessages {
               done));
           return;
         case 2:
-          this.setCalculator(controller, (integration.api.grpc.VeriBlockMessages.SetCalculatorRequest)request,
-            com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.GeneralReply>specializeCallback(
-              done));
-          return;
-        case 3:
           this.rewardsCalculateScore(controller, (integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest)request,
             com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply>specializeCallback(
               done));
           return;
-        case 4:
+        case 3:
           this.rewardsCalculateOutputs(controller, (integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest)request,
             com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply>specializeCallback(
               done));
           return;
-        case 5:
+        case 4:
           this.rewardsCalculatePopDifficulty(controller, (integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest)request,
             com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply>specializeCallback(
               done));
@@ -55348,12 +55242,10 @@ public final class VeriBlockMessages {
         case 1:
           return integration.api.grpc.VeriBlockMessages.EmptyRequest.getDefaultInstance();
         case 2:
-          return integration.api.grpc.VeriBlockMessages.SetCalculatorRequest.getDefaultInstance();
-        case 3:
           return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest.getDefaultInstance();
-        case 4:
+        case 3:
           return integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest.getDefaultInstance();
-        case 5:
+        case 4:
           return integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest.getDefaultInstance();
         default:
           throw new java.lang.AssertionError("Can't get here.");
@@ -55374,12 +55266,10 @@ public final class VeriBlockMessages {
         case 1:
           return integration.api.grpc.VeriBlockMessages.GetCalculatorReply.getDefaultInstance();
         case 2:
-          return integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance();
-        case 3:
           return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance();
-        case 4:
+        case 3:
           return integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply.getDefaultInstance();
-        case 5:
+        case 4:
           return integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance();
         default:
           throw new java.lang.AssertionError("Can't get here.");
@@ -55432,27 +55322,12 @@ public final class VeriBlockMessages {
             integration.api.grpc.VeriBlockMessages.GetCalculatorReply.getDefaultInstance()));
       }
 
-      public  void setCalculator(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.SetCalculatorRequest request,
-          com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done) {
-        channel.callMethod(
-          getDescriptor().getMethods().get(2),
-          controller,
-          request,
-          integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance(),
-          com.google.protobuf.RpcUtil.generalizeCallback(
-            done,
-            integration.api.grpc.VeriBlockMessages.GeneralReply.class,
-            integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance()));
-      }
-
       public  void rewardsCalculateScore(
           com.google.protobuf.RpcController controller,
           integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest request,
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> done) {
         channel.callMethod(
-          getDescriptor().getMethods().get(3),
+          getDescriptor().getMethods().get(2),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance(),
@@ -55467,7 +55342,7 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest request,
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply> done) {
         channel.callMethod(
-          getDescriptor().getMethods().get(4),
+          getDescriptor().getMethods().get(3),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply.getDefaultInstance(),
@@ -55482,7 +55357,7 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request,
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> done) {
         channel.callMethod(
-          getDescriptor().getMethods().get(5),
+          getDescriptor().getMethods().get(4),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance(),
@@ -55507,11 +55382,6 @@ public final class VeriBlockMessages {
       public integration.api.grpc.VeriBlockMessages.GetCalculatorReply getCalculator(
           com.google.protobuf.RpcController controller,
           integration.api.grpc.VeriBlockMessages.EmptyRequest request)
-          throws com.google.protobuf.ServiceException;
-
-      public integration.api.grpc.VeriBlockMessages.GeneralReply setCalculator(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.SetCalculatorRequest request)
           throws com.google.protobuf.ServiceException;
 
       public integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply rewardsCalculateScore(
@@ -55561,24 +55431,12 @@ public final class VeriBlockMessages {
       }
 
 
-      public integration.api.grpc.VeriBlockMessages.GeneralReply setCalculator(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.SetCalculatorRequest request)
-          throws com.google.protobuf.ServiceException {
-        return (integration.api.grpc.VeriBlockMessages.GeneralReply) channel.callBlockingMethod(
-          getDescriptor().getMethods().get(2),
-          controller,
-          request,
-          integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance());
-      }
-
-
       public integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply rewardsCalculateScore(
           com.google.protobuf.RpcController controller,
           integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest request)
           throws com.google.protobuf.ServiceException {
         return (integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply) channel.callBlockingMethod(
-          getDescriptor().getMethods().get(3),
+          getDescriptor().getMethods().get(2),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance());
@@ -55590,7 +55448,7 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsRequest request)
           throws com.google.protobuf.ServiceException {
         return (integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply) channel.callBlockingMethod(
-          getDescriptor().getMethods().get(4),
+          getDescriptor().getMethods().get(3),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.RewardsCalculateOutputsReply.getDefaultInstance());
@@ -55602,7 +55460,7 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.RewardsCalculatePopDifficultyRequest request)
           throws com.google.protobuf.ServiceException {
         return (integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply) channel.callBlockingMethod(
-          getDescriptor().getMethods().get(5),
+          getDescriptor().getMethods().get(4),
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply.getDefaultInstance());
@@ -59165,14 +59023,6 @@ public final class VeriBlockMessages {
           integration.api.grpc.VeriBlockMessages.TwoBranchesRequest request,
           com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.CompareReply> done);
 
-      /**
-       * <code>rpc SetForkresolutionConfig(.VeriBlock.ForkresolutionConfigRequest) returns (.VeriBlock.GeneralReply);</code>
-       */
-      public abstract void setForkresolutionConfig(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest request,
-          com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done);
-
     }
 
     public static com.google.protobuf.Service newReflectiveService(
@@ -59184,14 +59034,6 @@ public final class VeriBlockMessages {
             integration.api.grpc.VeriBlockMessages.TwoBranchesRequest request,
             com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.CompareReply> done) {
           impl.compareTwoBranches(controller, request, done);
-        }
-
-        @java.lang.Override
-        public  void setForkresolutionConfig(
-            com.google.protobuf.RpcController controller,
-            integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest request,
-            com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done) {
-          impl.setForkresolutionConfig(controller, request, done);
         }
 
       };
@@ -59218,8 +59060,6 @@ public final class VeriBlockMessages {
           switch(method.getIndex()) {
             case 0:
               return impl.compareTwoBranches(controller, (integration.api.grpc.VeriBlockMessages.TwoBranchesRequest)request);
-            case 1:
-              return impl.setForkresolutionConfig(controller, (integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest)request);
             default:
               throw new java.lang.AssertionError("Can't get here.");
           }
@@ -59236,8 +59076,6 @@ public final class VeriBlockMessages {
           switch(method.getIndex()) {
             case 0:
               return integration.api.grpc.VeriBlockMessages.TwoBranchesRequest.getDefaultInstance();
-            case 1:
-              return integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest.getDefaultInstance();
             default:
               throw new java.lang.AssertionError("Can't get here.");
           }
@@ -59254,8 +59092,6 @@ public final class VeriBlockMessages {
           switch(method.getIndex()) {
             case 0:
               return integration.api.grpc.VeriBlockMessages.CompareReply.getDefaultInstance();
-            case 1:
-              return integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance();
             default:
               throw new java.lang.AssertionError("Can't get here.");
           }
@@ -59271,14 +59107,6 @@ public final class VeriBlockMessages {
         com.google.protobuf.RpcController controller,
         integration.api.grpc.VeriBlockMessages.TwoBranchesRequest request,
         com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.CompareReply> done);
-
-    /**
-     * <code>rpc SetForkresolutionConfig(.VeriBlock.ForkresolutionConfigRequest) returns (.VeriBlock.GeneralReply);</code>
-     */
-    public abstract void setForkresolutionConfig(
-        com.google.protobuf.RpcController controller,
-        integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest request,
-        com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done);
 
     public static final
         com.google.protobuf.Descriptors.ServiceDescriptor
@@ -59307,11 +59135,6 @@ public final class VeriBlockMessages {
             com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.CompareReply>specializeCallback(
               done));
           return;
-        case 1:
-          this.setForkresolutionConfig(controller, (integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest)request,
-            com.google.protobuf.RpcUtil.<integration.api.grpc.VeriBlockMessages.GeneralReply>specializeCallback(
-              done));
-          return;
         default:
           throw new java.lang.AssertionError("Can't get here.");
       }
@@ -59328,8 +59151,6 @@ public final class VeriBlockMessages {
       switch(method.getIndex()) {
         case 0:
           return integration.api.grpc.VeriBlockMessages.TwoBranchesRequest.getDefaultInstance();
-        case 1:
-          return integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest.getDefaultInstance();
         default:
           throw new java.lang.AssertionError("Can't get here.");
       }
@@ -59346,8 +59167,6 @@ public final class VeriBlockMessages {
       switch(method.getIndex()) {
         case 0:
           return integration.api.grpc.VeriBlockMessages.CompareReply.getDefaultInstance();
-        case 1:
-          return integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance();
         default:
           throw new java.lang.AssertionError("Can't get here.");
       }
@@ -59383,21 +59202,6 @@ public final class VeriBlockMessages {
             integration.api.grpc.VeriBlockMessages.CompareReply.class,
             integration.api.grpc.VeriBlockMessages.CompareReply.getDefaultInstance()));
       }
-
-      public  void setForkresolutionConfig(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest request,
-          com.google.protobuf.RpcCallback<integration.api.grpc.VeriBlockMessages.GeneralReply> done) {
-        channel.callMethod(
-          getDescriptor().getMethods().get(1),
-          controller,
-          request,
-          integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance(),
-          com.google.protobuf.RpcUtil.generalizeCallback(
-            done,
-            integration.api.grpc.VeriBlockMessages.GeneralReply.class,
-            integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance()));
-      }
     }
 
     public static BlockingInterface newBlockingStub(
@@ -59409,11 +59213,6 @@ public final class VeriBlockMessages {
       public integration.api.grpc.VeriBlockMessages.CompareReply compareTwoBranches(
           com.google.protobuf.RpcController controller,
           integration.api.grpc.VeriBlockMessages.TwoBranchesRequest request)
-          throws com.google.protobuf.ServiceException;
-
-      public integration.api.grpc.VeriBlockMessages.GeneralReply setForkresolutionConfig(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest request)
           throws com.google.protobuf.ServiceException;
     }
 
@@ -59433,18 +59232,6 @@ public final class VeriBlockMessages {
           controller,
           request,
           integration.api.grpc.VeriBlockMessages.CompareReply.getDefaultInstance());
-      }
-
-
-      public integration.api.grpc.VeriBlockMessages.GeneralReply setForkresolutionConfig(
-          com.google.protobuf.RpcController controller,
-          integration.api.grpc.VeriBlockMessages.ForkresolutionConfigRequest request)
-          throws com.google.protobuf.ServiceException {
-        return (integration.api.grpc.VeriBlockMessages.GeneralReply) channel.callBlockingMethod(
-          getDescriptor().getMethods().get(1),
-          controller,
-          request,
-          integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance());
       }
 
     }
@@ -60011,7 +59798,7 @@ public final class VeriBlockMessages {
       "\027.VeriBlock.GeneralReply\022\030\n\020comparingsRe" +
       "sult\030\002 \001(\005\"S\n\033ForkresolutionConfigReques" +
       "t\022\035\n\025keystoneFinalityDelay\030\001 \001(\005\022\025\n\ramne" +
-      "styPeriod\030\002 \001(\0052\230\013\n\022IntegrationService\022C" +
+      "styPeriod\030\002 \001(\0052\274\n\n\022IntegrationService\022C" +
       "\n\rResetSecurity\022\027.VeriBlock.EmptyRequest" +
       "\032\027.VeriBlock.GeneralReply\"\000\022K\n\023AddGenesi" +
       "sVeriBlock\022\031.VeriBlock.VeriBlockBlock\032\027." +
@@ -60035,141 +59822,135 @@ public final class VeriBlockMessages {
       "\031.VeriBlock.AltPublication\032\027.VeriBlock.G" +
       "eneralReply\"\000\022[\n\025GetMainVBKHeightOfATV\022\031" +
       ".VeriBlock.AltPublication\032%.VeriBlock.Ge" +
-      "tMainVBKHeightOfATVReply\"\000\022Z\n\033SetAltChai" +
-      "nParametersConfig\022 .VeriBlock.AltChainCo" +
-      "nfigRequest\032\027.VeriBlock.GeneralReply\"\000\022f" +
-      "\n\025GetLastKnownVBKBlocks\022$.VeriBlock.GetL" +
-      "astKnownBlocksRequest\032%.VeriBlock.GetLas" +
-      "tKnownVBKBlocksReply\"\000\022f\n\025GetLastKnownBT" +
-      "CBlocks\022$.VeriBlock.GetLastKnownBlocksRe" +
-      "quest\032%.VeriBlock.GetLastKnownBTCBlocksR" +
-      "eply\"\000\022]\n\026SavePoPTransactionData\022(.VeriB" +
-      "lock.SavePoPTransactionDataRequest\032\027.Ver" +
-      "iBlock.GeneralReply\"\000\022C\n\tSetConfig\022\033.Ver" +
-      "iBlock.SetConfigRequest\032\027.VeriBlock.Gene" +
-      "ralReply\"\0002\303\004\n\016RewardsService\022B\n\014ResetRe" +
-      "wards\022\027.VeriBlock.EmptyRequest\032\027.VeriBlo" +
-      "ck.GeneralReply\"\000\022I\n\rGetCalculator\022\027.Ver" +
-      "iBlock.EmptyRequest\032\035.VeriBlock.GetCalcu" +
-      "latorReply\"\000\022K\n\rSetCalculator\022\037.VeriBloc" +
-      "k.SetCalculatorRequest\032\027.VeriBlock.Gener" +
-      "alReply\"\000\022i\n\025RewardsCalculateScore\022\'.Ver" +
-      "iBlock.RewardsCalculateScoreRequest\032%.Ve" +
-      "riBlock.RewardsCalculateScoreReply\"\000\022o\n\027" +
-      "RewardsCalculateOutputs\022).VeriBlock.Rewa" +
-      "rdsCalculateOutputsRequest\032\'.VeriBlock.R" +
-      "ewardsCalculateOutputsReply\"\000\022y\n\035Rewards" +
-      "CalculatePopDifficulty\022/.VeriBlock.Rewar" +
-      "dsCalculatePopDifficultyRequest\032%.VeriBl" +
-      "ock.RewardsCalculateScoreReply\"\0002\263\010\n\022Des" +
-      "erializeService\022U\n\023ParseAltPublication\022\034" +
-      ".VeriBlock.BytesArrayRequest\032\036.VeriBlock" +
-      ".AltPublicationReply\"\000\022W\n\024ParsePublicati" +
-      "onData\022\034.VeriBlock.BytesArrayRequest\032\037.V" +
-      "eriBlock.PublicationDataReply\"\000\022]\n\027Parse" +
-      "BitcoinTransaction\022\034.VeriBlock.BytesArra" +
-      "yRequest\032\".VeriBlock.BitcoinTransactionR" +
-      "eply\"\000\022U\n\023ParseVeriBlockBlock\022\034.VeriBloc" +
-      "k.BytesArrayRequest\032\036.VeriBlock.VeriBloc" +
-      "kBlockReply\"\000\022a\n\031ParseVeriBlockTransacti" +
-      "on\022\034.VeriBlock.BytesArrayRequest\032$.VeriB" +
-      "lock.VeriBlockTransactionReply\"\000\022a\n\031Pars" +
-      "eVeriBlockPublication\022\034.VeriBlock.BytesA" +
-      "rrayRequest\032$.VeriBlock.VeriBlockPublica" +
-      "tionReply\"\000\022^\n\023ParseVeriBlockPopTx\022\034.Ver" +
-      "iBlock.BytesArrayRequest\032\'.VeriBlock.Ver" +
-      "iBlockPoPTransactionReply\"\000\022E\n\013ParseOutp" +
-      "ut\022\034.VeriBlock.BytesArrayRequest\032\026.VeriB" +
-      "lock.OutputReply\"\000\022G\n\014ParseAddress\022\034.Ver" +
-      "iBlock.BytesArrayRequest\032\027.VeriBlock.Add" +
-      "ressReply\"\000\022Q\n\021ParseBitcoinBlock\022\034.VeriB" +
-      "lock.BytesArrayRequest\032\034.VeriBlock.Bitco" +
-      "inBlockReply\"\000\022_\n\030ParseVeriBlockMerklePa" +
-      "th\022\034.VeriBlock.BytesArrayRequest\032#.VeriB" +
-      "lock.VeriBlockMerklePathReply\"\000\022M\n\017Parse" +
-      "MerklePath\022\034.VeriBlock.MerklePathRequest" +
-      "\032\032.VeriBlock.MerklePathReply\"\0002\215\010\n\020Seria" +
-      "lizeService\022R\n\027SerializeAltPublication\022\031" +
-      ".VeriBlock.AltPublication\032\032.VeriBlock.By" +
-      "tesArrayReply\"\000\022T\n\030SerializePublicationD" +
-      "ata\022\032.VeriBlock.PublicationData\032\032.VeriBl" +
-      "ock.BytesArrayReply\"\000\022Z\n\033SerializeBitcoi" +
-      "nTransaction\022\035.VeriBlock.BitcoinTransact" +
-      "ion\032\032.VeriBlock.BytesArrayReply\"\000\022R\n\027Ser" +
-      "ializeVeriBlockBlock\022\031.VeriBlock.VeriBlo" +
-      "ckBlock\032\032.VeriBlock.BytesArrayReply\"\000\022^\n" +
-      "\035SerializeVeriBlockTransaction\022\037.VeriBlo" +
-      "ck.VeriBlockTransaction\032\032.VeriBlock.Byte" +
-      "sArrayReply\"\000\022^\n\035SerializeVeriBlockPubli" +
-      "cation\022\037.VeriBlock.VeriBlockPublication\032" +
-      "\032.VeriBlock.BytesArrayReply\"\000\022[\n\027Seriali" +
-      "zeVeriBlockPopTx\022\".VeriBlock.VeriBlockPo" +
-      "PTransaction\032\032.VeriBlock.BytesArrayReply" +
-      "\"\000\022B\n\017SerializeOutput\022\021.VeriBlock.Output" +
-      "\032\032.VeriBlock.BytesArrayReply\"\000\022D\n\020Serial" +
-      "izeAddress\022\022.VeriBlock.Address\032\032.VeriBlo" +
-      "ck.BytesArrayReply\"\000\022N\n\025SerializeBitcoin" +
-      "Block\022\027.VeriBlock.BitcoinBlock\032\032.VeriBlo" +
-      "ck.BytesArrayReply\"\000\022\\\n\034SerializeVeriBlo" +
-      "ckMerklePath\022\036.VeriBlock.VeriBlockMerkle" +
-      "Path\032\032.VeriBlock.BytesArrayReply\"\000\022J\n\023Se" +
-      "rializeMerklePath\022\025.VeriBlock.MerklePath" +
-      "\032\032.VeriBlock.BytesArrayReply\"\0002\271\r\n\021Valid" +
-      "ationService\022U\n\024VerifyVeriBlockPoPTx\022\".V" +
-      "eriBlock.VeriBlockPoPTransaction\032\027.VeriB" +
-      "lock.GeneralReply\"\000\022]\n\034CheckSignatureVer" +
-      "iBlockPoPTx\022\".VeriBlock.VeriBlockPoPTran" +
-      "saction\032\027.VeriBlock.GeneralReply\"\000\022b\n!Ch" +
-      "eckBitcoinTransactionForPoPData\022\".VeriBl" +
-      "ock.VeriBlockPoPTransaction\032\027.VeriBlock." +
-      "GeneralReply\"\000\022e\n$CheckBitcoinMerklePath" +
-      "VeriBlockPoPTx\022\".VeriBlock.VeriBlockPoPT" +
-      "ransaction\032\027.VeriBlock.GeneralReply\"\000\022a\n" +
-      " CheckBitcoinBlocksVeriBlockPoPTx\022\".Veri" +
-      "Block.VeriBlockPoPTransaction\032\027.VeriBloc" +
-      "k.GeneralReply\"\000\022X\n\032VerifyVeriBlockPubli" +
-      "cation\022\037.VeriBlock.VeriBlockPublication\032" +
-      "\027.VeriBlock.GeneralReply\"\000\022]\n\037CheckBlock" +
-      "sVeriBlockPublication\022\037.VeriBlock.VeriBl" +
-      "ockPublication\032\027.VeriBlock.GeneralReply\"" +
-      "\000\022a\n#CheckMerklePathVeriBlockPublication" +
-      "\022\037.VeriBlock.VeriBlockPublication\032\027.Veri" +
-      "Block.GeneralReply\"\000\022X\n\032VerifyVeriBlockT" +
-      "ransaction\022\037.VeriBlock.VeriBlockTransact" +
-      "ion\032\027.VeriBlock.GeneralReply\"\000\022`\n\"CheckS" +
-      "ignatureVeriBlockTransaction\022\037.VeriBlock" +
-      ".VeriBlockTransaction\032\027.VeriBlock.Genera" +
-      "lReply\"\000\022L\n\024VerifyVeriBlockBlock\022\031.VeriB" +
-      "lock.VeriBlockBlock\032\027.VeriBlock.GeneralR" +
-      "eply\"\000\022V\n\036CheckProofOfWorkVeriBlockBlock" +
+      "tMainVBKHeightOfATVReply\"\000\022f\n\025GetLastKno" +
+      "wnVBKBlocks\022$.VeriBlock.GetLastKnownBloc" +
+      "ksRequest\032%.VeriBlock.GetLastKnownVBKBlo" +
+      "cksReply\"\000\022f\n\025GetLastKnownBTCBlocks\022$.Ve" +
+      "riBlock.GetLastKnownBlocksRequest\032%.Veri" +
+      "Block.GetLastKnownBTCBlocksReply\"\000\022]\n\026Sa" +
+      "vePoPTransactionData\022(.VeriBlock.SavePoP" +
+      "TransactionDataRequest\032\027.VeriBlock.Gener" +
+      "alReply\"\000\022C\n\tSetConfig\022\033.VeriBlock.SetCo" +
+      "nfigRequest\032\027.VeriBlock.GeneralReply\"\0002\366" +
+      "\003\n\016RewardsService\022B\n\014ResetRewards\022\027.Veri" +
+      "Block.EmptyRequest\032\027.VeriBlock.GeneralRe" +
+      "ply\"\000\022I\n\rGetCalculator\022\027.VeriBlock.Empty" +
+      "Request\032\035.VeriBlock.GetCalculatorReply\"\000" +
+      "\022i\n\025RewardsCalculateScore\022\'.VeriBlock.Re" +
+      "wardsCalculateScoreRequest\032%.VeriBlock.R" +
+      "ewardsCalculateScoreReply\"\000\022o\n\027RewardsCa" +
+      "lculateOutputs\022).VeriBlock.RewardsCalcul" +
+      "ateOutputsRequest\032\'.VeriBlock.RewardsCal" +
+      "culateOutputsReply\"\000\022y\n\035RewardsCalculate" +
+      "PopDifficulty\022/.VeriBlock.RewardsCalcula" +
+      "tePopDifficultyRequest\032%.VeriBlock.Rewar" +
+      "dsCalculateScoreReply\"\0002\263\010\n\022DeserializeS" +
+      "ervice\022U\n\023ParseAltPublication\022\034.VeriBloc" +
+      "k.BytesArrayRequest\032\036.VeriBlock.AltPubli" +
+      "cationReply\"\000\022W\n\024ParsePublicationData\022\034." +
+      "VeriBlock.BytesArrayRequest\032\037.VeriBlock." +
+      "PublicationDataReply\"\000\022]\n\027ParseBitcoinTr" +
+      "ansaction\022\034.VeriBlock.BytesArrayRequest\032" +
+      "\".VeriBlock.BitcoinTransactionReply\"\000\022U\n" +
+      "\023ParseVeriBlockBlock\022\034.VeriBlock.BytesAr" +
+      "rayRequest\032\036.VeriBlock.VeriBlockBlockRep" +
+      "ly\"\000\022a\n\031ParseVeriBlockTransaction\022\034.Veri" +
+      "Block.BytesArrayRequest\032$.VeriBlock.Veri" +
+      "BlockTransactionReply\"\000\022a\n\031ParseVeriBloc" +
+      "kPublication\022\034.VeriBlock.BytesArrayReque" +
+      "st\032$.VeriBlock.VeriBlockPublicationReply" +
+      "\"\000\022^\n\023ParseVeriBlockPopTx\022\034.VeriBlock.By" +
+      "tesArrayRequest\032\'.VeriBlock.VeriBlockPoP" +
+      "TransactionReply\"\000\022E\n\013ParseOutput\022\034.Veri" +
+      "Block.BytesArrayRequest\032\026.VeriBlock.Outp" +
+      "utReply\"\000\022G\n\014ParseAddress\022\034.VeriBlock.By" +
+      "tesArrayRequest\032\027.VeriBlock.AddressReply" +
+      "\"\000\022Q\n\021ParseBitcoinBlock\022\034.VeriBlock.Byte" +
+      "sArrayRequest\032\034.VeriBlock.BitcoinBlockRe" +
+      "ply\"\000\022_\n\030ParseVeriBlockMerklePath\022\034.Veri" +
+      "Block.BytesArrayRequest\032#.VeriBlock.Veri" +
+      "BlockMerklePathReply\"\000\022M\n\017ParseMerklePat" +
+      "h\022\034.VeriBlock.MerklePathRequest\032\032.VeriBl" +
+      "ock.MerklePathReply\"\0002\215\010\n\020SerializeServi" +
+      "ce\022R\n\027SerializeAltPublication\022\031.VeriBloc" +
+      "k.AltPublication\032\032.VeriBlock.BytesArrayR" +
+      "eply\"\000\022T\n\030SerializePublicationData\022\032.Ver" +
+      "iBlock.PublicationData\032\032.VeriBlock.Bytes" +
+      "ArrayReply\"\000\022Z\n\033SerializeBitcoinTransact" +
+      "ion\022\035.VeriBlock.BitcoinTransaction\032\032.Ver" +
+      "iBlock.BytesArrayReply\"\000\022R\n\027SerializeVer" +
+      "iBlockBlock\022\031.VeriBlock.VeriBlockBlock\032\032" +
+      ".VeriBlock.BytesArrayReply\"\000\022^\n\035Serializ" +
+      "eVeriBlockTransaction\022\037.VeriBlock.VeriBl" +
+      "ockTransaction\032\032.VeriBlock.BytesArrayRep" +
+      "ly\"\000\022^\n\035SerializeVeriBlockPublication\022\037." +
+      "VeriBlock.VeriBlockPublication\032\032.VeriBlo" +
+      "ck.BytesArrayReply\"\000\022[\n\027SerializeVeriBlo" +
+      "ckPopTx\022\".VeriBlock.VeriBlockPoPTransact" +
+      "ion\032\032.VeriBlock.BytesArrayReply\"\000\022B\n\017Ser" +
+      "ializeOutput\022\021.VeriBlock.Output\032\032.VeriBl" +
+      "ock.BytesArrayReply\"\000\022D\n\020SerializeAddres" +
+      "s\022\022.VeriBlock.Address\032\032.VeriBlock.BytesA" +
+      "rrayReply\"\000\022N\n\025SerializeBitcoinBlock\022\027.V" +
+      "eriBlock.BitcoinBlock\032\032.VeriBlock.BytesA" +
+      "rrayReply\"\000\022\\\n\034SerializeVeriBlockMerkleP" +
+      "ath\022\036.VeriBlock.VeriBlockMerklePath\032\032.Ve" +
+      "riBlock.BytesArrayReply\"\000\022J\n\023SerializeMe" +
+      "rklePath\022\025.VeriBlock.MerklePath\032\032.VeriBl" +
+      "ock.BytesArrayReply\"\0002\271\r\n\021ValidationServ" +
+      "ice\022U\n\024VerifyVeriBlockPoPTx\022\".VeriBlock." +
+      "VeriBlockPoPTransaction\032\027.VeriBlock.Gene" +
+      "ralReply\"\000\022]\n\034CheckSignatureVeriBlockPoP" +
+      "Tx\022\".VeriBlock.VeriBlockPoPTransaction\032\027" +
+      ".VeriBlock.GeneralReply\"\000\022b\n!CheckBitcoi" +
+      "nTransactionForPoPData\022\".VeriBlock.VeriB" +
+      "lockPoPTransaction\032\027.VeriBlock.GeneralRe" +
+      "ply\"\000\022e\n$CheckBitcoinMerklePathVeriBlock" +
+      "PoPTx\022\".VeriBlock.VeriBlockPoPTransactio" +
+      "n\032\027.VeriBlock.GeneralReply\"\000\022a\n CheckBit" +
+      "coinBlocksVeriBlockPoPTx\022\".VeriBlock.Ver" +
+      "iBlockPoPTransaction\032\027.VeriBlock.General" +
+      "Reply\"\000\022X\n\032VerifyVeriBlockPublication\022\037." +
+      "VeriBlock.VeriBlockPublication\032\027.VeriBlo" +
+      "ck.GeneralReply\"\000\022]\n\037CheckBlocksVeriBloc" +
+      "kPublication\022\037.VeriBlock.VeriBlockPublic" +
+      "ation\032\027.VeriBlock.GeneralReply\"\000\022a\n#Chec" +
+      "kMerklePathVeriBlockPublication\022\037.VeriBl" +
+      "ock.VeriBlockPublication\032\027.VeriBlock.Gen" +
+      "eralReply\"\000\022X\n\032VerifyVeriBlockTransactio" +
+      "n\022\037.VeriBlock.VeriBlockTransaction\032\027.Ver" +
+      "iBlock.GeneralReply\"\000\022`\n\"CheckSignatureV" +
+      "eriBlockTransaction\022\037.VeriBlock.VeriBloc" +
+      "kTransaction\032\027.VeriBlock.GeneralReply\"\000\022" +
+      "L\n\024VerifyVeriBlockBlock\022\031.VeriBlock.Veri" +
+      "BlockBlock\032\027.VeriBlock.GeneralReply\"\000\022V\n" +
+      "\036CheckProofOfWorkVeriBlockBlock\022\031.VeriBl" +
+      "ock.VeriBlockBlock\032\027.VeriBlock.GeneralRe" +
+      "ply\"\000\022W\n\037CheckMaximumDriftVeriBlockBlock" +
       "\022\031.VeriBlock.VeriBlockBlock\032\027.VeriBlock." +
-      "GeneralReply\"\000\022W\n\037CheckMaximumDriftVeriB" +
-      "lockBlock\022\031.VeriBlock.VeriBlockBlock\032\027.V" +
-      "eriBlock.GeneralReply\"\000\022H\n\022VerifyBitcoin" +
+      "GeneralReply\"\000\022H\n\022VerifyBitcoinBlock\022\027.V" +
+      "eriBlock.BitcoinBlock\032\027.VeriBlock.Genera" +
+      "lReply\"\000\022R\n\034CheckProofOfWorkBitcoinBlock" +
+      "\022\027.VeriBlock.BitcoinBlock\032\027.VeriBlock.Ge" +
+      "neralReply\"\000\022S\n\035CheckMaximumDriftBitcoin" +
       "Block\022\027.VeriBlock.BitcoinBlock\032\027.VeriBlo" +
-      "ck.GeneralReply\"\000\022R\n\034CheckProofOfWorkBit" +
-      "coinBlock\022\027.VeriBlock.BitcoinBlock\032\027.Ver" +
-      "iBlock.GeneralReply\"\000\022S\n\035CheckMaximumDri" +
-      "ftBitcoinBlock\022\027.VeriBlock.BitcoinBlock\032" +
-      "\027.VeriBlock.GeneralReply\"\000\022L\n\024VerifyAltP" +
-      "ublication\022\031.VeriBlock.AltPublication\032\027." +
-      "VeriBlock.GeneralReply\"\000\022U\n\035CheckMerkleP" +
-      "athAltPublication\022\031.VeriBlock.AltPublica" +
-      "tion\032\027.VeriBlock.GeneralReply\"\000\022Q\n\031Check" +
-      "BlocksAltPublication\022\031.VeriBlock.AltPubl" +
-      "ication\032\027.VeriBlock.GeneralReply\"\0002\305\001\n\025F" +
-      "orkresolutionService\022N\n\022CompareTwoBranch" +
-      "es\022\035.VeriBlock.TwoBranchesRequest\032\027.Veri" +
-      "Block.CompareReply\"\000\022\\\n\027SetForkresolutio" +
-      "nConfig\022&.VeriBlock.ForkresolutionConfig" +
-      "Request\032\027.VeriBlock.GeneralReply\"\000:4\n\013he" +
-      "x_encoded\022\035.google.protobuf.FieldOptions" +
-      "\030\320\206\003 \001(\010:8\n\017address_encoded\022\035.google.pro" +
-      "tobuf.FieldOptions\030\321\206\003 \001(\010:6\n\rascii_enco" +
-      "ded\022\035.google.protobuf.FieldOptions\030\322\206\003 \001" +
-      "(\010:5\n\014utf8_encoded\022\035.google.protobuf.Fie" +
-      "ldOptions\030\323\206\003 \001(\010B,\n\024integration.api.grp" +
-      "cB\021VeriBlockMessages\210\001\001b\006proto3"
+      "ck.GeneralReply\"\000\022L\n\024VerifyAltPublicatio" +
+      "n\022\031.VeriBlock.AltPublication\032\027.VeriBlock" +
+      ".GeneralReply\"\000\022U\n\035CheckMerklePathAltPub" +
+      "lication\022\031.VeriBlock.AltPublication\032\027.Ve" +
+      "riBlock.GeneralReply\"\000\022Q\n\031CheckBlocksAlt" +
+      "Publication\022\031.VeriBlock.AltPublication\032\027" +
+      ".VeriBlock.GeneralReply\"\0002g\n\025Forkresolut" +
+      "ionService\022N\n\022CompareTwoBranches\022\035.VeriB" +
+      "lock.TwoBranchesRequest\032\027.VeriBlock.Comp" +
+      "areReply\"\000:4\n\013hex_encoded\022\035.google.proto" +
+      "buf.FieldOptions\030\320\206\003 \001(\010:8\n\017address_enco" +
+      "ded\022\035.google.protobuf.FieldOptions\030\321\206\003 \001" +
+      "(\010:6\n\rascii_encoded\022\035.google.protobuf.Fi" +
+      "eldOptions\030\322\206\003 \001(\010:5\n\014utf8_encoded\022\035.goo" +
+      "gle.protobuf.FieldOptions\030\323\206\003 \001(\010B,\n\024int" +
+      "egration.api.grpcB\021VeriBlockMessages\210\001\001b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

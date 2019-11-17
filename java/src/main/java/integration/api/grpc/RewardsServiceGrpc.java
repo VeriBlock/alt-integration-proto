@@ -89,37 +89,6 @@ public final class RewardsServiceGrpc {
     return getGetCalculatorMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.SetCalculatorRequest,
-      integration.api.grpc.VeriBlockMessages.GeneralReply> getSetCalculatorMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SetCalculator",
-      requestType = integration.api.grpc.VeriBlockMessages.SetCalculatorRequest.class,
-      responseType = integration.api.grpc.VeriBlockMessages.GeneralReply.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.SetCalculatorRequest,
-      integration.api.grpc.VeriBlockMessages.GeneralReply> getSetCalculatorMethod() {
-    io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.SetCalculatorRequest, integration.api.grpc.VeriBlockMessages.GeneralReply> getSetCalculatorMethod;
-    if ((getSetCalculatorMethod = RewardsServiceGrpc.getSetCalculatorMethod) == null) {
-      synchronized (RewardsServiceGrpc.class) {
-        if ((getSetCalculatorMethod = RewardsServiceGrpc.getSetCalculatorMethod) == null) {
-          RewardsServiceGrpc.getSetCalculatorMethod = getSetCalculatorMethod =
-              io.grpc.MethodDescriptor.<integration.api.grpc.VeriBlockMessages.SetCalculatorRequest, integration.api.grpc.VeriBlockMessages.GeneralReply>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetCalculator"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  integration.api.grpc.VeriBlockMessages.SetCalculatorRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance()))
-              .setSchemaDescriptor(new RewardsServiceMethodDescriptorSupplier("SetCalculator"))
-              .build();
-        }
-      }
-    }
-    return getSetCalculatorMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest,
       integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> getRewardsCalculateScoreMethod;
 
@@ -256,13 +225,6 @@ public final class RewardsServiceGrpc {
 
     /**
      */
-    public void setCalculator(integration.api.grpc.VeriBlockMessages.SetCalculatorRequest request,
-        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetCalculatorMethod(), responseObserver);
-    }
-
-    /**
-     */
     public void rewardsCalculateScore(integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest request,
         io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> responseObserver) {
       asyncUnimplementedUnaryCall(getRewardsCalculateScoreMethod(), responseObserver);
@@ -298,13 +260,6 @@ public final class RewardsServiceGrpc {
                 integration.api.grpc.VeriBlockMessages.EmptyRequest,
                 integration.api.grpc.VeriBlockMessages.GetCalculatorReply>(
                   this, METHODID_GET_CALCULATOR)))
-          .addMethod(
-            getSetCalculatorMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                integration.api.grpc.VeriBlockMessages.SetCalculatorRequest,
-                integration.api.grpc.VeriBlockMessages.GeneralReply>(
-                  this, METHODID_SET_CALCULATOR)))
           .addMethod(
             getRewardsCalculateScoreMethod(),
             asyncUnaryCall(
@@ -366,14 +321,6 @@ public final class RewardsServiceGrpc {
 
     /**
      */
-    public void setCalculator(integration.api.grpc.VeriBlockMessages.SetCalculatorRequest request,
-        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getSetCalculatorMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
     public void rewardsCalculateScore(integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest request,
         io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> responseObserver) {
       asyncUnaryCall(
@@ -427,13 +374,6 @@ public final class RewardsServiceGrpc {
     public integration.api.grpc.VeriBlockMessages.GetCalculatorReply getCalculator(integration.api.grpc.VeriBlockMessages.EmptyRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetCalculatorMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public integration.api.grpc.VeriBlockMessages.GeneralReply setCalculator(integration.api.grpc.VeriBlockMessages.SetCalculatorRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getSetCalculatorMethod(), getCallOptions(), request);
     }
 
     /**
@@ -494,14 +434,6 @@ public final class RewardsServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<integration.api.grpc.VeriBlockMessages.GeneralReply> setCalculator(
-        integration.api.grpc.VeriBlockMessages.SetCalculatorRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getSetCalculatorMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreReply> rewardsCalculateScore(
         integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest request) {
       return futureUnaryCall(
@@ -527,10 +459,9 @@ public final class RewardsServiceGrpc {
 
   private static final int METHODID_RESET_REWARDS = 0;
   private static final int METHODID_GET_CALCULATOR = 1;
-  private static final int METHODID_SET_CALCULATOR = 2;
-  private static final int METHODID_REWARDS_CALCULATE_SCORE = 3;
-  private static final int METHODID_REWARDS_CALCULATE_OUTPUTS = 4;
-  private static final int METHODID_REWARDS_CALCULATE_POP_DIFFICULTY = 5;
+  private static final int METHODID_REWARDS_CALCULATE_SCORE = 2;
+  private static final int METHODID_REWARDS_CALCULATE_OUTPUTS = 3;
+  private static final int METHODID_REWARDS_CALCULATE_POP_DIFFICULTY = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -556,10 +487,6 @@ public final class RewardsServiceGrpc {
         case METHODID_GET_CALCULATOR:
           serviceImpl.getCalculator((integration.api.grpc.VeriBlockMessages.EmptyRequest) request,
               (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GetCalculatorReply>) responseObserver);
-          break;
-        case METHODID_SET_CALCULATOR:
-          serviceImpl.setCalculator((integration.api.grpc.VeriBlockMessages.SetCalculatorRequest) request,
-              (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply>) responseObserver);
           break;
         case METHODID_REWARDS_CALCULATE_SCORE:
           serviceImpl.rewardsCalculateScore((integration.api.grpc.VeriBlockMessages.RewardsCalculateScoreRequest) request,
@@ -636,7 +563,6 @@ public final class RewardsServiceGrpc {
               .setSchemaDescriptor(new RewardsServiceFileDescriptorSupplier())
               .addMethod(getResetRewardsMethod())
               .addMethod(getGetCalculatorMethod())
-              .addMethod(getSetCalculatorMethod())
               .addMethod(getRewardsCalculateScoreMethod())
               .addMethod(getRewardsCalculateOutputsMethod())
               .addMethod(getRewardsCalculatePopDifficultyMethod())

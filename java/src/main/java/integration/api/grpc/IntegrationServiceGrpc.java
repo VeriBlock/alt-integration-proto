@@ -399,37 +399,6 @@ public final class IntegrationServiceGrpc {
     return getGetMainVBKHeightOfATVMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.AltChainConfigRequest,
-      integration.api.grpc.VeriBlockMessages.GeneralReply> getSetAltChainParametersConfigMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SetAltChainParametersConfig",
-      requestType = integration.api.grpc.VeriBlockMessages.AltChainConfigRequest.class,
-      responseType = integration.api.grpc.VeriBlockMessages.GeneralReply.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.AltChainConfigRequest,
-      integration.api.grpc.VeriBlockMessages.GeneralReply> getSetAltChainParametersConfigMethod() {
-    io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.AltChainConfigRequest, integration.api.grpc.VeriBlockMessages.GeneralReply> getSetAltChainParametersConfigMethod;
-    if ((getSetAltChainParametersConfigMethod = IntegrationServiceGrpc.getSetAltChainParametersConfigMethod) == null) {
-      synchronized (IntegrationServiceGrpc.class) {
-        if ((getSetAltChainParametersConfigMethod = IntegrationServiceGrpc.getSetAltChainParametersConfigMethod) == null) {
-          IntegrationServiceGrpc.getSetAltChainParametersConfigMethod = getSetAltChainParametersConfigMethod =
-              io.grpc.MethodDescriptor.<integration.api.grpc.VeriBlockMessages.AltChainConfigRequest, integration.api.grpc.VeriBlockMessages.GeneralReply>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAltChainParametersConfig"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  integration.api.grpc.VeriBlockMessages.AltChainConfigRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  integration.api.grpc.VeriBlockMessages.GeneralReply.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationServiceMethodDescriptorSupplier("SetAltChainParametersConfig"))
-              .build();
-        }
-      }
-    }
-    return getSetAltChainParametersConfigMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest,
       integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply> getGetLastKnownVBKBlocksMethod;
 
@@ -667,13 +636,6 @@ public final class IntegrationServiceGrpc {
 
     /**
      */
-    public void setAltChainParametersConfig(integration.api.grpc.VeriBlockMessages.AltChainConfigRequest request,
-        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetAltChainParametersConfigMethod(), responseObserver);
-    }
-
-    /**
-     */
     public void getLastKnownVBKBlocks(integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest request,
         io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply> responseObserver) {
       asyncUnimplementedUnaryCall(getGetLastKnownVBKBlocksMethod(), responseObserver);
@@ -786,13 +748,6 @@ public final class IntegrationServiceGrpc {
                 integration.api.grpc.VeriBlockMessages.AltPublication,
                 integration.api.grpc.VeriBlockMessages.GetMainVBKHeightOfATVReply>(
                   this, METHODID_GET_MAIN_VBKHEIGHT_OF_ATV)))
-          .addMethod(
-            getSetAltChainParametersConfigMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                integration.api.grpc.VeriBlockMessages.AltChainConfigRequest,
-                integration.api.grpc.VeriBlockMessages.GeneralReply>(
-                  this, METHODID_SET_ALT_CHAIN_PARAMETERS_CONFIG)))
           .addMethod(
             getGetLastKnownVBKBlocksMethod(),
             asyncUnaryCall(
@@ -941,14 +896,6 @@ public final class IntegrationServiceGrpc {
 
     /**
      */
-    public void setAltChainParametersConfig(integration.api.grpc.VeriBlockMessages.AltChainConfigRequest request,
-        io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getSetAltChainParametersConfigMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
     public void getLastKnownVBKBlocks(integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest request,
         io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply> responseObserver) {
       asyncUnaryCall(
@@ -1080,13 +1027,6 @@ public final class IntegrationServiceGrpc {
     public integration.api.grpc.VeriBlockMessages.GetMainVBKHeightOfATVReply getMainVBKHeightOfATV(integration.api.grpc.VeriBlockMessages.AltPublication request) {
       return blockingUnaryCall(
           getChannel(), getGetMainVBKHeightOfATVMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public integration.api.grpc.VeriBlockMessages.GeneralReply setAltChainParametersConfig(integration.api.grpc.VeriBlockMessages.AltChainConfigRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getSetAltChainParametersConfigMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1234,14 +1174,6 @@ public final class IntegrationServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<integration.api.grpc.VeriBlockMessages.GeneralReply> setAltChainParametersConfig(
-        integration.api.grpc.VeriBlockMessages.AltChainConfigRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getSetAltChainParametersConfigMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<integration.api.grpc.VeriBlockMessages.GetLastKnownVBKBlocksReply> getLastKnownVBKBlocks(
         integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest request) {
       return futureUnaryCall(
@@ -1285,11 +1217,10 @@ public final class IntegrationServiceGrpc {
   private static final int METHODID_CHECK_VTBINTERNALLY = 9;
   private static final int METHODID_CHECK_ATVINTERNALLY = 10;
   private static final int METHODID_GET_MAIN_VBKHEIGHT_OF_ATV = 11;
-  private static final int METHODID_SET_ALT_CHAIN_PARAMETERS_CONFIG = 12;
-  private static final int METHODID_GET_LAST_KNOWN_VBKBLOCKS = 13;
-  private static final int METHODID_GET_LAST_KNOWN_BTCBLOCKS = 14;
-  private static final int METHODID_SAVE_PO_PTRANSACTION_DATA = 15;
-  private static final int METHODID_SET_CONFIG = 16;
+  private static final int METHODID_GET_LAST_KNOWN_VBKBLOCKS = 12;
+  private static final int METHODID_GET_LAST_KNOWN_BTCBLOCKS = 13;
+  private static final int METHODID_SAVE_PO_PTRANSACTION_DATA = 14;
+  private static final int METHODID_SET_CONFIG = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1355,10 +1286,6 @@ public final class IntegrationServiceGrpc {
         case METHODID_GET_MAIN_VBKHEIGHT_OF_ATV:
           serviceImpl.getMainVBKHeightOfATV((integration.api.grpc.VeriBlockMessages.AltPublication) request,
               (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GetMainVBKHeightOfATVReply>) responseObserver);
-          break;
-        case METHODID_SET_ALT_CHAIN_PARAMETERS_CONFIG:
-          serviceImpl.setAltChainParametersConfig((integration.api.grpc.VeriBlockMessages.AltChainConfigRequest) request,
-              (io.grpc.stub.StreamObserver<integration.api.grpc.VeriBlockMessages.GeneralReply>) responseObserver);
           break;
         case METHODID_GET_LAST_KNOWN_VBKBLOCKS:
           serviceImpl.getLastKnownVBKBlocks((integration.api.grpc.VeriBlockMessages.GetLastKnownBlocksRequest) request,
@@ -1449,7 +1376,6 @@ public final class IntegrationServiceGrpc {
               .addMethod(getCheckVTBInternallyMethod())
               .addMethod(getCheckATVInternallyMethod())
               .addMethod(getGetMainVBKHeightOfATVMethod())
-              .addMethod(getSetAltChainParametersConfigMethod())
               .addMethod(getGetLastKnownVBKBlocksMethod())
               .addMethod(getGetLastKnownBTCBlocksMethod())
               .addMethod(getSavePoPTransactionDataMethod())
