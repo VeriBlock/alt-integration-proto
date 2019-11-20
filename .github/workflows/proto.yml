@@ -1,7 +1,10 @@
-name: Proto release policy
+name: proto is updated
 
 on:
   push:
+    paths:
+      - proto/**
+  pull_request:
     paths:
       - proto/**
 
@@ -10,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Slack Notification
-        uses: rtCamp/action-slack-notify@master
-        env:
-          SLACK_TITLE: "integration.proto has been updated"
-          SLACK_WEBHOOK: ${{ secrets.VBK_ALT_PROTO_WEBHOOK }}
+        run: |
+          curl -X POST \
+            --data-urlencode "payload={\"text\": \"integration.proto has been updated\"}" \
+            ${{ secrets.VBK_ALT_PROTO_WEBHOOK }}
