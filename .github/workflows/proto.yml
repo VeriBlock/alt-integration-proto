@@ -1,0 +1,16 @@
+name: Proto release policy
+
+on:
+  push:
+    paths:
+      - proto
+
+jobs:
+  slack-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack Notification
+        uses: notify in xxx_alt_proto
+        env:
+          SLACK_TITLE: "integration.proto has been updated"
+          SLACK_WEBHOOK: ${{ secrets.VBK_ALT_PROTO_WEBHOOK }}
