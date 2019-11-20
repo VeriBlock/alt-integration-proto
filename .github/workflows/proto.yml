@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Slack Notification
-        uses: notify in xxx_alt_proto
+        uses: rtCamp/action-slack-notify@master
         env:
           SLACK_TITLE: "integration.proto has been updated"
           SLACK_WEBHOOK: ${{ secrets.VBK_ALT_PROTO_WEBHOOK }}
