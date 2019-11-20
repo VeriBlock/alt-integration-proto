@@ -3,7 +3,7 @@ name: Proto release policy
 on:
   push:
     paths:
-      - proto
+      - proto/**
 
 jobs:
   slack-notification:
