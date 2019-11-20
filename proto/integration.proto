@@ -259,6 +259,7 @@ message RewardsCalculatePopDifficultyRequest{
     repeated AltChainBlock blocks = 1;
 }
 
+
 service RewardsService {
     rpc ResetRewards(EmptyRequest) returns (GeneralReply){}
     rpc GetCalculator(EmptyRequest) returns (GetCalculatorReply){}

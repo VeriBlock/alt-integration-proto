@@ -1,0 +1,23 @@
+name: proto is updated
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - proto/**
+  pull_request:
+    branches:
+      - master
+    paths:
+      - proto/**
+
+jobs:
+  slack-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack Notification
+        run: |
+          curl -X POST \
+            --data-urlencode "payload={\"text\": \"integration.proto has been updated by ${{ github.actor }} (branch: ${{ github.ref }})\"}" \
+            ${{ secrets.VBK_ALT_PROTO_WEBHOOK }}
