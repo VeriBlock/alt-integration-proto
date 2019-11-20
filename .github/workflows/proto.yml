@@ -19,5 +19,5 @@ jobs:
       - name: Slack Notification
         run: |
           curl -X POST \
-            --data-urlencode "payload={\"text\": \"integration.proto has been updated by ${{ github.actor }} (already in master)\"}" \
+            --data-urlencode "payload={\"text\": \"integration.proto has been updated by ${{ github.actor }} (branch: ${{ github.ref }})\"}" \
             ${{ secrets.VBK_ALT_PROTO_WEBHOOK }}
