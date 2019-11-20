@@ -1,3 +1,21 @@
+[![](https://jitpack.io/v/VeriBlock/alt-integration-proto.svg)](https://jitpack.io/#VeriBlock/alt-integration-proto)
+
+# integration.proto
+
+This repo contains single `proto/integration.proto` file, which is used as input to automatically generate JAR with all protobuf and grpc internals.
+
+Can be easily consumed by jitpack:
+
+https://jitpack.io/#VeriBlock/alt-integration-proto/v1
+
+## Release policy
+
+Only releases may be used in dependent projects. 
+Releases are tracked in [releases](https://github.com/VeriBlock/alt-integration-proto/releases) page.
+
+Every new change in the `integration.proto` with following merge to master branch must be accompanied by a github release, with incremental versioning (e.g. v1, v2...). 
+
+# Manual generation
 
 ## Preparation
 
