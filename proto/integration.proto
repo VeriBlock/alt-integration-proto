@@ -163,6 +163,23 @@ message SavePoPTransactionDataRequest{
     PoPTransactionData popTx = 3;
 }
 
+message VeriBlockBootstrapConfig {
+    repeated bytes blocks = 1 [(hex_encoded)=true];
+}
+
+message BitcoinBootstrapConfig {
+    repeated bytes blocks = 1 [(hex_encoded)=true];
+    int32 firstBlockHeight = 2;
+}
+
+message SetConfigRequest{
+    AltChainConfigRequest altChainConfig = 1;
+    CalculatorConfig calculatorConfig = 2;
+    ForkresolutionConfigRequest forkresolutionConfig = 3;
+    VeriBlockBootstrapConfig veriblockBootstrapConfig = 4;
+    BitcoinBootstrapConfig bitcoinBootstrapConfig = 5;
+}
+
 service IntegrationService {
     rpc ResetSecurity(EmptyRequest) returns (GeneralReply){}
     rpc AddGenesisVeriBlock(VeriBlockBlock) returns (GeneralReply){}
@@ -176,10 +193,10 @@ service IntegrationService {
     rpc CheckVTBInternally(VeriBlockPublication) returns (GeneralReply){}
     rpc CheckATVInternally(AltPublication) returns (GeneralReply){}
     rpc GetMainVBKHeightOfATV(AltPublication) returns (GetMainVBKHeightOfATVReply){}
-    rpc SetAltChainParametersConfig(AltChainConfigRequest) returns (GeneralReply) {}
     rpc GetLastKnownVBKBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownVBKBlocksReply){}
     rpc GetLastKnownBTCBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBTCBlocksReply){}
     rpc SavePoPTransactionData(SavePoPTransactionDataRequest) returns (GeneralReply) {}
+    rpc SetConfig(SetConfigRequest) returns (GeneralReply) {}
 }
 
 message RoundRatioConfig{
@@ -259,11 +276,9 @@ message RewardsCalculatePopDifficultyRequest{
     repeated AltChainBlock blocks = 1;
 }
 
-
 service RewardsService {
     rpc ResetRewards(EmptyRequest) returns (GeneralReply){}
     rpc GetCalculator(EmptyRequest) returns (GetCalculatorReply){}
-    rpc SetCalculator(SetCalculatorRequest) returns (GeneralReply){}
     rpc RewardsCalculateScore(RewardsCalculateScoreRequest) returns (RewardsCalculateScoreReply){}
     rpc RewardsCalculateOutputs(RewardsCalculateOutputsRequest) returns (RewardsCalculateOutputsReply){}
     rpc RewardsCalculatePopDifficulty(RewardsCalculatePopDifficultyRequest) returns (RewardsCalculateScoreReply) {}
@@ -432,5 +447,4 @@ message ForkresolutionConfigRequest{
 
 service ForkresolutionService{
     rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareReply) {}
-    rpc SetForkresolutionConfig(ForkresolutionConfigRequest) returns (GeneralReply){}
 }
