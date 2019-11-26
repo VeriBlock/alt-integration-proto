@@ -440,6 +440,11 @@ message CompareReply{
     int32 comparingsResult = 2;
 }
 
+message ForkresolutionConfigRequest{
+    int32 keystoneFinalityDelay = 1;
+    int32 amnestyPeriod = 2;
+}
+
 service ForkresolutionService{
     rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareReply) {}
 }
