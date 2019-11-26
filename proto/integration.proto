@@ -453,4 +453,16 @@ message ForkresolutionConfigRequest{
 
 service ForkresolutionService{
     rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareReply) {}
+<<<<<<< HEAD
+=======
+    rpc SetForkresolutionConfig(ForkresolutionConfigRequest) returns (GeneralReply){}
+}
+
+message EmptyReply{
+}
+
+service PopService{
+    rpc CheckVTBInternally(BytesArrayRequest) returns (EmptyReply) {}
+    rpc CheckATVInternally(BytesArrayRequest) returns (EmptyReply) {}
+>>>>>>> add PopService
 }
