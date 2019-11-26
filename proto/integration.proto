@@ -459,7 +459,21 @@ message CheckReply{
     bool result = 1;
 }
 
+message RewardsCalculateRequest{
+    int32 blockAltHeight = 1;
+    AltChainBlock endorsedBlock = 2;
+    repeated AltChainBlock endorsmentBlocks = 3;
+    repeated AltChainBlock difficultyBlocks = 4;
+}
+
+message RewardsOutputsReply{
+    string totalReward = 2;
+    string blockReward = 3;
+    repeated RewardOutput outputs = 4;
+}
+
 service PopService{
     rpc CheckVTBInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc CheckATVInternally(BytesArrayRequest) returns (CheckReply) {}
+    rpc RewardsCalculateOutputs(RewardsCalculateRequest) returns (RewardsOutputsReply){}
 }
