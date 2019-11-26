@@ -455,10 +455,11 @@ service ForkresolutionService{
     rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareReply) {}
 }
 
-message EmptyReply{
+message CheckReply{
+    bool result = 1;
 }
 
 service PopService{
-    rpc CheckVTBInternally(BytesArrayRequest) returns (EmptyReply) {}
-    rpc CheckATVInternally(BytesArrayRequest) returns (EmptyReply) {}
+    rpc CheckVTBInternally(BytesArrayRequest) returns (CheckReply) {}
+    rpc CheckATVInternally(BytesArrayRequest) returns (CheckReply) {}
 }
