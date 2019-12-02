@@ -181,8 +181,8 @@ message SetConfigRequest{
 }
 
 message UpdateContextRequest {
-    repeated bytes VeriBlockBlocks = 1;
-    repeated bytes BitcoinBlocks = 2;
+    repeated bytes VeriBlockBlocks = 1 [(hex_encoded)=true];
+    repeated bytes BitcoinBlocks = 2 [(hex_encoded)=true];
 }
 
 service IntegrationService {
