@@ -180,6 +180,11 @@ message SetConfigRequest{
     BitcoinBootstrapConfig bitcoinBootstrapConfig = 5;
 }
 
+message UpdateContextRequest {
+    repeated bytes VeriBlockBlocks = 1 [(hex_encoded)=true];
+    repeated bytes BitcoinBlocks = 2 [(hex_encoded)=true];
+}
+
 service IntegrationService {
     rpc ResetSecurity(EmptyRequest) returns (GeneralReply){}
     rpc AddGenesisVeriBlock(VeriBlockBlock) returns (GeneralReply){}
@@ -197,6 +202,7 @@ service IntegrationService {
     rpc GetLastKnownBTCBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBTCBlocksReply){}
     rpc SavePoPTransactionData(SavePoPTransactionDataRequest) returns (GeneralReply) {}
     rpc SetConfig(SetConfigRequest) returns (GeneralReply) {}
+    rpc UpdateContext(UpdateContextRequest) returns (GeneralReply) {}
 }
 
 message RoundRatioConfig{
