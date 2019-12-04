@@ -454,3 +454,26 @@ message ForkresolutionConfigRequest{
 service ForkresolutionService{
     rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareReply) {}
 }
+
+message CheckReply{
+    bool result = 1;
+}
+
+message RewardsCalculateRequest{
+    int32 blockAltHeight = 1;
+    AltChainBlock endorsedBlock = 2;
+    repeated AltChainBlock endorsmentBlocks = 3;
+    repeated AltChainBlock difficultyBlocks = 4;
+}
+
+message RewardsCalculateReply{
+    string totalReward = 1;
+    string blockReward = 2;
+    repeated RewardOutput outputs = 3;
+}
+
+service PopService{
+    rpc CheckVTBInternally(BytesArrayRequest) returns (CheckReply) {}
+    rpc CheckATVInternally(BytesArrayRequest) returns (CheckReply) {}
+    rpc RewardsCalculateOutputs(RewardsCalculateRequest) returns (RewardsCalculateReply){}
+}
