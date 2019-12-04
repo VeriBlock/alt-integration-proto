@@ -466,7 +466,7 @@ message RewardsCalculateRequest{
     repeated AltChainBlock difficultyBlocks = 4;
 }
 
-message RewardsOutputsReply{
+message RewardsCalculateReply{
     string totalReward = 2;
     string blockReward = 3;
     repeated RewardOutput outputs = 4;
