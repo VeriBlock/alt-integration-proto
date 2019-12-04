@@ -475,5 +475,5 @@ message RewardsOutputsReply{
 service PopService{
     rpc CheckVTBInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc CheckATVInternally(BytesArrayRequest) returns (CheckReply) {}
-    rpc RewardsCalculateOutputs(RewardsCalculateRequest) returns (RewardsOutputsReply){}
+    rpc RewardsCalculateOutputs(RewardsCalculateRequest) returns (RewardsCalculateReply){}
 }
