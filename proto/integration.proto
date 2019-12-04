@@ -467,9 +467,9 @@ message RewardsCalculateRequest{
 }
 
 message RewardsCalculateReply{
-    string totalReward = 2;
-    string blockReward = 3;
-    repeated RewardOutput outputs = 4;
+    string totalReward = 1;
+    string blockReward = 2;
+    repeated RewardOutput outputs = 3;
 }
 
 service PopService{
