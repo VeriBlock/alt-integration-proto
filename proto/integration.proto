@@ -459,6 +459,8 @@ message CheckReply{
     bool result = 1;
 }
 
+message EmptyReply {}
+
 message RewardsCalculateRequest{
     int32 blockAltHeight = 1;
     AltChainBlock endorsedBlock = 2;
@@ -472,8 +474,27 @@ message RewardsCalculateReply{
     repeated RewardOutput outputs = 3;
 }
 
+message PopTxData{
+    AltChainBlock endorsedBlock = 1;
+    string popTxHash = 2;
+    bytes altPublication = 3 [(hex_encoded)=true];
+    repeated bytes veriblockPublications = 4 [(hex_encoded)=true];
+}
+
+message SaveBlockPopTxRequest{
+    AltChainBlock containingBlock = 1;
+    repeated PopTxData popData = 2;
+}
+
+message CompareTwoBranchesReply{
+    int32 compareResult = 1;
+}
+
 service PopService{
     rpc CheckVTBInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc CheckATVInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc RewardsCalculateOutputs(RewardsCalculateRequest) returns (RewardsCalculateReply){}
+    rpc SaveBlockPopTxToDatabase(SaveBlockPopTxRequest) returns (EmptyReply) {}
+    rpc UpdateContext(UpdateContextRequest) returns (EmptyReply) {}
+    rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareTwoBranchesReply) {}
 }
