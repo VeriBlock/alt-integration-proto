@@ -459,7 +459,7 @@ message CheckReply{
     bool result = 1;
 }
 
-message Empty {}
+message EmptyReply {}
 
 message RewardsCalculateRequest{
     int32 blockAltHeight = 1;
@@ -487,14 +487,14 @@ message SaveBlockPopTxRequest{
 }
 
 message CompareTwoBranchesReply{
-    int32 comparingsResult = 1;
+    int32 compareResult = 1;
 }
 
 service PopService{
     rpc CheckVTBInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc CheckATVInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc RewardsCalculateOutputs(RewardsCalculateRequest) returns (RewardsCalculateReply){}
-    rpc SaveBlockPopTxToDatabase(SaveBlockPopTxRequest) returns (Empty) {}
-    rpc UpdateContext(UpdateContextRequest) returns (Empty) {}
+    rpc SaveBlockPopTxToDatabase(SaveBlockPopTxRequest) returns (EmptyReply) {}
+    rpc UpdateContext(UpdateContextRequest) returns (EmptyReply) {}
     rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareTwoBranchesReply) {}
 }
