@@ -487,7 +487,7 @@ message SaveBlockPopTxRequest{
 }
 
 message CompareTwoBranchesReply{
-    int32 comparingsResult = 2;
+    int32 comparingsResult = 1;
 }
 
 service PopService{
