@@ -481,10 +481,13 @@ message PopTxData{
     repeated bytes veriblockPublications = 4 [(hex_encoded)=true];
 }
 
-
 message SaveBlockPopTxRequest{
     AltChainBlock containingBlock = 1;
     repeated PopTxData popData = 2;
+}
+
+message CompareTwoBranchesReply{
+    int32 comparingsResult = 2;
 }
 
 service PopService{
@@ -493,5 +496,5 @@ service PopService{
     rpc RewardsCalculateOutputs(RewardsCalculateRequest) returns (RewardsCalculateReply){}
     rpc SaveBlockPopTxToDatabase(SaveBlockPopTxRequest) returns (Empty) {}
     rpc UpdateContext(UpdateContextRequest) returns (Empty) {}
-    rpc CompareTwoBranches(TwoBranchesRequest) returns (Empty) {}
+    rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareTwoBranchesReply) {}
 }
