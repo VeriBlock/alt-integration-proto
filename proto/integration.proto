@@ -490,11 +490,19 @@ message CompareTwoBranchesReply{
     int32 compareResult = 1;
 }
 
-service PopService{
+message GetLastKnownBlocksReply{
+    repeated bytes blocks = 1 [(hex_encoded)=true];
+}
+
+service GrpcPopService{
     rpc CheckVTBInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc CheckATVInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc RewardsCalculateOutputs(RewardsCalculateRequest) returns (RewardsCalculateReply){}
     rpc SaveBlockPopTxToDatabase(SaveBlockPopTxRequest) returns (EmptyReply) {}
     rpc UpdateContext(UpdateContextRequest) returns (EmptyReply) {}
     rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareTwoBranchesReply) {}
+    rpc GetLastKnownVBKBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBlocksReply){}
+    rpc GetLastKnownBTCBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBlocksReply){}
+    rpc ParseAltPublication(BytesArrayRequest) returns (AltPublication){}
+    rpc ParseVeriBlockPublication(BytesArrayRequest) returns (VeriBlockPublication){}
 }
