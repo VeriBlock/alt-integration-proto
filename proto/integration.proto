@@ -495,8 +495,9 @@ message GetLastKnownBlocksReply{
 }
 
 message AddPayloadsDataRequest{
-    bytes altPublication = 1 [(hex_encoded)=true];
-    repeated bytes veriblockPublications = 2 [(hex_encoded)=true];
+    BlockIndex blockIndex = 1;
+    bytes altPublication = 2 [(hex_encoded)=true];
+    repeated bytes veriblockPublications = 3 [(hex_encoded)=true];
 }
 
 service GrpcPopService{
