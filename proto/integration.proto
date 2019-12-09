@@ -496,7 +496,7 @@ message GetLastKnownBlocksReply{
 
 message AddPayloadsDataRequest{
     BlockIndex blockIndex = 1;
-    bytes altPublication = 2 [(hex_encoded)=true];
+    repeared bytes altPublications = 2 [(hex_encoded)=true];
     repeated bytes veriblockPublications = 3 [(hex_encoded)=true];
 }
 
