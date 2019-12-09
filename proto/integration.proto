@@ -494,6 +494,12 @@ message GetLastKnownBlocksReply{
     repeated bytes blocks = 1 [(hex_encoded)=true];
 }
 
+message AddPayloadsDataRequest{
+    BlockIndex blockIndex = 1;
+    repeated bytes altPublications = 2 [(hex_encoded)=true];
+    repeated bytes veriblockPublications = 3 [(hex_encoded)=true];
+}
+
 service GrpcPopService{
     rpc CheckVTBInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc CheckATVInternally(BytesArrayRequest) returns (CheckReply) {}
@@ -505,4 +511,7 @@ service GrpcPopService{
     rpc GetLastKnownBTCBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBlocksReply){}
     rpc ParseAltPublication(BytesArrayRequest) returns (AltPublication){}
     rpc ParseVeriBlockPublication(BytesArrayRequest) returns (VeriBlockPublication){}
+    rpc GetPublicationDataFromAltPublication(BytesArrayRequest) returns (PublicationData) {}
+    rpc AddPayloads(AddPayloadsDataRequest) returns (EmptyReply){}
+    rpc RemovePayloads(RemovePayloadsRequest) returns (EmptyReply){}
 }
