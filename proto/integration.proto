@@ -172,7 +172,7 @@ message BitcoinBootstrapConfig {
     int32 firstBlockHeight = 2;
 }
 
-message SetConfigRequest{
+message SetConfigRequest {
     AltChainConfigRequest altChainConfig = 1;
     CalculatorConfig calculatorConfig = 2;
     ForkresolutionConfigRequest forkresolutionConfig = 3;
@@ -180,7 +180,7 @@ message SetConfigRequest{
     BitcoinBootstrapConfig bitcoinBootstrapConfig = 5;
 }
 
-message UpdateContextRequest {
+message ContextBlocks {
     repeated bytes VeriBlockBlocks = 1 [(hex_encoded)=true];
     repeated bytes BitcoinBlocks = 2 [(hex_encoded)=true];
 }
@@ -201,8 +201,8 @@ service IntegrationService {
     rpc GetLastKnownVBKBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownVBKBlocksReply){}
     rpc GetLastKnownBTCBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBTCBlocksReply){}
     rpc SavePoPTransactionData(SavePoPTransactionDataRequest) returns (GeneralReply) {}
-    rpc SetConfig(SetConfigRequest) returns (GeneralReply) {}
-    rpc UpdateContext(UpdateContextRequest) returns (GeneralReply) {}
+    rpc SetConfig (SetConfigRequest) returns (GeneralReply) {}
+    rpc UpdateContext (ContextBlocks) returns (GeneralReply) {}
 }
 
 message RoundRatioConfig{
@@ -500,13 +500,23 @@ message AddPayloadsDataRequest{
     repeated bytes veriblockPublications = 3 [(hex_encoded)=true];
 }
 
-service GrpcPopService{
+service GrpcPopService {
     rpc CheckVTBInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc CheckATVInternally(BytesArrayRequest) returns (CheckReply) {}
     rpc RewardsCalculateOutputs(RewardsCalculateRequest) returns (RewardsCalculateReply){}
-    rpc SaveBlockPopTxToDatabase(SaveBlockPopTxRequest) returns (EmptyReply) {}
-    rpc UpdateContext(UpdateContextRequest) returns (EmptyReply) {}
-    rpc CompareTwoBranches(TwoBranchesRequest) returns (CompareTwoBranchesReply) {}
+    rpc SaveBlockPopTxToDatabase (SaveBlockPopTxRequest) returns (EmptyReply) {}
+
+    rpc UpdateContext (ContextBlocks) returns (EmptyReply) {}
+
+    // request:
+    //    context (btc&vbk) block headers that have to be checked against current state
+    // response:
+    //    filtered context (btc&vbk) block headers that valid and can be
+    //    applied to current state in order they appear in the response.
+    //    response can be safely passed to UpdateContext RPC.
+    //
+    rpc CheckContext (ContextBlocks) returns (ContextBlocks) {}
+    rpc CompareTwoBranches (TwoBranchesRequest) returns (CompareTwoBranchesReply) {}
     rpc GetLastKnownVBKBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBlocksReply){}
     rpc GetLastKnownBTCBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBlocksReply){}
     rpc ParseAltPublication(BytesArrayRequest) returns (AltPublication){}
