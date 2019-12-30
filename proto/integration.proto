@@ -515,7 +515,7 @@ service GrpcPopService {
     //    applied to current state in order they appear in the response.
     //    response can be safely passed to UpdateContext RPC.
     //
-    rpc CheckContext (ContextBlocks) returns (ContextBlocks) {}
+    rpc FilterContext (ContextBlocks) returns (ContextBlocks) {}
     rpc CompareTwoBranches (TwoBranchesRequest) returns (CompareTwoBranchesReply) {}
     rpc GetLastKnownVBKBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBlocksReply){}
     rpc GetLastKnownBTCBlocks(GetLastKnownBlocksRequest) returns (GetLastKnownBlocksReply){}
