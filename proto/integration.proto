@@ -514,4 +514,5 @@ service GrpcPopService{
     rpc GetPublicationDataFromAltPublication(BytesArrayRequest) returns (PublicationData) {}
     rpc AddPayloads(AddPayloadsDataRequest) returns (EmptyReply){}
     rpc RemovePayloads(RemovePayloadsRequest) returns (EmptyReply){}
+    rpc SetConfig(SetConfigRequest) returns (EmptyReply) {}
 }
